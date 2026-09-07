@@ -1,0 +1,313 @@
+[gd_scene load_steps=33 format=3 uid="uid://wnn1blxym12s"]
+
+[ext_resource type="Script" uid="uid://26gxb32nccfs" path="res://slides/base.gd" id="1_cnhqp"]
+[ext_resource type="Texture2D" uid="uid://djxqwdhxk0b0e" path="res://images/included/sprites/bg/bga.png" id="2_avh2n"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
+[ext_resource type="Script" uid="uid://cl2fwawg56l5e" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_gvfig"]
+[ext_resource type="Texture2D" uid="uid://ctmrf02mkceh8" path="res://images/included/sprites/bg/bgb.png" id="3_ukjfp"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_l2x7l"]
+[ext_resource type="Texture2D" uid="uid://bt4jl34sdav6w" path="res://images/included/sprites/bg/bgc.png" id="4_r1rew"]
+[ext_resource type="Texture2D" uid="uid://ka6sgwtimbcv" path="res://images/included/sprites/bg/bgd.png" id="5_2y4wy"]
+[ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="6_6vrr4"]
+[ext_resource type="Texture2D" uid="uid://djpf3crq72u2x" path="res://images/included/base_frame.png" id="6_e3lof"]
+[ext_resource type="Texture2D" uid="uid://bx650ogkck0ml" path="res://images/included/sprites/cottage/ruined/left.png" id="7_gx7cy"]
+[ext_resource type="Texture2D" uid="uid://csdva5wyxm8h2" path="res://images/included/sprites/cottage/intact/left.png" id="8_cnhqp"]
+[ext_resource type="Texture2D" uid="uid://b6ln4kpjqf2yr" path="res://images/included/sprites/cottage/intact/right.png" id="9_ovcnp"]
+[ext_resource type="Texture2D" uid="uid://ca73rxgtday54" path="res://images/included/sprites/trogdor/roar.png" id="10_gvfig"]
+[ext_resource type="Texture2D" uid="uid://cd3kc40gy24c5" path="res://images/included/sprites/knight/k1.png" id="11_6vceq"]
+[ext_resource type="Texture2D" uid="uid://y5o03e0k28cp" path="res://images/included/sprites/knight/k2.png" id="12_yk3m8"]
+[ext_resource type="Texture2D" uid="uid://b2k3evhxd3wmy" path="res://images/included/sprites/peasant/p1.png" id="13_oj564"]
+[ext_resource type="Texture2D" uid="uid://siu4beqmeawh" path="res://images/included/sprites/peasant/p2.png" id="14_ume64"]
+[ext_resource type="Texture2D" uid="uid://cjjwclru2l14i" path="res://images/included/sprites/peasant/pdead.png" id="15_gjonj"]
+[ext_resource type="Texture2D" uid="uid://dpyb0otc7b0mj" path="res://images/included/sprites/peasant/pf2.png" id="16_77bry"]
+[ext_resource type="Texture2D" uid="uid://oa5ardk7rlpf" path="res://images/included/sprites/peasant/pf1.png" id="16_ovcnp"]
+[ext_resource type="Texture2D" uid="uid://crcwqk0lmv8ns" path="res://images/included/sprites/trogdor/breath/breath 2.png" id="18_cnhqp"]
+[ext_resource type="Texture2D" uid="uid://vb4e51uk5quv" path="res://images/included/sprites/trogdor/breath/breath 3.png" id="19_ovcnp"]
+[ext_resource type="Texture2D" uid="uid://dihsa6yr7ktti" path="res://images/included/sprites/trogdor/breath/breath 4.png" id="20_gvfig"]
+[ext_resource type="Texture2D" uid="uid://bawsin2181wj7" path="res://images/included/sprites/trogdor/breath/breath 1.png" id="21_6wvah"]
+[ext_resource type="Texture2D" uid="uid://cfsqo1vpoo5gq" path="res://images/included/sprites/cottage/fire/f2.png" id="22_6vceq"]
+[ext_resource type="Texture2D" uid="uid://dc82exoatqycv" path="res://images/included/sprites/cottage/fire/f1.png" id="22_tfc7s"]
+[ext_resource type="Texture2D" uid="uid://d3j6o6u0p02q" path="res://images/included/sprites/cottage/fire/f3.png" id="23_yk3m8"]
+[ext_resource type="Texture2D" uid="uid://c308oc3f1qieu" path="res://images/included/sprites/cottage/fire/f4.png" id="24_oj564"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvfig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ovcnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_77bry")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ume64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_6wvah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cnhqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ovcnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gvfig")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjonj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_tfc7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6vceq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yk3m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oj564")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Base" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cnhqp")
+
+[node name="Conditional Background" type="Node2D" parent="."]
+
+[node name="MPFConditionalChildren" type="Control" parent="Conditional Background"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_gvfig")
+variable_name = "ball"
+metadata/_custom_type_script = "uid://cl2fwawg56l5e"
+
+[node name="__default__" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
+visible = false
+
+[node name="Background A" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/__default__"]
+position = Vector2(1440, 432)
+texture = ExtResource("2_avh2n")
+
+[node name="1" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
+
+[node name="Background D" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/1"]
+position = Vector2(1440, 432)
+texture = ExtResource("5_2y4wy")
+
+[node name="2" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
+
+[node name="Background C" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/2"]
+position = Vector2(1440, 432)
+texture = ExtResource("4_r1rew")
+
+[node name="3" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
+
+[node name="Background B" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/3"]
+position = Vector2(1440, 432)
+texture = ExtResource("3_ukjfp")
+
+[node name="Static Assets" type="Node2D" parent="."]
+
+[node name="Frame" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1440, 432)
+texture = ExtResource("6_e3lof")
+
+[node name="Left" type="Sprite2D" parent="Static Assets"]
+position = Vector2(930, 513)
+texture = ExtResource("7_gx7cy")
+
+[node name="Left2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2720, 399)
+texture = ExtResource("8_cnhqp")
+
+[node name="Right1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(233, 562)
+texture = ExtResource("9_ovcnp")
+
+[node name="Right2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2084, 453)
+texture = ExtResource("9_ovcnp")
+
+[node name="Roar" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1491, 462)
+scale = Vector2(1.3108975, 1.3108974)
+texture = ExtResource("10_gvfig")
+
+[node name="K1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(692, 354)
+texture = ExtResource("11_6vceq")
+
+[node name="K2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2347, 625)
+scale = Vector2(-1, 1)
+texture = ExtResource("12_yk3m8")
+
+[node name="P1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(439, 649)
+texture = ExtResource("13_oj564")
+
+[node name="P2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2589, 586)
+texture = ExtResource("14_ume64")
+
+[node name="Pdead" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1742, 607)
+texture = ExtResource("15_gjonj")
+
+[node name="peasant_animation" type="AnimatedSprite2D" parent="Static Assets"]
+position = Vector2(1145, 626)
+sprite_frames = SubResource("SpriteFrames_gvfig")
+
+[node name="breath_animation" type="AnimatedSprite2D" parent="Static Assets"]
+position = Vector2(1173, 375)
+scale = Vector2(1.3055556, 1.3055556)
+sprite_frames = SubResource("SpriteFrames_ume64")
+
+[node name="cottage_fire_animation" type="AnimatedSprite2D" parent="Static Assets"]
+position = Vector2(2079.04, 363)
+scale = Vector2(1.07, 1.07)
+sprite_frames = SubResource("SpriteFrames_gjonj")
+
+[node name="Off-player scores" type="Node2D" parent="."]
+
+[node name="MPFConditional !=p1" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "1"
+
+[node name="MPFVariable - ScoreP1" type="Label" parent="Off-player scores/MPFConditional !=p1"]
+layout_mode = 0
+offset_left = -156.0
+offset_top = 737.0
+offset_right = 853.0
+offset_bottom = 956.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P1: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P1: %s"
+
+[node name="MPFConditional !=p2" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "2"
+
+[node name="MPFVariable - ScoreP2" type="Label" parent="Off-player scores/MPFConditional !=p2"]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 736.0
+offset_right = 1607.0
+offset_bottom = 955.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P2: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P2: %s"
+min_players = 2
+
+[node name="MPFConditional !=p3" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 634.0
+offset_bottom = 791.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "3"
+
+[node name="MPFVariable - ScoreP3" type="Label" parent="Off-player scores/MPFConditional !=p3"]
+layout_mode = 0
+offset_left = 728.0
+offset_top = -10.0
+offset_right = 1737.0
+offset_bottom = 209.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P3: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P3: %s"
+min_players = 3
+
+[node name="MPFConditional !=p4" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 634.0
+offset_bottom = 791.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "4"
+
+[node name="MPFVariable - ScoreP4" type="Label" parent="Off-player scores/MPFConditional !=p4"]
+layout_mode = 0
+offset_left = 1444.0
+offset_top = -13.0
+offset_right = 2453.0
+offset_bottom = 206.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P4: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P4: %s"
+min_players = 4

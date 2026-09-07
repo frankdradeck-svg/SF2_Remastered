@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://68es25p8tm2r"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_tdx0x"]
+[ext_resource type="Script" uid="uid://bh3xoo03q0ii0" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="2_lhhi3"]
+[ext_resource type="VideoStream" uid="uid://dlmyn4stje2mn" path="res://assets/saga_1.ogv" id="3_tj6i8"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_35q0x"]
+[ext_resource type="VideoStream" uid="uid://bjht3vvm8byqg" path="res://assets/sagat_2.ogv" id="5_dqrsu"]
+[ext_resource type="VideoStream" uid="uid://cfkqhwogghe5h" path="res://assets/sagat_3.ogv" id="6_qoayv"]
+[ext_resource type="VideoStream" uid="uid://boqe4ouqkd687" path="res://assets/sagat_4.ogv" id="7_yhstf"]
+[ext_resource type="VideoStream" uid="uid://lrbymndvn0in" path="res://assets/sagat_5.ogv" id="8_tdx0x"]
+[ext_resource type="VideoStream" uid="uid://boltfhbrobiks" path="res://assets/sagat_6.ogv" id="9_lhhi3"]
+[ext_resource type="VideoStream" uid="uid://dgr3hpomk5t8f" path="res://assets/sagat_7.ogv" id="10_fwbgs"]
+[ext_resource type="VideoStream" uid="uid://c47ha5l3ndnjn" path="res://assets/new_sagat_1.ogv" id="11_35q0x"]
+[ext_resource type="VideoStream" uid="uid://dpk0urc4eccjy" path="res://assets/new_sagat_2.ogv" id="12_gy1mw"]
+[ext_resource type="VideoStream" uid="uid://dgojwp4otm0lf" path="res://assets/new_sagat_3.ogv" id="13_8plb6"]
+[ext_resource type="VideoStream" uid="uid://bilq4j7xcam17" path="res://assets/new_sagat_4.ogv" id="14_xlq3f"]
+[ext_resource type="VideoStream" uid="uid://hqc8jv1foq2i" path="res://assets/new_sagat_5.ogv" id="15_63j1t"]
+
+[node name="Field" type="Control" unique_id=2085516752]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tdx0x")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFChildPool" type="Control" parent="." unique_id=923641232]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_lhhi3")
+playback_method = 2
+child_method = "play"
+metadata/_custom_type_script = "uid://bh3xoo03q0ii0"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1378299526]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("3_tj6i8")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer2" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1254736699]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("5_dqrsu")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer3" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=58804013]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("6_qoayv")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer4" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1935013989]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("7_yhstf")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer5" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1461694506]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("8_tdx0x")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer6" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1115857406]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("9_lhhi3")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer7" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1703928191]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("10_fwbgs")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer8" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=480312951]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("11_35q0x")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer9" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1164177024]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("12_gy1mw")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer10" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=846656308]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("13_8plb6")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer11" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=2134388666]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("14_xlq3f")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer12" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=294830490]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("15_63j1t")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_35q0x")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

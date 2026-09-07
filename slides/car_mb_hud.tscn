@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://d3786r3g0f8yo"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_f6oyl"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="2_ckdjk"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_aqge6"]
+
+[node name="MPFSlide" type="Control" unique_id=1270873951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_f6oyl")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=323136025]
+position = Vector2(1746, 80)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("2_ckdjk")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=277748713]
+offset_left = -508.1252
+offset_top = -95.12038
+offset_right = 1421.4226
+offset_bottom = 127.87962
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 100
+text = "Current Round: "
+metadata/_edit_use_anchors_ = true
+
+[node name="MPFVariable" type="Label" parent="Sprite2D" unique_id=384024048]
+offset_left = 275.6497
+offset_top = -93.17915
+offset_right = 1046.1404
+offset_bottom = 43.820847
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 100
+text = "1"
+script = ExtResource("3_aqge6")
+variable_name = "smash_rounds"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=57851411]
+position = Vector2(1746, 200)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("2_ckdjk")
+
+[node name="Label2" type="Label" parent="Sprite2D2" unique_id=999618571]
+anchors_preset = -1
+anchor_left = -0.90204936
+anchor_right = -0.90204936
+offset_left = 953.8074
+offset_top = -38.824654
+offset_right = 2883.3552
+offset_bottom = 184.17535
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Value:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Sprite2D2" unique_id=515025641]
+anchors_preset = -1
+anchor_left = -0.90204936
+anchor_right = -0.90204936
+offset_left = 877.4221
+offset_top = -108.708984
+offset_right = 2806.97
+offset_bottom = 114.291016
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Jackpot"
+metadata/_edit_use_anchors_ = true
+
+[node name="MPFVariable2" type="Label" parent="Sprite2D2" unique_id=1468577624]
+offset_left = -149.4484
+offset_top = -89.29668
+offset_right = 621.04236
+offset_bottom = 47.703323
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 100
+text = "1,000,000"
+script = ExtResource("3_aqge6")
+variable_name = "smash_rounds"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1929645273]
+position = Vector2(1746, 320)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("2_ckdjk")
+
+[node name="Label" type="Label" parent="Sprite2D3" unique_id=1824711935]
+offset_left = -501.4834
+offset_top = -91.237885
+offset_right = 1428.0645
+offset_bottom = 131.76212
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 100
+text = "Total Car Hits:"
+metadata/_edit_use_anchors_ = true
+
+[node name="MPFVariable2" type="Label" parent="Sprite2D3" unique_id=319465891]
+offset_left = 219.19159
+offset_top = -93.1792
+offset_right = 989.6823
+offset_bottom = 43.8208
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 100
+text = "1"
+script = ExtResource("3_aqge6")
+variable_name = "smash_rounds"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+logs/
+
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+*.dmp

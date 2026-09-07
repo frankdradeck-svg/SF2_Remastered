@@ -1,0 +1,49 @@
+#show_version=6
+- time: 0
+  lights:
+    led_car_1: white
+    led_car_2: off
+    led_car_3: off
+    led_car_4: off
+    led_car_5: off
+    led_car_6: off
+- time: '+1'
+  lights:
+    led_car_1: off
+    led_car_2: white
+    led_car_3: off
+    led_car_4: off
+    led_car_5: off
+    led_car_6: off
+- time: '+1'
+  lights:
+    led_car_1: off
+    led_car_2: off
+    led_car_3: white
+    led_car_4: off
+    led_car_5: off
+    led_car_6: off
+- time: '+1'
+  lights:
+    led_car_1: off
+    led_car_2: off
+    led_car_3: off
+    led_car_4: white
+    led_car_5: off
+    led_car_6: off
+- time: '+1'
+  lights:
+    led_car_1: off
+    led_car_2: off
+    led_car_3: off
+    led_car_4: off
+    led_car_5: white
+    led_car_6: off
+- time: '+1'
+  lights:
+    led_car_1: off
+    led_car_2: off
+    led_car_3: off
+    led_car_4: off
+    led_car_5: off
+    led_car_6: white

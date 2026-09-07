@@ -1,0 +1,33 @@
+Crash report VPX rev404 (f3fa3d8)
+============
+Process: VPinballX.exe
+Reason: 0xC0000005 - EXCEPTION_ACCESS_VIOLATION at 0033:00000001401039B0
+Attempt to read from 0x1EBC2950
+Thread ID: 0x235AC [144812]
+
+Call stack
+==========
+00000000401039B0  (0x00000000 0x00000005 0x00000000 0x00300b82)
+
+Environment
+===========
+Date/time: 24/5/2026, 21:21:12:158
+Number of CPUs: 8
+Processor type: 8664
+System: Windows 10 (10.0 19045)
+
+Memory status
+=============
+Total Reserved: 5167748K (5046M) bytes
+Total Commited: 1534640K (1498M) bytes
+Total Free: 4288264844K (134211182M) bytes
+Largest Free: 4242495828K (134166486M) bytes
+
+Registers
+=========
+RAX=403E06F8 RBX=401CB910 RCX=1EBC2950 RDX=4044B680
+RSI=1EBC2950 RDI=20A93C30 RBP=5F0BA080 RSP=0014D5A0 RIP=401039B0
+FLG=00010206 CS=0033 DS=002B SS=002B ES=002B FS=0053 GS=002B
+
+
+Failed to save minidump.

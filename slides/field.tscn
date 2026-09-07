@@ -1,0 +1,285 @@
+[gd_scene format=3 uid="uid://xb431j81y7n2"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_j4cmf"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="2_g2r2l"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="4_xd0y2"]
+[ext_resource type="Texture2D" uid="uid://clwjpejwfok4q" path="res://assets/car_counter.png" id="5_8467l"]
+[ext_resource type="Texture2D" uid="uid://crmvakjp3h7jq" path="res://assets/flame_counter.png" id="6_mxxmw"]
+[ext_resource type="Texture2D" uid="uid://bx0xx07kn4wtl" path="res://assets/torpedo_counter.png" id="7_5s28b"]
+[ext_resource type="VideoStream" uid="uid://btwfi08ji15l1" path="res://assets/Crowded_Downtown_China_Street_Fighter_IV_1920x1080[01KPNNMX6P3GNXV8GDSFY6T263].ogv" id="7_dl8to"]
+[ext_resource type="Script" uid="uid://bh3xoo03q0ii0" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="8_4leg3"]
+[ext_resource type="Texture2D" uid="uid://baxd54fptoa2f" path="res://assets/guile_counter4.png" id="8_8467l"]
+[ext_resource type="VideoStream" uid="uid://i7f1l0nrbims" path="res://assets/Snowy_Rail_Yard_Russia_Street_Fighter_IV_1920x1080[01KPNNQF1DGCJJ46VQEH7VH3RR].ogv" id="8_kn5kd"]
+[ext_resource type="VideoStream" uid="uid://beixs5pxofvl4" path="res://assets/Drive-in_At_Night_U.S.A._Street_Fighter_IV_1920x1080[01KPNNM97FG911HWWAB35S5VQK].ogv" id="9_eyrve"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="9_mxxmw"]
+[ext_resource type="VideoStream" uid="uid://b60ytwx8v8j2f" path="res://assets/Overpass_Japan_Street_Fighter_IV_1920x1080[01KPNNJT1BJ9TEKXCS6RH58DK1].ogv" id="9_v4rug"]
+[ext_resource type="VideoStream" uid="uid://dww5fjcmsx4mb" path="res://assets/Run-Down_Back_Alley_China_Street_Fighter_IV_1920x1080[01KPNNNHHK4616QMVRQEWTG8E5].ogv" id="10_cxje7"]
+[ext_resource type="VideoStream" uid="uid://dhm7nxvt4rops" path="res://assets/Inland_Jungle_Brazil_Street_Fighter_IV_1920x1080[01KPNNR02E6JYE7HEPYZ6GXEPX].ogv" id="11_8sopu"]
+[ext_resource type="VideoStream" uid="uid://dao0g7w3b0nti" path="res://assets/Secret_Laboratory_Unknown_Street_Fighter_IV_1920x1080[01KPNNS08CJ3D3SVW02EXAX2WJ].ogv" id="11_b3ylt"]
+[ext_resource type="VideoStream" uid="uid://d2audm55sm03e" path="res://assets/Blast_Furnace_Russia_Ultra_Street_Fighter_IV_1920x1080[01KPNNVKMPP428Q7R5GCYSW5Z5].ogv" id="12_3jgk2"]
+[ext_resource type="VideoStream" uid="uid://co6yfvj6exurr" path="res://assets/Old_Temple_Japan_Street_Fighter_IV_1920x1080[01KPNNKPT9E73S56ADZTFE0CXP].ogv" id="12_h4m64"]
+[ext_resource type="VideoStream" uid="uid://xba0qhd4lpxe" path="res://assets/Historic_Distillery_Scotland_Street_Fighter_IV_1920x1080[01KPNNPJ3N4F34MT1ETHM67K4K].ogv" id="13_42fli"]
+[ext_resource type="VideoStream" uid="uid://lbibdb5wapuu" path="res://assets/Cosmic_Elevator_Equator_Ultra_Street_Fighter_IV_1920x1080[01KPNNW4ZE97DN13D8VV8D4617].ogv" id="14_lm755"]
+[ext_resource type="VideoStream" uid="uid://ddrteayufo4dn" path="res://assets/Exciting_Street_Scene_India_Super_Street_Fighter_IV_1920x1080[01KPNNTC5MJBYEZ3WRCSNKK8WF].ogv" id="15_5x0sp"]
+[ext_resource type="VideoStream" uid="uid://b48y6vwnjhg1s" path="res://assets/Festival_at_the_Old_Temple_South_Korea_Super_Street_Fighter_IV_1920x1080[01KPNNSP0585W5M0KJGP5AZ1TR].ogv" id="16_gjk56"]
+
+[node name="Field" type="Control" unique_id=2085516752]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j4cmf")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFChildPool" type="Control" parent="." unique_id=923641232]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_4leg3")
+playback_method = 2
+child_method = "play"
+metadata/_custom_type_script = "uid://bh3xoo03q0ii0"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1378299526]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("9_v4rug")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer2" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1254736699]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("11_8sopu")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer3" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=58804013]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("12_h4m64")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer4" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1935013989]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("7_dl8to")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer5" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1461694506]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("8_kn5kd")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer6" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1115857406]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("9_eyrve")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer7" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1703928191]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("10_cxje7")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer8" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=480312951]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("11_b3ylt")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer9" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1164177024]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("12_3jgk2")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer10" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=846656308]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("13_42fli")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer11" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=2134388666]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("14_lm755")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer12" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=294830490]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("15_5x0sp")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer13" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1472794582]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("16_gjk56")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=186566095]
+position = Vector2(253.75003, 89.49999)
+scale = Vector2(0.45084637, 0.81152344)
+texture = ExtResource("4_xd0y2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1885674555]
+position = Vector2(291.99997, 79)
+scale = Vector2(0.6553398, 0.77102804)
+texture = ExtResource("5_8467l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=257552867]
+position = Vector2(71, 74.99999)
+scale = Vector2(0.02923583, 0.030334491)
+texture = ExtResource("6_mxxmw")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1153371177]
+position = Vector2(1667, 84)
+scale = Vector2(0.4514974, 0.7285156)
+texture = ExtResource("4_xd0y2")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1763663643]
+position = Vector2(1511, 73)
+scale = Vector2(0.29374993, 0.29242423)
+texture = ExtResource("7_5s28b")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=817191615]
+position = Vector2(1771.0001, 75)
+scale = Vector2(0.03420241, 0.03642268)
+texture = ExtResource("8_8467l")
+
+[node name="MPFVariable" type="Label" parent="." unique_id=970984201]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 12.0
+offset_right = 274.0
+offset_bottom = 81.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "10/30"
+script = ExtResource("9_mxxmw")
+variable_name = "center_spinner_hits_count"
+template_string = "%s/30"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable3" type="Label" parent="." unique_id=404786474]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 13.0
+offset_right = 520.0
+offset_bottom = 82.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "10/60"
+script = ExtResource("9_mxxmw")
+variable_name = "car_loop_spinner_hits_count"
+template_string = "%s/60"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable2" type="Label" parent="." unique_id=662012504]
+layout_mode = 0
+offset_left = 1812.0
+offset_top = 21.0
+offset_right = 1889.0
+offset_bottom = 90.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "2/5"
+script = ExtResource("9_mxxmw")
+variable_name = "guile_hits_count"
+template_string = "%s/5"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable4" type="Label" parent="." unique_id=107710062]
+layout_mode = 0
+offset_left = 1606.0
+offset_top = 22.0
+offset_right = 1683.0
+offset_bottom = 91.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "2/7"
+script = ExtResource("9_mxxmw")
+variable_name = "torpedo_hits_count"
+template_string = "%s/7"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

@@ -1,0 +1,130 @@
+#config_version=6
+
+mode:
+  start_events: timer_finishing_ken_timer_complete{current_player.millions_played!=1}
+  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_millions_timer_complete
+  priority: 200
+
+sound_player:
+  loop_hit{device.counters.millions_hits.value==1}:
+    5_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==2}:
+    10_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==3}:
+    15_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==4}:
+    20_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==5}:
+    25_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==6}:
+    30_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==7}:
+    35_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==8}:
+    40_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==9}:
+    45_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value==10}:
+    50_mill:
+      bus: voice_boost
+      action: replace
+  loop_hit{device.counters.millions_hits.value>10}:
+    60_mill:
+      bus: voice_boost
+      action: replace
+
+show_player:
+  mode_millions_started:
+    flash_color:
+      key: millions_flash
+      speed: 4
+      show_tokens:
+        lights: led_ryu_defeat, led_ryu_double, led_ryu_millions
+        color: white
+  loop_hit:
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+
+slide_player:
+  mode_millions_started:
+    field:
+      action: remove
+    millions_bg:
+      action: play
+      priority: 5
+    millions_main:
+      action: play
+      priority: 6
+    ken_millions_timer:
+      action: play
+      priority: 7
+  loop_hit:
+    ken_millions_videos:
+      expire: 3s
+      priority: 7
+
+timers:
+  millions_timer:
+    start_value: 50
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+
+variable_player:
+  mode_millions_started:
+    millions_played:
+      int: 1
+      action: set
+  loop_hit{device.counters.millions_hits.value<11}:
+    score: device.counters.millions_hits.value * 5_000_000
+  loop_hit{device.counters.millions_hits.value>10}:
+    score: 60_000_000
+  timer_millions_timer_tick:
+    ken_millions_time_left:
+      int: device.timers.millions_timer.ticks
+      action: set
+
+counters:
+  millions_hits:
+    count_events: loop_hit
+    starting_count: 1
+    direction: up
+    persist_state: true
+
+event_player:
+  loop_hit{device.counters.millions_hits.value<11}:
+    millions_value:
+      current_millions:
+        type: int
+        value: 5_000_000 + device.counters.millions_hits.value * 5_000_000
+  loop_hit{device.counters.millions_hits.value>10}:
+    millions_value:
+      current_millions:
+        type: int
+        value: 60_000_000
+  
+
+
+
+    

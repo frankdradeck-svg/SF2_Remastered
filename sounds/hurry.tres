@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://dhffsxcm6kvp4"]
+
+[ext_resource type="AudioStream" uid="uid://b3ghm4tlj2hyv" path="res://sounds/unprocessed/hurry/hurry_up__LEGACY (1).wav" id="1_s7ym6"]
+[ext_resource type="AudioStream" uid="uid://cnci6eh5iv0v5" path="res://sounds/unprocessed/hurry/hurry_up__LEGACY (2).wav" id="2_ol6e5"]
+[ext_resource type="AudioStream" uid="uid://tfkr7vk2c4f0" path="res://sounds/unprocessed/hurry/hurry_up__LEGACY (3).wav" id="3_ju0s6"]
+[ext_resource type="AudioStream" uid="uid://broqgb0awqrch" path="res://sounds/unprocessed/hurry/hurry_up__LEGACY.wav" id="4_f7yux"]
+[ext_resource type="AudioStream" uid="uid://cm4y0584ahehq" path="res://sounds/unprocessed/hurry/hurry_____LEGACY.wav" id="5_qcljv"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_s7ym6")
+stream_1/stream = ExtResource("2_ol6e5")
+stream_2/stream = ExtResource("3_ju0s6")
+stream_3/stream = ExtResource("4_f7yux")
+stream_4/stream = ExtResource("5_qcljv")

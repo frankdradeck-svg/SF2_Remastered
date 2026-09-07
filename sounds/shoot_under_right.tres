@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://beo3addtyj8w8"]
+
+[ext_resource type="AudioStream" uid="uid://dbcyv2ytjjm1r" path="res://sounds/unprocessed/shoot_under_right/shoot_the_right_2.mp3" id="2_fcen5"]
+[ext_resource type="AudioStream" uid="uid://bus4cmynkko0" path="res://sounds/unprocessed/shoot_under_right/shoot_the_right_4.mp3" id="3_3c4my"]
+[ext_resource type="AudioStream" uid="uid://spe8m31nt8wd" path="res://sounds/unprocessed/shoot_under_right/shoot_the_right_6.mp3" id="4_ruhpn"]
+[ext_resource type="AudioStream" uid="uid://cp03tvrw4ji4j" path="res://sounds/unprocessed/shoot_under_right/shoot_the_right_10.wav" id="5_elw8t"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("5_elw8t")
+stream_1/stream = ExtResource("2_fcen5")
+stream_2/stream = ExtResource("3_3c4my")
+stream_3/stream = ExtResource("4_ruhpn")

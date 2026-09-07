@@ -1,0 +1,456 @@
+#config_version=6
+
+mode:
+  start_events: ehonda_started
+  stop_events: ball_will_end, timer_finishing_ehonda_timer_complete, timer_ehonda_losing_timer_complete
+  priority: 300
+
+slide_player:
+  mode_ehonda_started: 
+    ehonda:
+      action: play
+    field:
+      action: remove
+  timer_ehonda_intro_timer_complete:
+    health_Left_full:
+      action: play
+      priority: 5
+    health_Right_full:
+      action: play
+      priority: 5
+  logicblock_ehonda_hits_hit{remaining == 0}:
+    health_Right_2hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    health_Left_full:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    health_Left_1hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    health_Left_2hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    ehonda:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko_loss:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko:
+      action: play
+      expire: 10s
+    fight_hit_3:
+      action: play
+      expire: 3s
+      priority: 5
+  ehonda_losing:
+    health_Left_2hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    health_Right_full:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    health_Right_1hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    health_Right_2hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    ehonda:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko_loss:
+      action: play
+      expire: 10s
+  timer_ehonda_fight_timer_complete{device.counters.ehonda_damage.value==0}:
+    health_Left_full:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    ehonda:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko_loss:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_1:
+      action: play
+    health_Left_1hit:
+      action: play
+      priority: 4
+  timer_ehonda_fight_timer_complete{device.counters.ehonda_damage.value==1}:
+    health_Left_1hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    ehonda:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko_loss:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_2:
+      action: play
+    health_Left_2hit:
+      action: play
+      priority: 3
+  power_move_event{device.counters.ehonda_hits.value==0}:
+    health_Right_full:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    ehonda:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko_loss:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_1:
+      action: play
+    health_Right_1hit:
+      action: play
+      priority: 4
+    fight_hit_1:
+      action: play
+      expire: 3s
+      priority: 5
+  power_move_event{device.counters.ehonda_hits.value==1}:
+    health_Right_1hit:
+      action: remove
+      transition:
+        type: fade
+        duration: 3s
+    ehonda:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_attack_2:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_1:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ko_loss:
+      action: remove
+      transition:
+        type: fade
+        duration: 5s
+    ehonda_ryu_attack_2:
+      action: play
+    health_Right_2hit:
+      action: play
+      priority: 3
+    fight_hit_2:
+      action: play
+      expire: 3s
+      priority: 5
+
+sound_player:
+  mode_ehonda_started:
+    honda_theme:
+      bus: music_loud
+
+variable_player:
+  finishing_ehonda:
+    ehonda_completed:
+      int: 1
+      action: set
+    fight_qualified:
+      int: 0
+      action: set
+  ehonda_scoop_intro_finish_event:
+    ehonda_intro_complete:
+      int: 1
+      action: set
+  s_guile_opto_active:
+    score: 150000
+  s_center_spinner_active:
+    score: 5000
+  power_move_event{device.counters.ehonda_hits.value==0}:
+    score: 2000000
+  power_move_event{device.counters.ehonda_hits.value==1}:
+    score: 4000000
+  logicblock_ehonda_hits_hit{remaining == 0}:
+    score: 10000000
+
+queue_relay_player:
+  balldevice_bd_left_vuk_ball_eject_attempt{device.counters.ehonda_hits.value==3}:
+    post: ehonda_scoop_ko_finish_event
+    wait_for: timer_finishing_ehonda_timer_complete
+  balldevice_bd_left_vuk_ball_eject_attempt{current_player.ehonda_intro_complete!=1}:
+    post: ehonda_scoop_intro_finish_event
+    wait_for: timer_ehonda_intro_timer_complete
+
+timers:
+  ehonda_intro_timer:
+    start_value: 6
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+  ehonda_fight_timer:
+    start_value: 15
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: mode_ehonda_started
+      - action: stop
+        event: ehonda_losing
+      - action: add
+        event: power_move_event
+        value: 15
+    restart_on_complete: true
+  finishing_ehonda_timer:
+    start_value: 10
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: finishing_ehonda
+  ehonda_losing_timer:
+    start_value: 10
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: ehonda_losing
+#timer_finishing_mode_complete
+
+light_player:
+  led_zangief_power_solid:
+    led_zangief_power:
+      color: orange
+      priority: 3
+  led_chunli_power_solid:
+    led_chunli_power:
+      color: orange
+      priority: 3
+  led_balrog_power_solid:
+    led_balrog_power:
+      color: orange
+      priority: 3
+
+show_player:
+  mode_ehonda_started:
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_zangief_power, led_chunli_power, led_balrog_power
+        color: orange
+  logicblock_ehonda_hits_hit{remaining == 1}:
+    flash_color:
+      speed: 4
+      show_tokens:
+        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
+        color: white
+      priority: 5
+    off:
+      show_tokens:
+        lights: led_zangief_power, led_chunli_power, led_balrog_power
+      priority: 4
+
+counters:
+  ehonda_hits:
+    count_events: power_move_event
+    starting_count: 0
+    count_complete_value: 3
+    direction: up
+    events_when_complete: finishing_ehonda
+    persist_state: false
+    reset_on_complete: false
+  ehonda_zangief_power_hits:
+    count_events: s_zangief_active{device.counters.ehonda_hits.value!=2}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: power_move_event, led_zangief_power_solid
+    reset_on_complete: false
+  ehonda_chunli_power_hits:
+    count_events: s_chunli_entrance_active{device.counters.ehonda_hits.value!=2}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: power_move_event, led_chunli_power_solid
+    reset_on_complete: false
+  ehonda_balrog_power_hits:
+    count_events: s_right_vuk_active{device.counters.ehonda_hits.value!=2}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: power_move_event, led_balrog_power_solid
+    reset_on_complete: false
+  ehonda_final_move_hits:
+    count_events: s_left_ramp_rollover_active{device.counters.ehonda_hits.value==2}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: power_move_event
+    reset_on_complete: false
+  ehonda_damage:
+    count_events: timer_ehonda_fight_timer_complete
+    starting_count: 0
+    count_complete_value: 3
+    direction: up
+    events_when_complete: ehonda_losing

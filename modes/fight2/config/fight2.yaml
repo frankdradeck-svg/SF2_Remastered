@@ -1,0 +1,46 @@
+#config_version=6
+
+mode:
+  start_events: fight2_started
+  stop_events: ball_will_end, timer_finishing_mode_2_timer_complete
+  priority: 50
+
+slide_player:
+  mode_fight2_started: 
+    fight2:
+      action: play
+    field:
+      action: remove
+  logicblock_guile_hits_fight2_hit{remaining == 0}:
+    ko2:
+      action: play
+      expire: 8s
+
+counters:
+  guile_hits_fight2:
+    count_events: s_guile_opto_active
+    starting_count: 0
+    count_complete_value: 3
+    direction: up
+    events_when_complete: finishing_mode_2
+    persist_state: true
+
+variable_player:
+  finishing_mode_2:
+    fight2_completed:
+      int: 1
+      action: set
+    fight_qualified:
+      int: 0
+      action: set
+
+timers:
+  finishing_mode_2_timer:
+    start_value: 8
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: finishing_mode_2
+#timer_finishing_mode_complete

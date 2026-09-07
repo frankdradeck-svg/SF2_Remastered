@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cmu46v1mlwc1c"]
+
+[ext_resource type="AudioStream" uid="uid://bjyx83q1gwkax" path="res://sounds/unprocessed/shoot_flame/shoot_the_flame_1.mp3" id="1_rf3fm"]
+[ext_resource type="AudioStream" uid="uid://caj14pg3v1y3e" path="res://sounds/unprocessed/shoot_flame/shoot_the_flame_2.mp3" id="2_02xur"]
+[ext_resource type="AudioStream" uid="uid://c83gtjk6ufc1x" path="res://sounds/unprocessed/shoot_flame/shoot_the_flame_3.mp3" id="3_s6dek"]
+[ext_resource type="AudioStream" uid="uid://07573bvib5bw" path="res://sounds/unprocessed/shoot_flame/shoot_the_flame_7.wav" id="4_u15rf"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_rf3fm")
+stream_1/stream = ExtResource("2_02xur")
+stream_2/stream = ExtResource("3_s6dek")
+stream_3/stream = ExtResource("4_u15rf")

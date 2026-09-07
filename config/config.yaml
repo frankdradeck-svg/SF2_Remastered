@@ -1,0 +1,665 @@
+#config_version=6
+
+modes:
+ - attract
+ - base
+ - global
+ - field
+ - chunli
+ - vega
+ - guile_mb
+ - bonus
+ - car_mb
+ - sagat
+ - blanka
+ - dhalsim
+ - ehonda
+ - balrog
+ - zangief
+ - ken_hurry
+ - millions
+ - torpedo
+
+hardware:
+ platform: fast
+ stepper_controllers: pololu_tic
+
+fast:
+  net:
+    controller: neuron
+    io_loop:
+      front:
+        model: FP-I/O-3208
+        order: 1
+      back:
+        model: FP-I/O-1616
+        order: 2
+    watchdog: 1s
+  exp:
+    boards:
+      playfield:
+        model: FP-EXP-0071-2
+        led_fade_time: 100ms
+
+custom_code:
+  - custom_code.chunli.Chunli
+
+steppers:
+  chun_stepper:
+    number: "00506424"
+    homing_mode: switch
+    homing_direction: clockwise
+    homing_switch: s_stepper_home
+    pos_min: 0
+    pos_max: 1000000
+    named_positions:
+      10: stepper_up
+      20: stepper_down
+      999999: stepper_go
+    relative_positions:
+      50: stepper_forward_50
+      -50: stepper_back_50
+      0: stepper_stop
+    platform_settings:
+      max_acceleration: 40000
+      current_limit: 931
+      max_deceleration: 40000
+      max_speed: 2000000
+      poll_ms: 100ms
+      starting_speed: 0
+      step_mode: 1
+
+lights:
+  led_left_middle_gi_1:
+    number: playfield-1-1
+    tags: led_gi
+  led_left_middle_gi_2:
+    number: playfield-1-2
+    tags: led_gi
+  led_honda_defeat:
+    number: playfield-1-3
+  led_honda_torpedo:
+    number: playfield-1-4
+  led_honda_double:
+    number: playfield-1-5
+    tags: led_double
+  led_left_sling_gi_1:
+    number: playfield-1-6
+    tags: led_gi
+  led_left_sling_gi_2:
+    number: playfield-1-7
+    tags: led_gi
+  led_left_sling_gi_3:
+    number: playfield-1-8
+    tags: led_gi
+  led_shoot_again:
+    number: playfield-1-9
+  led_champion:
+    number: playfield-1-10
+  led_right_sling_gi_1:
+    number: playfield-1-11
+    tags: led_gi
+  led_right_sling_gi_2:
+    number: playfield-1-12
+    tags: led_gi
+  led_right_sling_gi_3:
+    number: playfield-1-13
+    tags: led_gi
+  led_balrog_double:
+    number: playfield-1-14
+    tags: led_double
+  led_balrog_power:
+    number: playfield-1-15
+    tags: led_power
+  led_mbison_defeat:
+    number: playfield-1-16
+  led_balrog_defeat:
+    number: playfield-1-17
+  led_chunli_double:
+    number: playfield-1-18
+    tags: led_double
+  led_chunli_power:
+    number: playfield-1-19
+    tags: led_power
+  led_chunli_defeat:
+    number: playfield-1-20
+  led_vega_defeat:
+    number: playfield-1-21
+  led_right_middle_gi_1:
+    number: playfield-1-22
+    tags: led_gi
+  led_right_middle_gi_2:
+    number: playfield-1-23
+    tags: led_gi
+  led_right_middle_gi_3:
+    number: playfield-1-24
+    tags: led_gi
+  led_right_middle_gi_4:
+    number: playfield-1-25
+    tags: led_gi
+  led_right_middle_gi_5:
+    number: playfield-1-26
+    tags: led_gi
+  led_right_middle_gi_6:
+    number: playfield-1-27
+    tags: led_gi
+  led_fighter_1:
+    number: playfield-1-28
+  led_fighter_2:
+    number: playfield-1-29
+  led_left_middle_gi_3:
+    number: playfield-2-1
+    tags: led_gi
+  led_left_middle_gi_4:
+    number: playfield-2-2
+    tags: led_gi
+  led_blanka_defeat:
+    number: playfield-2-3
+  led_blanka_car:
+    number: playfield-2-4
+  led_blanka_double:
+    number: playfield-2-5
+    tags: led_double
+  led_sagat_defeat:
+    number: playfield-2-6
+  led_zangief_defeat:
+    number: playfield-2-7
+  led_zangief_power:
+    number: playfield-2-8
+    tags: led_power
+  led_zangief_double:
+    number: playfield-2-9
+    tags: led_double
+  led_dhalsim_double:
+    number: playfield-2-10
+    tags: led_double
+  led_dhalsim_flame:
+    number: playfield-2-11
+  led_dhalsim_defeat:
+    number: playfield-2-12
+  led_left_middle_gi_5:
+    number: playfield-2-13
+    tags: led_gi
+  led_left_middle_gi_6:
+    number: playfield-2-14
+    tags: led_gi
+  led_left_rear_gi_1:
+    number: playfield-2-15
+    tags: led_gi
+  led_right_rear_gi_1:
+    number: playfield-2-16
+    tags: led_gi
+  led_pop_standups_1:
+    number: playfield-2-17
+  led_pop_standups_2:
+    number: playfield-2-18
+  led_pop_standups_3:
+    number: playfield-2-19
+  led_guile_defeat:
+    number: playfield-2-20
+  led_guile_advance:
+    number: playfield-2-21
+  led_guile_double:
+    number: playfield-2-22
+    tags: led_double
+  led_extra_ball:
+    number: playfield-2-23
+  led_ryu_double:
+    number: playfield-2-24
+    tags: led_double
+  led_ryu_millions:
+    number: playfield-2-25
+  led_ryu_defeat:
+    number: playfield-2-26
+  led_bracelet:
+    number: playfield-2-27
+  led_pop_bumper:
+    number: playfield-2-28
+    tags: led_gi
+  led_car_1:
+    number: playfield-3-1
+  led_car_2:
+    number: playfield-3-2
+  led_car_3:
+    number: playfield-3-3
+  led_car_4:
+    number: playfield-3-4
+  led_car_5:
+    number: playfield-3-5
+  led_car_6:
+    number: playfield-3-6
+  led_car_flash_1_1:
+    number: playfield-3-7
+    tags: led_car_flash_1
+  led_car_flash_1_2:
+    number: playfield-3-8
+    tags: led_car_flash_1
+  led_car_flash_1_3:
+    number: playfield-3-9
+    tags: led_car_flash_1
+  led_car_flash_1_4:
+    number: playfield-3-10
+    tags: led_car_flash_1
+  led_car_flash_1_5:
+    number: playfield-3-11
+    tags: led_car_flash_1
+  led_car_flash_1_6:
+    number: playfield-3-12
+    tags: led_car_flash_1
+  led_car_flash_1_7:
+    number: playfield-3-13
+    tags: led_car_flash_1
+  led_car_flash_1_8:
+    number: playfield-3-14
+    tags: led_car_flash_1
+  led_car_flash_2_1:
+    number: playfield-3-15
+    tags: led_car_flash_2
+  led_car_flash_2_2:
+    number: playfield-3-16
+    tags: led_car_flash_2
+  led_car_flash_2_3:
+    number: playfield-3-17
+    tags: led_car_flash_2
+  led_car_flash_2_4:
+    number: playfield-3-18
+    tags: led_car_flash_2
+  led_car_flash_2_5:
+    number: playfield-3-19
+    tags: led_car_flash_2
+  led_car_flash_2_6:
+    number: playfield-3-20
+    tags: led_car_flash_2
+  led_car_flash_2_7:
+    number: playfield-3-21
+    tags: led_car_flash_2
+  led_car_flash_2_8:
+    number: playfield-3-22
+    tags: led_car_flash_2
+  led_flasher_left_1:
+    number: playfield-4-1
+    tags: led_flasher_left
+  led_flasher_left_2:
+    number: playfield-4-2
+    tags: led_flasher_left
+  led_flasher_left_3:
+    number: playfield-4-3
+    tags: led_flasher_left
+  led_flasher_left_4:
+    number: playfield-4-4
+    tags: led_flasher_left
+  led_flasher_left_5:
+    number: playfield-4-5
+    tags: led_flasher_left
+  led_flasher_left_6:
+    number: playfield-4-6
+    tags: led_flasher_left
+  led_flasher_left_7:
+    number: playfield-4-7
+    tags: led_flasher_left
+  led_flasher_left_8:
+    number: playfield-4-8
+    tags: led_flasher_left
+  led_flasher_middle_1:
+    number: playfield-4-9
+    tags: led_flasher_middle
+  led_flasher_middle_2:
+    number: playfield-4-10
+    tags: led_flasher_middle
+  led_flasher_middle_3:
+    number: playfield-4-11
+    tags: led_flasher_middle
+  led_flasher_middle_4:
+    number: playfield-4-12
+    tags: led_flasher_middle
+  led_flasher_middle_5:
+    number: playfield-4-13
+    tags: led_flasher_middle
+  led_flasher_middle_6:
+    number: playfield-4-14
+    tags: led_flasher_middle
+  led_flasher_middle_7:
+    number: playfield-4-15
+    tags: led_flasher_middle
+  led_flasher_middle_8:
+    number: playfield-4-16
+    tags: led_flasher_middle
+  led_flasher_rightrear_1:
+    number: playfield-4-17
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_2:
+    number: playfield-4-18
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_3:
+    number: playfield-4-19
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_4:
+    number: playfield-4-20
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_5:
+    number: playfield-4-21
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_6:
+    number: playfield-4-22
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_7:
+    number: playfield-4-23
+    tags: led_flasher_rightrear
+  led_flasher_rightrear_8:
+    number: playfield-4-24
+    tags: led_flasher_rightrear
+  led_flasher_right_1:
+    number: playfield-4-25
+    tags: led_flasher_right
+  led_flasher_right_2:
+    number: playfield-4-26
+    tags: led_flasher_right
+  led_flasher_right_3:
+    number: playfield-4-27
+    tags: led_flasher_right
+  led_flasher_right_4:
+    number: playfield-4-28
+    tags: led_flasher_right
+  led_flasher_right_5:
+    number: playfield-4-29
+    tags: led_flasher_right
+  led_flasher_right_6:
+    number: playfield-4-30
+    tags: led_flasher_right
+  led_flasher_right_7:
+    number: playfield-4-31
+    tags: led_flasher_right
+  led_flasher_right_8:
+    number: playfield-4-32
+    tags: led_flasher_right
+
+switches:
+  s_right_ramp_divert:
+    number: front-5
+  s_left_flipper:
+    number: front-2
+    tags: left_flipper
+  s_right_flipper:
+    number: front-4
+    tags: right_flipper
+  s_upper_flipper:
+    number: front-3
+  s_start:
+    number: front-1
+    tags: start
+  s_action:
+    number: front-0
+  s_drain:
+    number: front-24
+  s_trough:
+    number: front-6
+  s_shooter:
+    number: front-25
+  s_left_inlane:
+    number: front-26
+    tags: playfield_active
+  s_left_outlane:
+    number: front-27
+    tags: playfield_active
+  s_right_inlane:
+    number: front-28
+    tags: playfield_active
+  s_right_outlane:
+    number: front-29
+    tags: playfield_active
+  s_left_sling:
+    number: front-30
+  s_right_sling:
+    number: front-31
+  s_left_vuk:
+    number: front-19
+  s_right_vuk:
+    number: front-20
+  s_right_standup_1:
+    number: front-21
+    tags: playfield_active
+  s_right_standup_2:
+    number: front-22
+    tags: playfield_active
+  s_center_standup_1:
+    number: front-8
+    tags: playfield_active
+  s_center_standup_2:
+    number: front-9
+    tags: playfield_active
+  s_center_standup_3:
+    number: front-10
+    tags: playfield_active
+  s_pop_bumper:
+    number: front-11
+  s_pop_standup_1:
+    number: front-12
+    tags: playfield_active
+  s_pop_standup_2:
+    number: front-13
+    tags: playfield_active
+  s_pop_standup_3:
+    number: front-14
+    tags: playfield_active
+  s_center_spinner:
+    number: front-15
+    tags: playfield_active
+  s_loop_spinner:
+    number: back-9
+    tags: playfield_active
+  s_left_ramp_rollover:
+    number: back-1
+    tags: playfield_active
+  s_right_orbit_rollover:
+    number: back-2
+    tags: playfield_active
+  s_left_orbit_rollover:
+    number: back-3
+    tags: playfield_active
+  s_punchback_1:
+    number: back-4
+    tags: playfield_active
+  s_punchback_2:
+    number: back-5
+    tags: playfield_active
+  s_chunli_entrance:
+    number: back-8
+    tags: playfield_active
+  s_chunli_exit:
+    number: back-0
+    tags: playfield_active
+  s_zangief:
+    number: back-10
+    tags: playfield_active
+  s_guile_opto:
+    number: back-11
+    tags: playfield_active
+  s_stepper_home:
+    number: back-12
+
+spinners:
+  loop_spinner:
+    switch: s_loop_spinner
+    active_ms: 500
+  center_spinner:
+    switch: s_center_spinner
+    active_ms: 500
+
+coils:
+  c_autolauncher:
+    number: front-0
+    default_pulse_ms: 30ms
+  c_drain_eject:
+    number: front-1
+    default_pulse_ms: 60ms
+    default_hold_power: 0.25
+  c_trough_eject:
+    number: front-2
+    default_pulse_ms: 40ms
+    default_hold_power: 0.25
+  c_left_sling:
+    number: front-5
+    default_pulse_ms: 20
+  c_right_sling:
+    number: front-6
+    default_pulse_ms: 20
+  c_left_vuk:
+    number: back-0
+    default_pulse_ms: 60
+  c_right_vuk:
+    number: back-1
+    default_pulse_ms: 60
+  c_right_ramp_divert:
+    number: back-2
+    default_hold_power: 1.0
+    default_pulse_ms: 20
+  c_left_ramp_divert:
+    number: back-3
+    default_hold_power: 1.0
+    default_pulse_ms: 20
+  c_pop_bumper:
+    number: back-5
+    default_pulse_ms: 20
+  c_left_flipper:
+    number: front-4
+    default_hold_power: 1.0
+    default_pulse_ms: 30
+    allow_enable: true
+  c_right_flipper:
+    number: front-3
+    default_hold_power: 1.0
+    default_pulse_ms: 30
+    allow_enable: true
+  c_upper_flipper:
+    number: back-4
+    default_hold_power: 1.0
+    default_pulse_ms: 30
+    allow_enable: true
+  c_car_mech:
+    number: back-6
+    default_pulse_ms: 200
+
+flippers:
+  left_flipper:
+    main_coil: c_left_flipper
+    activation_switch: s_left_flipper
+  right_flipper:
+    main_coil: c_right_flipper
+    activation_switch: s_right_flipper
+  upper_flipper:
+    main_coil: c_upper_flipper
+    activation_switch: s_upper_flipper
+
+event_player:
+  trigger_slow_speed:   
+    set_tic_velocity: 
+      velocity: 100000    # Speed 1: Slow (10 microsteps/sec)
+  trigger_medium_speed: 
+    set_tic_velocity: 
+      velocity: 300000    # Speed 2: Medium (30 microsteps/sec)
+  trigger_fast_speed:   
+    set_tic_velocity: 
+      velocity: 600000    # Speed 3: Fast (60 microsteps/sec)
+  trigger_motor_stop:   
+    set_tic_velocity: 
+      velocity: 0         # Stop Command
+
+diverters:
+  left_ramp:
+    activation_coil: c_left_ramp_divert
+    type: hold
+    activate_events: fight_qualified_event, ball_started{current_player.fight_qualified==1}, logicblock_chunli_hits_hit{remaining==1}, logicblock_vega_hits_hit{remaining==1}, mode_field_started{current_player.fight_qualified==1}, logicblock_blanka_hits_hit{remaining==1}, logicblock_zangief_hits_hit{remaining==1}, logicblock_sagat_hits_hit{remaining==1}, logicblock_dhalsim_hits_hit{remaining==1}, logicblock_balrog_hits_hit{remaining==1}, logicblock_ehonda_hits_hit{remaining==1}
+    enable_events: ball_started, multiball_guile_mb_ended
+    deactivate_events: vega_started{device.counters.vega_hits.value<2}, chunli_started{device.counters.chunli_hits.value<2}, mode_field_started{current_player.fight_qualified!=1}, ball_ended, game_ending, ehonda_started{device.counters.ehonda_hits.value<2}, blanka_started{device.counters.blanka_hits.value<2}, dhalsim_started{device.counters.dhalsim_hits.value<2}, sagat_started{device.counters.sagat_hits.value<2}, balrog_started{device.counters.balrog_hits.value<2}, zangief_started{device.counters.zangief_hits.value<2}
+    disable_events: ball_ended, game_ending, guile_mb_started
+    targets_when_active: playfield
+    targets_when_inactive: playfield
+
+  right_ramp:
+    activation_coil: c_right_ramp_divert
+    type: hold
+    activate_events: car_mb_qualified_event, ball_started{current_player.car_mb_qualified==1}, mode_field_started{current_player.car_mb_qualified==1}
+    deactivate_events: vega_started, chunli_started, mode_field_started{current_player.car_mb_qualified!=1}, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started
+    targets_when_active: playfield
+    targets_when_inactive: playfield
+    disable_events: ball_ended, game_ending, guile_mb_started
+    enable_events: ball_started, multiball_guile_mb_ended
+
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger_lane
+    tags: default
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_sling
+    switch: s_left_sling
+  right_slingshot:
+    coil: c_right_sling
+    switch: s_right_sling
+  pop_bumper:
+    coil: c_pop_bumper
+    switch: s_pop_bumper
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain_eject
+    eject_targets: bd_trough
+    tags: drain
+    eject_timeouts: 4s
+  bd_trough:
+    entrance_switch: s_trough
+    entrance_switch_full_timeout: 1000ms
+    ball_capacity: 3
+    eject_coil: c_trough_eject
+    eject_coil_enable_time: 500ms
+    tags: trough, home
+    eject_timeouts: 3s
+    eject_targets: bd_plunger_lane
+  bd_plunger_lane:
+    ball_switches: s_shooter
+    mechanical_eject: true
+    eject_timeouts: 3s
+    eject_coil: c_autolauncher
+  bd_left_vuk:
+    ball_switches: s_left_vuk
+    eject_coil: c_left_vuk
+    eject_timeouts: 1s
+  bd_right_vuk:
+    ball_switches: s_right_vuk
+    eject_coil: c_right_vuk
+    eject_timeouts: 1s
+  
+machine:
+  balls_installed: 3
+
+player_vars:
+  chunli_completed:
+    initial_value: 0
+  vega_completed:
+    initial_value: 0
+  fight_qualified:
+    initial_value: 0
+  guile_mb_qualified:
+    initial_value: 0
+  car_mb_qualified: 
+    initial_value: 0
+  guile_hits_count:
+    initial_value: 0
+  car_loop_spinner_hits_count:
+    initial_value: 0
+  center_spinner_hits_count:
+    initial_value: 0
+  super_meter:
+    initial_value: 0
+  guile_mb_played:
+    initial_value: 0
+  car_mb_played:
+    initial_value: 0
+  fights_completed:
+    initial_value: 0
+  torpedo_hits_count:
+    initial_value: 0
+  

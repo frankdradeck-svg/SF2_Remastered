@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bfpfmrm26nan"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_u4hyd"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_k6m6c"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="3_k6m6c"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_u4hyd")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label2" type="Label" parent="." unique_id=96281559]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 304.0
+offset_right = 2242.0
+offset_bottom = 414.0
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 80
+text = "Total Car Hits:"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=297892759]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 279.0
+offset_right = 1710.0
+offset_bottom = 511.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 140
+text = "0"
+script = ExtResource("2_k6m6c")
+variable_name = "car_hits"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=740805619]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 111.0
+offset_right = 1601.0
+offset_bottom = 417.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 180
+theme_override_font_sizes/bold_font_size = 160
+theme_override_font_sizes/bold_italics_font_size = 160
+theme_override_font_sizes/italics_font_size = 160
+theme_override_font_sizes/mono_font_size = 160
+bbcode_enabled = true
+text = "[wave]SMASH THE CAR[/wave]"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=826321544]
+position = Vector2(89, 70)
+scale = Vector2(0.3751627, 0.60717773)
+texture = ExtResource("3_k6m6c")
+
+[node name="MPFVariable" type="Label" parent="Sprite2D" unique_id=264983267]
+offset_left = 205.57727
+offset_top = -117.140305
+offset_right = 976.068
+offset_bottom = 74.859695
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 140
+text = "1"
+script = ExtResource("2_k6m6c")
+variable_name = "car_mb_smash_time_left"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="Label3" type="Label" parent="Sprite2D" unique_id=1778933487]
+offset_left = -140.93903
+offset_top = -105.61157
+offset_right = 368.17346
+offset_bottom = 59.388428
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 120
+text = "Time: "

@@ -1,0 +1,5 @@
+-c:v libtheora -q:v 7 -c:a libvorbis -q:a 5 output.ogv
+
+for i in *.mov; do ffmpeg -i "$i" -c:v libtheora -q:v 7 -c:a libvorbis -q:a 5 "${i%.*}.ogv"; done
+
+FOR /F "tokens=*" %G IN ('dir /b *.mov') DO ffmpeg -i "%G" -c:v libtheora -q:v 7 -c:a libvorbis -q:a 5 "%~nG.ogv"

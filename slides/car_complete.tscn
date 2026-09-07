@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dt13ey2u81jji"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_b2bmf"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_b2bmf")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label" type="Label" parent="." unique_id=1730150719]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 519.0
+offset_right = 1570.0
+offset_bottom = 861.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 250
+text = "CAR"
+
+[node name="Label3" type="Label" parent="." unique_id=730284880]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 784.0
+offset_right = 1742.0
+offset_bottom = 894.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Bonus stage multiball is lit at right orbit!"

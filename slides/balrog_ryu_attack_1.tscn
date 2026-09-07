@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cl7l316d3ymbt"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_dimj5"]
+[ext_resource type="VideoStream" uid="uid://b0yy4kh1o2y01" path="res://assets/balrog_ryu_attack_1.ogv" id="2_dimj5"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_uik8l"]
+
+[node name="Fight" type="Control" unique_id=1718823309]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_dimj5")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1415132247]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_dimj5")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_uik8l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

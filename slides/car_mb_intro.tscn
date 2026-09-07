@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://wxd5kaxnh8ln"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_p3hcr"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_p3hcr")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label" type="Label" parent="." unique_id=1730150719]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 478.0
+offset_right = 2136.0
+offset_bottom = 820.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 200
+text = "CAR MULTIBALL"
+
+[node name="Label2" type="Label" parent="." unique_id=96281559]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 682.0
+offset_right = 1857.0
+offset_bottom = 792.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Shoot center standups to build jackpot value"

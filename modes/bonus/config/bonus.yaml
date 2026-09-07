@@ -1,0 +1,32 @@
+#config_version=6
+
+mode_settings:
+  bonus_entries:
+    - entry: heavy_kicks
+      text: "Heavy Kicks Landed"
+      player_score_entry: sling_pop_hits_count
+      score: 5000
+    - entry: super_meter
+      text: "Build Super Meter"
+      player_score_entry: pop_standups_hits_count
+      score: 10000
+
+
+slide_player:
+  mode_bonus_started: 
+    bonus_videos:
+      expire: 3s
+      transition: fade
+      priority: 101
+    bonus:
+      action: play
+
+  bonus_start:
+    bonus:
+      action: update
+      tokens:
+        entry: initial
+  bonus_entry:
+    bonus:
+      action: update
+

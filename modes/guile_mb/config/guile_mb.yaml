@@ -1,0 +1,282 @@
+#config_version=6
+
+mode:
+  start_events: guile_mb_started
+  stop_events: ball_will_end, multiball_guile_mb_ended
+  priority: 300
+
+slide_player:
+  mode_guile_mb_started: 
+    guile_mb:
+      action: play
+    field:
+      action: remove
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value<=1}:
+    guile_mb_jackpot:
+      action: play
+      expire: 2s
+      priority: 1
+    guile_videos:
+      action: play
+      expire: 3s
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==2}:
+    guile_mb_jackpot:
+      action: remove
+    guile_mb_2xjackpot:
+      action: play
+      expire: 2s
+      priority: 1
+    guile_videos:
+      action: play
+      expire: 3s
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==3}:
+    guile_mb_2xjackpot:
+      action: remove
+    guile_mb_3xjackpot:
+      action: play
+      expire: 2s
+      priority: 1
+    guile_videos:
+      action: play
+      expire: 3s
+  guile_mb_super_jackpot_event:
+    guile_mb_3xjackpot: 
+      action: remove
+    guile_mb_superjackpot:
+      action: play
+      expire: 3s
+      priority: 1000
+
+sound_player:
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value<=1}:
+    jackpot:
+      bus: voice
+      action: replace
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==2}:
+    double_jackpot:
+      bus: voice
+      action: replace
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==3}:
+    triple_jackpot:
+      bus: voice
+      action: replace
+  guile_mb_super_jackpot_event:
+    super_jackpot:
+      bus: voice
+      action: replace
+
+show_player:
+  mode_guile_mb_started:
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_double
+        color: red
+  multiball_guile_mb_timer_start:
+    flash_color:
+      key: ball_save2
+      speed: 2
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  multiball_guile_mb_hurry_up:
+    flash_color:
+      key: ball_save2
+      speed: 4
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  multiball_guile_mb_shoot_again_ended:
+    ball_save2: stop
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==3}:
+    flash_color:
+      speed: 6
+      show_tokens:
+        lights: led_extra_ball
+        color: red
+    off:
+      show_tokens:
+        lights: led_double
+  guile_mb_base_jackpot_event:
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+  guile_mb_super_jackpot_event:
+    off:
+      show_tokens:
+        lights: led_extra_ball
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_double
+        color: red
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+
+multiballs:
+  guile_mb:
+    ball_count: 3
+    shoot_again: 30s
+    hurry_up_time: 10s
+    grace_period: 5s
+    start_events: mode_guile_mb_started
+
+variable_player:
+  s_guile_opto_active:
+    score: 150000
+  s_center_spinner_active:
+    score: 5000
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value<=1}:
+    score: 2000000
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==2}:
+    score: 4000000
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==3}:
+    score: 6000000
+  guile_mb_super_jackpot_event:
+    score: 15000000
+  mode_guile_mb_started:
+    guile_mb_qualified:
+      int: 0
+      action: set
+    guile_mb_played:
+      int: 1
+      action: set
+  
+
+light_player:
+  guile_mb_base_jackpot_event{device.counters.guile_mb_base_jackpot_hits.value==3}:
+    led_double: off
+    led_zangief_double: stop
+    led_blanka_double: stop
+    led_chunli_double: stop
+    led_balrog_double: stop
+    led_guile_double: stop
+    led_dhalsim_double: stop
+    led_ryu_double: stop
+    led_honda_double: stop
+  led_zangief_double_solid:
+    led_zangief_double:
+      color: orange
+      priority: 1
+  led_chunli_double_solid:
+    led_chunli_double:
+      color: orange
+      priority: 1
+  led_balrog_double_solid:
+    led_balrog_double:
+      color: orange
+      priority: 1
+  led_guile_double_solid:
+    led_guile_double:
+      color: orange
+      priority: 1
+  led_dhalsim_double_solid:
+    led_dhalsim_double:
+      color: orange
+      priority: 1
+  led_blanka_double_solid:
+    led_blanka_double:
+      color: orange
+      priority: 1
+  led_ryu_double_solid:
+    led_ryu_double:
+      color: orange
+      priority: 1
+  led_honda_double_solid:
+    led_honda_double:
+      color: orange
+      priority: 1
+
+
+counters:
+  guile_mb_base_jackpot_hits:
+    count_events: guile_mb_base_jackpot_event
+    starting_count: 0
+    count_complete_value: 5
+    direction: up
+    events_when_complete: guile_mb_super_jackpot_event
+    reset_on_complete: true
+    disable_on_complete: false
+  guile_mb_zangief_double_hits:
+    count_events: s_zangief_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_zangief_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_honda_double_hits:
+    count_events: s_left_vuk_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_honda_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_balrog_double_hits:
+    count_events: s_right_vuk_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_balrog_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_chunli_double_hits:
+    count_events: s_chunli_entrance_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_chunli_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_blanka_double_hits:
+    count_events: s_left_orbit_rollover_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_blanka_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_ryu_double_hits:
+    count_events: s_loop_spinner_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_ryu_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_guile_double_hits:
+    count_events: s_guile_opto_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_guile_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_dhalsim_double_hits:
+    count_events: s_center_spinner_active{device.counters.guile_mb_base_jackpot_hits.value!=4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event, led_dhalsim_double_solid
+    reset_on_complete: false
+    reset_events: guile_mb_super_jackpot_event
+    disable_on_complete: false
+  guile_mb_super_jackpot_hits:
+    count_events: s_center_standup_2_active{device.counters.guile_mb_base_jackpot_hits.value==4}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_event
+    reset_on_complete: true
+    disable_on_complete: false

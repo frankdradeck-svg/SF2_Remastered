@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://spcsrq1c3up0"]
+
+[ext_resource type="AudioStream" uid="uid://dkkk6e0g0ovsb" path="res://sounds/car_mb_ryu_1.wav" id="1_yucsm"]
+[ext_resource type="AudioStream" uid="uid://dqo86toy8exsp" path="res://sounds/car_mb_ryu_2.wav" id="2_jll24"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_yucsm")
+stream_1/stream = ExtResource("2_jll24")

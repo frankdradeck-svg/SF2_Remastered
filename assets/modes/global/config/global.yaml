@@ -1,0 +1,50 @@
+#config_version=6
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_will_end
+  priority: 101
+
+slide_player:
+  fight_qualified_event:
+    challenger_video:
+      expire: 8s
+
+random_event_player:
+  choose_fight:
+    events:
+      fight1_started: 50
+      fight2_started: 50
+      force_all: true
+
+variable_player:
+  game_started:
+    fight1_completed:
+      int: 0
+      action: set
+    fight2_completed:
+      int: 0
+      action: set
+    fight_qualified:
+      int: 0
+      action: set
+  fight_qualified_event:
+    fight_qualified:
+      int: 1
+      action: set
+
+counters:
+  guile_hits:
+    count_events: s_guile_opto_active
+    starting_count: 0
+    count_complete_value: 3
+    direction: up
+    events_when_complete: fight_qualified_event
+    persist_state: true
+    reset_on_complete: true
+  fight1_hits:
+    count_events: s_left_ramp_rollover_active{urrent_player.fight_qualified==1}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: choose_fight

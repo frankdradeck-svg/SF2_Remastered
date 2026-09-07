@@ -1,0 +1,249 @@
+#config_version=6
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_will_end
+  priority: 200
+
+sound_player:
+  s_center_spinner_active:
+    spinner2:
+      bus: effects_loud
+  s_loop_spinner_active:
+    spinner2:
+      bus: effects_loud
+  s_left_sling_active:
+    sling1:
+      bus: effects
+  s_right_sling_active:
+    sling2:
+      bus: effects
+  super_meter_qualified_event:
+    super_meter_maxed:
+      bus: voice
+  timer_super_meter_timer_started:
+    double_scoring:
+      bus: voice
+  s_zangief_active:
+    ramp_1:
+      bus: effects_loud
+  s_chunli_entrance_active:
+    ramp_2:
+      bus: effects_loud
+  s_guile_opto_active:
+    ramp_3:
+      bus: effects_loud
+  s_pop_bumper_active:
+    standup:
+      bus: effects_loud
+  s_pop_standup_1_active:
+    standup:
+      bus: effects_loud
+  s_pop_standup_2_active:
+    standup:
+      bus: effects_loud
+  s_pop_standup_3_active:
+    standup:
+      bus: effects_loud
+  balldevice_bd_left_vuk_ball_eject_attempt:
+    scoop_1:
+      bus: effects_loud
+  balldevice_bd_right_vuk_ball_eject_attempt:
+    scoop_2:
+      bus: effects_loud
+  combo_1_hit:
+    good_shot_randomizer:
+      bus: voice_loud
+  combo_2_hit:
+    good_shot_randomizer:
+      bus: voice_loud
+
+show_player:
+  super_meter_qualified_event:
+    super_meter_full:
+      speed: 2
+      priority: 1
+  timer_super_meter_timer_started:
+    off:
+      show_tokens:
+        lights: led_fighter_1, led_fighter_2
+  power_move_event:
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+
+slide_player:
+  mode_global_started:
+    super_meter:
+      action: play
+      priority: 100
+  mode_global_started{super_meter_qualified==1}:
+    super_meter_2:
+      action: play
+      priority: 100
+  super_meter_qualified_event:
+    super_meter_2:
+      action: play
+      priority: 100
+  timer_super_meter_timer_started:
+    super_meter_2:
+      action: remove
+
+random_event_player:
+  choose_fight:
+    events:
+      vega_started{current_player.vega_completed!=1}: 12
+      chunli_started{current_player.chunli_completed!=1}: 16
+      blanka_started{current_player.vega_completed!=1}: 12
+      zangief_started{current_player.chunli_completed!=1}: 12
+      balrog_started{current_player.vega_completed!=1}: 12
+      ehonda_started{current_player.chunli_completed!=1}: 12
+      sagat_started{current_player.vega_completed!=1}: 12
+      dhalsim_started{current_player.chunli_completed!=1}: 12
+
+timers:
+  super_meter_timer:
+    start_value: 20
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: s_right_standup_1_active{current_player.super_meter_qualified==1}
+      - action: start
+        event: s_right_standup_2_active{current_player.super_meter_qualified==1}
+
+variable_player:
+  fight_qualified_event:
+    fight_qualified:
+      int: 1
+      action: set
+  car_mb_qualified_event:
+    car_mb_qualified:
+      int: 1
+      action: set
+  guile_mb_qualified_event:
+    guile_mb_qualified:
+      int: 1
+      action: set
+  logicblock_center_spinner_hits_updated:
+    center_spinner_hits_count:
+      int: value
+      action: set
+  logicblock_torpedo_hits_updated:
+    torpedo_hits_count:
+      int: value
+      action: set
+  logicblock_guile_hits_updated:
+    guile_hits_count:
+      int: value
+      action: set
+  logicblock_sling_pop_hits_updated:
+    sling_pop_hits_count:
+      int: value
+      action: set
+  logicblock_pop_standups_hits_updated:
+    pop_standups_hits_count:
+      int: value
+      action: set
+  logicblock_car_loop_spinner_hits_updated:
+    car_loop_spinner_hits_count:
+      int: value
+      action: set
+  logicblock_super_meter_counter_updated:
+    super_meter:
+      int: value
+      action: set
+  super_meter_qualified_event:
+    super_meter_qualified:
+      int: 1
+      action: set
+  timer_super_meter_timer_started:
+    super_meter_qualified:
+      int: 0
+      action: set
+    super_meter_running:
+      int: 1
+      action: set
+  timer_super_meter_timer_stopped:
+    super_meter_running:
+      int: 0
+      action: set
+  timer_super_meter_timer_complete:
+    super_meter_running:
+      int: 0
+      action: set
+  mode_global_started:
+    super_meter_running:
+      int: 0
+      action: set
+
+sequence_shots:
+  combo_1:
+    switch_sequence: s_zangief, s_chunli_entrance
+    sequence_timeout: 3s
+  combo_2:
+    switch_sequence: s_zangief, s_guile_opto
+    sequence_timeout: 3s
+  loop:
+    switch_sequence: s_loop_spinner, s_left_orbit_rollover
+    sequence_timeout: 1s
+
+counters:
+  guile_hits:
+    count_events: s_guile_opto_active
+    starting_count: 2
+    count_complete_value: 5
+    direction: up
+    events_when_complete: guile_mb_qualified_event
+    persist_state: true
+    reset_on_complete: false
+    disable_on_complete: true
+  center_spinner_hits:
+    count_events: s_center_spinner_active
+    starting_count: 0
+    count_complete_value: 30
+    direction: up
+    events_when_complete: fight_qualified_event
+    restart_events: finishing_chunli, finishing_vega, finishing_balrog, finishing_blanka, finishing_dhalsim, finishing_ehonda, finishing_sagat, finishing_zangief
+    persist_state: true
+    reset_on_complete: false
+  sling_pop_hits:
+    count_events: s_left_sling_active, s_right_sling_active, s_pop_bumper_active
+    starting_count: 1
+    direction: up
+    persist_state: true
+  pop_standups_hits:
+    count_events: s_pop_standup_1_active, s_pop_standup_2_active, s_pop_standup_3_active
+    starting_count: 1
+    direction: up
+    persist_state: true
+  car_loop_spinner_hits:
+    count_events: s_loop_spinner_active
+    starting_count: 0
+    count_complete_value: 60
+    direction: up
+    persist_state: true
+    disable_on_complete: true
+    events_when_complete: car_mb_qualified_event
+    reset_on_complete: false
+  super_meter_counter:
+    count_events: s_pop_bumper_active{device.counters.super_meter_counter.value<20 and current_player.super_meter_running!=1}, s_pop_standup_3_active{device.counters.super_meter_counter.value<20 and current_player.super_meter_running!=1}, s_pop_standup_2_active{device.counters.super_meter_counter.value<20 and current_player.super_meter_running!=1}, s_pop_standup_1_active{device.counters.super_meter_counter.value<20 and current_player.super_meter_running!=1}
+    starting_count: 0
+    direction: up
+    persist_state: true
+    count_complete_value: 20
+    reset_on_complete: false
+    disable_on_complete: false
+    events_when_complete: super_meter_qualified_event
+    control_events:
+      - event: timer_super_meter_timer_tick
+        action: subtract
+        value: 1
+
+  
+
+
+
+    

@@ -1,0 +1,22 @@
+#config_version=6
+
+mode:
+  start_events: ball_starting, timer_finishing_mode_1_timer_complete, timer_finishing_mode_2_timer_complete
+  stop_events: ball_will_end, fight1_started, fight2_started
+  priority: 100
+
+slide_player:
+  mode_field_started: 
+    field:
+      action: play
+    fight:
+      action: remove
+  s_guile_opto_active:
+    guile_videos:
+      expire: 3s
+
+variable_player:
+  s_left_inlane_active:
+    score: 100
+  s_guile_opto_active:
+    score: 1500

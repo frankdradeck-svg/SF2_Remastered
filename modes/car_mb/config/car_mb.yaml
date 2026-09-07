@@ -1,0 +1,371 @@
+#config_version=6
+
+mode:
+  start_events: car_mb_started
+  stop_events: ball_will_end, multiball_car_mb_ended
+  priority: 300
+
+sound_player:
+  mode_car_mb_started:
+    car_mb_music:
+      bus: music
+    bonus_stage_start:
+      bus: voice_boost
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==8}:
+    car_mb_progress_1:
+      bus: voice_boost
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==16}:
+    car_mb_progress_2:
+      bus: voice_boost
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==24}:
+    car_3:
+      bus: voice_boost
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==30}:
+    car_4:
+      bus: voice_boost
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value!=0}:
+    car_mb_audio_randomizer:
+      bus: voice_loud
+    car_mb_damage:
+      bus: effects_loud
+  s_guile_opto_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+  spinner_center_spinner_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+  s_right_orbit_rollover_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+  s_zangief_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+  s_left_vuk_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+  s_right_vuk_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+  spinner_loop_spinner_active{current_player.jackpot_time==1}:
+    car_mb_jackpot:
+      bus: voice_boost
+    hurry:
+      bus: voice_boost
+  
+
+slide_player:
+  mode_car_mb_started: 
+    car_still_dmg0:
+      action: play
+    field:
+      action: remove
+    car_mb_intro:
+      expire: 3s
+  timer_car_intro_timer_complete:
+    car_smash_time:
+      action: play
+      priority: 3
+  timer_car_jackpot_timer_complete:
+    car_smash_time:
+      action: play
+      priority: 3
+    car_mb_jackpot_time:
+      action: remove
+  timer_car_smash_timer_complete:
+    car_mb_jackpot_time:
+      action: play
+      priority: 3
+    car_smash_time:
+      action: remove
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==2}:
+    car_still_dmg1:
+      action: play
+      priority: 1
+    car_still_dmg0:
+      action: remove
+    car_mb_hit_dmg0_to_dmg1:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==4}:
+    car_still_dmg2:
+      action: play
+      priority: 1
+    car_still_dmg1:
+      action: remove
+    car_mb_hit_dmg1_to_dmg2:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==6}:
+    car_still_dmg3:
+      action: play
+      priority: 1
+    car_still_dmg2:
+      action: remove
+    car_mb_hit_dmg2_to_dmg3:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==8}:
+    car_mb_hit_dmg3_to_dmg3:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==10}:
+    car_still_dmg4:
+      action: play
+      priority: 1
+    car_still_dmg3:
+      action: remove
+    car_mb_hit_dmg3_to_dmg4:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==12}:
+    car_mb_hit_dmg4_to_dmg4:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==14}:
+    car_still_dmg5:
+      action: play
+      priority: 1
+    car_still_dmg4:
+      action: remove
+    car_mb_hit_dmg4_to_dmg5:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==16}:
+    car_mb_hit_dmg5_to_dmg5:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==18}:
+    car_still_dmg6:
+      action: play
+      priority: 1
+    car_still_dmg5:
+      action: remove
+    car_mb_hit_dmg5_to_dmg6:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==20}:
+    car_mb_hit_dmg6_to_dmg6:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==22}:
+    car_still_dmg7:
+      action: play
+      priority: 1
+    car_still_dmg6:
+      action: remove
+    car_mb_hit_dmg6_to_dmg7:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==24}:
+    car_mb_hit_dmg7_to_dmg7:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==26}:
+    car_still_dmg8:
+      action: play
+      priority: 1
+    car_still_dmg7:
+      action: remove
+    car_mb_hit_dmg7_to_dmg8:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==28}:
+    car_mb_hit_dmg8_to_dmg8:
+      expire: 2s
+      priority: 2
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==30}:
+    car_still_dmg9:
+      action: play
+      priority: 1
+    car_still_dmg8:
+      action: remove
+    car_mb_hit_dmg8_to_dmg9:
+      expire: 2s
+      priority: 2
+
+show_player:
+  mode_car_mb_started:
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_extra_ball
+        color: red
+    car_mb_idle:
+      speed: 12
+  multiball_car_mb_timer_start:
+    flash_color:
+      key: ball_save2
+      speed: 2
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  multiball_car_mb_hurry_up:
+    flash_color:
+      key: ball_save2
+      speed: 4
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  multiball_car_mb_shoot_again_ended:
+    ball_save2: stop
+  timer_car_jackpot_timer_complete:
+    flash_color:
+      speed: 6
+      show_tokens:
+        lights: led_extra_ball
+        color: red
+    off:
+      show_tokens:
+        lights: led_double
+  timer_car_smash_timer_complete:
+    off:
+      show_tokens:
+        lights: led_extra_ball
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_double
+        color: red
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value!=0}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 1
+  s_guile_opto_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+  spinner_center_spinner_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+  s_right_orbit_rollover_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+  s_zangief_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+  s_left_vuk_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+  s_right_vuk_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+  spinner_loop_spinner_active{current_player.jackpot_time==1}:
+    car_mb_hit_single:
+      speed: 6
+      priority: 1
+      loops: 2
+
+multiballs:
+  car_mb:
+    ball_count: 2
+    shoot_again: 30s
+    hurry_up_time: 10s
+    grace_period: 5s
+    start_events: mode_car_mb_started
+
+
+counters:
+  center_standups_hits:
+    count_events: s_center_standup_1_active{current_player.jackpot_time!=1}, s_center_standup_2_active{current_player.jackpot_time!=1}, s_center_standup_3_active{current_player.jackpot_time!=1}
+    starting_count: 0
+    direction: up
+    persist_state: true
+    start_enabled: true
+
+
+timers:
+  car_smash_timer:
+    start_value: 15
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: timer_car_intro_timer_complete
+      - action: restart
+        event: timer_car_jackpot_timer_complete
+  car_jackpot_timer:
+    start_value: 10
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: restart
+        event: timer_car_smash_timer_complete
+  car_intro_timer:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+
+variable_player:
+  mode_car_mb_started:
+    jackpot_time:
+      int: 0
+      action: set
+    jackpot_value:
+      int: 0
+      action: set
+    smash_rounds:
+      int: 1
+      action: set
+    car_mb_qualified:
+      int: 0
+      action: set
+    car_hits:
+      int: 0
+      action: set
+    car_mb_played:
+      int: 1
+      action: set
+  timer_car_jackpot_timer_complete:
+    jackpot_time:
+      int: 0
+      action: set
+    smash_rounds: 1
+  timer_car_smash_timer_complete:
+    jackpot_time:
+      int: 1
+      action: set
+    jackpot_value:
+      int: 100000 * current_player.smash_rounds * current_player.car_hits
+      action: set
+  s_guile_opto_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  spinner_center_spinner_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  s_right_orbit_rollover_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  s_zangief_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  s_left_vuk_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  s_right_vuk_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  spinner_loop_spinner_active{current_player.jackpot_time==1}:
+    score: current_player.jackpot_value
+  logicblock_center_standups_hits_updated:
+    car_hits:
+      int: value
+      action: set
+  timer_car_jackpot_timer_tick:
+    car_mb_jackpot_time_left:
+      int: device.timers.car_jackpot_timer.ticks
+      action: set
+  timer_car_smash_timer_tick:
+    car_mb_smash_time_left:
+      int: device.timers.car_smash_timer.ticks
+      action: set

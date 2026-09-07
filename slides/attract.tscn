@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://g0dh1xkw6086"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_o4v0r"]
+[ext_resource type="Texture2D" uid="uid://c43o8o6vjgp8y" path="res://assets/attract.jpg" id="2_gensg"]
+[ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_hhxni"]
+
+[node name="Attract" type="Control" unique_id=242744057]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o4v0r")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=415424786]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Attract" type="Sprite2D" parent="." unique_id=195101096]
+position = Vector2(956, 540)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_gensg")
+
+[node name="MPFCarousel" type="Control" parent="." unique_id=358002829]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_hhxni")
+carousel_name = "attract"
+metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
+
+[node name="gameover" type="Node2D" parent="MPFCarousel" unique_id=1530883169]
+
+[node name="Label" type="Label" parent="MPFCarousel/gameover" unique_id=1342922172]
+offset_left = 455.0
+offset_top = 711.0
+offset_right = 1431.0
+offset_bottom = 957.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 34
+theme_override_font_sizes/font_size = 180
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="title" type="Node2D" parent="MPFCarousel" unique_id=2027966841]
+
+[node name="Label" type="Label" parent="MPFCarousel/title" unique_id=2103027440]
+offset_left = 446.0
+offset_top = 711.0
+offset_right = 1422.0
+offset_bottom = 957.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 34
+theme_override_font_sizes/font_size = 180
+text = "Press Start"
+horizontal_alignment = 1

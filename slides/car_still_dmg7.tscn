@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://de87272sh05oa"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_t6pew"]
+[ext_resource type="Texture2D" uid="uid://ci6k8uakp1nv1" path="res://assets/car_still_damage_7.png" id="2_8a8hx"]
+
+[node name="Field" type="Control" unique_id=2085516752]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_t6pew")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1356588586]
+position = Vector2(962, 539)
+texture = ExtResource("2_8a8hx")

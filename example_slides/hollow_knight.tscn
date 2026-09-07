@@ -1,0 +1,398 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwyhdl2i4vyep"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_b71wd"]
+[ext_resource type="FontFile" uid="uid://dumvfllyi8lf3" path="res://godot_assets/Cinzel/static/Cinzel-Regular.ttf" id="2_mixwp"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_myvl5"]
+[ext_resource type="Texture2D" uid="uid://dwrptuvntsxh5" path="res://godot_assets/mask_and_vessel_assets/empty_mask.png" id="4_6vrr4"]
+[ext_resource type="Script" uid="uid://g50gvmnepohu" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="4_myvl5"]
+[ext_resource type="Texture2D" uid="uid://grluojgvkbrl" path="res://godot_assets/mask_and_vessel_assets/full_mask.png" id="6_smx5b"]
+
+[node name="base" type="Control"]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 1024.0
+script = ExtResource("1_b71wd")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="score" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -11.5
+offset_right = 27.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 23
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_mixwp")
+theme_override_font_sizes/font_size = 140
+text = "123456"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_myvl5")
+variable_name = "score"
+comma_separate = true
+min_digits = 3
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p4_score" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -147.0
+offset_right = 367.0
+offset_bottom = 2.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_mixwp")
+theme_override_font_sizes/font_size = 100
+text = "123456"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_myvl5")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+min_digits = 3
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p3_score" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = 506.0
+offset_right = 372.0
+offset_bottom = -17.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_mixwp")
+theme_override_font_sizes/font_size = 100
+text = "123456"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_myvl5")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+min_digits = 3
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p2_score" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = 355.0
+offset_right = 373.0
+offset_bottom = -288.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_mixwp")
+theme_override_font_sizes/font_size = 100
+text = "123456"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_myvl5")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+min_digits = 3
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="p1_score" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+offset_left = 38.0
+offset_top = 281.0
+offset_right = 373.0
+offset_bottom = 430.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_mixwp")
+theme_override_font_sizes/font_size = 100
+text = "123456"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_myvl5")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 3
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="ball" type="Label" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+offset_top = -96.0
+offset_right = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_mixwp")
+theme_override_font_sizes/font_size = 70
+text = "Ball 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_myvl5")
+variable_name = "ball"
+template_string = "Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="EmptyMask1" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(400, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask2" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(500, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask3" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(600, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask4" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(700, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask5" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(800, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask6" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "max_masks"
+condition_type = 5
+condition_value = "6"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="EmptyMask6" type="Sprite2D" parent="EmptyMask6"]
+z_index = 2
+position = Vector2(900, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask7" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "max_masks"
+condition_type = 5
+condition_value = "7"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="EmptyMask7" type="Sprite2D" parent="EmptyMask7"]
+z_index = 2
+position = Vector2(1000, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask8" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "max_masks"
+condition_type = 5
+condition_value = "8"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="EmptyMask8" type="Sprite2D" parent="EmptyMask8"]
+z_index = 2
+position = Vector2(1100, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="EmptyMask9" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "max_masks"
+condition_type = 5
+condition_value = "9"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="EmptyMask9" type="Sprite2D" parent="EmptyMask9"]
+z_index = 2
+position = Vector2(1200, 75)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_6vrr4")
+
+[node name="FullMask" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "1"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask" type="Sprite2D" parent="FullMask"]
+z_index = 2
+position = Vector2(400, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask2" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "2"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask2" type="Sprite2D" parent="FullMask2"]
+z_index = 2
+position = Vector2(500, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask3" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "3"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask3" type="Sprite2D" parent="FullMask3"]
+z_index = 2
+position = Vector2(600, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask4" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "4"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask4" type="Sprite2D" parent="FullMask4"]
+z_index = 2
+position = Vector2(700, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask5" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "5"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask5" type="Sprite2D" parent="FullMask5"]
+z_index = 2
+position = Vector2(800, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask6" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "6"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask6" type="Sprite2D" parent="FullMask6"]
+z_index = 2
+position = Vector2(900, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask7" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "7"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask7" type="Sprite2D" parent="FullMask7"]
+z_index = 2
+position = Vector2(1000, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask8" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "8"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask8" type="Sprite2D" parent="FullMask8"]
+z_index = 2
+position = Vector2(1100, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")
+
+[node name="FullMask9" type="Control" parent="."]
+anchors_preset = 0
+offset_bottom = 40.0
+script = ExtResource("4_myvl5")
+variable_name = "masks"
+condition_type = 5
+condition_value = "9"
+metadata/_custom_type_script = "uid://g50gvmnepohu"
+
+[node name="FullMask9" type="Sprite2D" parent="FullMask9"]
+z_index = 2
+position = Vector2(1200, 65)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_smx5b")

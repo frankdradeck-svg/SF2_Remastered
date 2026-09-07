@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dbayn3am8gd13"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_j4cmf"]
+[ext_resource type="Texture2D" uid="uid://s6emeqsbdeqq" path="res://assets/score.png" id="2_mixwp"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="3_myvl5"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_myvl5"]
+
+[node name="Base" type="Control" unique_id=2085516752]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j4cmf")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=406321241]
+position = Vector2(962.5, 926.0001)
+scale = Vector2(0.24804686, 0.419922)
+texture = ExtResource("3_myvl5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1782261875]
+position = Vector2(967.50006, 1013.50006)
+scale = Vector2(1.4199219, 0.8466797)
+texture = ExtResource("2_mixwp")
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1065429901]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 993.0
+offset_right = 432.0
+offset_bottom = 1076.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 60
+text = "1,000,000"
+horizontal_alignment = 1
+vertical_alignment = 2
+script = ExtResource("4_myvl5")
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="Label" type="Label" parent="." unique_id=1804712726]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 943.0
+offset_right = 339.0
+offset_bottom = 1006.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 45
+text = "Player 1"
+
+[node name="Label2" type="Label" parent="." unique_id=863869775]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 945.0
+offset_right = 813.0
+offset_bottom = 1008.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 45
+text = "Player 2"
+
+[node name="Label3" type="Label" parent="." unique_id=1403733770]
+layout_mode = 0
+offset_left = 1097.0
+offset_top = 945.0
+offset_right = 1270.0
+offset_bottom = 1008.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 45
+text = "Player 3"
+
+[node name="Label4" type="Label" parent="." unique_id=268774900]
+layout_mode = 0
+offset_left = 1560.0
+offset_top = 945.0
+offset_right = 1733.0
+offset_bottom = 1008.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 45
+text = "Player 4"
+
+[node name="Label5" type="Label" parent="." unique_id=1384905398]
+layout_mode = 0
+offset_left = 950.9376
+offset_top = 884.6875
+offset_right = 1126.9376
+offset_bottom = 947.6875
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "Free Play"
+
+[node name="MPFVariable2" type="Label" parent="." unique_id=1854050605]
+layout_mode = 0
+offset_left = 838.9376
+offset_top = 885.6875
+offset_right = 970.9376
+offset_bottom = 954.6875
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "Ball 2"
+script = ExtResource("4_myvl5")
+variable_name = "ball"
+template_string = "Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

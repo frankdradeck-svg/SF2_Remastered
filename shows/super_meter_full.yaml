@@ -1,0 +1,85 @@
+#show_version=6
+- time: 0
+  lights:
+    led_fighter_1: white
+    led_fighter_2: off
+
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: white
+    
+- time: '+1'
+  lights:
+    led_fighter_1: red
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: red
+    
+- time: '+1'
+  lights:
+    led_fighter_1: green
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: green
+    
+- time: '+1'
+  lights:
+    led_fighter_1: blue
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: blue
+    
+- time: '+1'
+  lights:
+    led_fighter_1: orange
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: orange
+    
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: white
+    led_fighter_2: white
+
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: red
+    led_fighter_2: red
+
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: off
+    
+- time: '+1'
+  lights:
+    led_fighter_1: blue
+    led_fighter_2: blue
+
+- time: '+1'
+  lights:
+    led_fighter_1: off
+    led_fighter_2: off

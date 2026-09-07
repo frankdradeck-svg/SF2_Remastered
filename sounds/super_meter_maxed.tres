@@ -1,0 +1,19 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://b806xbwlc8313"]
+
+[ext_resource type="AudioStream" uid="uid://v1cmpmqq8xr7" path="res://sounds/unprocessed/Super_maxed/super_meter_maxed.mp3" id="1_ii7iw"]
+[ext_resource type="AudioStream" uid="uid://fkf0nvm4d72f" path="res://sounds/unprocessed/Super_maxed/super_meter_maxed_4.mp3" id="3_t70we"]
+[ext_resource type="AudioStream" uid="uid://dn5w376piodtt" path="res://sounds/unprocessed/Super_maxed/super_meter_maxed_5.mp3" id="4_qhrlx"]
+[ext_resource type="AudioStream" uid="uid://nekh6vfy7ho1" path="res://sounds/unprocessed/Super_maxed/super_meter_maxed_9.wav" id="5_ir587"]
+[ext_resource type="AudioStream" uid="uid://1lgqlar1xov" path="res://sounds/unprocessed/Super_maxed/super_meter_maxed_10.wav" id="6_lalll"]
+[ext_resource type="AudioStream" uid="uid://bqo0yfaerf75h" path="res://sounds/unprocessed/Super_maxed/super_meter_max_8.mp3" id="7_7tm0h"]
+[ext_resource type="AudioStream" uid="uid://betxgbs7c1xlq" path="res://sounds/unprocessed/Super_maxed/super_meter_max_9.mp3" id="8_ho3xk"]
+
+[resource]
+streams_count = 7
+stream_0/stream = ExtResource("1_ii7iw")
+stream_1/stream = ExtResource("3_t70we")
+stream_2/stream = ExtResource("4_qhrlx")
+stream_3/stream = ExtResource("5_ir587")
+stream_4/stream = ExtResource("6_lalll")
+stream_5/stream = ExtResource("7_7tm0h")
+stream_6/stream = ExtResource("8_ho3xk")

@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://i4jtasaotcew"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_4xgho"]
+[ext_resource type="Texture2D" uid="uid://cjgyf8ilkqrjs" path="res://assets/bonus_frame.PNG" id="2_5bwht"]
+[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_fyms0"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_ktofo"]
+
+[node name="MPFSlide" type="Control" unique_id=1181075095]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_4xgho")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=737620385]
+position = Vector2(959.5, 538.25)
+scale = Vector2(1.2135614, 1.2021277)
+texture = ExtResource("2_5bwht")
+
+[node name="MPFConditionalChildren" type="Control" parent="Sprite2D" unique_id=526372369]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_fyms0")
+variable_type = 1
+variable_name = "entry"
+metadata/_custom_type_script = "uid://808knhb8e2nn"
+
+[node name="initial" type="Node2D" parent="Sprite2D/MPFConditionalChildren" unique_id=1721262417]
+
+[node name="MPFVariable" type="Label" parent="Sprite2D/MPFConditionalChildren/initial" unique_id=1252836581]
+offset_left = -228.6658
+offset_top = -16.013275
+offset_right = 336.20053
+offset_bottom = 175.10619
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "End of Ball 1"
+horizontal_alignment = 1
+script = ExtResource("4_ktofo")
+variable_name = "ball"
+template_string = "End of Ball %s"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="__default__" type="Node2D" parent="Sprite2D/MPFConditionalChildren" unique_id=1281514098]
+
+[node name="text" type="Label" parent="Sprite2D/MPFConditionalChildren/__default__" unique_id=605824131]
+offset_left = -290.46732
+offset_top = -112.50885
+offset_right = 282.53268
+offset_bottom = -16.50885
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "Bonus Text Entry"
+horizontal_alignment = 1
+script = ExtResource("4_ktofo")
+variable_type = 1
+variable_name = "text"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="score" type="Label" parent="Sprite2D/MPFConditionalChildren/__default__" unique_id=908561325]
+offset_left = -176.75249
+offset_top = -27.659292
+offset_right = 141.24751
+offset_bottom = 68.340706
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "1,000,000"
+horizontal_alignment = 1
+script = ExtResource("4_ktofo")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="subtotal" type="Node2D" parent="Sprite2D/MPFConditionalChildren" unique_id=1312942328]
+
+[node name="score" type="Label" parent="Sprite2D/MPFConditionalChildren/subtotal" unique_id=889432096]
+offset_left = -176.75249
+offset_top = -27.659292
+offset_right = 141.24751
+offset_bottom = 68.340706
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "1,000,000"
+horizontal_alignment = 1
+script = ExtResource("4_ktofo")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="text" type="Label" parent="Sprite2D/MPFConditionalChildren/subtotal" unique_id=1342633222]
+offset_left = -276.45905
+offset_top = -115.83627
+offset_right = 296.54095
+offset_bottom = -19.836273
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "Bonus Subtotal"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="total" type="Node2D" parent="Sprite2D/MPFConditionalChildren" unique_id=1548222909]
+
+[node name="score" type="Label" parent="Sprite2D/MPFConditionalChildren/total" unique_id=2060434813]
+offset_left = -176.75249
+offset_top = -27.659292
+offset_right = 141.24751
+offset_bottom = 68.340706
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "1,000,000"
+horizontal_alignment = 1
+script = ExtResource("4_ktofo")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="text" type="Label" parent="Sprite2D/MPFConditionalChildren/total" unique_id=650559594]
+offset_left = -215.48145
+offset_top = -115.83629
+offset_right = 203.12122
+offset_bottom = -19.836288
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "Bonus Total"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="multiplier" type="Node2D" parent="Sprite2D/MPFConditionalChildren" unique_id=1400141973]
+
+[node name="score" type="Label" parent="Sprite2D/MPFConditionalChildren/multiplier" unique_id=1716555419]
+offset_left = -176.75249
+offset_top = -27.659292
+offset_right = 141.24751
+offset_bottom = 68.340706
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "1,000,000"
+horizontal_alignment = 1
+script = ExtResource("4_ktofo")
+variable_type = 1
+variable_name = "score"
+template_string = "%sX"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="text" type="Label" parent="Sprite2D/MPFConditionalChildren/multiplier" unique_id=528153950]
+offset_left = -298.70758
+offset_top = -118.33186
+offset_right = 274.29242
+offset_bottom = -22.331863
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 70
+text = "Bonus Multiplier"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

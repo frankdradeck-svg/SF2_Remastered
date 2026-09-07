@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dy3vwus0aujvt"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_lwrkg"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_2imwg"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_lwrkg")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label3" type="Label" parent="." unique_id=730284880]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 548.0
+offset_right = 2115.0
+offset_bottom = 658.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Value:"
+
+[node name="Label3" type="Label" parent="Label3" unique_id=604832577]
+layout_mode = 0
+offset_left = -286.0
+offset_top = -195.0
+offset_right = 1261.0
+offset_bottom = 28.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 60
+text = "Shoot the flame spinner to build value
+Cashout at left scoop!"
+horizontal_alignment = 1
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1101555038]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 492.0
+offset_right = 2623.0
+offset_bottom = 724.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/font_size = 170
+text = "0"
+script = ExtResource("2_2imwg")
+variable_type = 1
+variable_name = "current_torpedo"
+initialize_empty = false
+update_event = "torpedo_value"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2099579562]
+layout_mode = 0
+offset_left = 562.0
+offset_top = 159.0
+offset_right = 2059.0
+offset_bottom = 465.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 180
+theme_override_font_sizes/bold_font_size = 160
+theme_override_font_sizes/bold_italics_font_size = 160
+theme_override_font_sizes/italics_font_size = 160
+theme_override_font_sizes/mono_font_size = 160
+bbcode_enabled = true
+text = "[wave]TORPEDO[/wave]"

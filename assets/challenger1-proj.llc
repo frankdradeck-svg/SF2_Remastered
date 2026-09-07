@@ -1,0 +1,12 @@
+{
+  version: 2,
+  mediaFileName: 'challenger1.ogv',
+  cutSegments: [
+    {
+      start: 6.881652463652482,
+      end: 8.740846688102895,
+      name: '',
+      selected: true,
+    },
+  ],
+}

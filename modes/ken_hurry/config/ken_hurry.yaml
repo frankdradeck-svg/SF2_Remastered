@@ -1,0 +1,110 @@
+#config_version=6
+
+mode:
+  start_events: mode_field_started{current_player.fights_completed==2 and current_player.ken_hurry_played!=1}, ken_hurry_test_event
+  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_ken_hurry_outro_timer_complete, timer_finishing_ken_timer_complete
+  priority: 200
+
+sound_player:
+  mode_ken_hurry_started:
+    hurry:
+      bus: voice_boost
+  s_right_vuk_active{current_player.ken_outro_timer_started!=1}:
+    good_shot_randomizer:
+      bus: voice
+
+show_player:
+  mode_ken_hurry_started:
+    flash_color:
+      key: balrog_flash
+      speed: 4
+      show_tokens:
+        lights: led_balrog_defeat, led_balrog_double, led_balrog_power, led_mbison_defeat
+        color: white
+  finishing_ken:
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+
+event_player:
+  timer_ken_hurry_timer_tick:
+    hurry_up_value:
+      current_hurryup:
+        type: int
+        value: 30_000_000 - ticks * 200_050
+
+slide_player:
+  mode_ken_hurry_started:
+    hurry_up_1:
+      expire: 5s
+      priority: 100
+    ken_hurry_main:
+      priority: 101
+  timer_ken_hurry_timer_tick{ticks_remaining==35}:
+    hurry_up_2:
+      expire: 3s
+      priority: 101
+  timer_ken_hurry_timer_complete:
+    hurry_up_failed:
+      expire: 3s
+      priority: 101
+    ken_hurry_main:
+      action: remove
+  s_right_vuk_active{current_player.ken_outro_timer_started!=1}:
+    hurry_up_complete:
+      expire: 5s
+      priority: 101
+    ken_hurry_main:
+      action: remove
+
+queue_relay_player:
+  balldevice_bd_right_vuk_ball_eject_attempt:
+    post: finishing_ken
+    wait_for: timer_finishing_ken_timer_complete
+
+timers:
+  ken_hurry_timer:
+    start_value: 0
+    end_value: 75
+    direction: up
+    tick_interval: 200ms
+    start_running: true
+    control_events:
+      - action: stop
+        event: finishing_ken
+  finishing_ken_timer:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: finishing_ken
+  ken_hurry_outro_timer:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: timer_ken_hurry_timer_complete
+
+variable_player:
+  mode_ken_hurry_started:
+    ken_hurry_played:
+      int: 1
+      action: set
+    ken_hurry_active:
+      int: 1
+      action: set
+  s_right_vuk_active:
+    score: 30_000_000 - device.timers.ken_hurry_timer.ticks * 200_050
+  timer_ken_hurry_outro_timer_started:
+    ken_outro_timer_started:
+      int: 1
+      action: set
+    
+
+
+    

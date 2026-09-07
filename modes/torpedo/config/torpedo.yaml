@@ -1,0 +1,81 @@
+#config_version=6
+
+mode:
+  start_events: torpedo_complete
+  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_torpedo_outro_timer_stopped
+  priority: 200
+
+show_player:
+  mode_torpedo_started:
+    flash_color:
+      key: torpedo_flash1
+      speed: 4
+      show_tokens:
+        lights: led_dhalsim_defeat, led_dhalsim_double, led_dhalsim_flame
+        color: white
+  s_center_spinner_active{device.counters.torpedo_build_hits.value==1}:
+    flash_color:
+      key: torpedo_flash2
+      speed: 4
+      show_tokens:
+        lights: led_honda_defeat, led_honda_double, led_honda_torpedo
+        color: white
+  s_left_vuk_active:
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+
+slide_player:
+  mode_torpedo_started:
+    torpedo_main:
+      action: play
+      priority: 1000
+  s_left_vuk_active:
+    torpedo_cashout:
+      action: play
+      priority: 1001
+
+event_player:
+  logicblock_torpedo_build_hits_updated:
+    torpedo_value:
+      current_torpedo:
+        type: int
+        value: 10_000 + device.counters.torpedo_build_hits.value * 750_000
+
+timers:
+  torpedo_timer:
+    start_value: 0
+    end_value: 45
+    direction: up
+    tick_interval: 1s
+    start_running: true
+    control_events:
+      - action: stop
+        event: s_left_vuk_active
+  torpedo_outro_timer:
+    start_value: 0
+    end_value: 3
+    direction: up
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: timer_torpedo_timer_stopped
+
+variable_player:
+  s_left_vuk_active:
+    score: 10_000 + device.counters.torpedo_build_hits.value * 750_000
+  logicblock_torpedo_build_hits_updated:
+    torpedo_cashout_value:
+      int: 10_000 + device.counters.torpedo_build_hits.value * 750_000
+      action: set
+
+
+counters:
+  torpedo_build_hits:
+    count_events: s_center_spinner_active
+    starting_count: 0
+    direction: up
+
+
+    

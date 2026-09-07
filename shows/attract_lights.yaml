@@ -1,0 +1,3643 @@
+#show_version=6
+- time: 0
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_double: '1B593C'
+    led_balrog_power: '1B593C'
+    led_blanka_car: '7A2AB9'
+    led_blanka_defeat: '7A2AB9'
+    led_blanka_double: '7A2AB9'
+    led_bracelet: 'C70001'
+    led_champion: '0051B6'
+    led_chunli_defeat: 'C87900'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_dhalsim_defeat: 'BF05A0'
+    led_dhalsim_double: 'BF05A0'
+    led_dhalsim_flame: 'BF05A0'
+    led_extra_ball: 'BF05A0'
+    led_fighter_1: 'C85911'
+    led_fighter_2: 'C87900'
+    led_guile_advance: 'C70001'
+    led_guile_defeat: 'C70001'
+    led_guile_double: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '001EC1'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_2: '0000C8'
+    led_left_middle_gi_3: '7A2AB9'
+    led_left_middle_gi_4: '7A2AB9'
+    led_left_middle_gi_5: 'BF05A0'
+    led_left_middle_gi_6: '7A2AB9'
+    led_left_sling_gi_1: '0051B6'
+    led_left_sling_gi_2: '0051B6'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '355E32'
+    led_pop_standups_1: 'C70001'
+    led_pop_standups_2: 'BF05A0'
+    led_pop_standups_3: 'BF05A0'
+    led_right_middle_gi_1: 'C87900'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_3: 'C8401F'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_middle_gi_5: 'C8401F'
+    led_right_middle_gi_6: 'C8401F'
+    led_right_sling_gi_1: '1B593C'
+    led_right_sling_gi_2: '1B593C'
+    led_right_sling_gi_3: '1B593C'
+    led_ryu_defeat: 'C8401F'
+    led_ryu_double: 'BF05A0'
+    led_ryu_millions: 'C70001'
+    led_sagat_defeat: '7A2AB9'
+    led_vega_defeat: 'C87900'
+    led_zangief_defeat: '7A2AB9'
+    led_zangief_double: '0000C8'
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '0018C3'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '44612D'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '385E31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '001AC2'
+    led_left_middle_gi_1: '0000AB'
+    led_left_middle_gi_6: '12061C'
+    led_left_sling_gi_2: '000000'
+    led_mbison_defeat: '2A5C36'
+    
+- time: '+1'
+  lights:
+    led_champion: '000000'
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_6: '000000'
+    led_mbison_defeat: '305D34'
+    led_right_middle_gi_4: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_zangief_double: '2E10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_4: '000000'
+    led_mbison_defeat: '325D34'
+    led_zangief_double: '3613C1'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '040106'
+    led_honda_torpedo: '0000C8'
+    led_left_middle_gi_3: '000000'
+    led_left_sling_gi_1: '000000'
+    led_mbison_defeat: '536328'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '000000'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '2B5C36'
+    led_right_middle_gi_1: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7528B1'
+    led_chunli_double: '1B593B'
+    led_honda_torpedo: '000BC6'
+    led_mbison_defeat: '2D5C35'
+    led_right_middle_gi_3: '000000'
+    led_right_sling_gi_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '000000'
+    led_chunli_double: '1D593B'
+    led_extra_ball: 'BF059F'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: '000000'
+    led_mbison_defeat: '2B5C36'
+    led_pop_standups_2: '000000'
+    led_right_middle_gi_6: 'C23E1E'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '000000'
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '215A39'
+    led_pop_standups_1: '000000'
+    led_right_middle_gi_6: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '030A07'
+    led_chunli_double: '225A39'
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '385E31'
+    led_pop_standups_3: '550247'
+    led_right_middle_gi_2: 'C86909'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000000'
+    led_chunli_double: '1E593B'
+    led_guile_defeat: '050000'
+    led_honda_defeat: '000007'
+    led_honda_double: '000408'
+    led_honda_torpedo: '000DC5'
+    led_mbison_defeat: '255B38'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_5: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_power: '000000'
+    led_chunli_double: '1F5A3A'
+    led_extra_ball: 'BF05A0'
+    led_guile_defeat: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_mbison_defeat: '215636'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '44602D'
+    led_extra_ball: 'C00591'
+    led_guile_advance: '070000'
+    led_mbison_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2F5D35'
+    led_dhalsim_defeat: 'B60598'
+    led_extra_ball: 'C0058F'
+    led_guile_advance: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '225A39'
+    led_dhalsim_defeat: '000000'
+    led_extra_ball: 'C0058E'
+    led_sagat_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '285B37'
+    led_guile_double: '000000'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_dhalsim_flame: 'B00593'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C8391B'
+    led_vega_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '9D0000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '103524'
+    led_chunli_power: '452A00'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C70A05'
+    led_zangief_defeat: '0F0516'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70402'
+    led_zangief_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_extra_ball: 'BF05A0'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '980000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: '000000'
+    led_ryu_defeat: '000000'
+    led_zangief_double: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    led_ryu_millions: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C70001'
+    led_ryu_double: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_double: '1B593C'
+    led_balrog_power: '1B593C'
+    led_blanka_car: '7A2AB9'
+    led_blanka_defeat: '7A2AB9'
+    led_blanka_double: '7A2AB9'
+    led_bracelet: 'C70001'
+    led_champion: '0051B6'
+    led_chunli_defeat: 'C87900'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_dhalsim_defeat: 'BF05A0'
+    led_dhalsim_double: 'BF05A0'
+    led_dhalsim_flame: 'BF05A0'
+    led_extra_ball: 'BF05A0'
+    led_fighter_1: 'C85911'
+    led_guile_advance: 'C70001'
+    led_guile_defeat: 'C70001'
+    led_guile_double: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '001EC1'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_2: '0000C8'
+    led_left_middle_gi_3: '7A2AB9'
+    led_left_middle_gi_4: '7A2AB9'
+    led_left_middle_gi_5: 'BF05A0'
+    led_left_middle_gi_6: '7A2AB9'
+    led_left_sling_gi_1: '0051B6'
+    led_left_sling_gi_2: '0051B6'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '355E32'
+    led_pop_standups_1: 'C70001'
+    led_pop_standups_2: 'BF05A0'
+    led_pop_standups_3: 'BF05A0'
+    led_right_middle_gi_1: 'C87900'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_3: 'C8401F'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_middle_gi_5: 'C8401F'
+    led_right_middle_gi_6: 'C8401F'
+    led_right_sling_gi_1: '1B593C'
+    led_right_sling_gi_2: '1B593C'
+    led_right_sling_gi_3: '1B593C'
+    led_ryu_defeat: 'C8401F'
+    led_ryu_double: 'BF05A0'
+    led_ryu_millions: 'C70001'
+    led_sagat_defeat: '7A2AB9'
+    led_vega_defeat: 'C87900'
+    led_zangief_defeat: '7A2AB9'
+    led_zangief_double: '0000C8'
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '0018C3'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '44612D'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '385E31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '001AC2'
+    led_left_middle_gi_1: '0000AB'
+    led_left_middle_gi_6: '12061C'
+    led_left_sling_gi_2: '000000'
+    led_mbison_defeat: '2A5C36'
+    
+- time: '+1'
+  lights:
+    led_champion: '000000'
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_6: '000000'
+    led_mbison_defeat: '305D34'
+    led_right_middle_gi_4: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_zangief_double: '2E10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_4: '000000'
+    led_mbison_defeat: '325D34'
+    led_zangief_double: '3613C1'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '040106'
+    led_honda_torpedo: '0000C8'
+    led_left_middle_gi_3: '000000'
+    led_left_sling_gi_1: '000000'
+    led_mbison_defeat: '536328'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '000000'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '2B5C36'
+    led_right_middle_gi_1: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7528B1'
+    led_chunli_double: '1B593B'
+    led_honda_torpedo: '000BC6'
+    led_mbison_defeat: '2D5C35'
+    led_right_middle_gi_3: '000000'
+    led_right_sling_gi_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '000000'
+    led_chunli_double: '1D593B'
+    led_extra_ball: 'BF059F'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: '000000'
+    led_mbison_defeat: '2B5C36'
+    led_pop_standups_2: '000000'
+    led_right_middle_gi_6: 'C23E1E'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '000000'
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '215A39'
+    led_pop_standups_1: '000000'
+    led_right_middle_gi_6: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '030A07'
+    led_chunli_double: '225A39'
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '385E31'
+    led_pop_standups_3: '550247'
+    led_right_middle_gi_2: 'C86909'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000000'
+    led_chunli_double: '1E593B'
+    led_guile_defeat: '050000'
+    led_honda_defeat: '000007'
+    led_honda_double: '000408'
+    led_honda_torpedo: '000DC5'
+    led_mbison_defeat: '255B38'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_5: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_power: '000000'
+    led_chunli_double: '1F5A3A'
+    led_extra_ball: 'BF05A0'
+    led_guile_defeat: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_mbison_defeat: '215636'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '44602D'
+    led_extra_ball: 'C00591'
+    led_guile_advance: '070000'
+    led_mbison_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2F5D35'
+    led_dhalsim_defeat: 'B60598'
+    led_extra_ball: 'C0058F'
+    led_guile_advance: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '225A39'
+    led_dhalsim_defeat: '000000'
+    led_extra_ball: 'C0058E'
+    led_sagat_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '285B37'
+    led_guile_double: '000000'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_dhalsim_flame: 'B00593'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C8391B'
+    led_vega_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '9D0000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '103524'
+    led_chunli_power: '452A00'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C70A05'
+    led_zangief_defeat: '0F0516'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70402'
+    led_zangief_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_extra_ball: 'BF05A0'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '980000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: '000000'
+    led_ryu_defeat: '000000'
+    led_zangief_double: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    led_ryu_millions: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C70001'
+    led_ryu_double: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_double: '1B593C'
+    led_balrog_power: '1B593C'
+    led_blanka_car: '7A2AB9'
+    led_blanka_defeat: '7A2AB9'
+    led_blanka_double: '7A2AB9'
+    led_bracelet: 'C70001'
+    led_champion: '0051B6'
+    led_chunli_defeat: 'C87900'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_dhalsim_defeat: 'BF05A0'
+    led_dhalsim_double: 'BF05A0'
+    led_dhalsim_flame: 'BF05A0'
+    led_extra_ball: 'BF05A0'
+    led_fighter_1: 'C85911'
+    led_guile_advance: 'C70001'
+    led_guile_defeat: 'C70001'
+    led_guile_double: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '001EC1'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_2: '0000C8'
+    led_left_middle_gi_3: '7A2AB9'
+    led_left_middle_gi_4: '7A2AB9'
+    led_left_middle_gi_5: 'BF05A0'
+    led_left_middle_gi_6: '7A2AB9'
+    led_left_sling_gi_1: '0051B6'
+    led_left_sling_gi_2: '0051B6'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '355E32'
+    led_pop_standups_1: 'C70001'
+    led_pop_standups_2: 'BF05A0'
+    led_pop_standups_3: 'BF05A0'
+    led_right_middle_gi_1: 'C87900'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_3: 'C8401F'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_middle_gi_5: 'C8401F'
+    led_right_middle_gi_6: 'C8401F'
+    led_right_sling_gi_1: '1B593C'
+    led_right_sling_gi_2: '1B593C'
+    led_right_sling_gi_3: '1B593C'
+    led_ryu_defeat: 'C8401F'
+    led_ryu_double: 'BF05A0'
+    led_ryu_millions: 'C70001'
+    led_sagat_defeat: '7A2AB9'
+    led_vega_defeat: 'C87900'
+    led_zangief_defeat: '7A2AB9'
+    led_zangief_double: '0000C8'
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '0018C3'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '44612D'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '385E31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '001AC2'
+    led_left_middle_gi_1: '0000AB'
+    led_left_middle_gi_6: '12061C'
+    led_left_sling_gi_2: '000000'
+    led_mbison_defeat: '2A5C36'
+    
+- time: '+1'
+  lights:
+    led_champion: '000000'
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_6: '000000'
+    led_mbison_defeat: '305D34'
+    led_right_middle_gi_4: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_zangief_double: '2E10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_4: '000000'
+    led_mbison_defeat: '325D34'
+    led_zangief_double: '3613C1'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '040106'
+    led_honda_torpedo: '0000C8'
+    led_left_middle_gi_3: '000000'
+    led_left_sling_gi_1: '000000'
+    led_mbison_defeat: '536328'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '000000'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '2B5C36'
+    led_right_middle_gi_1: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7528B1'
+    led_chunli_double: '1B593B'
+    led_honda_torpedo: '000BC6'
+    led_mbison_defeat: '2D5C35'
+    led_right_middle_gi_3: '000000'
+    led_right_sling_gi_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '000000'
+    led_chunli_double: '1D593B'
+    led_extra_ball: 'BF059F'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: '000000'
+    led_mbison_defeat: '2B5C36'
+    led_pop_standups_2: '000000'
+    led_right_middle_gi_6: 'C23E1E'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '000000'
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '215A39'
+    led_pop_standups_1: '000000'
+    led_right_middle_gi_6: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '030A07'
+    led_chunli_double: '225A39'
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '385E31'
+    led_pop_standups_3: '550247'
+    led_right_middle_gi_2: 'C86909'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000000'
+    led_chunli_double: '1E593B'
+    led_guile_defeat: '050000'
+    led_honda_defeat: '000007'
+    led_honda_double: '000408'
+    led_honda_torpedo: '000DC5'
+    led_mbison_defeat: '255B38'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_5: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_power: '000000'
+    led_chunli_double: '1F5A3A'
+    led_extra_ball: 'BF05A0'
+    led_guile_defeat: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_mbison_defeat: '215636'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '44602D'
+    led_extra_ball: 'C00591'
+    led_guile_advance: '070000'
+    led_mbison_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2F5D35'
+    led_dhalsim_defeat: 'B60598'
+    led_extra_ball: 'C0058F'
+    led_guile_advance: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '225A39'
+    led_dhalsim_defeat: '000000'
+    led_extra_ball: 'C0058E'
+    led_sagat_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '285B37'
+    led_guile_double: '000000'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_dhalsim_flame: 'B00593'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C8391B'
+    led_vega_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '9D0000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '103524'
+    led_chunli_power: '452A00'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C70A05'
+    led_zangief_defeat: '0F0516'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70402'
+    led_zangief_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_extra_ball: 'BF05A0'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '980000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: '000000'
+    led_ryu_defeat: '000000'
+    led_zangief_double: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    led_ryu_millions: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C70001'
+    led_ryu_double: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_double: '1B593C'
+    led_balrog_power: '1B593C'
+    led_blanka_car: '7A2AB9'
+    led_blanka_defeat: '7A2AB9'
+    led_blanka_double: '7A2AB9'
+    led_bracelet: 'C70001'
+    led_champion: '0051B6'
+    led_chunli_defeat: 'C87900'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_dhalsim_defeat: 'BF05A0'
+    led_dhalsim_double: 'BF05A0'
+    led_dhalsim_flame: 'BF05A0'
+    led_extra_ball: 'BF05A0'
+    led_fighter_1: 'C85911'
+    led_guile_advance: 'C70001'
+    led_guile_defeat: 'C70001'
+    led_guile_double: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '001EC1'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_2: '0000C8'
+    led_left_middle_gi_3: '7A2AB9'
+    led_left_middle_gi_4: '7A2AB9'
+    led_left_middle_gi_5: 'BF05A0'
+    led_left_middle_gi_6: '7A2AB9'
+    led_left_sling_gi_1: '0051B6'
+    led_left_sling_gi_2: '0051B6'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '355E32'
+    led_pop_standups_1: 'C70001'
+    led_pop_standups_2: 'BF05A0'
+    led_pop_standups_3: 'BF05A0'
+    led_right_middle_gi_1: 'C87900'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_3: 'C8401F'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_middle_gi_5: 'C8401F'
+    led_right_middle_gi_6: 'C8401F'
+    led_right_sling_gi_1: '1B593C'
+    led_right_sling_gi_2: '1B593C'
+    led_right_sling_gi_3: '1B593C'
+    led_ryu_defeat: 'C8401F'
+    led_ryu_double: 'BF05A0'
+    led_ryu_millions: 'C70001'
+    led_sagat_defeat: '7A2AB9'
+    led_vega_defeat: 'C87900'
+    led_zangief_defeat: '7A2AB9'
+    led_zangief_double: '0000C8'
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '0018C3'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '44612D'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '385E31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '001AC2'
+    led_left_middle_gi_1: '0000AB'
+    led_left_middle_gi_6: '12061C'
+    led_left_sling_gi_2: '000000'
+    led_mbison_defeat: '2A5C36'
+    
+- time: '+1'
+  lights:
+    led_champion: '000000'
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_6: '000000'
+    led_mbison_defeat: '305D34'
+    led_right_middle_gi_4: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_zangief_double: '2E10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_4: '000000'
+    led_mbison_defeat: '325D34'
+    led_zangief_double: '3613C1'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '040106'
+    led_honda_torpedo: '0000C8'
+    led_left_middle_gi_3: '000000'
+    led_left_sling_gi_1: '000000'
+    led_mbison_defeat: '536328'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '000000'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '2B5C36'
+    led_right_middle_gi_1: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7528B1'
+    led_chunli_double: '1B593B'
+    led_honda_torpedo: '000BC6'
+    led_mbison_defeat: '2D5C35'
+    led_right_middle_gi_3: '000000'
+    led_right_sling_gi_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '000000'
+    led_chunli_double: '1D593B'
+    led_extra_ball: 'BF059F'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: '000000'
+    led_mbison_defeat: '2B5C36'
+    led_pop_standups_2: '000000'
+    led_right_middle_gi_6: 'C23E1E'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '000000'
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '215A39'
+    led_pop_standups_1: '000000'
+    led_right_middle_gi_6: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '030A07'
+    led_chunli_double: '225A39'
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '385E31'
+    led_pop_standups_3: '550247'
+    led_right_middle_gi_2: 'C86909'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000000'
+    led_chunli_double: '1E593B'
+    led_guile_defeat: '050000'
+    led_honda_defeat: '000007'
+    led_honda_double: '000408'
+    led_honda_torpedo: '000DC5'
+    led_mbison_defeat: '255B38'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_5: '000000'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_power: '000000'
+    led_chunli_double: '1F5A3A'
+    led_extra_ball: 'BF05A0'
+    led_guile_defeat: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_mbison_defeat: '215636'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '44602D'
+    led_extra_ball: 'C00591'
+    led_guile_advance: '070000'
+    led_mbison_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2F5D35'
+    led_dhalsim_defeat: 'B60598'
+    led_extra_ball: 'C0058F'
+    led_guile_advance: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '225A39'
+    led_dhalsim_defeat: '000000'
+    led_extra_ball: 'C0058E'
+    led_sagat_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '285B37'
+    led_guile_double: '000000'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_dhalsim_flame: 'B00593'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C8391B'
+    led_vega_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '9D0000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '103524'
+    led_chunli_power: '452A00'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C70A05'
+    led_zangief_defeat: '0F0516'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70402'
+    led_zangief_defeat: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_extra_ball: 'BF05A0'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '980000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: '000000'
+    led_ryu_defeat: '000000'
+    led_zangief_double: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    led_ryu_millions: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C70001'
+    led_ryu_double: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C72311'
+    led_ryu_double: 'BF05A0'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C7381A'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8391B'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83F1E'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: '220000'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: 'C50001'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_ryu_millions: 'C70001'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '8C0000'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059E'
+    led_zangief_power: '020103'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059F'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '93047B'
+    led_extra_ball: 'BF059D'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: 'BF05A0'
+    led_extra_ball: 'C0059B'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00597'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00595'
+    led_ryu_defeat: 'C70603'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70A05'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00593'
+    led_ryu_defeat: 'C7160B'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '020000'
+    led_extra_ball: 'C00592'
+    led_ryu_defeat: 'C71D0E'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'A60000'
+    led_chunli_double: '020705'
+    led_chunli_power: '080500'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'C70001'
+    led_chunli_defeat: '060400'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_extra_ball: 'C00590'
+    led_ryu_defeat: 'C82E16'
+    led_zangief_defeat: '792AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'B26C00'
+    led_chunli_double: '1D593B'
+    led_ryu_defeat: 'C73319'
+    led_zangief_defeat: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'C87900'
+    led_dhalsim_flame: '35012C'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C83419'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_dhalsim_flame: 'BF05A0'
+    led_ryu_defeat: 'C8391B'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C0058E'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593A'
+    led_ryu_defeat: 'C8401F'
+    led_vega_defeat: 'C47700'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_guile_double: '050000'
+    led_ryu_defeat: 'C83E1E'
+    led_vega_defeat: 'C87900'
+    
+- time: '+1'
+  lights:
+    led_guile_double: 'B30001'
+    led_ryu_defeat: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '275B37'
+    led_guile_double: 'C70001'
+    led_ryu_defeat: 'C83F1E'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '245B38'
+    led_ryu_defeat: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '255B38'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C83F1E'
+    led_sagat_defeat: '220C33'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2E5D35'
+    led_dhalsim_defeat: '10000E'
+    led_ryu_defeat: 'C8401F'
+    led_sagat_defeat: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2A5C36'
+    led_dhalsim_defeat: 'B00593'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '265B38'
+    led_dhalsim_defeat: 'BF05A0'
+    led_extra_ball: 'C00590'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1C593B'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '295C37'
+    led_guile_advance: '050000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '235A39'
+    led_extra_ball: 'C00591'
+    led_guile_advance: 'B30001'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_extra_ball: 'BF05A0'
+    led_guile_advance: 'C70001'
+    led_mbison_defeat: '000101'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1F5A3A'
+    led_mbison_defeat: '0D291B'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '020100'
+    led_balrog_power: '000101'
+    led_chunli_double: '1C593B'
+    led_mbison_defeat: '205939'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'BB7200'
+    led_balrog_power: '14422C'
+    led_chunli_double: '205A3A'
+    led_honda_torpedo: '000418'
+    led_mbison_defeat: '235A39'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_power: '1B593C'
+    led_chunli_double: '1F5A3A'
+    led_honda_defeat: '000001'
+    led_honda_torpedo: '000FBF'
+    led_mbison_defeat: '1F5A3A'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_extra_ball: 'BF059F'
+    led_guile_defeat: '270000'
+    led_honda_defeat: '000006'
+    led_honda_double: '000306'
+    led_honda_torpedo: '002ABE'
+    led_mbison_defeat: '205A3A'
+    led_right_middle_gi_5: '020000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593B'
+    led_guile_defeat: 'C10001'
+    led_honda_defeat: '0000B1'
+    led_honda_double: '004BA9'
+    led_honda_torpedo: '0020C1'
+    led_mbison_defeat: '1B593C'
+    led_right_middle_gi_5: 'AD371A'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_guile_defeat: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '0014C3'
+    led_mbison_defeat: '205A3A'
+    led_pop_standups_3: '040004'
+    led_right_middle_gi_5: 'C73F1E'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000201'
+    led_chunli_double: '1D593B'
+    led_honda_torpedo: '000BC5'
+    led_mbison_defeat: '1E593A'
+    led_pop_standups_3: 'B30596'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_5: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '174D34'
+    led_chunli_double: '1E593B'
+    led_honda_torpedo: '000FC5'
+    led_mbison_defeat: '225A39'
+    led_pop_standups_3: 'BF05A0'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '1B593C'
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '000EC5'
+    led_mbison_defeat: '265B38'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '000CC5'
+    led_mbison_defeat: '2B5C36'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '315D34'
+    led_pop_standups_1: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '7A2AB9'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '385E32'
+    led_right_middle_gi_6: '010000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1C593B'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '1C593B'
+    led_right_middle_gi_6: '902E16'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_mbison_defeat: '1D593B'
+    led_pop_standups_2: 'BF05A0'
+    led_right_middle_gi_6: 'C73F1E'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '0006C7'
+    led_left_middle_gi_5: '0C000A'
+    led_mbison_defeat: '1C593B'
+    led_right_middle_gi_6: 'C8401F'
+    led_zangief_double: '7929B9'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '1A0927'
+    led_chunli_double: '1B593B'
+    led_extra_ball: 'BF05A0'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: 'BF05A0'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7A2AB9'
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '285B37'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0002C7'
+    led_mbison_defeat: '335D33'
+    led_right_sling_gi_3: '164830'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0006C7'
+    led_mbison_defeat: '365E32'
+    led_right_sling_gi_3: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0007C6'
+    led_mbison_defeat: '2E5C35'
+    led_right_middle_gi_3: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '215A39'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000AC6'
+    led_mbison_defeat: '255B38'
+    led_right_middle_gi_1: 'C87900'
+    led_zangief_double: '4217C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0012C4'
+    led_mbison_defeat: '1B593B'
+    led_zangief_double: '4016C0'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '7A2AB9'
+    led_honda_torpedo: '0013C4'
+    led_left_middle_gi_3: '7A2AB9'
+    led_mbison_defeat: '1B593C'
+    led_zangief_double: '3D15C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_sling_gi_1: '000A16'
+    led_mbison_defeat: '2C5C36'
+    led_zangief_double: '3A14C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0000C8'
+    led_left_sling_gi_1: '0051B6'
+    led_mbison_defeat: '345E33'
+    led_zangief_double: '3813C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_2: '00002D'
+    led_left_middle_gi_4: '7A2AB9'
+    led_mbison_defeat: '1F5A3A'
+    led_zangief_double: '3512C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '0000C2'
+    led_mbison_defeat: '325D33'
+    led_zangief_double: '3211C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0002C8'
+    led_left_middle_gi_2: '0000C8'
+    led_mbison_defeat: '45612D'
+    led_zangief_double: '2F10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '2F5D35'
+    led_zangief_double: '2D0FC2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    led_mbison_defeat: '295C37'
+    led_right_middle_gi_4: '591C0E'
+    led_right_sling_gi_2: '0B2519'
+    led_zangief_double: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_champion: '0051B6'
+    led_honda_torpedo: '000DC5'
+    led_left_middle_gi_1: '000016'
+    led_mbison_defeat: '1B593C'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_sling_gi_1: '123B27'
+    led_right_sling_gi_2: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    led_left_middle_gi_1: '0000B8'
+    led_left_middle_gi_6: '240C36'
+    led_mbison_defeat: '255B38'
+    led_right_sling_gi_1: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_6: '7A2AB9'
+    led_mbison_defeat: '2F5D35'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000DC5'
+    led_left_sling_gi_2: '000E1F'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_2: '0051B6'
+    led_mbison_defeat: '395F31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0004C7'
+    led_mbison_defeat: '215A39'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_sling_gi_3: '00132B'
+    led_mbison_defeat: '3C5F30'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '365E32'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85215'
+    led_honda_torpedo: '0027BF'
+    led_mbison_defeat: '275B37'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85414'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85513'
+    led_honda_torpedo: '0022C0'
+    led_mbison_defeat: '2B5C36'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85712'
+    led_honda_torpedo: '001DC1'
+    led_mbison_defeat: '2F5D35'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85812'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85911'
+    led_honda_torpedo: '0019C2'
+    led_mbison_defeat: '345E33'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85B10'
+    led_honda_torpedo: '001BC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0017C3'
+    led_mbison_defeat: '3A5F31'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85D0F'
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_double: '000000'
+    led_balrog_power: '000000'
+    led_blanka_car: '000000'
+    led_blanka_defeat: '000000'
+    led_blanka_double: '000000'
+    led_bracelet: '000000'
+    led_champion: '000000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_dhalsim_defeat: '000000'
+    led_dhalsim_double: '000000'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: '000000'
+    led_fighter_1: 'C72311'
+    led_guile_advance: '000000'
+    led_guile_defeat: '000000'
+    led_guile_double: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_3: '000000'
+    led_left_middle_gi_4: '000000'
+    led_left_middle_gi_5: '000000'
+    led_left_middle_gi_6: '000000'
+    led_left_sling_gi_1: '000000'
+    led_left_sling_gi_2: '000000'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '000000'
+    led_pop_standups_1: '000000'
+    led_pop_standups_2: '000000'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_1: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_3: '000000'
+    led_right_middle_gi_4: '000000'
+    led_right_middle_gi_5: '000000'
+    led_right_middle_gi_6: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_right_sling_gi_3: '000000'
+    led_ryu_defeat: '000000'
+    led_ryu_millions: '000000'
+    led_sagat_defeat: '000000'
+    led_vega_defeat: '000000'
+    led_zangief_defeat: '000000'
+    led_zangief_double: '000000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C7381A'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8391B'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83F1E'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: '220000'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: 'C50001'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_ryu_millions: 'C70001'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '8C0000'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059E'
+    led_zangief_power: '020103'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059F'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '93047B'
+    led_extra_ball: 'BF059D'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: 'BF05A0'
+    led_extra_ball: 'C0059B'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00597'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00595'
+    led_ryu_defeat: 'C70603'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70A05'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00593'
+    led_ryu_defeat: 'C7160B'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '020000'
+    led_extra_ball: 'C00592'
+    led_ryu_defeat: 'C71D0E'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'A60000'
+    led_chunli_double: '020705'
+    led_chunli_power: '080500'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'C70001'
+    led_chunli_defeat: '060400'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_extra_ball: 'C00590'
+    led_ryu_defeat: 'C82E16'
+    led_zangief_defeat: '792AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'B26C00'
+    led_chunli_double: '1D593B'
+    led_ryu_defeat: 'C73319'
+    led_zangief_defeat: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'C87900'
+    led_dhalsim_flame: '35012C'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C83419'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_dhalsim_flame: 'BF05A0'
+    led_ryu_defeat: 'C8391B'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C0058E'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593A'
+    led_ryu_defeat: 'C8401F'
+    led_vega_defeat: 'C47700'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_guile_double: '050000'
+    led_ryu_defeat: 'C83E1E'
+    led_vega_defeat: 'C87900'
+    
+- time: '+1'
+  lights:
+    led_guile_double: 'B30001'
+    led_ryu_defeat: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '275B37'
+    led_guile_double: 'C70001'
+    led_ryu_defeat: 'C83F1E'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '245B38'
+    led_ryu_defeat: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '255B38'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C83F1E'
+    led_sagat_defeat: '220C33'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2E5D35'
+    led_dhalsim_defeat: '10000E'
+    led_ryu_defeat: 'C8401F'
+    led_sagat_defeat: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2A5C36'
+    led_dhalsim_defeat: 'B00593'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '265B38'
+    led_dhalsim_defeat: 'BF05A0'
+    led_extra_ball: 'C00590'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1C593B'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '295C37'
+    led_guile_advance: '050000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '235A39'
+    led_extra_ball: 'C00591'
+    led_guile_advance: 'B30001'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_extra_ball: 'BF05A0'
+    led_guile_advance: 'C70001'
+    led_mbison_defeat: '000101'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1F5A3A'
+    led_mbison_defeat: '0D291B'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '020100'
+    led_balrog_power: '000101'
+    led_chunli_double: '1C593B'
+    led_mbison_defeat: '205939'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'BB7200'
+    led_balrog_power: '14422C'
+    led_chunli_double: '205A3A'
+    led_honda_torpedo: '000418'
+    led_mbison_defeat: '235A39'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_power: '1B593C'
+    led_chunli_double: '1F5A3A'
+    led_honda_defeat: '000001'
+    led_honda_torpedo: '000FBF'
+    led_mbison_defeat: '1F5A3A'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_extra_ball: 'BF059F'
+    led_guile_defeat: '270000'
+    led_honda_defeat: '000006'
+    led_honda_double: '000306'
+    led_honda_torpedo: '002ABE'
+    led_mbison_defeat: '205A3A'
+    led_right_middle_gi_5: '020000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593B'
+    led_guile_defeat: 'C10001'
+    led_honda_defeat: '0000B1'
+    led_honda_double: '004BA9'
+    led_honda_torpedo: '0020C1'
+    led_mbison_defeat: '1B593C'
+    led_right_middle_gi_5: 'AD371A'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_guile_defeat: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '0014C3'
+    led_mbison_defeat: '205A3A'
+    led_pop_standups_3: '040004'
+    led_right_middle_gi_5: 'C73F1E'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000201'
+    led_chunli_double: '1D593B'
+    led_honda_torpedo: '000BC5'
+    led_mbison_defeat: '1E593A'
+    led_pop_standups_3: 'B30596'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_5: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '174D34'
+    led_chunli_double: '1E593B'
+    led_honda_torpedo: '000FC5'
+    led_mbison_defeat: '225A39'
+    led_pop_standups_3: 'BF05A0'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '1B593C'
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '000EC5'
+    led_mbison_defeat: '265B38'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '000CC5'
+    led_mbison_defeat: '2B5C36'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '315D34'
+    led_pop_standups_1: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '7A2AB9'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '385E32'
+    led_right_middle_gi_6: '010000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1C593B'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '1C593B'
+    led_right_middle_gi_6: '902E16'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_mbison_defeat: '1D593B'
+    led_pop_standups_2: 'BF05A0'
+    led_right_middle_gi_6: 'C73F1E'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '0006C7'
+    led_left_middle_gi_5: '0C000A'
+    led_mbison_defeat: '1C593B'
+    led_right_middle_gi_6: 'C8401F'
+    led_zangief_double: '7929B9'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '1A0927'
+    led_chunli_double: '1B593B'
+    led_extra_ball: 'BF05A0'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: 'BF05A0'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7A2AB9'
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '285B37'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0002C7'
+    led_mbison_defeat: '335D33'
+    led_right_sling_gi_3: '164830'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0006C7'
+    led_mbison_defeat: '365E32'
+    led_right_sling_gi_3: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0007C6'
+    led_mbison_defeat: '2E5C35'
+    led_right_middle_gi_3: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '215A39'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000AC6'
+    led_mbison_defeat: '255B38'
+    led_right_middle_gi_1: 'C87900'
+    led_zangief_double: '4217C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0012C4'
+    led_mbison_defeat: '1B593B'
+    led_zangief_double: '4016C0'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '7A2AB9'
+    led_honda_torpedo: '0013C4'
+    led_left_middle_gi_3: '7A2AB9'
+    led_mbison_defeat: '1B593C'
+    led_zangief_double: '3D15C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_sling_gi_1: '000A16'
+    led_mbison_defeat: '2C5C36'
+    led_zangief_double: '3A14C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0000C8'
+    led_left_sling_gi_1: '0051B6'
+    led_mbison_defeat: '345E33'
+    led_zangief_double: '3813C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_2: '00002D'
+    led_left_middle_gi_4: '7A2AB9'
+    led_mbison_defeat: '1F5A3A'
+    led_zangief_double: '3512C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '0000C2'
+    led_mbison_defeat: '325D33'
+    led_zangief_double: '3211C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0002C8'
+    led_left_middle_gi_2: '0000C8'
+    led_mbison_defeat: '45612D'
+    led_zangief_double: '2F10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '2F5D35'
+    led_zangief_double: '2D0FC2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    led_mbison_defeat: '295C37'
+    led_right_middle_gi_4: '591C0E'
+    led_right_sling_gi_2: '0B2519'
+    led_zangief_double: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_champion: '0051B6'
+    led_honda_torpedo: '000DC5'
+    led_left_middle_gi_1: '000016'
+    led_mbison_defeat: '1B593C'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_sling_gi_1: '123B27'
+    led_right_sling_gi_2: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    led_left_middle_gi_1: '0000B8'
+    led_left_middle_gi_6: '240C36'
+    led_mbison_defeat: '255B38'
+    led_right_sling_gi_1: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_6: '7A2AB9'
+    led_mbison_defeat: '2F5D35'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000DC5'
+    led_left_sling_gi_2: '000E1F'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_2: '0051B6'
+    led_mbison_defeat: '395F31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0004C7'
+    led_mbison_defeat: '215A39'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_sling_gi_3: '00132B'
+    led_mbison_defeat: '3C5F30'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '365E32'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85215'
+    led_honda_torpedo: '0027BF'
+    led_mbison_defeat: '275B37'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85414'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85513'
+    led_honda_torpedo: '0022C0'
+    led_mbison_defeat: '2B5C36'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85712'
+    led_honda_torpedo: '001DC1'
+    led_mbison_defeat: '2F5D35'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85812'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85911'
+    led_honda_torpedo: '0019C2'
+    led_mbison_defeat: '345E33'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85B10'
+    led_honda_torpedo: '001BC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0017C3'
+    led_mbison_defeat: '3A5F31'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85D0F'
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_double: '000000'
+    led_balrog_power: '000000'
+    led_blanka_car: '000000'
+    led_blanka_defeat: '000000'
+    led_blanka_double: '000000'
+    led_bracelet: '000000'
+    led_champion: '000000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_dhalsim_defeat: '000000'
+    led_dhalsim_double: '000000'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: '000000'
+    led_fighter_1: 'C72311'
+    led_guile_advance: '000000'
+    led_guile_defeat: '000000'
+    led_guile_double: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_3: '000000'
+    led_left_middle_gi_4: '000000'
+    led_left_middle_gi_5: '000000'
+    led_left_middle_gi_6: '000000'
+    led_left_sling_gi_1: '000000'
+    led_left_sling_gi_2: '000000'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '000000'
+    led_pop_standups_1: '000000'
+    led_pop_standups_2: '000000'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_1: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_3: '000000'
+    led_right_middle_gi_4: '000000'
+    led_right_middle_gi_5: '000000'
+    led_right_middle_gi_6: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_right_sling_gi_3: '000000'
+    led_ryu_defeat: '000000'
+    led_ryu_millions: '000000'
+    led_sagat_defeat: '000000'
+    led_vega_defeat: '000000'
+    led_zangief_defeat: '000000'
+    led_zangief_double: '000000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C7381A'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8391B'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83E1E'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C83F1E'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: '220000'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: 'C50001'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8401F'
+    led_ryu_millions: 'C70001'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059D'
+    led_ryu_defeat: '8C0000'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059E'
+    led_zangief_power: '020103'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF059F'
+    led_zangief_power: '7729B6'
+    
+- time: '+1'
+  lights:
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '93047B'
+    led_extra_ball: 'BF059D'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: 'BF05A0'
+    led_extra_ball: 'C0059B'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00599'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00597'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00595'
+    led_ryu_defeat: 'C70603'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00594'
+    led_ryu_defeat: 'C70A05'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C00593'
+    led_ryu_defeat: 'C7160B'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '020000'
+    led_extra_ball: 'C00592'
+    led_ryu_defeat: 'C71D0E'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'A60000'
+    led_chunli_double: '020705'
+    led_chunli_power: '080500'
+    led_extra_ball: 'C00591'
+    led_ryu_defeat: 'C72311'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'C70001'
+    led_chunli_defeat: '060400'
+    led_chunli_double: '1B593C'
+    led_chunli_power: 'C87900'
+    led_extra_ball: 'C00590'
+    led_ryu_defeat: 'C82E16'
+    led_zangief_defeat: '792AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'B26C00'
+    led_chunli_double: '1D593B'
+    led_ryu_defeat: 'C73319'
+    led_zangief_defeat: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'C87900'
+    led_dhalsim_flame: '35012C'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C83419'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_dhalsim_flame: 'BF05A0'
+    led_ryu_defeat: 'C8391B'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'C0058E'
+    led_ryu_defeat: 'C83D1D'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593A'
+    led_ryu_defeat: 'C8401F'
+    led_vega_defeat: 'C47700'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_guile_double: '050000'
+    led_ryu_defeat: 'C83E1E'
+    led_vega_defeat: 'C87900'
+    
+- time: '+1'
+  lights:
+    led_guile_double: 'B30001'
+    led_ryu_defeat: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '275B37'
+    led_guile_double: 'C70001'
+    led_ryu_defeat: 'C83F1E'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '245B38'
+    led_ryu_defeat: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '255B38'
+    led_extra_ball: 'C0058F'
+    led_ryu_defeat: 'C83F1E'
+    led_sagat_defeat: '220C33'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2E5D35'
+    led_dhalsim_defeat: '10000E'
+    led_ryu_defeat: 'C8401F'
+    led_sagat_defeat: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '2A5C36'
+    led_dhalsim_defeat: 'B00593'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '265B38'
+    led_dhalsim_defeat: 'BF05A0'
+    led_extra_ball: 'C00590'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1C593B'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '295C37'
+    led_guile_advance: '050000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '235A39'
+    led_extra_ball: 'C00591'
+    led_guile_advance: 'B30001'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_extra_ball: 'BF05A0'
+    led_guile_advance: 'C70001'
+    led_mbison_defeat: '000101'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1F5A3A'
+    led_mbison_defeat: '0D291B'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '020100'
+    led_balrog_power: '000101'
+    led_chunli_double: '1C593B'
+    led_mbison_defeat: '205939'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'BB7200'
+    led_balrog_power: '14422C'
+    led_chunli_double: '205A3A'
+    led_honda_torpedo: '000418'
+    led_mbison_defeat: '235A39'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_power: '1B593C'
+    led_chunli_double: '1F5A3A'
+    led_honda_defeat: '000001'
+    led_honda_torpedo: '000FBF'
+    led_mbison_defeat: '1F5A3A'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_extra_ball: 'BF059F'
+    led_guile_defeat: '270000'
+    led_honda_defeat: '000006'
+    led_honda_double: '000306'
+    led_honda_torpedo: '002ABE'
+    led_mbison_defeat: '205A3A'
+    led_right_middle_gi_5: '020000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593B'
+    led_guile_defeat: 'C10001'
+    led_honda_defeat: '0000B1'
+    led_honda_double: '004BA9'
+    led_honda_torpedo: '0020C1'
+    led_mbison_defeat: '1B593C'
+    led_right_middle_gi_5: 'AD371A'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_guile_defeat: 'C70001'
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '0014C3'
+    led_mbison_defeat: '205A3A'
+    led_pop_standups_3: '040004'
+    led_right_middle_gi_5: 'C73F1E'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '000201'
+    led_chunli_double: '1D593B'
+    led_honda_torpedo: '000BC5'
+    led_mbison_defeat: '1E593A'
+    led_pop_standups_3: 'B30596'
+    led_right_middle_gi_2: 'C87900'
+    led_right_middle_gi_5: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '174D34'
+    led_chunli_double: '1E593B'
+    led_honda_torpedo: '000FC5'
+    led_mbison_defeat: '225A39'
+    led_pop_standups_3: 'BF05A0'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '1B593C'
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '000EC5'
+    led_mbison_defeat: '265B38'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1E593A'
+    led_honda_torpedo: '000CC5'
+    led_mbison_defeat: '2B5C36'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1D593B'
+    led_honda_torpedo: '0009C6'
+    led_mbison_defeat: '315D34'
+    led_pop_standups_1: 'C70001'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '7A2AB9'
+    led_honda_torpedo: '0008C6'
+    led_mbison_defeat: '385E32'
+    led_right_middle_gi_6: '010000'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1C593B'
+    led_honda_torpedo: '0011C4'
+    led_mbison_defeat: '1C593B'
+    led_right_middle_gi_6: '902E16'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_mbison_defeat: '1D593B'
+    led_pop_standups_2: 'BF05A0'
+    led_right_middle_gi_6: 'C73F1E'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '0006C7'
+    led_left_middle_gi_5: '0C000A'
+    led_mbison_defeat: '1C593B'
+    led_right_middle_gi_6: 'C8401F'
+    led_zangief_double: '7929B9'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '1A0927'
+    led_chunli_double: '1B593B'
+    led_extra_ball: 'BF05A0'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_5: 'BF05A0'
+    led_zangief_double: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7A2AB9'
+    led_chunli_double: '1B593C'
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '285B37'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0002C7'
+    led_mbison_defeat: '335D33'
+    led_right_sling_gi_3: '164830'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0006C7'
+    led_mbison_defeat: '365E32'
+    led_right_sling_gi_3: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0007C6'
+    led_mbison_defeat: '2E5C35'
+    led_right_middle_gi_3: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0005C7'
+    led_mbison_defeat: '215A39'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000AC6'
+    led_mbison_defeat: '255B38'
+    led_right_middle_gi_1: 'C87900'
+    led_zangief_double: '4217C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0012C4'
+    led_mbison_defeat: '1B593B'
+    led_zangief_double: '4016C0'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '7A2AB9'
+    led_honda_torpedo: '0013C4'
+    led_left_middle_gi_3: '7A2AB9'
+    led_mbison_defeat: '1B593C'
+    led_zangief_double: '3D15C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_sling_gi_1: '000A16'
+    led_mbison_defeat: '2C5C36'
+    led_zangief_double: '3A14C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0000C8'
+    led_left_sling_gi_1: '0051B6'
+    led_mbison_defeat: '345E33'
+    led_zangief_double: '3813C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000AC6'
+    led_left_middle_gi_2: '00002D'
+    led_left_middle_gi_4: '7A2AB9'
+    led_mbison_defeat: '1F5A3A'
+    led_zangief_double: '3512C1'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_2: '0000C2'
+    led_mbison_defeat: '325D33'
+    led_zangief_double: '3211C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0002C8'
+    led_left_middle_gi_2: '0000C8'
+    led_mbison_defeat: '45612D'
+    led_zangief_double: '2F10C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '2F5D35'
+    led_zangief_double: '2D0FC2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    led_mbison_defeat: '295C37'
+    led_right_middle_gi_4: '591C0E'
+    led_right_sling_gi_2: '0B2519'
+    led_zangief_double: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_champion: '0051B6'
+    led_honda_torpedo: '000DC5'
+    led_left_middle_gi_1: '000016'
+    led_mbison_defeat: '1B593C'
+    led_right_middle_gi_4: 'C8401F'
+    led_right_sling_gi_1: '123B27'
+    led_right_sling_gi_2: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    led_left_middle_gi_1: '0000B8'
+    led_left_middle_gi_6: '240C36'
+    led_mbison_defeat: '255B38'
+    led_right_sling_gi_1: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_middle_gi_1: '0000C8'
+    led_left_middle_gi_6: '7A2AB9'
+    led_mbison_defeat: '2F5D35'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000DC5'
+    led_left_sling_gi_2: '000E1F'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0015C3'
+    led_left_sling_gi_2: '0051B6'
+    led_mbison_defeat: '395F31'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0004C7'
+    led_mbison_defeat: '215A39'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_sling_gi_3: '00132B'
+    led_mbison_defeat: '3C5F30'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '000CC5'
+    led_left_sling_gi_3: '0051B6'
+    led_mbison_defeat: '365E32'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85215'
+    led_honda_torpedo: '0027BF'
+    led_mbison_defeat: '275B37'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85414'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85513'
+    led_honda_torpedo: '0022C0'
+    led_mbison_defeat: '2B5C36'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85712'
+    led_honda_torpedo: '001DC1'
+    led_mbison_defeat: '2F5D35'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85812'
+    led_honda_torpedo: '001CC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85911'
+    led_honda_torpedo: '0019C2'
+    led_mbison_defeat: '345E33'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85B10'
+    led_honda_torpedo: '001BC2'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0017C3'
+    led_mbison_defeat: '3A5F31'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85D0F'
+    led_honda_torpedo: '0000C8'
+    led_mbison_defeat: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '000000'
+    led_balrog_double: '000000'
+    led_balrog_power: '000000'
+    led_blanka_car: '000000'
+    led_blanka_defeat: '000000'
+    led_blanka_double: '000000'
+    led_bracelet: '000000'
+    led_champion: '000000'
+    led_chunli_defeat: '000000'
+    led_chunli_double: '000000'
+    led_chunli_power: '000000'
+    led_dhalsim_defeat: '000000'
+    led_dhalsim_double: '000000'
+    led_dhalsim_flame: '000000'
+    led_extra_ball: '000000'
+    led_fighter_1: 'C8401F'
+    led_fighter_2: 'C77900'
+    led_guile_advance: '000000'
+    led_guile_defeat: '000000'
+    led_guile_double: '000000'
+    led_honda_defeat: '000000'
+    led_honda_double: '000000'
+    led_honda_torpedo: '000000'
+    led_left_middle_gi_1: '000000'
+    led_left_middle_gi_2: '000000'
+    led_left_middle_gi_3: '000000'
+    led_left_middle_gi_4: '000000'
+    led_left_middle_gi_5: '000000'
+    led_left_middle_gi_6: '000000'
+    led_left_sling_gi_1: '000000'
+    led_left_sling_gi_2: '000000'
+    led_left_sling_gi_3: '000000'
+    led_mbison_defeat: '000000'
+    led_pop_standups_1: '000000'
+    led_pop_standups_2: '000000'
+    led_pop_standups_3: '000000'
+    led_right_middle_gi_1: '000000'
+    led_right_middle_gi_2: '000000'
+    led_right_middle_gi_3: '000000'
+    led_right_middle_gi_4: '000000'
+    led_right_middle_gi_5: '000000'
+    led_right_middle_gi_6: '000000'
+    led_right_sling_gi_1: '000000'
+    led_right_sling_gi_2: '000000'
+    led_right_sling_gi_3: '000000'
+    led_ryu_defeat: '000000'
+    led_ryu_millions: '000000'
+    led_sagat_defeat: '000000'
+    led_vega_defeat: '000000'
+    led_zangief_defeat: '000000'
+    led_zangief_double: '000000'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_fighter_2: 'C87900'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: 'A80001'
+    
+- time: '+1'
+  lights:
+    led_ryu_millions: 'C70001'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '050000'
+    
+- time: '+1'
+  lights:
+    led_extra_ball: 'BF05A0'
+    led_ryu_defeat: 'A10000'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70001'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70101'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: '7929B9'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: '792AB9'
+    led_zangief_power: '010001'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '7C0368'
+    led_ryu_defeat: 'C70001'
+    led_zangief_double: '7A2AB9'
+    led_zangief_power: '632298'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: 'BF05A0'
+    led_zangief_power: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70603'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70B06'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C70E07'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C71108'
+    
+- time: '+1'
+  lights:
+    led_bracelet: '640000'
+    led_ryu_defeat: 'C71D0E'
+    
+- time: '+1'
+  lights:
+    led_bracelet: 'C70001'
+    led_ryu_defeat: 'C72612'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C72A14'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: '0C0700'
+    led_chunli_power: '523200'
+    led_ryu_defeat: 'C83318'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'B97100'
+    led_chunli_double: '103624'
+    led_chunli_power: 'C87900'
+    led_ryu_defeat: 'C8371B'
+    led_zangief_defeat: '210B33'
+    
+- time: '+1'
+  lights:
+    led_chunli_defeat: 'C87900'
+    led_chunli_double: '1A583B'
+    led_dhalsim_flame: '3D0233'
+    led_ryu_defeat: 'C83E1E'
+    led_zangief_defeat: '7A2AB9'
+    led_zangief_double: '6D25BB'
+    
+- time: '+1'
+  lights:
+    led_chunli_double: '1B593C'
+    led_dhalsim_flame: 'BF05A0'
+    led_zangief_double: '6B25BB'
+    
+- time: '+1'
+  lights:
+    led_vega_defeat: 'A16200'
+    led_zangief_double: '6924BB'
+    
+- time: '+1'
+  lights:
+    led_guile_double: '1E0000'
+    led_ryu_defeat: 'C8401E'
+    led_vega_defeat: 'C87900'
+    led_zangief_double: '6824BB'
+    
+- time: '+1'
+  lights:
+    led_guile_double: 'C70001'
+    led_ryu_defeat: 'C83F1E'
+    led_zangief_double: '6623BB'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C8401F'
+    led_zangief_double: '6221BC'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C8401E'
+    led_zangief_double: '5E20BC'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C8401F'
+    led_zangief_double: '5B1FBD'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: '581EBD'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_defeat: '020002'
+    led_sagat_defeat: '040106'
+    led_zangief_double: '541DBE'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_defeat: '95047D'
+    led_sagat_defeat: '6B25A3'
+    led_zangief_double: '511CBE'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_defeat: 'BF05A0'
+    led_sagat_defeat: '7929B8'
+    led_zangief_double: '4E1BBE'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '0B0000'
+    led_sagat_defeat: '7A2AB9'
+    led_zangief_double: '4A19BF'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'AF0001'
+    led_zangief_double: '4718BF'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C70001'
+    led_zangief_double: '4317C0'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: '4016C0'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: '3C15C1'
+    
+- time: '+1'
+  lights:
+    led_mbison_defeat: '010202'
+    led_zangief_double: '3914C1'
+    
+- time: '+1'
+  lights:
+    led_mbison_defeat: '164931'
+    led_zangief_double: '3612C1'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: '3A2300'
+    led_balrog_power: '000101'
+    led_guile_defeat: '020000'
+    led_mbison_defeat: '1B593C'
+    led_zangief_double: '3312C2'
+    
+- time: '+1'
+  lights:
+    led_balrog_defeat: 'C87900'
+    led_balrog_power: '164831'
+    led_guile_defeat: '6B0000'
+    led_honda_torpedo: '000001'
+    led_right_middle_gi_5: '040101'
+    led_zangief_double: '3010C2'
+    
+- time: '+1'
+  lights:
+    led_balrog_power: '1B593C'
+    led_guile_defeat: 'C60001'
+    led_honda_torpedo: '002863'
+    led_right_middle_gi_5: 'BE3C1D'
+    led_zangief_double: '2D0FC2'
+    
+- time: '+1'
+  lights:
+    led_guile_defeat: 'C70001'
+    led_honda_defeat: '000001'
+    led_honda_torpedo: '0044B6'
+    led_right_middle_gi_5: 'C8401F'
+    led_zangief_double: '2A0EC3'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '000071'
+    led_honda_double: '00377C'
+    led_honda_torpedo: '0047B8'
+    led_pop_standups_3: '500243'
+    led_zangief_double: '260DC3'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '0000C8'
+    led_honda_double: '0051B6'
+    led_honda_torpedo: '004BB7'
+    led_pop_standups_3: 'BF05A0'
+    led_right_middle_gi_2: 'C87900'
+    led_zangief_double: '240CC4'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '010403'
+    led_honda_torpedo: '0044B9'
+    led_zangief_double: '200BC4'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '1A563A'
+    led_honda_torpedo: '0039BB'
+    led_zangief_double: '1D0AC4'
+    
+- time: '+1'
+  lights:
+    led_balrog_double: '1B593C'
+    led_honda_torpedo: '0030BD'
+    led_pop_standups_1: 'C70001'
+    led_zangief_double: '1B09C5'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '002ABF'
+    led_right_middle_gi_6: '020100'
+    led_zangief_double: '1708C5'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0023C0'
+    led_right_middle_gi_6: '912E16'
+    led_zangief_double: '1407C5'
+    
+- time: '+1'
+  lights:
+    led_blanka_double: '7A2AB9'
+    led_honda_torpedo: '001DC1'
+    led_pop_standups_2: 'BF05A0'
+    led_right_middle_gi_6: 'C73F1E'
+    led_zangief_double: '1206C6'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0017C3'
+    led_left_middle_gi_5: '010001'
+    led_right_middle_gi_6: 'C8401F'
+    led_zangief_double: '0F05C6'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0011C4'
+    led_left_middle_gi_5: 'BD059E'
+    led_zangief_double: '0C04C7'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '010001'
+    led_honda_torpedo: '003EBA'
+    led_left_middle_gi_5: 'BF05A0'
+    led_zangief_double: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '5B1F8B'
+    led_honda_torpedo: '0039BB'
+    
+- time: '+1'
+  lights:
+    led_blanka_car: '7A2AB9'
+    led_honda_torpedo: '0033BD'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '002BBE'
+    led_right_middle_gi_3: 'C8401F'
+    led_right_sling_gi_3: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0022C0'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '001BC2'
+    led_right_middle_gi_1: 'C87900'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0019C2'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '001EC1'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '531C7F'
+    led_honda_torpedo: '001DC2'
+    led_left_middle_gi_3: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_blanka_defeat: '7A2AB9'
+    led_honda_torpedo: '0014C3'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '0007C6'
+    led_left_sling_gi_1: '000308'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8411E'
+    led_honda_torpedo: '0011C4'
+    led_left_sling_gi_1: '0051B6'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8421D'
+    led_honda_torpedo: '0014C4'
+    led_left_middle_gi_4: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8441D'
+    led_honda_torpedo: '0009C6'
+    led_left_middle_gi_2: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8451C'
+    led_honda_torpedo: '0005C7'
+    led_right_middle_gi_4: '40140A'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8471B'
+    led_honda_torpedo: '000FC5'
+    led_right_middle_gi_4: 'C8401F'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C8481A'
+    led_honda_torpedo: '0008C6'
+    led_right_sling_gi_1: '1A5539'
+    led_right_sling_gi_2: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_champion: '0051B6'
+    led_fighter_1: 'C84919'
+    led_honda_torpedo: '0001C8'
+    led_left_middle_gi_1: '00002B'
+    led_left_middle_gi_6: '1B0928'
+    led_right_sling_gi_1: '1B593C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C84B19'
+    led_honda_torpedo: '000CC5'
+    led_left_middle_gi_1: '0000C3'
+    led_left_middle_gi_6: '7A2AB9'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C84C18'
+    led_honda_torpedo: '0002C8'
+    led_left_middle_gi_1: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C84D17'
+    led_honda_torpedo: '0003C7'
+    led_left_sling_gi_2: '002450'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C84F17'
+    led_honda_torpedo: '0008C6'
+    led_left_sling_gi_2: '0051B6'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85016'
+    led_honda_torpedo: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85115'
+    led_honda_torpedo: '0007C6'
+    led_left_sling_gi_3: '001E42'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85215'
+    led_honda_torpedo: '0000C8'
+    led_left_sling_gi_3: '0051B6'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85414'
+    led_honda_torpedo: '0003C7'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85513'
+    led_honda_torpedo: '0002C7'
+    led_left_sling_gi_1: '0050B6'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85613'
+    led_honda_torpedo: '0000C8'
+    led_left_sling_gi_1: '0051B6'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85712'
+    led_honda_torpedo: '0003C7'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85812'
+    led_honda_torpedo: '0000C8'
+    led_left_sling_gi_1: '004DB7'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85911'
+    led_honda_torpedo: '0004C7'
+    led_left_sling_gi_1: '0051B6'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: 'BD07A1'
+    led_fighter_1: 'C85B10'
+    led_honda_torpedo: '0000C8'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: 'BF05A0'
+    led_honda_torpedo: '0003C7'
+    led_left_sling_gi_1: '004AB7'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: 'C85D0F'
+    led_honda_torpedo: '0018C3'
+    led_left_sling_gi_1: '0051B6'
+    

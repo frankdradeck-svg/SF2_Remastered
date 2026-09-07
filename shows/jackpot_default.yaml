@@ -1,0 +1,28 @@
+#show_version=6
+- time: 0
+  lights:
+    led_car_1: white
+    led_car_2: white
+    led_car_3: white
+    led_car_4: white
+    led_car_5: white
+    led_car_6: white
+    led_flasher_left: white
+    led_flasher_middle: white
+    led_flasher_rightrear: white
+    led_flasher_right: white
+  coils: 
+    c_car_mech: pulse
+
+- time: '+1'
+  lights:
+    led_car_1: off
+    led_car_2: off
+    led_car_3: off
+    led_car_4: off
+    led_car_5: off
+    led_car_6: off
+    led_flasher_left: off
+    led_flasher_middle: off
+    led_flasher_rightrear: off
+    led_flasher_right: off

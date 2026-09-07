@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://ccbf3ynqqfk4q"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_07fst"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_j0hpy"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_07fst")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label" type="Label" parent="." unique_id=1730150719]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 111.0
+offset_right = 1623.0
+offset_bottom = 453.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 250
+text = "SAVE KEN"
+
+[node name="Label3" type="Label" parent="." unique_id=730284880]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 383.0
+offset_right = 2062.0
+offset_bottom = 493.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Shoot the Right Scoop!"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1101555038]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 433.0
+offset_right = 2303.0
+offset_bottom = 665.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/font_size = 170
+text = "15,000,000"
+script = ExtResource("2_j0hpy")
+variable_type = 1
+variable_name = "current_hurryup"
+initialize_empty = false
+update_event = "hurry_up_value"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

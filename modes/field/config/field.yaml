@@ -1,0 +1,377 @@
+#config_version=6
+
+#NEED TORPEDO OVERLAY SLIDES
+
+mode:
+  start_events: ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
+  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
+  priority: 300
+
+sound_player:
+  fight_qualified_event:
+    challenger2: 
+      bus: voice
+  car_mb_qualified_event:
+    shoot_under_right:
+      bus: voice_boost
+  timer_field_intro_timer_complete{current_player.fight_qualified==1}:
+    shoot_under_left:
+      bus: voice
+  timer_field_intro_timer_complete{current_player.fight_qualified!=1}:
+    shoot_flame:
+      bus: voice_loud
+
+slide_player:
+  timer_millions_timer_complete:
+    field:
+      action: play
+  mode_field_started: 
+    field:
+      action: play
+    vega:
+      action: remove
+    chunli:
+      action: remove
+    guile_mb:
+      action: remove
+  s_guile_opto_active:
+    guile_videos:
+      expire: 3s
+      priority: 101
+  s_guile_opto_active{device.counters.guile_hits.value==0 and current_player.guile_mb_played!=1}:
+    g_uile:
+      expire: 3s
+      priority: 102
+  s_guile_opto_active{device.counters.guile_hits.value==1 and current_player.guile_mb_played!=1}:
+    gu_ile:
+      expire: 3s
+      priority: 102
+  s_guile_opto_active{device.counters.guile_hits.value==2 and current_player.guile_mb_played!=1}:
+    gui_le:
+      expire: 3s
+      priority: 102
+  s_guile_opto_active{device.counters.guile_hits.value==3 and current_player.guile_mb_played!=1}:
+    guil_e:
+      expire: 3s
+      priority: 102
+  s_guile_opto_active{device.counters.guile_hits.value==4 and current_player.guile_mb_played!=1}:
+    guile_complete:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==0}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+    t_orpedo:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==1}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+    to_rpedo:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==2}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+    tor_pedo:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==3}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+    torp_edo:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==4}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+    torpe_do:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==5}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+    torped_o:
+      expire: 3s
+      priority: 102
+  s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value>5}:
+    ehonda_videos:
+      expire: 3s
+      priority: 101
+  s_loop_spinner_active{device.counters.car_loop_spinner_hits.value==19}:
+    car_mb_progress:
+      expire: 3s
+      priority: 102
+    c_ar:
+      expire: 3s
+      priority: 103
+  s_loop_spinner_active{device.counters.car_loop_spinner_hits.value==39}:
+    car_mb_progress:
+      expire: 3s
+      priority: 102
+    ca_r:
+      expire: 3s 
+      priority: 103
+  s_loop_spinner_active{device.counters.car_loop_spinner_hits.value==59}:
+    car_mb_progress:
+      expire: 3s
+      priority: 102
+    car_complete:
+      expire: 3s 
+      priority: 103
+  fight_qualified_event:
+    challenger_overlay:
+      action: play
+  guile_mb_qualified_event:
+    guile_mb_overlay:
+      action: play
+  car_mb_qualified_event:
+    bonus_mb_overlay:
+      action: play
+  ball_started{current_player.car_mb_qualified==1}:
+    bonus_mb_overlay:
+      action: play
+  ball_started{current_player.fight_qualified==1}:
+    challenger_overlay:
+      action: play
+  ball_started{current_player.guile_mb_qualified==1}:
+    guile_mb_overlay:
+      action: play
+  mode_field_started{current_player.car_mb_qualified==1}:
+    bonus_mb_overlay:
+      action: play
+  mode_field_started{current_player.fight_qualified==1}:
+    challenger_overlay:
+      action: play
+  mode_field_started{current_player.guile_mb_qualified==1}:
+    guile_mb_overlay:
+      action: play
+  s_right_vuk_active{current_player.ken_hurry_active!=1}:
+    bison_videos:
+      expire: 3s
+      priority: 101
+  s_zangief_active:
+    zangief_videos:
+      expire: 3s
+      priority: 101
+  s_chunli_entrance_active:
+    chunli_videos:
+      expire: 3s
+      priority: 101
+  s_center_spinner_active{device.counters.center_spinner_hits.value==15}:
+    dhalsim_videos:
+      expire: 3s
+      priority: 101
+  s_loop_spinner_active{device.counters.loop_spinner_hits.value==10}:
+    kenryu_videos:
+      expire: 3s
+      priority: 101
+  s_right_standup_1_active:
+    fei_videos:
+      expire: 3s
+      priority: 101
+  s_right_standup_2_active:
+    fei_videos:
+      expire: 3s
+      priority: 101
+  s_left_orbit_rollover_active{device.counters.left_orbit_hits.value==1}:
+    blanka_videos:
+      expire: 3s
+      priority: 101
+
+
+variable_player:
+  s_left_inlane_active:
+    score: 10000
+  s_guile_opto_active:
+    score: 150000
+  s_center_spinner_active:
+    score: 5000
+  s_right_vuk_active:
+    score: 10000
+  s_left_vuk_active:
+    score: 10000
+  s_zangief_active:
+    score: 120000
+  s_chunli_entrance_active:
+    score: 120000
+  s_loop_spinner_active:
+    score: 10000
+  s_right_standup_1_active:
+    score: 10000
+  s_right_standup_2_active:
+    score: 10000
+  left_orbit_count_complete_event:
+    score: 100000
+  mode_ken_hurry_stopped:
+    ken_hurry_active:
+      int: 0
+      action: set
+  torpedo_complete:
+    torpedo_qualified:
+      int: 1
+      action: set
+  timer_torpedo_timer_started:
+    torpedo_running:
+      int: 1
+      action: set
+  timer_torpedo_outro_timer_stopped:
+    torpedo_running:
+      int: 0
+      action: set
+
+light_player:
+  ball_started{current_player.fight_qualified==1}:
+    led_dhalsim_flame: off
+  fight_qualified_event:
+    led_dhalsim_flame: off
+  ball_started{current_player.guile_mb_qualified==0}:
+    led_guile_advance:
+      color: orange
+  mode_field_started{current_player.guile_mb_qualified==0}:
+    led_guile_advance:
+      color: orange
+  ball_started{current_player.car_mb_qualified!=1}:
+    led_blanka_car: 
+      color: orange
+  mode_field_started{current_player.car_mb_qualified!=1}:
+    led_blanka_car: 
+      color: orange
+
+show_player:
+  ball_started{current_player.fight_qualified!=1}:
+    flash_color:
+      key: dhalsim_flash
+      speed: 2
+      show_tokens:
+        lights: led_dhalsim_flame
+        color: red
+  mode_field_started{current_player.fight_qualified!=1}:
+    flash_color:
+      key: dhalsim_flash
+      speed: 2
+      show_tokens:
+        lights: led_dhalsim_flame
+        color: red
+  ball_started{current_player.guile_mb_qualified==1}:
+    flash_color:
+      key: guile_flash
+      speed: 4
+      show_tokens:
+        lights: led_guile_advance
+        color: orange
+  mode_field_started{current_player.guile_mb_qualified==1}:
+    flash_color:
+      key: guile_flash
+      speed: 4
+      show_tokens:
+        lights: led_guile_advance
+        color: orange
+  guile_mb_qualified_event:
+    flash_color:
+      key: guile_flash
+      speed: 4
+      show_tokens:
+        lights: led_guile_advance
+        color: orange
+  fight_qualified_event:
+    flash_color:
+      key: zangief_flash
+      speed: 4
+      show_tokens:
+        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
+        color: white
+  ball_started{current_player.fight_qualified==1}:
+    flash_color:
+      key: zangief_flash
+      speed: 4
+      show_tokens:
+        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
+        color: white
+  mode_field_started{current_player.fight_qualified==1}:
+    flash_color:
+      key: zangief_flash
+      speed: 4
+      show_tokens:
+        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
+        color: white
+  car_mb_qualified_event:
+    flash_color:
+      key: chunli_flash
+      speed: 4
+      show_tokens:
+        lights: led_vega_defeat, led_chunli_defeat, led_chunli_double, led_chunli_power
+        color: white
+  mode_field_started{current_player.car_mb_qualified==1}:
+    flash_color:
+      key: chunli_flash
+      speed: 4
+      show_tokens:
+        lights: led_vega_defeat, led_chunli_defeat, led_chunli_double, led_chunli_power
+        color: white
+  ball_started{current_player.car_mb_qualified==1}:
+    flash_color:
+      key: chunli_flash
+      speed: 4
+      show_tokens:
+        lights: led_vega_defeat, led_chunli_defeat, led_chunli_double, led_chunli_power
+        color: white
+
+
+event_player:
+  s_left_ramp_rollover_active{current_player.fight_qualified==1}: choose_fight
+  s_guile_opto_active{current_player.guile_mb_qualified==1}: guile_mb_started
+  s_right_orbit_rollover_active{current_player.car_mb_qualified==1}: car_mb_started
+  timer_field_stepper_intro_stopped: trigger_motor_stop
+  timer_field_stepper_intro_started: trigger_slow_speed
+  
+counters:
+  loop_spinner_hits:
+    count_events: s_loop_spinner_active
+    starting_count: 0
+    count_complete_value: 60
+    direction: up
+    persist_state: true
+    disable_on_complete: true
+  left_orbit_hits:
+    count_events: s_left_orbit_rollover_active
+    starting_count: 0
+    count_complete_value: 2
+    direction: up
+    events_when_complete: left_orbit_count_complete_event
+    persist_state: false
+    disable_on_complete: false
+    reset_on_complete: true
+  torpedo_hits:
+    count_events: s_left_vuk_active
+    starting_count: 0
+    count_complete_value: 7
+    direction: up
+    events_when_complete: torpedo_complete
+    persist_state: true
+    reset_on_complete: false
+    disable_on_complete: true
+
+timers:
+  field_intro_timer:
+    start_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+  field_stepper_intro:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: mode_field_started
+        action: start
+      - event: timer_field_stepper_intro_complete
+        action: reset

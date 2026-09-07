@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://e5x3j7apvj48"]
+
+[ext_resource type="AudioStream" uid="uid://6e4nier1rnmg" path="res://sounds/unprocessed/double_scoring/double_scoring_1.mp3" id="1_y25jo"]
+[ext_resource type="AudioStream" uid="uid://w3ucu76kunyu" path="res://sounds/unprocessed/double_scoring/double_scoring_3.wav" id="2_uc3hd"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_y25jo")
+stream_1/stream = ExtResource("2_uc3hd")

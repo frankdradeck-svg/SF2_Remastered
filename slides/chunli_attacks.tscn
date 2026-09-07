@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://de6yigao5kdyo"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ylwid"]
+[ext_resource type="Script" uid="uid://bh3xoo03q0ii0" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="2_5estg"]
+[ext_resource type="VideoStream" uid="uid://bw4vbnwwmvcry" path="res://assets/chunli_attack_1.ogv" id="3_hp3w7"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_buwib"]
+[ext_resource type="VideoStream" uid="uid://7uop0wofuml" path="res://assets/chunli_attack_2.ogv" id="5_jv32i"]
+
+[node name="MPFSlide" type="Control" unique_id=2140851176]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ylwid")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFChildPool" type="Control" parent="." unique_id=1161882054]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_5estg")
+playback_method = 1
+child_method = "play"
+metadata/_custom_type_script = "uid://bh3xoo03q0ii0"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=2045365910]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("3_hp3w7")
+expand = true
+bus = &"effects"
+script = ExtResource("4_buwib")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer2" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=364541186]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("5_jv32i")
+expand = true
+bus = &"effects"
+script = ExtResource("4_buwib")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
