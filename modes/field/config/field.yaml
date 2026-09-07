@@ -187,6 +187,14 @@ slide_player:
 
 
 variable_player:
+  timer_field_stepper_intro_started:
+    stepper_intro_running:
+      action: set
+      int: 1
+  timer_field_stepper_intro_stopped:
+    stepper_intro_running:
+      action: set
+      int: 0
   s_left_inlane_active:
     score: 10000
   s_guile_opto_active:
@@ -328,8 +336,9 @@ event_player:
   s_left_ramp_rollover_active{current_player.fight_qualified==1}: choose_fight
   s_guile_opto_active{current_player.guile_mb_qualified==1}: guile_mb_started
   s_right_orbit_rollover_active{current_player.car_mb_qualified==1}: car_mb_started
-  timer_field_stepper_intro_stopped: trigger_motor_stop
-  timer_field_stepper_intro_started: trigger_slow_speed
+  timer_field_stepper_intro_started: chunli_intro_start
+  s_stepper_home_active: chunli_home
+  s_chunli_entrance_active: chunli_move_90
   
 counters:
   loop_spinner_hits:

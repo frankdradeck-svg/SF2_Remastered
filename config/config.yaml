@@ -22,7 +22,6 @@ modes:
 
 hardware:
  platform: fast
- stepper_controllers: pololu_tic
 
 fast:
   net:
@@ -42,32 +41,7 @@ fast:
         led_fade_time: 100ms
 
 custom_code:
-  - custom_code.chunli.Chunli
-
-steppers:
-  chun_stepper:
-    number: "00506424"
-    homing_mode: switch
-    homing_direction: clockwise
-    homing_switch: s_stepper_home
-    pos_min: 0
-    pos_max: 1000000
-    named_positions:
-      10: stepper_up
-      20: stepper_down
-      999999: stepper_go
-    relative_positions:
-      50: stepper_forward_50
-      -50: stepper_back_50
-      0: stepper_stop
-    platform_settings:
-      max_acceleration: 40000
-      current_limit: 931
-      max_deceleration: 40000
-      max_speed: 2000000
-      poll_ms: 100ms
-      starting_speed: 0
-      step_mode: 1
+  - custom_code.chunli.ChunLi
 
 lights:
   led_left_middle_gi_1:
@@ -550,20 +524,6 @@ flippers:
     main_coil: c_upper_flipper
     activation_switch: s_upper_flipper
 
-event_player:
-  trigger_slow_speed:   
-    set_tic_velocity: 
-      velocity: 100000    # Speed 1: Slow (10 microsteps/sec)
-  trigger_medium_speed: 
-    set_tic_velocity: 
-      velocity: 300000    # Speed 2: Medium (30 microsteps/sec)
-  trigger_fast_speed:   
-    set_tic_velocity: 
-      velocity: 600000    # Speed 3: Fast (60 microsteps/sec)
-  trigger_motor_stop:   
-    set_tic_velocity: 
-      velocity: 0         # Stop Command
-
 diverters:
   left_ramp:
     activation_coil: c_left_ramp_divert
@@ -578,8 +538,8 @@ diverters:
   right_ramp:
     activation_coil: c_right_ramp_divert
     type: hold
-    activate_events: car_mb_qualified_event, ball_started{current_player.car_mb_qualified==1}, mode_field_started{current_player.car_mb_qualified==1}
-    deactivate_events: vega_started, chunli_started, mode_field_started{current_player.car_mb_qualified!=1}, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started
+    activate_events: car_mb_qualified_event, ball_started{current_player.car_mb_qualified==1}, mode_field_started{current_player.car_mb_qualified==1}, mode_millions_started
+    deactivate_events: vega_started, chunli_started, mode_field_started{current_player.car_mb_qualified!=1}, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started, mode_millions_ended
     targets_when_active: playfield
     targets_when_inactive: playfield
     disable_events: ball_ended, game_ending, guile_mb_started
