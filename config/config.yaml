@@ -587,10 +587,12 @@ ball_devices:
     ball_switches: s_left_vuk
     eject_coil: c_left_vuk
     eject_timeouts: 1s
+    entrance_count_delay: 1000ms
   bd_right_vuk:
     ball_switches: s_right_vuk
     eject_coil: c_right_vuk
     eject_timeouts: 1s
+    entrance_count_delay: 1000ms
   
 machine:
   balls_installed: 3
