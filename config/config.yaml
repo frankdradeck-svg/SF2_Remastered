@@ -479,10 +479,10 @@ coils:
     default_pulse_ms: 20
   c_left_vuk:
     number: back-0
-    default_pulse_ms: 60
+    default_pulse_ms: 100
   c_right_vuk:
     number: back-1
-    default_pulse_ms: 60
+    default_pulse_ms: 100
   c_right_ramp_divert:
     number: back-2
     default_hold_power: 1.0
