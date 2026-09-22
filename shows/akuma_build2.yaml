@@ -1,0 +1,8 @@
+#show_version=6
+- duration: 0.5s
+  lights:
+    led_all: red-f0.5s
+
+- duration: 0.5s
+  lights:
+    led_all: off-f0.5s

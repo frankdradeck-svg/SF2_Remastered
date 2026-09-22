@@ -1,0 +1,83 @@
+#config_version=6
+
+mode:
+  start_events: timer_akuma_timer_stopped
+  stop_events: ball_will_end, multiball_akuma_mb_ended
+  priority: 300
+
+slide_player:
+  mode_akuma_started: 
+    akuma_idle:
+      action: play
+      priority: 3
+  akuma_jackpot_event:
+    akuma_jackpot:
+      action: play
+      expire: 2s
+      priority: 4
+
+sound_player:
+  mode_akuma_started:
+    akuma_theme:
+      bus: music
+      action: play
+  akuma_jackpot_event:
+    vo_jackpot:
+      action: replace
+      bus: voice_loud
+
+show_player:
+  mode_akuma_started:
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_double
+        color: red
+    akuma_multiball:
+      loops: -1
+  multiball_akuma_mb_timer_start:
+    flash_color:
+      key: ball_save2
+      speed: 2
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  multiball_akuma_mb_hurry_up:
+    flash_color:
+      key: ball_save2
+      speed: 4
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  multiball_akuma_mb_shoot_again_ended:
+    ball_save2: stop
+  akuma_jackpot_event:
+    jackpot_default:
+      speed: 6
+      priority: 1
+      loops: 2
+
+multiballs:
+  akuma_mb:
+    ball_count: 3
+    shoot_again: 35s
+    hurry_up_time: 10s
+    grace_period: 5s
+    start_events: mode_akuma_started
+
+variable_player:
+  akuma_jackpot_event:
+    score: 10_000 + device.counters.akuma_build_hits.value * 750_000
+  fighter_mode_qualified:
+    int: 0
+    action: set
+
+event_player:
+  s_zangief_active: akuma_jackpot_event
+  s_center_spinner_active: akuma_jackpot_event
+  s_loop_spinner_active: akuma_jackpot_event
+  s_left_orbit_rollover_active: akuma_jackpot_event
+  s_right_vuk_active: akuma_jackpot_event
+  s_left_vuk_active: akuma_jackpot_event
+  s_guile_opto_active: akuma_jackpot_event
+  s_right_orbit_rollover_active: akuma_jackpot_event

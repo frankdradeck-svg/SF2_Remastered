@@ -12,7 +12,11 @@ slide_player:
       priority: 300
     attract:
       action: remove
-
+  get_fighter_letter:
+    get_fighter_letter:
+      action: play
+      expire: 3s
+      priority: 10
 ball_saves:
   default:
     active_time: 10s
@@ -92,6 +96,38 @@ light_player:
     led_ryu_defeat:
       color: white
       fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==0}:
+    led_fighter_apron_1:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==1}:
+    led_fighter_apron_2:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==2}:
+    led_fighter_apron_3:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==3}:
+    led_fighter_apron_4:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==4}:
+    led_fighter_apron_5:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==5}:
+    led_fighter_apron_6:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==6}:
+    led_fighter_apron_7:
+      color: red
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==7}:
+    led_fighter_apron_1:
+      color: green
+      fade: 200ms
 
 shots:
   zangief_ramp:
@@ -132,3 +168,25 @@ variable_player:
     fights_completed: 1
   mode_millions_started:
     fights_completed: 1
+  get_fighter_letter:
+    fighter_letters: 1
+
+event_player:
+  timer_finishing_vega_timer_complete: get_fighter_letter
+  timer_finishing_chunli_timer_complete: get_fighter_letter
+  timer_finishing_ehonda_timer_complete: get_fighter_letter
+  timer_finishing_zangief_timer_complete: get_fighter_letter
+  timer_finishing_sagat_timer_complete: get_fighter_letter
+  timer_finishing_dhalsim_timer_complete: get_fighter_letter
+  timer_finishing_balrog_timer_complete: get_fighter_letter
+  timer_finishing_blanka_timer_complete: get_fighter_letter
+  mode_guile_mb_started: get_fighter_letter
+  mode_millions_started: get_fighter_letter
+  vega_started: get_fighter_letter
+  ehonda_started: get_fighter_letter
+  zangief_started: get_fighter_letter
+  sagat_started: get_fighter_letter
+  dhalsim_started: get_fighter_letter
+  balrog_started: get_fighter_letter
+  blanka_started: get_fighter_letter
+  chunli_started: get_fighter_letter

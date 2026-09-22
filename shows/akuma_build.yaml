@@ -1,0 +1,4 @@
+#show_version=6
+- duration: 10s
+  lights:
+    led_all: red-f10s

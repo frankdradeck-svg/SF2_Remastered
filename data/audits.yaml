@@ -1,28 +1,48 @@
 events:
   game_ended: 22
-  game_started: 398
+  game_started: 462
 missing_switches:
-  s_action: 358
+  s_action: 422
   s_center_spinner: 2
-  s_center_standup_2: 1
+  s_center_standup_1: 64
+  s_center_standup_2: 65
+  s_center_standup_3: 64
   s_chun_li_entrance: 50
   s_chun_li_exit: 50
-  s_chunli_exit: 1
-  s_guile_opto: 51
+  s_chunli_entrance: 64
+  s_chunli_exit: 65
+  s_drain: 64
+  s_guile_opto: 115
+  s_left_flipper: 14
+  s_left_inlane: 64
+  s_left_orbit_rollover: 64
+  s_left_outlane: 64
   s_left_ramp_opto: 42
-  s_left_ramp_rollover: 23
+  s_left_ramp_rollover: 87
+  s_left_sling: 64
+  s_left_vuk: 64
+  s_loop_spinner: 64
   s_plunge_opto: 42
-  s_pop_standup_1: 2
-  s_pop_standup_2: 51
-  s_punchback_1: 398
-  s_punchback_2: 398
-  s_right_orbit_rollover: 51
-  s_right_outlane: 54
-  s_right_ramp_divert: 359
+  s_pop_bumper: 64
+  s_pop_standup_1: 66
+  s_pop_standup_2: 115
+  s_pop_standup_3: 64
+  s_punchback_1: 462
+  s_punchback_2: 462
+  s_right_inlane: 64
+  s_right_orbit_rollover: 115
+  s_right_outlane: 118
+  s_right_ramp_divert: 423
   s_right_ramp_opto: 42
-  s_right_standup_1: 2
-  s_right_standup_2: 3
-  s_start: 3
+  s_right_sling: 64
+  s_right_standup_1: 66
+  s_right_standup_2: 67
+  s_right_vuk: 34
+  s_start: 67
+  s_stepper_home: 64
+  s_trough: 64
+  s_upper_flipper: 64
+  s_zangief: 2
 player:
   score:
     average: 25892591
@@ -39,17 +59,17 @@ player:
     - 17370000
     total: 22
 shots:
-  center_spinner: 4496
+  center_spinner: 4606
   chunli_ramp: 199
   guile_ramp: 154
   left_orbit: 553
   left_vuk: 351
   loop_spinner: 4505
-  right_vuk: 208
-  zangief_ramp: 166
+  right_vuk: 230
+  zangief_ramp: 174
 switches:
   s_action: 2
-  s_center_spinner: 4696
+  s_center_spinner: 4806
   s_center_standup_1: 68
   s_center_standup_2: 455
   s_center_standup_3: 82
@@ -59,7 +79,7 @@ switches:
   s_chunli_exit: 153
   s_drain: 273
   s_guile_opto: 396
-  s_left_flipper: 1776
+  s_left_flipper: 1844
   s_left_inlane: 322
   s_left_orbit_rollover: 553
   s_left_outlane: 11
@@ -75,7 +95,7 @@ switches:
   s_pop_standup_3: 49
   s_punchback_1: 0
   s_punchback_2: 0
-  s_right_flipper: 1212
+  s_right_flipper: 1394
   s_right_inlane: 139
   s_right_orbit_rollover: 46
   s_right_outlane: 3
@@ -84,10 +104,10 @@ switches:
   s_right_sling: 232
   s_right_standup_1: 27
   s_right_standup_2: 12
-  s_right_vuk: 209
-  s_shooter: 631
+  s_right_vuk: 231
+  s_shooter: 699
   s_start: 11
   s_stepper_home: 177
   s_trough: 279
   s_upper_flipper: 1768
-  s_zangief: 166
+  s_zangief: 174

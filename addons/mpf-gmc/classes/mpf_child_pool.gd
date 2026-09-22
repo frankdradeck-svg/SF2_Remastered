@@ -110,3 +110,6 @@ func _find_random_child_force_all() -> Node:
 	# But add this one after clearing, to avoid back-to-back
 	used.append(i)
 	return self.get_child(i)
+
+func video_finished() -> void:
+	_initialize()

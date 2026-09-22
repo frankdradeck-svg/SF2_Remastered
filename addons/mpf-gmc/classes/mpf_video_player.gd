@@ -90,7 +90,11 @@ func _on_finished() -> void:
 	elif end_behavior == EndBehavior.CUSTOM_METHOD:
 		self[end_method].call()
 	elif end_behavior == EndBehavior.PARENT_METHOD:
-		self._get_parent()[end_method].call()
+		var parent = self.get_parent()
+		if parent is MPFChildPool:
+			parent[end_method].call()
+		else:
+			self._get_parent()[end_method].call()
 
 	if events_when_stopped:
 		# TBD: Will the events come as a string or an array?

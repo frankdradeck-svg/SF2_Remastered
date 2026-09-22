@@ -1,0 +1,108 @@
+#config_version=6
+
+mode:
+  start_events: akuma_chosen
+  stop_events: ball_will_end, timer_akuma_timer_stopped
+  priority: 200
+
+show_player:
+  mode_akuma_build_started:
+    flash_color:
+      key: torpedo_flash1
+      speed: 4
+      show_tokens:
+        lights: led_dhalsim_defeat, led_dhalsim_double, led_dhalsim_flame
+        color: white
+  ball_save_akuma_timer_start:
+    flash_color:
+      key: ball_save_akuma
+      speed: 2
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  ball_save_akuma_hurry_up:
+    flash_color:
+      key: ball_save_akuma
+      speed: 4
+      show_tokens:
+        lights: led_shoot_again
+        color: red
+  ball_save_akuma_disabled:
+    ball_save_akuma: stop
+  timer_akuma_timer_tick{device.timers.akuma_timer.ticks==20}:
+    akuma_build2:
+      loops: 0
+  timer_akuma_timer_tick{device.timers.akuma_timer.ticks==17}:
+    akuma_build2:
+      loops: 0
+  timer_akuma_timer_tick{device.timers.akuma_timer.ticks==15}:
+    akuma_build2:
+      loops: 0
+  timer_akuma_timer_tick{device.timers.akuma_timer.ticks==12}:
+    akuma_build2:
+      loops: 0
+  timer_akuma_timer_tick{device.timers.akuma_timer.ticks==10}:
+    akuma_build:
+      loops: 0
+
+slide_player:
+  mode_akuma_build_started:
+    akuma_intro:
+      action: play
+      priority: 3
+  timer_akuma_intro_timer_stopped:
+    akuma_build:
+      action: play
+      priority: 3
+
+event_player:
+  logicblock_akuma_build_hits_updated:
+    akuma_value:
+      current_akuma:
+        type: int
+        value: 10_000 + device.counters.akuma_build_hits.value * 750_000
+  timer_akuma_intro_timer_stopped: fighter_eject
+
+ball_saves:
+  akuma:
+    active_time: 36s
+    hurry_up_time: 8s
+    grace_period: 2s
+    enable_events: mode_akuma_build_started
+    timer_start_events: timer_akuma_intro_timer_stopped
+    auto_launch: true
+    balls_to_save: 10
+
+timers:
+  akuma_timer:
+    start_value: 46
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+  akuma_intro_timer:
+    start_value: 0
+    end_value: 10
+    direction: up
+    tick_interval: 1s
+    start_running: true
+
+variable_player:
+  logicblock_akuma_build_hits_updated:
+    akuma_cashout_value:
+      int: 10_000 + device.counters.akuma_build_hits.value * 750_000
+      action: set
+  timer_akuma_timer_tick:
+    akuma_build_time_left:
+      int: device.timers.akuma_timer.ticks
+      action: set
+
+
+counters:
+  akuma_build_hits:
+    count_events: s_center_spinner_active, s_loop_spinner_active
+    starting_count: 0
+    direction: up
+
+
+    

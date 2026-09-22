@@ -367,6 +367,9 @@ class ChunLi(CustomCode):
             "ChunLi animation: +50 steps."
         )
 
+        # Tell MPF that the ChunLi animation actually started.
+        self.machine.events.post("chunli_animation_started")
+
         # Give the Tic time to complete the move.
         self.machine.clock.schedule_once(
             self._animation_reverse_20,

@@ -1,25 +1,29 @@
 #config_version=6
 
-#NEED TORPEDO OVERLAY SLIDES
-
 mode:
-  start_events: ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
-  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
+  start_events: mode_akuma_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
+  stop_events: ball_will_end, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
   priority: 300
 
 sound_player:
   fight_qualified_event:
     challenger2: 
       bus: voice
+  get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}:
+    challenger2: 
+      bus: voice
   car_mb_qualified_event:
     shoot_under_right:
       bus: voice_boost
-  timer_field_intro_timer_complete{current_player.fight_qualified==1}:
+  timer_field_intro_timer_complete{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     shoot_under_left:
       bus: voice
   timer_field_intro_timer_complete{current_player.fight_qualified!=1}:
     shoot_flame:
       bus: voice_loud
+  chunli_animation_started:
+    chun_vfx:
+      bus: voice
 
 slide_player:
   timer_millions_timer_complete:
@@ -253,14 +257,14 @@ light_player:
       color: orange
 
 show_player:
-  ball_started{current_player.fight_qualified!=1}:
+  ball_started{current_player.fight_qualified!=1 and current_player.fighter_mode_qualified!=1}:
     flash_color:
       key: dhalsim_flash
       speed: 2
       show_tokens:
         lights: led_dhalsim_flame
         color: red
-  mode_field_started{current_player.fight_qualified!=1}:
+  mode_field_started{current_player.fight_qualified!=1 and current_player.fighter_mode_qualified!=1}:
     flash_color:
       key: dhalsim_flash
       speed: 2
@@ -295,14 +299,21 @@ show_player:
       show_tokens:
         lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
         color: white
-  ball_started{current_player.fight_qualified==1}:
+  get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}:
     flash_color:
       key: zangief_flash
       speed: 4
       show_tokens:
         lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
         color: white
-  mode_field_started{current_player.fight_qualified==1}:
+  ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
+    flash_color:
+      key: zangief_flash
+      speed: 4
+      show_tokens:
+        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
+        color: white
+  mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     flash_color:
       key: zangief_flash
       speed: 4
@@ -333,7 +344,8 @@ show_player:
 
 
 event_player:
-  s_left_ramp_rollover_active{current_player.fight_qualified==1}: choose_fight
+  s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1}: choose_fight
+  s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}: choose_fighter_mode
   s_guile_opto_active{current_player.guile_mb_qualified==1}: guile_mb_started
   s_right_orbit_rollover_active{current_player.car_mb_qualified==1}: car_mb_started
   timer_field_stepper_intro_started: chunli_intro_start

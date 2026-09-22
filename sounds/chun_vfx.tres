@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://cth3tex34la1w"]
+
+[ext_resource type="AudioStream" uid="uid://clqirnrfw1l7i" path="res://sounds/unprocessed/chun/chun_voice_1.mp3" id="1_n5akc"]
+[ext_resource type="AudioStream" uid="uid://dfunypjg44l3" path="res://sounds/unprocessed/chun/chun_voice_2.mp3" id="2_kvfvd"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_n5akc")
+stream_1/stream = ExtResource("2_kvfvd")

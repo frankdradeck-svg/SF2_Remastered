@@ -1,0 +1,45 @@
+#config_version=6
+
+mode:
+  start_events: choose_fighter_mode
+  stop_events: ball_will_end, akuma_chosen
+  priority: 400
+  code: mpf.modes.carousel.code.carousel.Carousel
+
+mode_settings:
+  selectable_items:
+    - chunli
+    - mbison
+    - akuma
+  next_item_events: s_right_flipper_inactive
+  previous_item_events: s_left_flipper_inactive
+  select_item_events: flipper_cancel, timer_fighter_select_timer_complete
+
+sound_player:
+  mode_fighter_mode_select_started:
+    character_select2:
+      bus: music_loud
+      action: play
+slide_player:
+  mode_fighter_mode_select_started: fighter_mode_select
+
+event_player:
+  carousel_item_selected{item=="akuma"}: akuma_chosen
+
+timers:
+  fighter_select_timer:
+    start_value: 15
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+
+variable_player:
+  mode_fighter_mode_select_started:
+    fighter_mode_select_time_left:
+      int: 15
+      action: set
+  timer_fighter_select_timer_tick:
+    fighter_mode_select_time_left:
+      int: device.timers.fighter_select_timer.ticks
+      action: set

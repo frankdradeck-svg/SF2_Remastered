@@ -114,6 +114,12 @@ timers:
       - action: start
         event: s_right_standup_2_active{current_player.super_meter_qualified==1}
 
+
+queue_relay_player:
+  balldevice_bd_left_vuk_ball_eject_attempt{current_player.fighter_mode_qualified==1}:
+    post: waiting_for_choice
+    wait_for: fighter_eject
+
 variable_player:
   fight_qualified_event:
     fight_qualified:
@@ -177,6 +183,18 @@ variable_player:
   mode_global_started:
     super_meter_running:
       int: 0
+      action: set
+  get_fighter_letter{current_player.fighter_letters==6}:
+    fighter_mode_qualified:
+      int: 1
+      action: set
+  get_fighter_letter{current_player.fighter_letters==13}:
+    fighter_mode_qualified:
+      int: 1
+      action: set
+  get_fighter_letter{current_player.fighter_letters==20}:
+    fighter_mode_qualified:
+      int: 1
       action: set
 
 sequence_shots:
