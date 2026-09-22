@@ -39,7 +39,11 @@ variable_player:
     fighter_mode_select_time_left:
       int: 15
       action: set
+    playing_fighter_mode:
+      int: 1
+      action: set
   timer_fighter_select_timer_tick:
     fighter_mode_select_time_left:
       int: device.timers.fighter_select_timer.ticks
       action: set
+

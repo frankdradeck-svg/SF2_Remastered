@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: mode_akuma_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
+  start_events: multiball_akuma_mb_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
   stop_events: ball_will_end, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
   priority: 300
 
@@ -26,6 +26,10 @@ sound_player:
       bus: voice
 
 slide_player:
+  get_fighter_letter:
+    get_fighter_letter:
+      expire: 3s
+      priority: 101
   timer_millions_timer_complete:
     field:
       action: play
@@ -235,6 +239,10 @@ variable_player:
       action: set
   timer_torpedo_outro_timer_stopped:
     torpedo_running:
+      int: 0
+      action: set
+  mode_field_started:
+    playing_fighter_mode:
       int: 0
       action: set
 

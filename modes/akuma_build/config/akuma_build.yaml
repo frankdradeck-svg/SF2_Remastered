@@ -3,7 +3,7 @@
 mode:
   start_events: akuma_chosen
   stop_events: ball_will_end, timer_akuma_timer_stopped
-  priority: 200
+  priority: 300
 
 show_player:
   mode_akuma_build_started:
@@ -95,6 +95,10 @@ variable_player:
   timer_akuma_timer_tick:
     akuma_build_time_left:
       int: device.timers.akuma_timer.ticks
+      action: set
+  mode_akuma_build_started:
+    fighter_mode_qualified:
+      int: 0
       action: set
 
 

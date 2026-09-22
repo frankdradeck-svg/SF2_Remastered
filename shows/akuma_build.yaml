@@ -2,3 +2,4 @@
 - duration: 10s
   lights:
     led_all: red-f10s
+    led_gi: green-f10s

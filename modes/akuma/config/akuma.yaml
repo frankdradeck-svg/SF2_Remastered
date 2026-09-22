@@ -68,9 +68,7 @@ multiballs:
 variable_player:
   akuma_jackpot_event:
     score: 10_000 + device.counters.akuma_build_hits.value * 750_000
-  fighter_mode_qualified:
-    int: 0
-    action: set
+
 
 event_player:
   s_zangief_active: akuma_jackpot_event

@@ -2,7 +2,9 @@
 - duration: 0.5s
   lights:
     led_all: red-f0.5s
+    led_gi: green-f0.5s
 
 - duration: 0.5s
   lights:
     led_all: off-f0.5s
+    led_gi: off-f0.5s

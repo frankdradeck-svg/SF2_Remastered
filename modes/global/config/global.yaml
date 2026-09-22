@@ -219,7 +219,7 @@ counters:
     reset_on_complete: false
     disable_on_complete: true
   center_spinner_hits:
-    count_events: s_center_spinner_active
+    count_events: s_center_spinner_active{current_player.playing_fighter_mode!=1}
     starting_count: 0
     count_complete_value: 30
     direction: up

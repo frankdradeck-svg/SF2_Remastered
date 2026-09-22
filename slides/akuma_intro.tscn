@@ -17,6 +17,7 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 stream = ExtResource("2_g7hcx")
+volume_db = 7.999999
 autoplay = true
 expand = true
 bus = &"voice_boost"
