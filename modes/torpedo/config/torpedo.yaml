@@ -64,7 +64,7 @@ timers:
 
 variable_player:
   s_left_vuk_active:
-    score: 10_000 + device.counters.torpedo_build_hits.value * 750_000
+    score: 10000 + device.counters.torpedo_build_hits.value * 750000
   logicblock_torpedo_build_hits_updated:
     torpedo_cashout_value:
       int: 10_000 + device.counters.torpedo_build_hits.value * 750_000

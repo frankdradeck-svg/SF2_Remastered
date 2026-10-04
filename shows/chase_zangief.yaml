@@ -1,0 +1,756 @@
+#show_version=6
+- time: 0
+  lights:
+    led_zangief_double: 'C37DC3'
+    led_zangief_power: '2D1D2D'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C67FC6'
+    led_zangief_power: '452C45'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C880C8'
+    led_zangief_power: '633F63'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C67FC6'
+    led_zangief_power: '815381'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '010101'
+    led_zangief_double: 'C27CC2'
+    led_zangief_power: '996299'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '070407'
+    led_zangief_double: 'BC79BC'
+    led_zangief_power: 'AB6DAB'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '0F0A0F'
+    led_zangief_double: 'B071B0'
+    led_zangief_power: 'B775B7'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '1C121C'
+    led_zangief_double: 'A167A1'
+    led_zangief_power: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '2F1E2F'
+    led_zangief_double: '895789'
+    led_zangief_power: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '482E48'
+    led_zangief_double: '6B446B'
+    led_zangief_power: 'C47EC4'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '674267'
+    led_zangief_double: '4B304B'
+    led_zangief_power: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '865686'
+    led_zangief_double: '311F31'
+    led_zangief_power: 'C07BC0'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '9F659F'
+    led_zangief_double: '1E131E'
+    led_zangief_power: 'B976B9'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: 'B070B0'
+    led_zangief_double: '100A10'
+    led_zangief_power: 'AE6FAE'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '030203'
+    led_zangief_defeat: 'BC78BC'
+    led_zangief_double: '070407'
+    led_zangief_power: '9C649C'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '090609'
+    led_zangief_defeat: 'C27CC2'
+    led_zangief_double: '020102'
+    led_zangief_power: '895889'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '130C13'
+    led_zangief_defeat: 'C67FC6'
+    led_zangief_double: '000000'
+    led_zangief_power: '6B456B'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: '231623'
+    led_zangief_defeat: 'C780C7'
+    led_zangief_power: '4C304C'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020102'
+    led_sagat_defeat: '382438'
+    led_zangief_defeat: 'C77FC7'
+    led_zangief_power: '322032'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020202'
+    led_sagat_defeat: '533553'
+    led_zangief_defeat: 'C37DC3'
+    led_zangief_power: '1E131E'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '030203'
+    led_sagat_defeat: '744A74'
+    led_zangief_defeat: 'BD79BD'
+    led_zangief_power: '100A10'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '905C90'
+    led_zangief_defeat: 'B373B3'
+    led_zangief_power: '080507'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'A66AA6'
+    led_zangief_defeat: 'A368A3'
+    led_zangief_power: '020102'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '040304'
+    led_sagat_defeat: 'B473B4'
+    led_zangief_defeat: '8F5B8F'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '030203'
+    led_sagat_defeat: 'BF7ABF'
+    led_zangief_defeat: '724972'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020102'
+    led_sagat_defeat: 'C47DC4'
+    led_zangief_defeat: '513451'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_dhalsim_flame: '010001'
+    led_sagat_defeat: 'C67FC6'
+    led_zangief_defeat: '362336'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '000000'
+    led_sagat_defeat: 'C77FC7'
+    led_zangief_defeat: '211521'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '010101'
+    led_sagat_defeat: 'C57EC5'
+    led_zangief_defeat: '120C12'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C17CC1'
+    led_zangief_defeat: '080508'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '030203'
+    led_sagat_defeat: 'BB78BB'
+    led_zangief_defeat: '030203'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '000000'
+    led_sagat_defeat: '000000'
+    led_zangief_defeat: '000000'
+    led_zangief_double: 'C27CC2'
+    led_zangief_power: '281928'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C67FC6'
+    led_zangief_power: '3E283E'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C77FC7'
+    led_zangief_power: '583958'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C67FC6'
+    led_zangief_power: '784D78'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '010001'
+    led_zangief_double: 'C27CC2'
+    led_zangief_power: '915D91'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '050305'
+    led_zangief_double: 'BD79BD'
+    led_zangief_power: 'A56AA5'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '0D080D'
+    led_zangief_double: 'B373B3'
+    led_zangief_power: 'B272B2'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '181018'
+    led_zangief_double: 'A368A3'
+    led_zangief_power: 'BB78BB'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '2B1C2B'
+    led_zangief_double: '8C598C'
+    led_zangief_power: 'BF7BBF'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '432B43'
+    led_zangief_double: '6F476F'
+    led_zangief_power: 'C17CC1'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '603D60'
+    led_zangief_double: '513451'
+    led_zangief_power: 'C27CC2'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '7E517E'
+    led_zangief_double: '362336'
+    led_zangief_power: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '996299'
+    led_zangief_double: '211521'
+    led_zangief_power: 'B976B9'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: 'AC6EAC'
+    led_zangief_double: '120C12'
+    led_zangief_power: 'AD6FAD'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '020102'
+    led_zangief_defeat: 'B976B9'
+    led_zangief_double: '080508'
+    led_zangief_power: '9D649D'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '090609'
+    led_zangief_defeat: 'C27CC2'
+    led_zangief_double: '020102'
+    led_zangief_power: '845484'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '140D14'
+    led_zangief_defeat: 'C67FC6'
+    led_zangief_double: '000000'
+    led_zangief_power: '664166'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '241724'
+    led_zangief_defeat: 'C77FC7'
+    led_zangief_power: '472D47'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: '3A253A'
+    led_zangief_defeat: 'C67FC6'
+    led_zangief_power: '2F1E2F'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '563756'
+    led_zangief_defeat: 'C27CC2'
+    led_zangief_power: '1C121C'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '030203'
+    led_sagat_defeat: '744A74'
+    led_zangief_defeat: 'BD79BD'
+    led_zangief_power: '100A10'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '905C90'
+    led_zangief_defeat: 'B373B3'
+    led_zangief_power: '080507'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'A66AA6'
+    led_zangief_defeat: 'A368A3'
+    led_zangief_power: '020102'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020202'
+    led_sagat_defeat: 'B574B5'
+    led_zangief_defeat: '8C598C'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: 'BF7ABF'
+    led_zangief_defeat: '6F476F'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020102'
+    led_sagat_defeat: 'C47DC4'
+    led_zangief_defeat: '513451'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_dhalsim_flame: '010001'
+    led_sagat_defeat: 'C67FC6'
+    led_zangief_defeat: '362336'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '000000'
+    led_sagat_defeat: 'C77FC7'
+    led_zangief_defeat: '211521'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '010101'
+    led_sagat_defeat: 'C57EC5'
+    led_zangief_defeat: '120C12'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C17CC1'
+    led_zangief_defeat: '080508'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'BA77BA'
+    led_zangief_defeat: '020102'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '000000'
+    led_sagat_defeat: '000000'
+    led_zangief_defeat: '000000'
+    led_zangief_double: 'C27CC2'
+    led_zangief_power: '281928'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C67FC6'
+    led_zangief_power: '3E283E'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C77FC7'
+    led_zangief_power: '583958'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C67FC6'
+    led_zangief_power: '784D78'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '010001'
+    led_zangief_double: 'C27CC2'
+    led_zangief_power: '915D91'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '050305'
+    led_zangief_double: 'BD79BD'
+    led_zangief_power: 'A56AA5'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '0D080D'
+    led_zangief_double: 'B373B3'
+    led_zangief_power: 'B272B2'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '181018'
+    led_zangief_double: 'A368A3'
+    led_zangief_power: 'BB78BB'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '2B1C2B'
+    led_zangief_double: '8C598C'
+    led_zangief_power: 'BF7BBF'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '432B43'
+    led_zangief_double: '6F476F'
+    led_zangief_power: 'C17CC1'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '603D60'
+    led_zangief_double: '513451'
+    led_zangief_power: 'C27CC2'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '7E517E'
+    led_zangief_double: '362336'
+    led_zangief_power: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '996299'
+    led_zangief_double: '211521'
+    led_zangief_power: 'B976B9'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: 'AC6EAC'
+    led_zangief_double: '120C12'
+    led_zangief_power: 'AD6FAD'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '020102'
+    led_zangief_defeat: 'B976B9'
+    led_zangief_double: '080508'
+    led_zangief_power: '9D649D'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '070407'
+    led_zangief_defeat: 'C07BC0'
+    led_zangief_double: '030203'
+    led_zangief_power: '8B598B'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '100A10'
+    led_zangief_defeat: 'C57EC5'
+    led_zangief_double: '000000'
+    led_zangief_power: '6E466E'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010001'
+    led_sagat_defeat: '1E131E'
+    led_zangief_defeat: 'C77FC7'
+    led_zangief_power: '4F324F'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_sagat_defeat: '322032'
+    led_zangief_defeat: 'C67FC6'
+    led_zangief_power: '342134'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: '4C304C'
+    led_zangief_defeat: 'C47DC4'
+    led_zangief_power: '201520'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020202'
+    led_sagat_defeat: '6A446A'
+    led_zangief_defeat: 'BF7ABF'
+    led_zangief_power: '130C14'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '030203'
+    led_sagat_defeat: '875787'
+    led_zangief_defeat: 'B775B7'
+    led_zangief_power: '090609'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '9F669F'
+    led_zangief_defeat: 'A96CA9'
+    led_zangief_power: '030203'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020102'
+    led_sagat_defeat: 'B171B1'
+    led_zangief_defeat: '945E94'
+    led_zangief_power: '010001'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: 'BC78BC'
+    led_zangief_defeat: '784D78'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C27CC2'
+    led_zangief_defeat: '5B3A5B'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_sagat_defeat: 'C67FC6'
+    led_zangief_defeat: '3E283D'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C77FC7'
+    led_zangief_defeat: '271927'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '010001'
+    led_sagat_defeat: 'C67FC6'
+    led_zangief_defeat: '160E16'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '010101'
+    led_sagat_defeat: 'C27CC2'
+    led_zangief_defeat: '0B070B'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'BC78BC'
+    led_zangief_defeat: '040204'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '000000'
+    led_sagat_defeat: '000000'
+    led_zangief_defeat: '000000'
+    led_zangief_double: 'C47DC4'
+    led_zangief_power: '342134'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C77FC7'
+    led_zangief_power: '4E324E'
+    
+- time: '+1'
+  lights:
+    led_zangief_power: '6D466D'
+    
+- time: '+1'
+  lights:
+    led_zangief_double: 'C57EC5'
+    led_zangief_power: '8A588A'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '030203'
+    led_zangief_double: 'C17BC1'
+    led_zangief_power: 'A067A0'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '090609'
+    led_zangief_double: 'B976B9'
+    led_zangief_power: 'B071B0'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '130C13'
+    led_zangief_double: 'AC6EAC'
+    led_zangief_power: 'BB77BB'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '231623'
+    led_zangief_double: '986198'
+    led_zangief_power: 'C07BC0'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '382438'
+    led_zangief_double: '7E507E'
+    led_zangief_power: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '533553'
+    led_zangief_double: '5E3C5E'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '724972'
+    led_zangief_double: '432B43'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '8F5B8F'
+    led_zangief_double: '2B1B2B'
+    led_zangief_power: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: 'A469A4'
+    led_zangief_double: '191019'
+    led_zangief_power: 'B775B7'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: 'B473B4'
+    led_zangief_double: '0C080C'
+    led_zangief_power: 'AA6CAA'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '050305'
+    led_zangief_defeat: 'BF7ABF'
+    led_zangief_double: '050305'
+    led_zangief_power: '966096'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '090609'
+    led_zangief_defeat: 'C27CC2'
+    led_zangief_double: '020102'
+    led_zangief_power: '845484'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '140D14'
+    led_zangief_defeat: 'C67FC6'
+    led_zangief_double: '000000'
+    led_zangief_power: '664166'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '241724'
+    led_zangief_defeat: 'C77FC7'
+    led_zangief_power: '472D47'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: '3A253A'
+    led_zangief_defeat: 'C67FC6'
+    led_zangief_power: '2F1E2F'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '563756'
+    led_zangief_defeat: 'C27CC2'
+    led_zangief_power: '1C121C'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '030203'
+    led_sagat_defeat: '744A74'
+    led_zangief_defeat: 'BD79BD'
+    led_zangief_power: '100A10'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: '905C90'
+    led_zangief_defeat: 'B373B3'
+    led_zangief_power: '080507'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'A66AA6'
+    led_zangief_defeat: 'A368A3'
+    led_zangief_power: '020102'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '020202'
+    led_sagat_defeat: 'B574B5'
+    led_zangief_defeat: '8C598C'
+    led_zangief_power: '000000'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '010101'
+    led_sagat_defeat: 'BF7ABF'
+    led_zangief_defeat: '6F476F'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_double: '000000'
+    led_sagat_defeat: 'C37DC3'
+    led_zangief_defeat: '4E324E'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C67FC6'
+    led_zangief_defeat: '342134'
+    
+- time: '+1'
+  lights:
+    led_zangief_defeat: '1F141F'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C47EC4'
+    led_zangief_defeat: '110B11'
+    
+- time: '+1'
+  lights:
+    led_sagat_defeat: 'C07BC0'
+    led_zangief_defeat: '080508'
+    
+- time: '+1'
+  lights:
+    led_dhalsim_flame: '010001'
+    led_sagat_defeat: 'B876B8'
+    led_zangief_defeat: '020102'
+    

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bfy2dll2lcnrc"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_fcyjf"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="2_td0u7"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_fcyjf")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=551518233]
+position = Vector2(371, 447.67776)
+scale = Vector2(0.67057294, 1.0013237)
+texture = ExtResource("2_td0u7")
+
+[node name="Label" type="Label" parent="." unique_id=1730150719]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 305.0
+offset_right = 929.0
+offset_bottom = 647.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 180
+text = "C"
+
+[node name="Label2" type="Label" parent="." unique_id=2092698024]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 304.0
+offset_right = 1171.0
+offset_bottom = 646.0
+theme_override_colors/font_color = Color(9.7895565, 9.7895565, 9.7895565, 0.39200002)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 180
+text = "AMMY"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2129787362]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 306.0
+offset_right = 1517.0
+offset_bottom = 612.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 37
+theme_override_font_sizes/normal_font_size = 180
+theme_override_font_sizes/bold_font_size = 160
+theme_override_font_sizes/bold_italics_font_size = 160
+theme_override_font_sizes/italics_font_size = 160
+theme_override_font_sizes/mono_font_size = 160
+bbcode_enabled = true
+text = "[pulse]CAMM[/pulse]"

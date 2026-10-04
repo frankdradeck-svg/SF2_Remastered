@@ -1,0 +1,12 @@
+#config_version=6
+
+mode:
+  start_events: blanka_frenzy_started
+  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_ken_hurry_outro_timer_complete, timer_finishing_ken_timer_complete
+  priority: 200
+
+variable_player:
+  mode_blanka_frenzy_started:
+    blanka_frenzy_qualified:
+      int: 0
+      action: set

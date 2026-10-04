@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b74w54evutd7d"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_15qeh"]
+[ext_resource type="VideoStream" uid="uid://b4mb2rtawu0dp" path="res://assets/Super_Street_Fighter_II_OST_Cammy_Theme_1280x720[01M44B1Q80Q792J430TAR9E2JW].ogv" id="2_15qeh"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ti0m7"]
+
+[node name="MPFSlide" type="Control" unique_id=496584869]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_15qeh")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1432029311]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_15qeh")
+autoplay = true
+expand = true
+loop = true
+script = ExtResource("3_ti0m7")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

@@ -128,6 +128,59 @@ light_player:
     led_fighter_apron_1:
       color: green
       fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==8}:
+    led_fighter_apron_2:
+      color: green
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==9}:
+    led_fighter_apron_3:
+      color: green
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==10}:
+    led_fighter_apron_4:
+      color: green
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==11}:
+    led_fighter_apron_5:
+      color: green
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==12}:
+    led_fighter_apron_6:
+      color: green
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==13}:
+    led_fighter_apron_7:
+      color: green
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==14}:
+    led_fighter_apron_1:
+      color: blue
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==15}:
+    led_fighter_apron_2:
+      color: blue
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==16}:
+    led_fighter_apron_3:
+      color: blue
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==17}:
+    led_fighter_apron_4:
+      color: blue
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==18}:
+    led_fighter_apron_5:
+      color: blue
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==19}:
+    led_fighter_apron_6:
+      color: blue
+      fade: 200ms
+  get_fighter_letter{current_player.fighter_letters==20}:
+    led_fighter_apron_7:
+      color: blue
+      fade: 200ms
+
 
 shots:
   zangief_ramp:
@@ -190,3 +243,4 @@ event_player:
   balrog_started: get_fighter_letter
   blanka_started: get_fighter_letter
   chunli_started: get_fighter_letter
+  skillshot_hit_event: get_fighter_letter

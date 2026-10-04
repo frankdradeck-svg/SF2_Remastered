@@ -1,0 +1,14 @@
+#show_version=6
+- time: 0
+  lights:
+    led_balrog_defeat: white
+    led_balrog_double: white
+    led_balrog_power: white
+    led_mbison_defeat: white
+
+- time: '+1'
+  lights:
+    led_balrog_defeat: off
+    led_balrog_double: off
+    led_balrog_power: off
+    led_mbison_defeat: off

@@ -2,7 +2,7 @@
 
 mode:
   start_events: multiball_akuma_mb_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
-  stop_events: ball_will_end, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
+  stop_events: ball_will_end, cammy_combos_started, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
   priority: 300
 
 sound_player:
@@ -24,8 +24,53 @@ sound_player:
   chunli_animation_started:
     chun_vfx:
       bus: voice
+  loop_hit{device.counters.loop_counter.value==1}:
+    wizz:
+      bus: effects
+      action: replace
+  loop_hit{device.counters.loop_counter.value==2}:
+    wizz2:
+      bus: effects
+      action: replace
+  loop_hit{device.counters.loop_counter.value==3}:
+    wizz3:
+      bus: effects
+      action: replace
+  loop_hit{device.counters.loop_counter.value>3}:
+    wizz4:
+      bus: effects
+      action: replace
+      
+
 
 slide_player:
+  logicblock_combos_hits_hit{device.counter.combos_hits.value==0}:
+    c_ammy:
+      expire: 3s
+      priority: 101
+  logicblock_combos_hits_hit{device.counter.combos_hits.value==1}:
+    ca_mmy:
+      expire: 3s
+      priority: 101
+  logicblock_combos_hits_hit{device.counter.combos_hits.value==2}:
+    cam_my:
+      expire: 3s
+      priority: 101
+  logicblock_combos_hits_hit{device.counter.combos_hits.value==3}:
+    camm_y:
+      expire: 3s
+      priority: 101
+  logicblock_combos_hits_hit{device.counter.combos_hits.value==4}:
+    cammy_qualified:
+      expire: 3s
+      priority: 101
+  loop_hit{device.counters.loop_counter.value==1}:
+    loop_counter:
+      action: play
+      priority: 101
+  timer_loops_timer_stopped:
+    loop_counter:
+      action: remove
   get_fighter_letter:
     get_fighter_letter:
       expire: 3s
@@ -195,6 +240,24 @@ slide_player:
 
 
 variable_player:
+  cammy_combos_start:
+    cammy_combos_qualified:
+      int: 1
+      action: set
+  blanka_frenzy_start:
+    blanka_frenzy_qualified:
+      int: 1
+      action: set
+  logicblock_combos_hits_hit:
+    combos_count: 1
+  logicblock_blanka_count_hit:
+    blanka_spins: 1
+  timer_loops_timer_stopped:
+    loop_count:
+      action: set
+      int: 0
+  logicblock_loop_counter_hit:
+    loop_count: 1
   timer_field_stepper_intro_started:
     stepper_intro_running:
       action: set
@@ -265,6 +328,33 @@ light_player:
       color: orange
 
 show_player:
+  s_left_vuk_active:
+    left_vuk_alert:
+      speed: 12
+      loops: 5
+  s_right_vuk_active:
+    right_vuk_alert:
+      speed: 12
+      loops: 5
+  ball_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
+    chase_balrog:
+      speed: 2
+      loops: -1
+  mode_field_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
+    chase_balrog:
+      speed: 2
+      loops: -1
+  s_right_vuk_active{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
+    chase_balrog:
+      action: stop
+  cammy_combos_start:
+    chase_balrog:
+      speed: 2
+      loops: -1
+  blanka_frenzy_start:
+    chase_balrog:
+      speed: 2
+      loops: -1
   ball_started{current_player.fight_qualified!=1 and current_player.fighter_mode_qualified!=1}:
     flash_color:
       key: dhalsim_flash
@@ -301,33 +391,21 @@ show_player:
         lights: led_guile_advance
         color: orange
   fight_qualified_event:
-    flash_color:
-      key: zangief_flash
-      speed: 4
-      show_tokens:
-        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
-        color: white
+    chase_zangief:
+      speed: 2
+      loops: -1
   get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}:
-    flash_color:
-      key: zangief_flash
-      speed: 4
-      show_tokens:
-        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
-        color: white
+    chase_zangief:
+      speed: 2
+      loops: -1
   ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
-    flash_color:
-      key: zangief_flash
-      speed: 4
-      show_tokens:
-        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
-        color: white
+    chase_zangief:
+      speed: 2
+      loops: -1
   mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
-    flash_color:
-      key: zangief_flash
-      speed: 4
-      show_tokens:
-        lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
-        color: white
+    chase_zangief:
+      speed: 2
+      loops: -1
   car_mb_qualified_event:
     flash_color:
       key: chunli_flash
@@ -359,6 +437,8 @@ event_player:
   timer_field_stepper_intro_started: chunli_intro_start
   s_stepper_home_active: chunli_home
   s_chunli_entrance_active: chunli_move_90
+  s_right_vuk_active{current_player.blanka_frenzy_qualified==1}: blanka_frenzy_started
+  s_right_vuk_active{current_player.cammy_combos_qualified==1}: cammy_combos_started
   
 counters:
   loop_spinner_hits:
@@ -386,6 +466,29 @@ counters:
     persist_state: true
     reset_on_complete: false
     disable_on_complete: true
+  loop_counter:
+    count_events: loop_hit
+    starting_count: 0
+    direction: up
+    restart_events: timer_loops_timer_stopped
+  combos_hits:
+    count_events: combo_1_hit, combo_2_hit, combo_3_hit
+    starting_count: 0
+    count_complete_value: 5
+    direction: up
+    events_when_complete: cammy_combos_start
+    persist_state: true
+    reset_on_complete: false
+    disable_on_complete: true
+  blanka_count:
+    count_events: s_center_spinner_active, s_loop_spinner_active, s_pop_bumper_active, s_pop_standup_1_active, s_pop_standup_2_active, s_pop_standup_3_active
+    starting_count: 0
+    count_complete_value: 200
+    direction: up
+    events_when_complete: blanka_frenzy_start
+    persist_state: true
+    reset_on_complete: false
+    disable_on_complete: true
 
 timers:
   field_intro_timer:
@@ -404,3 +507,15 @@ timers:
         action: start
       - event: timer_field_stepper_intro_complete
         action: reset
+  loops_timer:
+    start_value: 3
+    max_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: loop_hit
+        action: start
+      - event: logicblock_loop_counter_hit
+        action: add
+        value: 3

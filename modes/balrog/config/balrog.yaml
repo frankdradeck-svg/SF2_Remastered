@@ -410,6 +410,10 @@ show_player:
       show_tokens:
         lights: led_zangief_power, led_chunli_power, led_balrog_power
       priority: 4
+  timer_balrog_intro_timer_tick{ticks_remaining==1}:
+    left_vuk_alert:
+      speed: 12
+      loops: 5
 
 counters:
   balrog_hits:

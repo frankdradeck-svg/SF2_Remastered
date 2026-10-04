@@ -22,6 +22,8 @@
 [ext_resource type="VideoStream" uid="uid://lbibdb5wapuu" path="res://assets/Cosmic_Elevator_Equator_Ultra_Street_Fighter_IV_1920x1080[01KPNNW4ZE97DN13D8VV8D4617].ogv" id="14_lm755"]
 [ext_resource type="VideoStream" uid="uid://ddrteayufo4dn" path="res://assets/Exciting_Street_Scene_India_Super_Street_Fighter_IV_1920x1080[01KPNNTC5MJBYEZ3WRCSNKK8WF].ogv" id="15_5x0sp"]
 [ext_resource type="VideoStream" uid="uid://b48y6vwnjhg1s" path="res://assets/Festival_at_the_Old_Temple_South_Korea_Super_Street_Fighter_IV_1920x1080[01KPNNSP0585W5M0KJGP5AZ1TR].ogv" id="16_gjk56"]
+[ext_resource type="Texture2D" uid="uid://bgxluotqwtw0c" path="res://assets/blanka4.png" id="23_eyrve"]
+[ext_resource type="Texture2D" uid="uid://b2es25r7ff8g5" path="res://assets/cammy3.png" id="24_cxje7"]
 
 [node name="Field" type="Control" unique_id=2085516752]
 layout_mode = 3
@@ -195,8 +197,8 @@ end_behavior = 1
 metadata/_custom_type_script = "uid://bov7mrgxslshq"
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=186566095]
-position = Vector2(253.75003, 89.49999)
-scale = Vector2(0.45084637, 0.81152344)
+position = Vector2(373.75003, 89.49999)
+scale = Vector2(0.6513672, 0.81152344)
 texture = ExtResource("4_xd0y2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1885674555]
@@ -210,8 +212,8 @@ scale = Vector2(0.02923583, 0.030334491)
 texture = ExtResource("6_mxxmw")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1153371177]
-position = Vector2(1667, 84)
-scale = Vector2(0.4514974, 0.7285156)
+position = Vector2(1560.8748, 89.00002)
+scale = Vector2(0.63525385, 0.77734375)
 texture = ExtResource("4_xd0y2")
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1763663643]
@@ -281,5 +283,46 @@ text = "2/7"
 script = ExtResource("9_mxxmw")
 variable_name = "torpedo_hits_count"
 template_string = "%s/7"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MPFVariable6" type="Label" parent="." unique_id=866722346]
+layout_mode = 0
+offset_left = 1337.0
+offset_top = 19.0
+offset_right = 1514.0
+offset_bottom = 88.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "1/5"
+script = ExtResource("9_mxxmw")
+variable_name = "combos_count"
+template_string = "%s/5"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1006370741]
+position = Vector2(539, 75)
+scale = Vector2(0.24, 0.282)
+texture = ExtResource("23_eyrve")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=710113390]
+position = Vector2(1285, 77)
+scale = Vector2(0.04, 0.037)
+texture = ExtResource("24_cxje7")
+
+[node name="MPFVariable5" type="Label" parent="." unique_id=48677916]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 23.0
+offset_right = 717.0
+offset_bottom = 92.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "105/200"
+horizontal_alignment = 2
+script = ExtResource("9_mxxmw")
+variable_name = "blanka_spins"
+template_string = "%s/200"
 initialize_empty = false
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"

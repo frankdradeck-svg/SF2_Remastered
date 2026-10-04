@@ -57,8 +57,18 @@ sound_player:
   combo_2_hit:
     good_shot_randomizer:
       bus: voice_loud
+  combo_3_hit:
+    good_shot_randomizer:
+      bus: voice_loud
+  skillshot_hit_event:
+    vo_skillshot:
+      bus: voice_loud
 
 show_player:
+  timer_cammy_blanka_intro_timer_tick{ticks_remaining==1}:
+    right_vuk_alert:
+      speed: 12
+      loops: 5
   super_meter_qualified_event:
     super_meter_full:
       speed: 2
@@ -72,8 +82,52 @@ show_player:
       speed: 6
       priority: 1
       loops: 2
+  vega_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  chunli_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  blanka_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  zangief_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  balrog_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  ehonda_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  sagat_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  dhalsim_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
 
 slide_player:
+  skillshot_hit_event:
+    skillshot:
+      expire: 3s
+      priority: 101
   mode_global_started:
     super_meter:
       action: play
@@ -89,6 +143,9 @@ slide_player:
   timer_super_meter_timer_started:
     super_meter_2:
       action: remove
+
+event_player:
+   loop_hit{current_player.skillshot_running==1}: skillshot_hit_event
 
 random_event_player:
   choose_fight:
@@ -113,14 +170,38 @@ timers:
         event: s_right_standup_1_active{current_player.super_meter_qualified==1}
       - action: start
         event: s_right_standup_2_active{current_player.super_meter_qualified==1}
+  skillshot_timer:
+    start_value: 8
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    control_events:
+      - action: stop
+        event: skillshot_hit_event
+  cammy_blanka_intro_timer:
+    start_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: cammy_blanka_intro
 
 
 queue_relay_player:
   balldevice_bd_left_vuk_ball_eject_attempt{current_player.fighter_mode_qualified==1}:
     post: waiting_for_choice
     wait_for: fighter_eject
+  balldevice_bd_right_vuk_ball_eject_attempt{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
+    post: cammy_blanka_intro
+    wait_for: timer_cammy_blanka_intro_timer_complete
 
 variable_player:
+  timer_skillshot_timer_complete:
+    skillshot_running:
+      int: 0
+      action: set
   fight_qualified_event:
     fight_qualified:
       int: 1
@@ -184,6 +265,12 @@ variable_player:
     super_meter_running:
       int: 0
       action: set
+    skillshot_running:
+      int: 1
+      action: set
+    loop_count:
+      int: 0
+      action: set
   get_fighter_letter{current_player.fighter_letters==6}:
     fighter_mode_qualified:
       int: 1
@@ -196,6 +283,11 @@ variable_player:
     fighter_mode_qualified:
       int: 1
       action: set
+  skillshot_hit_event:
+    score: 5000000
+    skillshot_running:
+      int: 0
+      action: set
 
 sequence_shots:
   combo_1:
@@ -203,6 +295,9 @@ sequence_shots:
     sequence_timeout: 3s
   combo_2:
     switch_sequence: s_zangief, s_guile_opto
+    sequence_timeout: 3s
+  combo_3:
+    switch_sequence: s_guile_opto, s_zangief
     sequence_timeout: 3s
   loop:
     switch_sequence: s_loop_spinner, s_left_orbit_rollover
@@ -259,7 +354,6 @@ counters:
       - event: timer_super_meter_timer_tick
         action: subtract
         value: 1
-
   
 
 

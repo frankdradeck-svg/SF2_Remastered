@@ -1,22 +1,49 @@
 events:
   game_ended: 22
-  game_started: 480
+  game_started: 507
 missing_switches:
-  s_action: 440
+  s_action: 467
+  s_center_spinner: 27
+  s_center_standup_1: 27
+  s_center_standup_2: 27
+  s_center_standup_3: 27
   s_chun_li_entrance: 50
   s_chun_li_exit: 50
-  s_chunli_entrance: 16
-  s_chunli_exit: 83
-  s_guile_opto: 10
+  s_chunli_entrance: 43
+  s_chunli_exit: 110
+  s_drain: 27
+  s_guile_opto: 37
+  s_left_flipper: 27
+  s_left_inlane: 27
+  s_left_orbit_rollover: 23
+  s_left_outlane: 27
   s_left_ramp_opto: 42
+  s_left_ramp_rollover: 27
+  s_left_sling: 27
+  s_left_vuk: 27
+  s_loop_spinner: 23
   s_plunge_opto: 42
-  s_pop_standup_2: 3
-  s_punchback_1: 480
-  s_punchback_2: 480
-  s_right_outlane: 9
-  s_right_ramp_divert: 441
+  s_pop_bumper: 27
+  s_pop_standup_1: 27
+  s_pop_standup_2: 30
+  s_pop_standup_3: 27
+  s_punchback_1: 507
+  s_punchback_2: 507
+  s_right_flipper: 27
+  s_right_inlane: 27
+  s_right_orbit_rollover: 27
+  s_right_outlane: 36
+  s_right_ramp_divert: 468
   s_right_ramp_opto: 42
-  s_start: 85
+  s_right_sling: 27
+  s_right_standup_1: 27
+  s_right_standup_2: 27
+  s_right_vuk: 27
+  s_start: 112
+  s_stepper_home: 27
+  s_trough: 27
+  s_upper_flipper: 27
+  s_zangief: 27
 player:
   score:
     average: 25892591
@@ -36,9 +63,9 @@ shots:
   center_spinner: 4814
   chunli_ramp: 200
   guile_ramp: 155
-  left_orbit: 657
+  left_orbit: 673
   left_vuk: 389
-  loop_spinner: 4746
+  loop_spinner: 4768
   right_vuk: 250
   zangief_ramp: 179
 switches:
@@ -55,13 +82,13 @@ switches:
   s_guile_opto: 397
   s_left_flipper: 2105
   s_left_inlane: 341
-  s_left_orbit_rollover: 657
+  s_left_orbit_rollover: 673
   s_left_outlane: 13
   s_left_ramp_opto: 0
   s_left_ramp_rollover: 217
   s_left_sling: 322
   s_left_vuk: 389
-  s_loop_spinner: 4746
+  s_loop_spinner: 4768
   s_plunge_opto: 0
   s_pop_bumper: 910
   s_pop_standup_1: 29
@@ -79,7 +106,7 @@ switches:
   s_right_standup_1: 32
   s_right_standup_2: 18
   s_right_vuk: 251
-  s_shooter: 745
+  s_shooter: 773
   s_start: 11
   s_stepper_home: 200
   s_trough: 307

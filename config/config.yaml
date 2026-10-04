@@ -22,6 +22,8 @@ modes:
  - fighter_mode_select
  - akuma
  - akuma_build
+ - cammy_combos
+ - blanka_frenzy
 
 hardware:
  platform: fast
@@ -43,8 +45,8 @@ fast:
         model: FP-EXP-0071-2
         led_fade_time: 100ms
 
-custom_code:
-  - custom_code.chunli.ChunLi
+##custom_code:
+##  - custom_code.chunli.ChunLi
 
 lights:
   led_left_middle_gi_1:
@@ -585,7 +587,7 @@ diverters:
     type: hold
     activate_events: fight_qualified_event, ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}, logicblock_chunli_hits_hit{remaining==1}, logicblock_vega_hits_hit{remaining==1}, mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}, logicblock_blanka_hits_hit{remaining==1}, logicblock_zangief_hits_hit{remaining==1}, logicblock_sagat_hits_hit{remaining==1}, logicblock_dhalsim_hits_hit{remaining==1}, logicblock_balrog_hits_hit{remaining==1}, logicblock_ehonda_hits_hit{remaining==1}, get_fighter_letter{current_player.fighter_letters==7 or current_player.fighter_letters==14 or current_player.fighter_letters==21}
     enable_events: ball_started, multiball_guile_mb_ended
-    deactivate_events: vega_started{device.counters.vega_hits.value<2}, chunli_started{device.counters.chunli_hits.value<2}, mode_field_started{current_player.fight_qualified!=1}, ball_ended, game_ending, ehonda_started{device.counters.ehonda_hits.value<2}, blanka_started{device.counters.blanka_hits.value<2}, dhalsim_started{device.counters.dhalsim_hits.value<2}, sagat_started{device.counters.sagat_hits.value<2}, balrog_started{device.counters.balrog_hits.value<2}, zangief_started{device.counters.zangief_hits.value<2}, mode_akuma_started, mode_akuma_build_started, mode_fighter_mode_select_started
+    deactivate_events: vega_started{device.counters.vega_hits.value<2}, chunli_started{device.counters.chunli_hits.value<2}, mode_field_started{current_player.fight_qualified!=1}, ball_ended, game_ending, ehonda_started{device.counters.ehonda_hits.value<2}, blanka_started{device.counters.blanka_hits.value<2}, dhalsim_started{device.counters.dhalsim_hits.value<2}, sagat_started{device.counters.sagat_hits.value<2}, balrog_started{device.counters.balrog_hits.value<2}, zangief_started{device.counters.zangief_hits.value<2}, mode_akuma_started, mode_akuma_build_started, mode_fighter_mode_select_started, cammy_combos_started
     disable_events: ball_ended, game_ending, guile_mb_started
     targets_when_active: playfield
     targets_when_inactive: playfield
@@ -594,7 +596,7 @@ diverters:
     activation_coil: c_right_ramp_divert
     type: hold
     activate_events: mode_akuma_build_started, mode_akuma_started, car_mb_qualified_event, ball_started{current_player.car_mb_qualified==1}, mode_field_started{current_player.car_mb_qualified==1}, mode_millions_started
-    deactivate_events: mode_akuma_ended, vega_started, chunli_started, mode_field_started{current_player.car_mb_qualified!=1}, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started, mode_millions_ended
+    deactivate_events: mode_akuma_ended, vega_started, chunli_started, mode_field_started{current_player.car_mb_qualified!=1}, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started, mode_millions_ended, cammy_combos_started
     targets_when_active: playfield
     targets_when_inactive: playfield
     disable_events: ball_ended, game_ending, guile_mb_started
@@ -682,5 +684,11 @@ player_vars:
   fighter_letters:
     initial_value: 0
   fighter_mode_qualified:
+    initial_value: 0
+  skillshot_running:
+    initial_value: 0
+  blanka_spins:
+    initial_value: 0
+  combos_count:
     initial_value: 0
   

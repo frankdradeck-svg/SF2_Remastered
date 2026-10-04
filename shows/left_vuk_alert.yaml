@@ -1,0 +1,12 @@
+#show_version=6
+- time: 0
+  lights:
+    led_honda_defeat: white
+    led_honda_double: white
+    led_honda_torpedo: white
+
+- time: '+1'
+  lights:
+    led_honda_defeat: off
+    led_honda_double: off
+    led_honda_torpedo: off

@@ -393,6 +393,10 @@ light_player:
       priority: 3
 
 show_player:
+  timer_sagat_intro_timer_tick{ticks_remaining==1}:
+    left_vuk_alert:
+      speed: 12
+      loops: 5
   mode_sagat_started:
     flash_color:
       speed: 2
