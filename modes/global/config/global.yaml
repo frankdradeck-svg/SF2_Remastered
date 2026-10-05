@@ -122,6 +122,16 @@ show_player:
       speed: 6
       priority: 10
       loops: 2
+  cammy_combos_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
+  blanka_frenzy_started:
+    fight_start:
+      speed: 6
+      priority: 10
+      loops: 2
 
 slide_player:
   skillshot_hit_event:

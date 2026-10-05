@@ -19,7 +19,7 @@ $loudnormFilter = "loudnorm=I={0}:TP={1}:LRA={2}" -f $targetLUFS, $truePeak, $lr
 $files = Get-ChildItem -Path $sourceRoot -File |
     Where-Object {
         $extensions -contains $_.Extension.ToLower() -and
-        $_.Name -match "skillshot"
+        $_.Name -match "extraball"
     }
 
 Write-Host ""

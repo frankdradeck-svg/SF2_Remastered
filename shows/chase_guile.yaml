@@ -1,0 +1,167 @@
+#show_version=6
+- time: 0
+  lights:
+    led_guile_double: 'BB78BB'
+    
+- time: '+1'
+  lights:
+    led_guile_double: 'C17BC1'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '050305'
+    led_guile_double: 'C27CC2'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '080508'
+    led_guile_double: 'C57EC5'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '110B11'
+    led_guile_double: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '1F141F'
+    led_guile_double: 'C17BC1'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '2A1B2A'
+    led_guile_double: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '402940'
+    led_guile_double: 'B775B7'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '593959'
+    led_guile_double: 'AB6DAB'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '6D466D'
+    led_guile_double: 'A569A5'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '885788'
+    led_guile_double: '8F5C8F'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '9E659E'
+    led_guile_double: '754B75'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'A96CA9'
+    led_guile_defeat: '010001'
+    led_guile_double: '654165'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'B674B6'
+    led_guile_defeat: '050305'
+    led_guile_double: '482E48'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'BE79BE'
+    led_guile_defeat: '0C070C'
+    led_guile_double: '311F31'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C27CC2'
+    led_guile_defeat: '120C12'
+    led_guile_double: '261826'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C57EC5'
+    led_guile_defeat: '211521'
+    led_guile_double: '160E16'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C67FC6'
+    led_guile_defeat: '332133'
+    led_guile_double: '0B070B'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C77FC7'
+    led_guile_defeat: '422A42'
+    led_guile_double: '070407'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C57EC5'
+    led_guile_defeat: '5D3C5D'
+    led_guile_double: '020102'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'C07BC0'
+    led_guile_defeat: '7A4E7A'
+    led_guile_double: '000000'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'BE79BE'
+    led_guile_defeat: '8C598C'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'B473B4'
+    led_guile_defeat: 'A167A1'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: 'A56AA5'
+    led_guile_defeat: 'B071B0'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '9A639A'
+    led_guile_defeat: 'B775B7'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '835483'
+    led_guile_defeat: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '654165'
+    led_guile_defeat: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '553755'
+    led_guile_defeat: 'C67EC6'
+    led_pop_standups_1: '010001'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '392539'
+    led_guile_defeat: 'C77FC7'
+    led_pop_standups_1: '030203'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '251825'
+    led_guile_defeat: 'C67EC6'
+    led_pop_standups_1: '060406'
+    
+- time: '+1'
+  lights:
+    led_guile_advance: '1B121B'
+    led_guile_defeat: 'C57EC5'
+    led_pop_standups_1: '070407'
+    

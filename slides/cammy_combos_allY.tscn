@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dxtac40efxtoq"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_4ahwe"]
+[ext_resource type="Texture2D" uid="uid://dvlhi2jefhym3" path="res://assets/green_check.png" id="2_aercj"]
+
+[node name="MPFSlide" type="Control" unique_id=496584869]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4ahwe")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1401657744]
+position = Vector2(526.00006, 469)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_aercj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1372163845]
+position = Vector2(1309, 468)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_aercj")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1160374284]
+position = Vector2(920, 470)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_aercj")

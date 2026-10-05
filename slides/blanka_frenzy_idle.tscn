@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://b8q7qkf1v0lwi"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_x4mjb"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="2_l353h"]
+[ext_resource type="Script" uid="uid://hxhsfa7gtrdy" path="res://addons/mpf-gmc/classes/mpf_progress.gd" id="3_6ngd4"]
+[ext_resource type="Texture2D" uid="uid://2g2g1seutmv" path="res://assets/blanka_frenzy.png" id="4_06hyr"]
+[ext_resource type="Texture2D" uid="uid://m0gjchavjgjq" path="res://assets/stages/blanka_idle_sprite.png" id="5_x4mjb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhcf7"]
+bg_color = Color(0.9999992, 0.9900674, 0.5987639, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l353h"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(0, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ngd4"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(185, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06hyr"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(370, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usnhv"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(555, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqjir"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(740, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2544p"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(0, 89, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mubk"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(185, 89, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5u5i"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(370, 89, 185, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fsqwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l353h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ngd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06hyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usnhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqjir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2544p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mubk")
+}, {
+"duration": 80.0,
+"texture": SubResource("AtlasTexture_f5u5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="MPFSlide" type="Control" unique_id=1270873951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_x4mjb")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=323136025]
+position = Vector2(1582.3749, 323.125)
+scale = Vector2(0.5867512, 0.58569336)
+texture = ExtResource("2_l353h")
+
+[node name="MPFProgress" type="ProgressBar" parent="." unique_id=1388601668]
+layout_mode = 0
+offset_left = 1392.0
+offset_top = 282.0
+offset_right = 1880.0
+offset_bottom = 341.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_qhcf7")
+step = 1.0
+value = 12.0
+show_percentage = false
+script = ExtResource("3_6ngd4")
+variable_name = "blanka_frenzy_progress"
+metadata/_custom_type_script = "uid://hxhsfa7gtrdy"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=884357026]
+position = Vector2(1315, 234.00002)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_06hyr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2139373046]
+position = Vector2(1379, 312)
+sprite_frames = SubResource("SpriteFrames_fsqwp")
+frame_progress = 0.48293656

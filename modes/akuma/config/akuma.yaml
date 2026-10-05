@@ -67,7 +67,7 @@ multiballs:
 
 variable_player:
   akuma_jackpot_event:
-    score: 10000 + device.counters.akuma_build_hits.value * 750000
+    score: current_player.akuma_cashout_value
 
 
 event_player:

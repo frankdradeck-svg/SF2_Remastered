@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_15qeh"]
 [ext_resource type="VideoStream" uid="uid://b4mb2rtawu0dp" path="res://assets/Super_Street_Fighter_II_OST_Cammy_Theme_1280x720[01M44B1Q80Q792J430TAR9E2JW].ogv" id="2_15qeh"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ti0m7"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="4_o6mj7"]
 
 [node name="MPFSlide" type="Control" unique_id=496584869]
 layout_mode = 3
@@ -22,3 +23,63 @@ expand = true
 loop = true
 script = ExtResource("3_ti0m7")
 metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1408682027]
+position = Vector2(526, 477)
+scale = Vector2(0.104980454, 0.5151367)
+texture = ExtResource("4_o6mj7")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1780695790]
+position = Vector2(1304, 476)
+scale = Vector2(0.104980454, 0.5151367)
+texture = ExtResource("4_o6mj7")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=144930322]
+position = Vector2(920, 478)
+scale = Vector2(0.104980454, 0.5151367)
+texture = ExtResource("4_o6mj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1681381813]
+position = Vector2(537.0001, 385)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("4_o6mj7")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=1257184517]
+offset_left = -368.64032
+offset_top = -95.12038
+offset_right = 1560.9075
+offset_bottom = 127.87962
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 100
+text = "Scoop / Scoop"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1962465690]
+position = Vector2(920.00006, 385)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("4_o6mj7")
+
+[node name="Label" type="Label" parent="Sprite2D2" unique_id=492866198]
+offset_left = -518.0888
+offset_top = -79.590515
+offset_right = 1411.459
+offset_bottom = 143.40948
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 85
+text = "Center Ramp / Left Ramp"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1347165231]
+position = Vector2(1304, 385)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("4_o6mj7")
+
+[node name="Label" type="Label" parent="Sprite2D3" unique_id=2139758042]
+offset_left = -514.7674
+offset_top = -87.355446
+offset_right = 1414.7805
+offset_bottom = 135.64456
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 90
+text = "Left Ramp / Right Ramp"
+metadata/_edit_use_anchors_ = true

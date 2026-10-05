@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dtl7ktsjgtf4c"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_0hp6h"]
+[ext_resource type="Texture2D" uid="uid://6e64q4poqnus" path="res://assets/stages/blanka_electric_sprite.png" id="5_imxjj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qh27"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(0, 0, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3exx"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(203, 0, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moiuu"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(406, 0, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvdmd"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(609, 0, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78tla"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(812, 0, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj3ie"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(0, 129, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyket"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(203, 129, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf2mx"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(406, 129, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsc8k"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(609, 129, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejrmu"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(812, 129, 203, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6gvl"]
+atlas = ExtResource("5_imxjj")
+region = Rect2(0, 258, 203, 129)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fsqwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qh27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3exx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moiuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvdmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78tla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj3ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyket")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf2mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsc8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6gvl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="MPFSlide" type="Control" unique_id=1270873951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_0hp6h")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2139373046]
+position = Vector2(1341, 294)
+sprite_frames = SubResource("SpriteFrames_fsqwp")
+frame_progress = 0.010617148

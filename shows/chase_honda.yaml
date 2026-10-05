@@ -1,0 +1,156 @@
+#show_version=6
+- time: 0
+  lights:
+    led_honda_double: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_honda_double: 'C77FC7'
+    led_honda_torpedo: '010001'
+    
+- time: '+1'
+  lights:
+    led_honda_torpedo: '050305'
+    
+- time: '+1'
+  lights:
+    led_honda_double: 'C67EC6'
+    led_honda_torpedo: '0B070B'
+    
+- time: '+1'
+  lights:
+    led_honda_double: 'C27CC2'
+    led_honda_torpedo: '160E16'
+    
+- time: '+1'
+  lights:
+    led_honda_double: 'BB77BB'
+    led_honda_torpedo: '2A1B2A'
+    
+- time: '+1'
+  lights:
+    led_honda_double: 'B473B4'
+    led_honda_torpedo: '372337'
+    
+- time: '+1'
+  lights:
+    led_honda_double: 'A268A2'
+    led_honda_torpedo: '553655'
+    
+- time: '+1'
+  lights:
+    led_honda_double: '8A588A'
+    led_honda_torpedo: '774C77'
+    
+- time: '+1'
+  lights:
+    led_honda_double: '774C77'
+    led_honda_torpedo: '8A588A'
+    
+- time: '+1'
+  lights:
+    led_honda_double: '4D314D'
+    led_honda_torpedo: 'A66AA6'
+    
+- time: '+1'
+  lights:
+    led_honda_double: '312031'
+    led_honda_torpedo: 'B674B6'
+    
+- time: '+1'
+  lights:
+    led_honda_double: '241724'
+    led_honda_torpedo: 'BD79BD'
+    
+- time: '+1'
+  lights:
+    led_honda_double: '130C13'
+    led_honda_torpedo: 'C27CC2'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '020102'
+    led_honda_double: '090509'
+    led_honda_torpedo: 'C67FC6'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '050305'
+    led_honda_double: '050305'
+    led_honda_torpedo: 'C77FC7'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '0C070C'
+    led_honda_double: '000000'
+    led_honda_torpedo: 'C67EC6'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '181018'
+    led_honda_torpedo: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '241724'
+    led_honda_torpedo: 'BF7ABF'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '3A253A'
+    led_honda_torpedo: 'B574B5'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '613E61'
+    led_honda_torpedo: '9F669F'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '774C77'
+    led_honda_torpedo: '8F5B8F'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: '945F94'
+    led_honda_torpedo: '724972'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'AA6DAA'
+    led_honda_torpedo: '513451'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'B473B4'
+    led_honda_torpedo: '3E283E'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'BE79BE'
+    led_honda_torpedo: '261826'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'C37DC3'
+    led_honda_torpedo: '150E15'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'C67EC6'
+    led_honda_torpedo: '0D090D'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'C880C8'
+    led_honda_torpedo: '050305'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'C67EC6'
+    led_honda_torpedo: '000000'
+    
+- time: '+1'
+  lights:
+    led_honda_defeat: 'C27CC2'
+    

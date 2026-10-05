@@ -1,0 +1,159 @@
+#show_version=6
+- time: 0
+  lights:
+    led_ryu_double: 'BD79BD'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: 'C27CC2'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: 'C67FC6'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: 'C77FC7'
+    led_ryu_millions: '040204'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: '010001'
+    led_ryu_double: 'C57EC5'
+    led_ryu_millions: '0C070C'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: '020102'
+    led_ryu_double: 'C17BC1'
+    led_ryu_millions: '181018'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: '030203'
+    led_ryu_double: 'B876B8'
+    led_ryu_millions: '2D1D2D'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: '000000'
+    led_ryu_double: 'AC6EAC'
+    led_ryu_millions: '422A42'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: '976197'
+    led_ryu_millions: '613E61'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: '010001'
+    led_ryu_double: '7A4E7A'
+    led_ryu_millions: '835483'
+    
+- time: '+1'
+  lights:
+    led_fighter_1: '000000'
+    led_ryu_double: '593959'
+    led_ryu_millions: '9E659E'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: '3A253A'
+    led_ryu_millions: 'B070B0'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: '241724'
+    led_ryu_millions: 'BB78BB'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: '130C13'
+    led_ryu_millions: 'C37DC3'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: '090609'
+    led_ryu_millions: 'C67EC6'
+    
+- time: '+1'
+  lights:
+    led_ryu_double: '030203'
+    led_ryu_millions: 'C880C8'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '040204'
+    led_ryu_double: '000000'
+    led_ryu_millions: 'C67EC6'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '0C070C'
+    led_ryu_millions: 'C27CC2'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '181018'
+    led_ryu_millions: 'BB77BB'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '2D1D2D'
+    led_ryu_millions: 'AD6FAD'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '452C45'
+    led_ryu_millions: '9A629A'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '654165'
+    led_ryu_millions: '7D507D'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '865686'
+    led_ryu_millions: '5D3B5C'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: '9E659E'
+    led_ryu_millions: '422A42'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'B070B0'
+    led_ryu_millions: '291A29'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'BB78BB'
+    led_ryu_millions: '160E16'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C37DC3'
+    led_ryu_millions: '0B070B'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C67EC6'
+    led_ryu_millions: '030203'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C77FC7'
+    led_ryu_millions: '010001'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C57EC5'
+    led_ryu_millions: '000000'
+    
+- time: '+1'
+  lights:
+    led_ryu_defeat: 'C17BC1'
+    

@@ -5,7 +5,39 @@ mode:
   stop_events: ball_will_end
   priority: 100
 
+extra_balls:
+  fighter_letters_1:
+    enabled: true
+    award_events: get_fighter_letter{current_player.fighter_letters==5}
+  fighter_letters_2:
+    enabled: true
+    award_events: get_fighter_letter{current_player.fighter_letters==12}
+  fighter_letters_3:
+    enabled: true
+    award_events: get_fighter_letter{current_player.fighter_letters==19}
+
 slide_player:
+  extra_ball_fighter_letters_1_awarded:
+    rando_videos:
+      expire: 3s
+      priority: 301
+    extra_ball:
+      expire: 3s
+      priority: 302
+  extra_ball_fighter_letters_2_awarded:
+    rando_videos:
+      expire: 3s
+      priority: 301
+    extra_ball:
+      expire: 3s
+      priority: 302
+  extra_ball_fighter_letters_3_awarded:
+    rando_videos:
+      expire: 3s
+      priority: 301
+    extra_ball:
+      expire: 3s
+      priority: 302
   mode_base_started: 
     base:
       action: play
@@ -244,3 +276,14 @@ event_player:
   blanka_started: get_fighter_letter
   chunli_started: get_fighter_letter
   skillshot_hit_event: get_fighter_letter
+
+sound_player:
+  extra_ball_fighter_letters_1_awarded:
+    extraball1:
+      bus: voice
+  extra_ball_fighter_letters_2_awarded:
+    extraball2:
+      bus: voice
+  extra_ball_fighter_letters_3_awarded:
+    extraball1:
+      bus: voice
