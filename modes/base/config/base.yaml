@@ -18,24 +18,15 @@ extra_balls:
 
 slide_player:
   extra_ball_fighter_letters_1_awarded:
-    rando_videos:
-      expire: 3s
-      priority: 301
-    extra_ball:
+    extra_ball2:
       expire: 3s
       priority: 302
   extra_ball_fighter_letters_2_awarded:
-    rando_videos:
-      expire: 3s
-      priority: 301
-    extra_ball:
+    extra_ball2:
       expire: 3s
       priority: 302
   extra_ball_fighter_letters_3_awarded:
-    rando_videos:
-      expire: 3s
-      priority: 301
-    extra_ball:
+    extra_ball2:
       expire: 3s
       priority: 302
   mode_base_started: 
@@ -276,6 +267,10 @@ event_player:
   blanka_started: get_fighter_letter
   chunli_started: get_fighter_letter
   skillshot_hit_event: get_fighter_letter
+  blanka_frenzy_started: get_fighter_letter
+  blanka_frenzy_complete: get_fighter_letter
+  guile_mb_super_jackpot_event: get_fighter_letter
+  logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==24}: get_fighter_letter
 
 sound_player:
   extra_ball_fighter_letters_1_awarded:

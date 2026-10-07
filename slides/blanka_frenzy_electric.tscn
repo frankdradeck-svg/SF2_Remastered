@@ -99,4 +99,5 @@ metadata/_custom_type_script = "uid://dru3usokwlhd3"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2139373046]
 position = Vector2(1341, 294)
 sprite_frames = SubResource("SpriteFrames_fsqwp")
-frame_progress = 0.010617148
+autoplay = "default"
+frame_progress = 0.56682414

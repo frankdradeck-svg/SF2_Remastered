@@ -2,7 +2,7 @@
 
 mode:
   start_events: blanka_frenzy_started
-  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_ken_hurry_outro_timer_complete, timer_finishing_ken_timer_complete
+  stop_events: timer_blanka_frenzy_outro_timer_complete, timer_blanka_frenzy_timer_complete, choose_fighter_mode, ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_ken_hurry_outro_timer_complete, timer_finishing_ken_timer_complete
   priority: 200
 
 variable_player:
@@ -10,3 +10,115 @@ variable_player:
     blanka_frenzy_qualified:
       int: 0
       action: set
+  timer_blanka_frenzy_timer_tick:
+    blanka_frenzy_time_left:
+      int: device.timers.blanka_frenzy_timer.ticks
+      action: set
+  logicblock_blanka_frenzy_counter_updated:
+    blanka_frenzy_progress:
+      int: value
+      action: set
+  blanka_frenzy_complete:
+    score: 100000000
+
+sound_player:
+  mode_blanka_frenzy_started:
+    blanka_electric:
+      bus: effects
+  spinner_loop_spinner_active:
+    blanka_electric:
+      bus: effects
+  spinner_center_spinner_active:
+    blanka_electric:
+      bus: effects
+  spinner_loop_spinner_inactive:
+    blanka_wahoo:
+      bus: voice
+  spinner_center_spinner_inactive:
+    blanka_wahoo:
+      bus: voice
+  blanka_frenzy_complete:
+    blanka_wahoo:
+      bus: voice
+
+show_player:
+  mode_blanka_frenzy_started:
+    chase_dhalsim:
+      speed: 2
+      loops: -1
+    chase_loop:
+      speed: 2
+      loops: -1
+
+slide_player:
+  mode_blanka_frenzy_started:
+    blanka_frenzy_intro:
+      expire: 3s
+      priority: 501
+    blanka_frenzy_intro_slide:
+      expire: 3s
+      priority: 500
+    blanka_frenzy_hud:
+      action: play
+      priority: 500
+    blanka_frenzy_electric:
+      expire: 3s
+      priority: 502
+  slide_blanka_frenzy_electric_removed:
+    blanka_frenzy_idle:
+      action: play
+      priority: 501
+  spinner_loop_spinner_active:
+    blanka_frenzy_idle:
+      action: remove
+    blanka_frenzy_electric:
+      action: play
+      priority: 502
+  spinner_center_spinner_active:
+    blanka_frenzy_idle:
+      action: remove
+    blanka_frenzy_electric:
+      action: play
+      priority: 502
+  spinner_loop_spinner_inactive:
+    blanka_frenzy_electric:
+      action: remove
+  spinner_center_spinner_inactive:
+    blanka_frenzy_electric:
+      action: remove
+  blanka_frenzy_complete:
+    blanka_frenzy_award:
+      expire: 3s
+      priority: 501
+    blanka_frenzy_outro_slide:
+      expire: 3s
+      priority: 500
+  
+counters:
+  blanka_frenzy_counter:
+    count_events: s_loop_spinner_active, s_center_spinner_active
+    starting_count: 0
+    count_complete_value: 100
+    direction: up
+    persist_state: true
+    disable_on_complete: true
+    events_when_complete: blanka_frenzy_complete
+
+timers:
+  blanka_frenzy_timer:
+    start_value: 30
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
+    control_events:
+      - action: stop
+        event: blanka_frenzy_complete
+  blanka_frenzy_outro_timer:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: blanka_frenzy_complete

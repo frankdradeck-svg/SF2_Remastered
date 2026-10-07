@@ -1,46 +1,48 @@
 events:
   game_ended: 22
-  game_started: 510
+  game_started: 529
 missing_switches:
-  s_action: 470
-  s_center_standup_1: 30
-  s_center_standup_2: 30
-  s_center_standup_3: 30
+  s_action: 489
+  s_center_standup_1: 49
+  s_center_standup_2: 49
+  s_center_standup_3: 49
   s_chun_li_entrance: 50
   s_chun_li_exit: 50
-  s_chunli_entrance: 46
-  s_chunli_exit: 113
-  s_drain: 30
-  s_left_flipper: 30
-  s_left_inlane: 30
-  s_left_orbit_rollover: 26
-  s_left_outlane: 30
+  s_chunli_entrance: 65
+  s_chunli_exit: 132
+  s_drain: 49
+  s_guile_opto: 19
+  s_left_flipper: 49
+  s_left_inlane: 49
+  s_left_orbit_rollover: 45
+  s_left_outlane: 49
   s_left_ramp_opto: 42
-  s_left_sling: 30
-  s_left_vuk: 2
-  s_loop_spinner: 26
+  s_left_ramp_rollover: 19
+  s_left_sling: 49
+  s_left_vuk: 21
+  s_loop_spinner: 45
   s_plunge_opto: 42
-  s_pop_bumper: 30
-  s_pop_standup_1: 30
-  s_pop_standup_2: 33
-  s_pop_standup_3: 30
-  s_punchback_1: 510
-  s_punchback_2: 510
-  s_right_flipper: 30
-  s_right_inlane: 30
-  s_right_orbit_rollover: 30
-  s_right_outlane: 39
-  s_right_ramp_divert: 471
+  s_pop_bumper: 49
+  s_pop_standup_1: 49
+  s_pop_standup_2: 52
+  s_pop_standup_3: 49
+  s_punchback_1: 529
+  s_punchback_2: 529
+  s_right_flipper: 49
+  s_right_inlane: 49
+  s_right_orbit_rollover: 49
+  s_right_outlane: 58
+  s_right_ramp_divert: 490
   s_right_ramp_opto: 42
-  s_right_sling: 30
-  s_right_standup_1: 30
-  s_right_standup_2: 30
-  s_right_vuk: 30
-  s_start: 115
-  s_stepper_home: 30
-  s_trough: 30
-  s_upper_flipper: 30
-  s_zangief: 30
+  s_right_sling: 49
+  s_right_standup_1: 49
+  s_right_standup_2: 49
+  s_right_vuk: 49
+  s_start: 134
+  s_stepper_home: 49
+  s_trough: 49
+  s_upper_flipper: 49
+  s_zangief: 49
 player:
   score:
     average: 25892591
@@ -57,7 +59,7 @@ player:
     - 17370000
     total: 22
 shots:
-  center_spinner: 4870
+  center_spinner: 5126
   chunli_ramp: 200
   guile_ramp: 159
   left_orbit: 673
@@ -67,7 +69,7 @@ shots:
   zangief_ramp: 179
 switches:
   s_action: 2
-  s_center_spinner: 5070
+  s_center_spinner: 5326
   s_center_standup_1: 86
   s_center_standup_2: 470
   s_center_standup_3: 93
@@ -103,7 +105,7 @@ switches:
   s_right_standup_1: 32
   s_right_standup_2: 18
   s_right_vuk: 251
-  s_shooter: 776
+  s_shooter: 797
   s_start: 11
   s_stepper_home: 200
   s_trough: 307

@@ -379,29 +379,25 @@ timers:
 #timer_finishing_mode_complete
 
 light_player:
-  led_zangief_power_solid:
-    led_zangief_power:
-      color: orange
-      priority: 3
-  led_chunli_power_solid:
-    led_chunli_power:
-      color: orange
-      priority: 3
-  led_balrog_power_solid:
-    led_balrog_power:
+  power_shot_hit:
+    (light):
       color: orange
       priority: 3
 
 show_player:
+  power_shots_complete:
+    off:
+      show_tokens:
+        lights: (lights)
   timer_chunli_intro_timer_tick{ticks_remaining==1}:
     left_vuk_alert:
       speed: 12
       loops: 5
-  mode_chunli_started:
+  power_shots_selected:
     flash_color:
       speed: 2
       show_tokens:
-        lights: led_zangief_power, led_chunli_power, led_balrog_power
+        lights: (lights)
         color: orange
   logicblock_chunli_hits_hit{remaining == 1}:
     flash_color:
@@ -410,10 +406,6 @@ show_player:
         lights: led_sagat_defeat, led_zangief_defeat, led_zangief_double, led_zangief_power
         color: white
       priority: 5
-    off:
-      show_tokens:
-        lights: led_zangief_power, led_chunli_power, led_balrog_power
-      priority: 4
 
 counters:
   chunli_hits:
@@ -423,27 +415,6 @@ counters:
     direction: up
     events_when_complete: finishing_chunli
     persist_state: false
-    reset_on_complete: false
-  chunli_zangief_power_hits:
-    count_events: s_zangief_active{device.counters.chunli_hits.value!=2}
-    starting_count: 0
-    count_complete_value: 1
-    direction: up
-    events_when_complete: power_move_event, led_zangief_power_solid
-    reset_on_complete: false
-  chunli_chunli_power_hits:
-    count_events: s_chunli_entrance_active{device.counters.chunli_hits.value!=2}
-    starting_count: 0
-    count_complete_value: 1
-    direction: up
-    events_when_complete: power_move_event, led_chunli_power_solid
-    reset_on_complete: false
-  chunli_balrog_power_hits:
-    count_events: s_right_vuk_active{device.counters.chunli_hits.value!=2}
-    starting_count: 0
-    count_complete_value: 1
-    direction: up
-    events_when_complete: power_move_event, led_balrog_power_solid
     reset_on_complete: false
   chunli_final_move_hits:
     count_events: s_left_ramp_rollover_active{device.counters.chunli_hits.value==2}

@@ -13,16 +13,16 @@ script = ExtResource("1_eeqgl")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2107863739]
-position = Vector2(1659, 283)
+position = Vector2(1659, 598)
 scale = Vector2(0.20670573, 0.9128036)
 texture = ExtResource("3_ndvhr")
 
 [node name="MPFVariable2" type="Label" parent="." unique_id=77362519]
 layout_mode = 0
 offset_left = 1528.0
-offset_top = 174.0
+offset_top = 488.99997
 offset_right = 1770.0
-offset_bottom = 379.0
+offset_bottom = 694.0
 theme_override_constants/outline_size = 22
 theme_override_font_sizes/font_size = 130
 text = "15"
@@ -35,9 +35,9 @@ metadata/_custom_type_script = "uid://bfvhmv2eirpua"
 [node name="Label4" type="Label" parent="." unique_id=604832577]
 layout_mode = 0
 offset_left = 1291.0
-offset_top = 312.0
+offset_top = 627.0
 offset_right = 1735.0
-offset_bottom = 481.0
+offset_bottom = 796.0
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 60
 text = "Loop combo!

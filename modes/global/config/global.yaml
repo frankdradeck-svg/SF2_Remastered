@@ -162,12 +162,12 @@ random_event_player:
     events:
       vega_started{current_player.vega_completed!=1}: 12
       chunli_started{current_player.chunli_completed!=1}: 16
-      blanka_started{current_player.vega_completed!=1}: 12
-      zangief_started{current_player.chunli_completed!=1}: 12
-      balrog_started{current_player.vega_completed!=1}: 12
-      ehonda_started{current_player.chunli_completed!=1}: 12
-      sagat_started{current_player.vega_completed!=1}: 12
-      dhalsim_started{current_player.chunli_completed!=1}: 12
+      blanka_started{current_player.blanka_completed!=1}: 12
+      zangief_started{current_player.zangief_completed!=1}: 12
+      balrog_started{current_player.balrog_completed!=1}: 12
+      ehonda_started{current_player.ehonda_completed!=1}: 12
+      sagat_started{current_player.sagat_completed!=1}: 12
+      dhalsim_started{current_player.dhalsim_completed!=1}: 12
 
 timers:
   super_meter_timer:

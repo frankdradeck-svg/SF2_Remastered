@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="2_1wxd6"]
 [ext_resource type="Script" uid="uid://hxhsfa7gtrdy" path="res://addons/mpf-gmc/classes/mpf_progress.gd" id="4_1wxd6"]
 [ext_resource type="Texture2D" uid="uid://2g2g1seutmv" path="res://assets/blanka_frenzy.png" id="4_qhcf7"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_qhcf7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhcf7"]
 bg_color = Color(0.9999992, 0.9900674, 0.5987639, 1)
@@ -19,6 +20,11 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_104j2")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1390832748]
+position = Vector2(1345.8438, 422.99994)
+scale = Vector2(0.11999507, 0.58569336)
+texture = ExtResource("2_1wxd6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=323136025]
 position = Vector2(1582.3749, 323.125)
@@ -43,3 +49,19 @@ metadata/_custom_type_script = "uid://hxhsfa7gtrdy"
 position = Vector2(1315, 234.00002)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("4_qhcf7")
+
+[node name="MPFVariable" type="Label" parent="." unique_id=116424162]
+layout_mode = 0
+offset_left = 1289.0
+offset_top = 358.0
+offset_right = 1404.0
+offset_bottom = 550.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 80
+text = "45"
+horizontal_alignment = 1
+script = ExtResource("5_qhcf7")
+variable_name = "blanka_frenzy_time_left"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
