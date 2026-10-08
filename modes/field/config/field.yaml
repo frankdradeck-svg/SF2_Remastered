@@ -67,7 +67,7 @@ slide_player:
   loop_hit{device.counters.loop_counter.value==1}:
     loop_counter:
       action: play
-      priority: 101
+      priority: 501
   timer_loops_timer_stopped:
     loop_counter:
       action: remove

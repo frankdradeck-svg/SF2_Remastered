@@ -45,9 +45,9 @@ fast:
         model: FP-EXP-0071-2
         led_fade_time: 100ms
 
-##custom_code:
-##  - custom_code.chunli.ChunLi
-##  - custom_code.power_shots.PowerShots
+custom_code:
+  - custom_code.chunli.ChunLi
+  - custom_code.power_shots.PowerShots
 
 lights:
   led_left_middle_gi_1:
