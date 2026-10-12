@@ -2,7 +2,7 @@
 
 mode:
   start_events: cammy_combos_started
-  stop_events: ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_ken_hurry_outro_timer_complete, timer_finishing_ken_timer_complete
+  stop_events: timer_cammy_combos_outro_timer_complete, ball_will_end, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started, timer_ken_hurry_outro_timer_complete, timer_finishing_ken_timer_complete
   priority: 200
 
 variable_player:
@@ -10,3 +10,302 @@ variable_player:
     cammy_combos_qualified:
       int: 0
       action: set
+  logicblock_cammy_combos_events_hit{device.counters.cammy_combos_events.value==1}:
+    score: 30000000
+  logicblock_cammy_combos_events_hit{device.counters.cammy_combos_events.value==2}:
+    score: 60000000
+  logicblock_cammy_combos_events_hit{device.counters.cammy_combos_events.value==3}:
+    score: 90000000
+  timer_cammy_combos_1_timer_started:
+    cammy_combo_1_running:
+      int: 1
+      action: set
+  timer_cammy_combos_2_timer_started:
+    cammy_combo_2_running:
+      int: 1
+      action: set
+  timer_cammy_combos_3_timer_started:
+    cammy_combo_3_running:
+      int: 1
+      action: set
+  timer_cammy_combos_1_timer_stopped:
+    cammy_combo_1_running:
+      int: 0
+      action: set
+  timer_cammy_combos_2_timer_stopped:
+    cammy_combo_2_running:
+      int: 0
+      action: set
+  timer_cammy_combos_3_timer_stopped:
+    cammy_combo_3_running:
+      int: 0
+      action: set
+  cammy_combo_1_hit:
+    cammy_combo_1_complete:
+      int: 1
+      action: set
+  cammy_combo_2_hit:
+    cammy_combo_2_complete:
+      int: 1
+      action: set
+  cammy_combo_3_hit:
+    cammy_combo_3_complete:
+      int: 1
+      action: set
+
+show_player:
+  mode_cammy_combos_started:
+    fight_start:
+      speed: 36
+      loops: 0
+      priority: 20
+    chase_guile:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_honda:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_zangief:
+      speed: 18
+      loops: -1
+      priority: 8
+  logicblock_cammy_combos_events_hit:
+    jackpot_default:
+      speed: 6
+      loops: 2
+      priority: 10
+  timer_cammy_combos_1_timer_started:
+    chase_chun:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_guile:
+      action: stop
+    chase_honda: 
+      action: stop
+    chase_zangief:
+      action: stop
+  timer_cammy_combos_2_timer_started:
+    chase_zangief:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_guile:
+      action: stop
+    chase_honda: 
+      action: stop
+  timer_cammy_combos_3_timer_started:
+    chase_balrog:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_guile:
+      action: stop
+    chase_honda: 
+      action: stop
+    chase_zangief:
+      action: stop
+  timer_cammy_combos_1_timer_stopped:
+    chase_chun:
+      action: stop
+  timer_cammy_combos_3_timer_stopped:
+    chase_balrog:
+      action: stop
+##generic timer stops for if no other timer is running, checking for completeness
+  timer_stopped_event{current_player.cammy_combo_1_complete==0 and current_player.cammy_combo_2_complete==0 and current_player.cammy_combo_3_complete==0 and current_player.cammy_combo_1_running==0 and current_player.cammy_combo_2_running==0 and current_player.cammy_combo_3_running==0}:
+    chase_guile:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_honda:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_zangief:
+      speed: 18
+      loops: -1
+      priority: 8
+  timer_stopped_event{current_player.cammy_combo_1_complete==1 and current_player.cammy_combo_2_complete==0 and current_player.cammy_combo_3_complete==0 and current_player.cammy_combo_1_running==0 and current_player.cammy_combo_2_running==0 and current_player.cammy_combo_3_running==0}:
+    chase_guile:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_honda:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_zangief:
+      action: stop
+  timer_stopped_event{current_player.cammy_combo_1_complete==1 and current_player.cammy_combo_2_complete==1 and current_player.cammy_combo_3_complete==0 and current_player.cammy_combo_1_running==0 and current_player.cammy_combo_2_running==0 and current_player.cammy_combo_3_running==0}:
+    chase_guile:
+      action: stop
+    chase_honda:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_zangief:
+      action: stop
+  timer_stopped_event{current_player.cammy_combo_1_complete==1 and current_player.cammy_combo_2_complete==0 and current_player.cammy_combo_3_complete==1 and current_player.cammy_combo_1_running==0 and current_player.cammy_combo_2_running==0 and current_player.cammy_combo_3_running==0}:
+    chase_guile:
+      speed: 18
+      loops: -1
+      priority: 8
+    chase_honda:
+      action: stop
+    chase_zangief:
+      action: stop
+  timer_stopped_event{current_player.cammy_combo_1_complete==0 and current_player.cammy_combo_2_complete==1 and current_player.cammy_combo_3_complete==1 and current_player.cammy_combo_1_running==0 and current_player.cammy_combo_2_running==0 and current_player.cammy_combo_3_running==0}:
+    chase_guile:
+      action: stop
+    chase_honda:
+      action: stop
+    chase_zangief:
+      speed: 18
+      loops: -1
+      priority: 8
+
+slide_player:
+  mode_cammy_combos_started:
+    cammy_combos:
+      action: play
+      priority: 101
+    cammy_combos_x_left:
+      action: play
+      priority: 102
+    cammy_combos_x_center:
+      action: play
+      priority: 102
+    cammy_combos_x_right:
+      action: play
+      priority: 102
+  logicblock_cammy_combos_events_hit:
+    cammy_videos:
+      expire: 3s
+      priority: 102
+  logicblock_cammy_combos_events_hit{device.counters.cammy_combos_events.value==1}:
+    cammy_jackpot:
+      expire: 3s
+      priority: 103
+  logicblock_cammy_combos_events_hit{device.counters.cammy_combos_events.value==2}:
+    cammy_jackpot_2:
+      expire: 3s
+      priority: 103
+  logicblock_cammy_combos_events_hit{device.counters.cammy_combos_events.value==3}:
+    cammy_jackpot_3:
+      expire: 3s
+      priority: 103
+  cammy_combo_1_hit:
+    cammy_combos_x_right:
+      action: remove
+    cammy_combos_y_right:
+      action: play
+      priority: 102
+  cammy_combo_2_hit:
+    cammy_combos_x_center:
+      action: remove
+    cammy_combos_y_center:
+      action: play
+      priority: 102
+  cammy_combo_3_hit:
+    cammy_combos_x_left:
+      action: remove
+    cammy_combos_y_left:
+      action: play
+      priority: 102
+
+event_player:
+  timer_cammy_combos_3_timer_stopped: timer_stopped_event
+  timer_cammy_combos_2_timer_stopped: timer_stopped_event
+  timer_cammy_combos_1_timer_stopped: timer_stopped_event
+
+counters:
+  cammy_combos_events:
+    count_events: cammy_combo_1_hit, cammy_combo_2_hit, cammy_combo_3_hit
+    starting_count: 0
+    count_complete_value: 3
+    direction: up
+    events_when_complete: cammy_combos_end
+    persist_state: true
+    reset_on_complete: false
+    disable_on_complete: true
+  cammy_combo_counter_1:
+    count_events: combo_1_hit{current_player.cammy_combo_1_running==1}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: cammy_combo_1_hit
+    disable_on_complete: true
+  cammy_combo_counter_2:
+    count_events: combo_3_hit{current_player.cammy_combo_2_running==1}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: cammy_combo_2_hit
+    disable_on_complete: true
+  cammy_combo_counter_3:
+    count_events: combo_4_hit{current_player.cammy_combo_3_running==1}
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: cammy_combo_3_hit
+    disable_on_complete: true
+
+timers:
+  cammy_combos_1_timer:
+    start_value: 5
+    max_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: s_zangief_active{current_player.cammy_combo_2_running==0 and current_player.cammy_combo_1_complete==0}
+        action: start
+      - event: s_left_vuk_active
+        action: stop
+      - event: cammy_combo_1_hit
+        action: stop
+      - event: timer_cammy_combos_1_timer_stopped
+        action: reset
+  cammy_combos_2_timer:
+    start_value: 5
+    max_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: s_guile_opto_active{current_player.cammy_combo_1_running==0 and current_player.cammy_combo_2_complete==0}
+        action: start
+      - event: s_left_vuk_active
+        action: stop
+      - event: cammy_combo_2_hit
+        action: stop
+      - event: timer_cammy_combos_2_timer_stopped
+        action: reset
+  cammy_combos_3_timer:
+    start_value: 5
+    max_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: s_left_vuk_active{current_player.cammy_combo_3_complete==0}
+        action: start
+      - event: s_zangief_active
+        action: stop
+      - event: s_guile_opto_active
+        action: stop
+      - event: cammy_combo_3_hit
+        action: stop
+      - event: timer_cammy_combos_3_timer_stopped
+        action: reset
+  cammy_combos_outro_timer:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: cammy_combos_end
+        action: start
+    

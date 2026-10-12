@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ccgag3tmel2fn"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_y3hda"]
+[ext_resource type="VideoStream" uid="uid://gun56bvpwcnh" path="res://assets/carsmash_1.ogv" id="2_63s5p"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_e5qgx"]
 
 [node name="MPFSlide" type="Control" unique_id=213916040]
 layout_mode = 3
@@ -9,6 +11,18 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_y3hda")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=2046345798]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_63s5p")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_e5qgx")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
 
 [node name="Label" type="Label" parent="." unique_id=1730150719]
 layout_mode = 0

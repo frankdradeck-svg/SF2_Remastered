@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://dah80x7rqblpt"]
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gel1p"]
+[ext_resource type="Script" uid="uid://bh3xoo03q0ii0" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="2_7tqfd"]
+[ext_resource type="VideoStream" uid="uid://yaho44byic66" path="res://assets/ehonda_1.ogv" id="3_3ghy2"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_x3d57"]
+[ext_resource type="VideoStream" uid="uid://brn67q5k5wi6r" path="res://assets/ehonda_2.ogv" id="5_752vw"]
+[ext_resource type="VideoStream" uid="uid://5vjgj2xrsjn7" path="res://assets/ehonda_3.ogv" id="6_gsqad"]
+[ext_resource type="VideoStream" uid="uid://cotia32awex53" path="res://assets/ehonda_4.ogv" id="7_kvb78"]
+[ext_resource type="VideoStream" uid="uid://bh0bbt1v41sur" path="res://assets/ehonda_5.ogv" id="8_6bv61"]
+[ext_resource type="VideoStream" uid="uid://cqlf46eyqlf0j" path="res://assets/ehonda_6.ogv" id="9_dbj56"]
+[ext_resource type="VideoStream" uid="uid://dhdxjqab88ocp" path="res://assets/ehonda_7.ogv" id="10_agklg"]
+[ext_resource type="VideoStream" uid="uid://c4fil0vcftejx" path="res://assets/ehonda_8.ogv" id="11_y8ak0"]
+[ext_resource type="VideoStream" uid="uid://co4c8kwjjiqt1" path="res://assets/new_ehonda_1.ogv" id="12_bq3en"]
 
 [node name="MPFSlide" type="Control" unique_id=213916040]
 layout_mode = 3
@@ -9,6 +20,123 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_gel1p")
 metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFChildPool" type="Control" parent="." unique_id=113280001]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_7tqfd")
+playback_method = 2
+child_method = "play"
+metadata/_custom_type_script = "uid://bh3xoo03q0ii0"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=731280124]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("3_3ghy2")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer2" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=929764208]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("5_752vw")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer3" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=149531684]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("6_gsqad")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer4" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1356146694]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("7_kvb78")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer5" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1417171109]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("8_6bv61")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer6" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1904500741]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("9_dbj56")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer7" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=390927533]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("10_agklg")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer8" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=55944923]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("11_y8ak0")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer9" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1180040213]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("12_bq3en")
+expand = true
+loop = true
+bus = &"effects"
+script = ExtResource("4_x3d57")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
 
 [node name="Label" type="Label" parent="." unique_id=1730150719]
 layout_mode = 0

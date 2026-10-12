@@ -45,13 +45,13 @@ scale = Vector2(0.3011068, 0.5151367)
 texture = ExtResource("4_o6mj7")
 
 [node name="Label" type="Label" parent="Sprite2D" unique_id=1257184517]
-offset_left = -368.64032
-offset_top = -95.12038
-offset_right = 1560.9075
-offset_bottom = 127.87962
+offset_left = -524.7318
+offset_top = -85.414185
+offset_right = 1404.816
+offset_bottom = 137.58582
 theme_override_constants/outline_size = 18
-theme_override_font_sizes/font_size = 100
-text = "Scoop / Scoop"
+theme_override_font_sizes/font_size = 90
+text = "Left Scoop / Right Scoop"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1962465690]

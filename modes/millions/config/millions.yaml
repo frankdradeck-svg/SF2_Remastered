@@ -6,47 +6,47 @@ mode:
   priority: 200
 
 sound_player:
-  loop_hit{device.counters.millions_hits.value==1}:
+  millions_event{device.counters.millions_hits.value==1}:
     5_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==2}:
+  millions_event{device.counters.millions_hits.value==2}:
     10_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==3}:
+  millions_event{device.counters.millions_hits.value==3}:
     15_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==4}:
+  millions_event{device.counters.millions_hits.value==4}:
     20_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==5}:
+  millions_event{device.counters.millions_hits.value==5}:
     25_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==6}:
+  millions_event{device.counters.millions_hits.value==6}:
     30_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==7}:
+  millions_event{device.counters.millions_hits.value==7}:
     35_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==8}:
+  millions_event{device.counters.millions_hits.value==8}:
     40_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==9}:
+  millions_event{device.counters.millions_hits.value==9}:
     45_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value==10}:
+  millions_event{device.counters.millions_hits.value==10}:
     50_mill:
       bus: voice_boost
       action: replace
-  loop_hit{device.counters.millions_hits.value>10}:
+  millions_event{device.counters.millions_hits.value>10}:
     60_mill:
       bus: voice_boost
       action: replace
@@ -59,7 +59,7 @@ show_player:
       show_tokens:
         lights: led_ryu_defeat, led_ryu_double, led_ryu_millions
         color: white
-  loop_hit:
+  millions_event:
     jackpot_default:
       speed: 6
       priority: 1
@@ -78,7 +78,7 @@ slide_player:
     ken_millions_timer:
       action: play
       priority: 7
-  loop_hit:
+  millions_event:
     ken_millions_videos:
       expire: 3s
       priority: 7
@@ -90,15 +90,35 @@ timers:
     direction: down
     tick_interval: 1s
     start_running: true
+  loops_millions_timer:
+    start_value: 3
+    max_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - event: loop_hit
+        action: start
+      - event: logicblock_loop_counter_millions_hit
+        action: add
+        value: 3
 
 variable_player:
+  timer_loops_millions_timer_started:
+    loop_counter_millions_running:
+      action: set
+      int: 1
+  timer_loops_millions_timer_stopped:
+    loop_counter_millions_running:
+      action: set
+      int: 0
   mode_millions_started:
     millions_played:
       int: 1
       action: set
-  loop_hit{device.counters.millions_hits.value<11}:
+  millions_event{device.counters.millions_hits.value<11}:
     score: device.counters.millions_hits.value * 5_000_000
-  loop_hit{device.counters.millions_hits.value>10}:
+  millions_event{device.counters.millions_hits.value>10}:
     score: 60_000_000
   timer_millions_timer_tick:
     ken_millions_time_left:
@@ -107,22 +127,29 @@ variable_player:
 
 counters:
   millions_hits:
-    count_events: loop_hit
+    count_events: millions_event
     starting_count: 1
     direction: up
     persist_state: true
+  loop_counter_millions:
+    count_events: s_left_orbit_rollover_active{current_player.loop_counter_millions_running==1}
+    starting_count: 0
+    direction: up
+    restart_events: timer_loops_millions_timer_stopped
 
 event_player:
-  loop_hit{device.counters.millions_hits.value<11}:
+  millions_event{device.counters.millions_hits.value<11}:
     millions_value:
       current_millions:
         type: int
         value: 5_000_000 + device.counters.millions_hits.value * 5_000_000
-  loop_hit{device.counters.millions_hits.value>10}:
+  millions_event{device.counters.millions_hits.value>10}:
     millions_value:
       current_millions:
         type: int
         value: 60_000_000
+  loop_hit{current_player.loop_counter_millions_running!=1}: millions_event
+  s_left_orbit_rollover_active{current_player.loop_counter_millions_running==1}: millions_event
   
 
 

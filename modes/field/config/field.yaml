@@ -1,8 +1,8 @@
 #config_version=6
 
 mode:
-  start_events: multiball_akuma_mb_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
-  stop_events: ball_will_end, cammy_combos_started, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
+  start_events: timer_cammy_combos_outro_timer_complete, timer_millions_timer_complete, multiball_akuma_mb_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, multiball_guile_mb_ended, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
+  stop_events: timer_finishing_ken_timer_complete{current_player.millions_played!=1}, ball_will_end, cammy_combos_started, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
   priority: 300
 
 sound_player:
@@ -24,60 +24,51 @@ sound_player:
   chunli_animation_started:
     chun_vfx:
       bus: voice
-  loop_hit{device.counters.loop_counter.value==1}:
+  s_left_orbit_rollover_active{device.counters.loop_counter.value==1}:
     wizz:
       bus: effects
       action: replace
-  loop_hit{device.counters.loop_counter.value==2}:
+  s_left_orbit_rollover_active{device.counters.loop_counter.value==2}:
     wizz2:
       bus: effects
       action: replace
-  loop_hit{device.counters.loop_counter.value==3}:
+  s_left_orbit_rollover_active{device.counters.loop_counter.value==3}:
     wizz3:
       bus: effects
       action: replace
-  loop_hit{device.counters.loop_counter.value>3}:
+  s_left_orbit_rollover_active{device.counters.loop_counter.value>3}:
     wizz4:
       bus: effects
       action: replace
       
-
-
 slide_player:
-  logicblock_combos_hits_hit{device.counter.combos_hits.value==0}:
+  logicblock_combos_hits_hit{device.counters.combos_hits.value==0}:
     c_ammy:
       expire: 3s
-      priority: 101
-  logicblock_combos_hits_hit{device.counter.combos_hits.value==1}:
+      priority: 501
+  logicblock_combos_hits_hit{device.counters.combos_hits.value==1}:
     ca_mmy:
       expire: 3s
-      priority: 101
-  logicblock_combos_hits_hit{device.counter.combos_hits.value==2}:
+      priority: 501
+  logicblock_combos_hits_hit{device.counters.combos_hits.value==2}:
     cam_my:
       expire: 3s
-      priority: 101
-  logicblock_combos_hits_hit{device.counter.combos_hits.value==3}:
+      priority: 501
+  logicblock_combos_hits_hit{device.counters.combos_hits.value==3}:
     camm_y:
       expire: 3s
-      priority: 101
-  logicblock_combos_hits_hit{device.counter.combos_hits.value==4}:
+      priority: 501
+  logicblock_combos_hits_hit{device.counters.combos_hits.value==4}:
     cammy_qualified:
       expire: 3s
-      priority: 101
-  loop_hit{device.counters.loop_counter.value==1}:
+      priority: 501
+  s_left_orbit_rollover_active{device.counters.loop_counter.value==1}:
     loop_counter:
       action: play
       priority: 501
   timer_loops_timer_stopped:
     loop_counter:
       action: remove
-  get_fighter_letter:
-    get_fighter_letter:
-      expire: 3s
-      priority: 101
-  timer_millions_timer_complete:
-    field:
-      action: play
   mode_field_started: 
     field:
       action: play
@@ -87,10 +78,6 @@ slide_player:
       action: remove
     guile_mb:
       action: remove
-  s_guile_opto_active:
-    guile_videos:
-      expire: 3s
-      priority: 101
   s_guile_opto_active{device.counters.guile_hits.value==0 and current_player.guile_mb_played!=1}:
     g_uile:
       expire: 3s
@@ -112,44 +99,26 @@ slide_player:
       expire: 3s
       priority: 102
   s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==0}:
-    ehonda_videos:
-      expire: 3s
-      priority: 101
     t_orpedo:
       expire: 3s
       priority: 102
   s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==1}:
-    ehonda_videos:
-      expire: 3s
-      priority: 101
     to_rpedo:
       expire: 3s
       priority: 102
   s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==2}:
-    ehonda_videos:
-      expire: 3s
-      priority: 101
     tor_pedo:
       expire: 3s
       priority: 102
   s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==3}:
-    ehonda_videos:
-      expire: 3s
-      priority: 101
     torp_edo:
       expire: 3s
       priority: 102
   s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==4}:
-    ehonda_videos:
-      expire: 3s
-      priority: 101
     torpe_do:
       expire: 3s
       priority: 102
   s_left_vuk_active{current_player.torpedo_running!=1 and device.counters.torpedo_hits.value==5}:
-    ehonda_videos:
-      expire: 3s
-      priority: 101
     torped_o:
       expire: 3s
       priority: 102
@@ -158,23 +127,14 @@ slide_player:
       expire: 3s
       priority: 101
   s_loop_spinner_active{device.counters.car_loop_spinner_hits.value==19}:
-    car_mb_progress:
-      expire: 3s
-      priority: 102
     c_ar:
       expire: 3s
       priority: 103
   s_loop_spinner_active{device.counters.car_loop_spinner_hits.value==39}:
-    car_mb_progress:
-      expire: 3s
-      priority: 102
     ca_r:
       expire: 3s 
       priority: 103
   s_loop_spinner_active{device.counters.car_loop_spinner_hits.value==59}:
-    car_mb_progress:
-      expire: 3s
-      priority: 102
     car_complete:
       expire: 3s 
       priority: 103
@@ -207,34 +167,50 @@ slide_player:
       action: play
   s_right_vuk_active{current_player.ken_hurry_active!=1}:
     bison_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_zangief_active:
     zangief_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_chunli_entrance_active:
     chunli_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_center_spinner_active{device.counters.center_spinner_hits.value==15}:
     dhalsim_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_loop_spinner_active{device.counters.loop_spinner_hits.value==10}:
     kenryu_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_right_standup_1_active:
     fei_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_right_standup_2_active:
     fei_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
   s_left_orbit_rollover_active{device.counters.left_orbit_hits.value==1}:
     blanka_videos:
+      action: queue
+      max_queue_time: 1s
       expire: 3s
       priority: 101
 
@@ -252,8 +228,15 @@ variable_player:
     combos_count: 1
   logicblock_blanka_count_hit:
     blanka_spins: 1
+  timer_loops_timer_started:
+    loop_counter_running:
+      action: set
+      int: 1
   timer_loops_timer_stopped:
     loop_count:
+      action: set
+      int: 0
+    loop_counter_running:
       action: set
       int: 0
   logicblock_loop_counter_hit:
@@ -338,22 +321,22 @@ show_player:
       loops: 5
   ball_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
-      speed: 2
+      speed: 8
       loops: -1
   mode_field_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
-      speed: 2
+      speed: 8
       loops: -1
   s_right_vuk_active{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
       action: stop
   cammy_combos_start:
     chase_balrog:
-      speed: 2
+      speed: 8
       loops: -1
   blanka_frenzy_start:
     chase_balrog:
-      speed: 2
+      speed: 8
       loops: -1
   ball_started{current_player.fight_qualified!=1 and current_player.fighter_mode_qualified!=1}:
     flash_color:
@@ -392,19 +375,19 @@ show_player:
         color: orange
   fight_qualified_event:
     chase_zangief:
-      speed: 2
+      speed: 8
       loops: -1
   get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}:
     chase_zangief:
-      speed: 2
+      speed: 8
       loops: -1
   ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     chase_zangief:
-      speed: 2
+      speed: 8
       loops: -1
   mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     chase_zangief:
-      speed: 2
+      speed: 8
       loops: -1
   car_mb_qualified_event:
     flash_color:
@@ -467,8 +450,8 @@ counters:
     reset_on_complete: false
     disable_on_complete: true
   loop_counter:
-    count_events: loop_hit
-    starting_count: 0
+    count_events: s_left_orbit_rollover_active{current_player.loop_counter_running==1}
+    starting_count: 1
     direction: up
     restart_events: timer_loops_timer_stopped
   combos_hits:

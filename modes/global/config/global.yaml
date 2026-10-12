@@ -60,6 +60,9 @@ sound_player:
   combo_3_hit:
     good_shot_randomizer:
       bus: voice_loud
+  combo_4_hit:
+    good_shot_randomizer:
+      bus: voice_loud
   skillshot_hit_event:
     vo_skillshot:
       bus: voice_loud
@@ -122,11 +125,6 @@ show_player:
       speed: 6
       priority: 10
       loops: 2
-  cammy_combos_started:
-    fight_start:
-      speed: 6
-      priority: 10
-      loops: 2
   blanka_frenzy_started:
     fight_start:
       speed: 6
@@ -153,9 +151,13 @@ slide_player:
   timer_super_meter_timer_started:
     super_meter_2:
       action: remove
+  get_fighter_letter:
+    get_fighter_letter:
+      expire: 3s
+      priority: 801
 
 event_player:
-   loop_hit{current_player.skillshot_running!=0}: skillshot_hit_event
+   spinner_loop_spinner_active{current_player.skillshot_running!=0}: skillshot_hit_event
 
 random_event_player:
   choose_fight:
@@ -302,16 +304,22 @@ variable_player:
 sequence_shots:
   combo_1:
     switch_sequence: s_zangief, s_chunli_entrance
-    sequence_timeout: 3s
+    sequence_timeout: 5s
   combo_2:
     switch_sequence: s_zangief, s_guile_opto
-    sequence_timeout: 3s
+    sequence_timeout: 5s
   combo_3:
     switch_sequence: s_guile_opto, s_zangief
-    sequence_timeout: 3s
+    sequence_timeout: 5s
+  combo_4:
+    switch_sequence: s_left_vuk, s_right_vuk
+    sequence_timeout: 5s
+
   loop:
-    switch_sequence: s_loop_spinner, s_left_orbit_rollover
-    sequence_timeout: 1s
+    event_sequence: 
+      - spinner_loop_spinner_active
+      - s_left_orbit_rollover_active
+    sequence_timeout: 2s
 
 counters:
   guile_hits:

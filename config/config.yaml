@@ -45,9 +45,9 @@ fast:
         model: FP-EXP-0071-2
         led_fade_time: 100ms
 
-custom_code:
-  - custom_code.chunli.ChunLi
-  - custom_code.power_shots.PowerShots
+##custom_code:
+##  - custom_code.chunli.ChunLi
+##  - custom_code.power_shots.PowerShots
 
 lights:
   led_left_middle_gi_1:
@@ -626,21 +626,22 @@ ball_devices:
     eject_coil: c_drain_eject
     eject_targets: bd_trough
     tags: drain
-    eject_timeouts: 4s
+    eject_timeouts: 2s
   bd_trough:
     entrance_switch: s_trough
-    entrance_switch_full_timeout: 1000ms
+    entrance_switch_full_timeout: 2000ms
     ball_capacity: 3
     eject_coil: c_trough_eject
     eject_coil_enable_time: 500ms
     tags: trough, home
-    eject_timeouts: 3s
+    eject_timeouts: 2s
     eject_targets: bd_plunger_lane
   bd_plunger_lane:
     ball_switches: s_shooter
     mechanical_eject: true
     eject_timeouts: 3s
     eject_coil: c_autolauncher
+    eject_targets: playfield
   bd_left_vuk:
     ball_switches: s_left_vuk
     eject_coil: c_left_vuk
@@ -694,4 +695,19 @@ player_vars:
     initial_value: 0
   blanka_frenzy_time_left:
     initial_value: 30
-  
+  loop_counter_running:
+    initial_value: 0
+  loop_counter_millions_running:
+    initial_value: 0
+  cammy_combo_3_running:
+    initial_value: 0
+  cammy_combo_2_running:
+    initial_value: 0
+  cammy_combo_1_running:
+    initial_value: 0
+  cammy_combo_3_complete:
+    initial_value: 0
+  cammy_combo_2_complete:
+    initial_value: 0
+  cammy_combo_1_complete:
+    initial_value: 0
