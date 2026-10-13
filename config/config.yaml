@@ -51,6 +51,7 @@ fast:
 ##custom_code:
 ##  - custom_code.chunli.ChunLi
 ##  - custom_code.power_shots.PowerShots
+##  - custom_code.lane_lights.LaneLights
 
 lights:
   led_left_middle_gi_1:
