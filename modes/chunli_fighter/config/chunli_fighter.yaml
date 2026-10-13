@@ -1,0 +1,8 @@
+#config_version=6
+
+mode:
+  start_events: chunli_chosen
+  stop_events: ball_will_end
+  priority: 300
+
+#current_player.chun_speed is the velocity, call chunli_intro_start when the mode is done, maybe even "animation"

@@ -1,3 +1,4 @@
+import random
 import subprocess
 
 from mpf.core.custom_code import CustomCode
@@ -33,6 +34,12 @@ class ChunLi(CustomCode):
     ANIMATION_REVERSE_STEPS = 20
     ANIMATION_FORWARD_AGAIN_STEPS = 20
 
+    # Map current_player.chun_speed (0-100) to Tic velocity.
+    MIN_DYNAMIC_VELOCITY = 1250000
+    MAX_DYNAMIC_VELOCITY = 5000000
+    DYNAMIC_SPEED_MIN = 0
+    DYNAMIC_SPEED_MAX = 100
+
     # Tic command timeout is 1 second.
     HEARTBEAT_INTERVAL = 0.20
 
@@ -59,12 +66,10 @@ class ChunLi(CustomCode):
         # Tracks whether the mechanism is physically known to be home.
         self.at_home = True
 
-        # Every other entrance trigger does nothing.
-        #
-        # True  = next entrance trigger runs the animation
-        # False = next entrance trigger does nothing
-        #
-        self.animation_enabled = True
+        # Dynamic velocity updates are enabled only during
+        # the chunli_fighter mode.
+        self.velocity_updates_enabled = False
+        self.last_velocity = None
 
         # -----------------------------------------------------------
         # MPF EVENTS
@@ -83,6 +88,17 @@ class ChunLi(CustomCode):
         self.machine.events.add_handler(
             "chunli_move_90",
             self.move_90
+        )
+
+        # Enable dynamic velocity updates only during chunli_fighter.
+        self.machine.events.add_handler(
+            "mode_chunli_fighter_started",
+            self._enable_velocity_updates
+        )
+
+        self.machine.events.add_handler(
+            "mode_chunli_fighter_stopped",
+            self._disable_velocity_updates
         )
 
         # -----------------------------------------------------------
@@ -137,11 +153,68 @@ class ChunLi(CustomCode):
     # ---------------------------------------------------------------
 
     def _heartbeat(self):
-        """Keep the Tic command timeout alive."""
+        """Keep the Tic alive and update velocity during chunli_fighter."""
 
-        self._ticcmd(
-            "--reset-command-timeout"
+        # Preserve the existing Tic heartbeat.
+        self._ticcmd("--reset-command-timeout")
+
+        # Do not read the player variable outside chunli_fighter mode.
+        if not self.velocity_updates_enabled:
+            return
+
+        player = self.machine.game.player
+
+        if player is None:
+            return
+
+        # Keep the MPF gameplay value within its intended 0-100 range.
+        chun_speed = int(player.chun_speed)
+        chun_speed = max(
+            self.DYNAMIC_SPEED_MIN,
+            min(self.DYNAMIC_SPEED_MAX, chun_speed)
         )
+
+        # Linear mapping:
+        # 0   -> 1,250,000
+        # 100 -> 5,000,000
+        velocity_range = (
+            self.MAX_DYNAMIC_VELOCITY - self.MIN_DYNAMIC_VELOCITY
+        )
+        speed_range = self.DYNAMIC_SPEED_MAX - self.DYNAMIC_SPEED_MIN
+
+        velocity = self.MIN_DYNAMIC_VELOCITY + int(
+            (chun_speed - self.DYNAMIC_SPEED_MIN)
+            * velocity_range
+            / speed_range
+        )
+
+        # Avoid sending the same velocity repeatedly.
+        if velocity == self.last_velocity:
+            return
+
+        if self._ticcmd("--velocity", str(velocity)):
+            self.last_velocity = velocity
+            self.log.debug(
+                "ChunLi dynamic velocity: chun_speed=%d, velocity=%d.",
+                chun_speed,
+                velocity
+            )
+
+    def _enable_velocity_updates(self, **kwargs):
+        """Enable dynamic velocity updates when chunli_fighter starts."""
+
+        self.velocity_updates_enabled = True
+        self.last_velocity = None
+
+        self.log.info("ChunLi fighter velocity updates enabled.")
+
+    def _disable_velocity_updates(self, **kwargs):
+        """Disable dynamic velocity updates when chunli_fighter stops."""
+
+        self.velocity_updates_enabled = False
+        self.last_velocity = None
+
+        self.log.info("ChunLi fighter velocity updates disabled.")
 
     # ---------------------------------------------------------------
     # MODE START
@@ -308,28 +381,25 @@ class ChunLi(CustomCode):
             return
 
         # -----------------------------------------------------------
-        # ALTERNATE BETWEEN ANIMATION AND DO NOTHING
+        # RANDOMLY RUN THE ANIMATION OR IGNORE THIS TRIGGER
         # -----------------------------------------------------------
 
-        if not self.animation_enabled:
+        # Each entrance trigger gets an independent 50/50 decision;
+        # unlike the previous toggle, this can randomly select the
+        # animation on consecutive triggers or skip several in a row.
+        if random.choice((True, False)):
 
             self.log.info(
-                "ChunLi entrance trigger ignored."
+                "ChunLi entrance trigger: randomly selected; starting animation."
             )
 
-            # Next trigger will run the animation.
-            self.animation_enabled = True
+            self.start_animation()
 
-            return
+        else:
 
-        # This trigger runs the animation.
-        self.animation_enabled = False
-
-        self.log.info(
-            "ChunLi entrance trigger: starting animation."
-        )
-
-        self.start_animation()
+            self.log.info(
+                "ChunLi entrance trigger: randomly selected; animation skipped."
+            )
 
     # ---------------------------------------------------------------
     # START ANIMATION

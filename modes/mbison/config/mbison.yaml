@@ -1,0 +1,7 @@
+#config_version=6
+
+mode:
+  start_events: mbison_chosen
+  stop_events: ball_will_end
+  priority: 300
+

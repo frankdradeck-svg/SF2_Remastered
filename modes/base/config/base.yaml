@@ -271,6 +271,8 @@ event_player:
   blanka_frenzy_complete: get_fighter_letter
   guile_mb_super_jackpot_event: get_fighter_letter
   logicblock_center_standups_hits_updated{device.counters.center_standups_hits.value==24}: get_fighter_letter
+  cammy_combos_started: get_fighter_letter
+  timer_cammy_combos_outro_timer_complete: get_fighter_letter
 
 sound_player:
   extra_ball_fighter_letters_1_awarded:

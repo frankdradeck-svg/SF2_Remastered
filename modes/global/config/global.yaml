@@ -82,52 +82,52 @@ show_player:
         lights: led_fighter_1, led_fighter_2
   power_move_event:
     jackpot_default:
-      speed: 6
+      speed: 36
       priority: 1
       loops: 2
   vega_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   chunli_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   blanka_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   zangief_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   balrog_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   ehonda_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   sagat_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   dhalsim_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
   blanka_frenzy_started:
     fight_start:
-      speed: 6
+      speed: 36
       priority: 10
       loops: 2
 

@@ -25,6 +25,8 @@ slide_player:
 
 event_player:
   carousel_item_selected{item=="akuma"}: akuma_chosen
+  carousel_item_selected{item=="chunli"}: chunli_chosen
+  carousel_item_selected{item=="mbison"}: mbison_chosen
 
 timers:
   fighter_select_timer:

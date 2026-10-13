@@ -307,6 +307,9 @@ sound_player:
   mode_dhalsim_started:
     dhalsim_theme:
       bus: music_loud
+  chunli_animation_started:
+    chun_vfx:
+      bus: voice
 
 variable_player:
   finishing_dhalsim:
@@ -429,3 +432,6 @@ counters:
     count_complete_value: 3
     direction: up
     events_when_complete: dhalsim_losing
+
+event_player:
+  s_chunli_entrance_active: chunli_move_90
