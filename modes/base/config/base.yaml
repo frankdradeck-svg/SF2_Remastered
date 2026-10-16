@@ -224,6 +224,12 @@ shots:
     switch: s_loop_spinner
 
 variable_player:
+  ramp_skillshot_start:
+    ramp_skillshot_running:
+      int: 1
+  ramp_skillshot_hit:
+    ramp_skillshot_running:
+      int: 0
   timer_finishing_vega_timer_complete:
     fights_completed: 1
   timer_finishing_chunli_timer_complete:

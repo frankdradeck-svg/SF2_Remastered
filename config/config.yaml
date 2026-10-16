@@ -445,86 +445,90 @@ switches:
     number: front-25
   s_left_inlane:
     number: front-26
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_left_outlane:
     number: front-27
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_right_inlane:
     number: front-28
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_right_outlane:
     number: front-29
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_left_sling:
     number: front-30
+    tags: skillshot_ramp_trigger
   s_right_sling:
     number: front-31
+    tags: skillshot_ramp_trigger
   s_left_vuk:
     number: front-19
+    tags: skillshot_ramp_trigger
   s_right_vuk:
     number: front-20
+    tags: skillshot_ramp_trigger
   s_right_standup_1:
     number: front-21
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_right_standup_2:
     number: front-22
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_center_standup_1:
     number: front-8
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_center_standup_2:
     number: front-9
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_center_standup_3:
     number: front-10
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_pop_bumper:
     number: front-11
+    tags: skillshot_ramp_trigger
   s_pop_standup_1:
     number: front-12
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_pop_standup_2:
     number: front-13
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_pop_standup_3:
     number: front-14
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_center_spinner:
     number: front-15
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_loop_spinner:
     number: back-9
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_left_ramp_rollover:
     number: back-1
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_right_orbit_rollover:
     number: back-2
     tags: playfield_active
   s_left_orbit_rollover:
     number: back-3
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_punchback_1:
     number: back-4
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_punchback_2:
     number: back-5
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_chunli_entrance:
     number: back-8
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_chunli_exit:
     number: back-0
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_zangief:
     number: back-10
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_guile_opto:
     number: back-11
-    tags: playfield_active
+    tags: playfield_active, skillshot_ramp_trigger
   s_stepper_home:
     number: back-12
-
 spinners:
   loop_spinner:
     switch: s_loop_spinner
@@ -612,12 +616,12 @@ diverters:
   right_ramp:
     activation_coil: c_right_ramp_divert
     type: hold
-    activate_events: mode_akuma_build_started, mode_akuma_started, car_mb_qualified_event, ball_started{current_player.car_mb_qualified==1}, mode_field_started{current_player.car_mb_qualified==1}, mode_millions_started
-    deactivate_events: mode_akuma_ended, vega_started, chunli_started, mode_field_started{current_player.car_mb_qualified!=1}, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started, mode_millions_ended, cammy_combos_started
+    activate_events: mode_akuma_build_started, mode_akuma_started, car_mb_qualified_event, ball_started{current_player.car_mb_qualified==1}, mode_field_started{current_player.car_mb_qualified==1}, mode_millions_started, ramp_skillshot_start
+    deactivate_events: mode_akuma_ended, vega_started, chunli_started, ball_ended, game_ending, zangief_started, blanka_started, dhalsim_started, sagat_started, balrog_started, ehonda_started, mode_millions_ended, cammy_combos_started, ramp_skillshot_hit{current_player.car_mb_qualified!=1}
     targets_when_active: playfield
     targets_when_inactive: playfield
     disable_events: ball_ended, game_ending, guile_mb_started
-    enable_events: ball_started, multiball_guile_mb_ended
+    enable_events: ball_starting, ball_started, multiball_guile_mb_ended
 
 
 playfields:
@@ -705,6 +709,8 @@ player_vars:
     initial_value: 0
   skillshot_running:
     initial_value: 0
+  ramp_skillshot_running:
+    initial_value: 0
   blanka_spins:
     initial_value: 0
   combos_count:
@@ -727,3 +733,8 @@ player_vars:
     initial_value: 0
   cammy_combo_1_complete:
     initial_value: 0
+
+event_player:
+  ball_starting: ramp_skillshot_start
+  sw_skillshot_ramp_trigger{current_player.ramp_skillshot_running==1}: ramp_skillshot_hit
+
