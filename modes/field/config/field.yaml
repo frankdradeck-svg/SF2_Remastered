@@ -62,7 +62,7 @@ slide_player:
     cammy_qualified:
       expire: 3s
       priority: 501
-  s_left_orbit_rollover_active{device.counters.loop_counter.value==1}:
+  s_left_orbit_rollover_active{device.counters.loop_counter.value==2}:
     loop_counter:
       action: play
       priority: 501

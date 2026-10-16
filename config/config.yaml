@@ -733,6 +733,8 @@ player_vars:
     initial_value: 0
   cammy_combo_1_complete:
     initial_value: 0
+  ramp_skillshot_start:
+    initial_value: 0
 
 event_player:
   ball_starting: ramp_skillshot_start

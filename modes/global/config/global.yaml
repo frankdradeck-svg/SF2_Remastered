@@ -6,6 +6,9 @@ mode:
   priority: 200
 
 sound_player:
+  lane_lights_complete:
+    vo_bonusx:
+      bus: voice
   s_center_spinner_active:
     spinner2:
       bus: effects_loud
@@ -158,6 +161,7 @@ slide_player:
 
 event_player:
    spinner_loop_spinner_active{current_player.skillshot_running!=0}: skillshot_hit_event
+   lane_lights_complete: lane_lights_reset
 
 random_event_player:
   choose_fight:
@@ -314,7 +318,6 @@ sequence_shots:
   combo_4:
     switch_sequence: s_left_vuk, s_right_vuk
     sequence_timeout: 5s
-
   loop:
     event_sequence: 
       - spinner_loop_spinner_active
