@@ -157,6 +157,11 @@ show_player:
     right_ramp_alert:
       speed: 12
       loops: 5
+    chase_chun: stop
+  timer_right_ramp_field_timer_started:
+    chase_chun:
+      speed: 32
+      loops: -1
   timer_right_ramp_fight_timer_tick{ticks_remaining==1}:
     right_ramp_alert:
       speed: 12
