@@ -4,44 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://rakv5d23gcbc" path="res://assets/bonus2.png" id="2_gygbu"]
 [ext_resource type="SpriteFrames" uid="uid://fkbublsemcxs" path="res://slides/ryu_left.tres" id="3_14ue3"]
 [ext_resource type="Script" uid="uid://bhuqmb1e5d87e" path="res://slides/animated_sprite_2d.gd" id="4_xng6b"]
-[ext_resource type="Texture2D" uid="uid://blbmrhdegjogr" path="res://assets/barrel_stage_sprites_BARREL.png" id="5_r1vm0"]
-[ext_resource type="Script" uid="uid://cdjksid2vpy80" path="res://slides/barrel.gd" id="6_ynol0"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ynol0"]
-atlas = ExtResource("5_r1vm0")
-region = Rect2(249, 57, 79, 67)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gdfxb"]
-atlas = ExtResource("5_r1vm0")
-region = Rect2(170, 57, 79, 67)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iwgo6"]
-atlas = ExtResource("5_r1vm0")
-region = Rect2(91, 57, 79, 67)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hkefo"]
-atlas = ExtResource("5_r1vm0")
-region = Rect2(12, 57, 79, 67)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6h206"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ynol0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gdfxb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iwgo6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hkefo")
-}],
-"loop": true,
-"name": &"barrel_roll_right",
-"speed": 8.0
-}]
+[ext_resource type="PackedScene" uid="uid://dkhl7woepjnhp" path="res://slides/barrel.tscn" id="5_r1vm0"]
+[ext_resource type="Script" uid="uid://xq2x4cnjfnht" path="res://slides/barrel_spawner.gd" id="6_ynol0"]
+[ext_resource type="AudioStream" uid="uid://doqcn7lb3a8yf" path="res://sounds/barrel_kick.wav" id="7_gdfxb"]
 
 [node name="Fight" type="Control" unique_id=1718823309]
 layout_mode = 3
@@ -56,24 +21,20 @@ position = Vector2(959.49994, 544.5)
 scale = Vector2(4.986979, 4.8437495)
 texture = ExtResource("2_gygbu")
 
+[node name="BarrelSpawner" type="Node2D" parent="." unique_id=1982852629]
+script = ExtResource("6_ynol0")
+barrel_scene = ExtResource("5_r1vm0")
+
 [node name="Ryu" type="AnimatedSprite2D" parent="." unique_id=1289962463]
+z_index = 1
 position = Vector2(970, 740)
 scale = Vector2(5, 5)
 sprite_frames = ExtResource("3_14ue3")
 animation = &"ryu_celebrate"
-frame = 2
-frame_progress = 1.0
 script = ExtResource("4_xng6b")
+kick_range = 500.0
+hit_area_top = 600.0
+kick_hit_delay = 0.35
 
-[node name="Barrel" type="AnimatedSprite2D" parent="." unique_id=410409432]
-position = Vector2(-179.99998, 19.000002)
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_6h206")
-animation = &"barrel_roll_right"
-frame = 2
-frame_progress = 0.28146496
-script = ExtResource("6_ynol0")
-roll_speed = 400.0
-opening_x = 750.0
-bar_y = 200.0
-ground_y = 800.0
+[node name="KickSound" type="AudioStreamPlayer" parent="Ryu" unique_id=1689885519]
+stream = ExtResource("7_gdfxb")

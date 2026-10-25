@@ -325,18 +325,18 @@ show_player:
       loops: -1
   mode_field_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
-      speed: 8
+      speed: 32
       loops: -1
   s_right_vuk_active{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
       action: stop
   cammy_combos_start:
     chase_balrog:
-      speed: 8
+      speed: 32
       loops: -1
   blanka_frenzy_start:
     chase_balrog:
-      speed: 8
+      speed: 32
       loops: -1
   ball_started{current_player.fight_qualified!=1 and current_player.fighter_mode_qualified!=1}:
     flash_color:
@@ -375,19 +375,19 @@ show_player:
         color: orange
   fight_qualified_event:
     chase_zangief:
-      speed: 8
+      speed: 32
       loops: -1
   get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}:
     chase_zangief:
-      speed: 8
+      speed: 32
       loops: -1
   ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     chase_zangief:
-      speed: 8
+      speed: 32
       loops: -1
   mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     chase_zangief:
-      speed: 8
+      speed: 32
       loops: -1
   car_mb_qualified_event:
     flash_color:

@@ -153,6 +153,14 @@ show_player:
     right_vuk_alert:
       speed: 12
       loops: 5
+  timer_right_ramp_field_timer_tick{ticks_remaining==1}:
+    right_ramp_alert:
+      speed: 12
+      loops: 5
+  timer_right_ramp_fight_timer_tick{ticks_remaining==1}:
+    right_ramp_alert:
+      speed: 12
+      loops: 5
   super_meter_qualified_event:
     super_meter_full:
       speed: 2
@@ -163,8 +171,8 @@ show_player:
         lights: led_fighter_1, led_fighter_2
   power_move_event:
     jackpot_default:
-      speed: 36
-      priority: 1
+      speed: 6
+      priority: 10
       loops: 2
   vega_started:
     fight_start:
@@ -207,6 +215,46 @@ show_player:
       priority: 10
       loops: 2
   blanka_frenzy_started:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_vega:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_chunli:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_blanka:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_zangief:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_balrog:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_ehonda:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_sagat:
+    fight_start:
+      speed: 36
+      priority: 10
+      loops: 2
+  finishing_dhalsim:
     fight_start:
       speed: 36
       priority: 10
@@ -254,6 +302,22 @@ random_event_player:
       dhalsim_started{current_player.dhalsim_completed!=1}: 12
 
 timers:
+  right_ramp_fight_timer:
+    start_value: 2
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: left_orbit_hit{current_player.fight_running==1}
+  right_ramp_field_timer:
+    start_value: 5
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    control_events:
+      - action: start
+        event: left_orbit_hit{current_player.fight_running!=1}
   super_meter_timer:
     start_value: 20
     end_value: 0
@@ -292,6 +356,18 @@ queue_relay_player:
     wait_for: timer_cammy_blanka_intro_timer_complete
 
 variable_player:
+  mode_field_started:
+    fight_running:
+      int: 0
+      action: set
+  choose_fight:
+    fight_running:
+      int: 1
+      action: set
+  cammy_combos_started:
+    fight_running:
+      int: 1
+      action: set
   timer_skillshot_timer_complete:
     skillshot_running:
       int: 0
@@ -401,6 +477,9 @@ sequence_shots:
       - spinner_loop_spinner_active
       - s_left_orbit_rollover_active
     sequence_timeout: 2s
+  left_orbit_shot:
+    switch_sequence: s_left_orbit_rollover, s_right_orbit_rollover
+    sequence_timeout: 3s
 
 counters:
   guile_hits:

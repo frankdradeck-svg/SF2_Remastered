@@ -425,3 +425,4 @@ counters:
 
 event_player:
   s_chunli_entrance_active: chunli_move_90
+  s_stepper_home_active: chunli_home

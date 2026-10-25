@@ -1,0 +1,14 @@
+#show_version=6
+- time: 0
+  lights:
+    led_vega_defeat: white
+    led_chunli_double: white
+    led_chunli_power: white
+    led_chunli_defeat: white
+
+- time: '+1'
+  lights:
+    led_vega_defeat: off
+    led_chunli_double: off
+    led_chunli_power: off
+    led_chunli_defeat: off
