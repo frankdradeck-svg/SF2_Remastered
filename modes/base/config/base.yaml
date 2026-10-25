@@ -227,7 +227,7 @@ variable_player:
   ramp_skillshot_start:
     ramp_skillshot_running:
       int: 1
-      action:: set
+      action: set
   ramp_skillshot_hit:
     ramp_skillshot_running:
       int: 0

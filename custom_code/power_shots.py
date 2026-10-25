@@ -1,4 +1,5 @@
 import random
+import time
 
 from mpf.core.custom_code import CustomCode
 
@@ -9,11 +10,10 @@ class PowerShots(CustomCode):
         ("s_left_vuk_active", "led_honda_double"),
         ("s_right_vuk_active", "led_balrog_double"),
         ("s_chunli_exit_active", "led_chunli_double"),
-        ("s_left_orbit_rollerover_active", "led_blanka_double"),
+        ("s_left_orbit_rollover_active", "led_blanka_double"),
         ("spinner_center_spinner_active", "led_dhalsim_double"),
         ("s_zangief_active", "led_zangief_double"),
         ("s_guile_opto_active", "led_guile_double"),
-        ("spinner_loop_spinner_active", "led_ryu_double"),
     ]
 
     FIGHTS = (
@@ -27,27 +27,30 @@ class PowerShots(CustomCode):
         "dhalsim",
     )
 
+    # Ignore power-shot hits during the fight's opening seconds.
+    HIT_PROTECTION_SECONDS = 3
+
     def on_load(self):
         self.active_fight = None
         self.active_targets = {}
         self.power_hits = 0
+        self.fight_started_at = 0
 
-        # Listen for every fight starting.
+        # Register handlers for fight start and stop events.
         for fight in self.FIGHTS:
             self.machine.events.add_handler(
-                f"{fight}_started",
+                f"mode_{fight}_started",
                 self.fight_started,
                 fight=fight
             )
 
-            # Clear randomized targets when the fight mode ends.
             self.machine.events.add_handler(
                 f"mode_{fight}_stopped",
                 self.fight_stopped,
                 fight=fight
             )
 
-        # Listen for every possible power-shot switch.
+        # Register handlers for all randomized shot switches.
         for switch, light in self.POWER_SHOTS:
             self.machine.events.add_handler(
                 switch,
@@ -56,11 +59,13 @@ class PowerShots(CustomCode):
             )
 
     def fight_started(self, fight, **kwargs):
-        # Pick exactly 3 unique targets from the pool.
-        selected = random.sample(self.POWER_SHOTS, 3)
-
+        # Record the start time so early switch activations are ignored.
         self.active_fight = fight
+        self.fight_started_at = time.monotonic()
         self.power_hits = 0
+
+        # Randomly select three unique shot/light pairs.
+        selected = random.sample(self.POWER_SHOTS, 3)
 
         self.active_targets = {
             switch: light
@@ -76,40 +81,57 @@ class PowerShots(CustomCode):
             )
         )
 
-        # Tell YAML which three lights should flash.
-        self.machine.events.post(
-            "power_shots_selected",
-            lights=[light for switch, light in selected],
-            fight=fight
-        )
+        # Start a separate flash show for each selected light.
+        for switch, light in selected:
+            self.machine.events.post(
+                f"power_shot_selected_{light}"
+            )
+
+            self.machine.log.info(
+                "Started power-shot flash: %s -> %s",
+                switch,
+                light
+            )
 
     def power_shot_hit(self, switch, **kwargs):
-        # No randomized power-shot sequence is active.
+        # Ignore hits when no fight is active.
         if not self.active_fight:
             return
 
-        # Only two randomized targets can be hit.
-        # After that, the final-blow shot takes over.
+        # Ignore switch activations during the opening protection window.
+        elapsed = time.monotonic() - self.fight_started_at
+
+        if elapsed < self.HIT_PROTECTION_SECONDS:
+            self.machine.log.debug(
+                "Ignoring power-shot hit during opening protection: "
+                "%s (%.2f seconds elapsed)",
+                switch,
+                elapsed
+            )
+            return
+
+        # Only the first two randomized targets count.
         if self.power_hits >= 2:
             return
 
-        # This switch wasn't randomly selected for this fight.
+        # Ignore switches that weren't selected for this fight.
         if switch not in self.active_targets:
             return
 
-        # Remove the target immediately.
-        #
-        # This prevents the same switch from scoring again.
+        # Remove the target immediately to prevent duplicate hits.
         light = self.active_targets.pop(switch)
 
         self.power_hits += 1
 
-        # Preserve the existing fight progression.
+        # Stop flashing this specific light.
         self.machine.events.post(
-            "power_move_event"
+            f"power_shot_flash_stop_{light}"
         )
 
-        # Tell YAML exactly which randomly selected light was hit.
+        # Preserve the existing fight progression.
+        self.machine.events.post("power_move_event")
+
+        # Tell YAML which selected light was hit.
         self.machine.events.post(
             "power_shot_hit",
             switch=switch,
@@ -117,24 +139,36 @@ class PowerShots(CustomCode):
             fight=self.active_fight
         )
 
-        # Two power shots have now been hit.
+        # After two valid hits, stop any unused selected flashes.
         if self.power_hits == 2:
+            for remaining_light in self.active_targets.values():
+                self.machine.events.post(
+                    f"power_shot_flash_stop_{remaining_light}"
+                )
 
-            # Whatever selected target(s) remain are no longer active.
-            remaining_lights = list(self.active_targets.values())
+                self.machine.events.post(
+                    "power_shot_light_off",
+                    light=remaining_light
+                )
 
             self.machine.events.post(
                 "power_shots_complete",
-                fight=self.active_fight,
-                lights=remaining_lights
+                fight=self.active_fight
             )
 
-            # Prevent any further randomized power-shot hits.
+            # No further randomized shots count in this fight.
             self.active_targets.clear()
 
     def fight_stopped(self, fight, **kwargs):
-        # Only clear the state belonging to the active fight.
+        # Clear state only when the active fight stops.
         if self.active_fight == fight:
+            # Stop all power-shot flashes to prevent lingering shows.
+            for switch, light in self.POWER_SHOTS:
+                self.machine.events.post(
+                    f"power_shot_flash_stop_{light}"
+                )
+
             self.active_fight = None
             self.active_targets.clear()
             self.power_hits = 0
+            self.fight_started_at = 0

@@ -71,6 +71,84 @@ sound_player:
       bus: voice_loud
 
 show_player:
+  # Start individual power-shot flashes
+  power_shot_selected_led_honda_double:
+    flash_color:
+      key: power_shot_honda
+      speed: 2
+      show_tokens:
+        lights: led_honda_double
+        color: orange
+
+  power_shot_selected_led_balrog_double:
+    flash_color:
+      key: power_shot_balrog
+      speed: 2
+      show_tokens:
+        lights: led_balrog_double
+        color: orange
+
+  power_shot_selected_led_chunli_double:
+    flash_color:
+      key: power_shot_chunli
+      speed: 2
+      show_tokens:
+        lights: led_chunli_double
+        color: orange
+
+  power_shot_selected_led_blanka_double:
+    flash_color:
+      key: power_shot_blanka
+      speed: 2
+      show_tokens:
+        lights: led_blanka_double
+        color: orange
+
+  power_shot_selected_led_dhalsim_double:
+    flash_color:
+      key: power_shot_dhalsim
+      speed: 2
+      show_tokens:
+        lights: led_dhalsim_double
+        color: orange
+
+  power_shot_selected_led_zangief_double:
+    flash_color:
+      key: power_shot_zangief
+      speed: 2
+      show_tokens:
+        lights: led_zangief_double
+        color: orange
+
+  power_shot_selected_led_guile_double:
+    flash_color:
+      key: power_shot_guile
+      speed: 2
+      show_tokens:
+        lights: led_guile_double
+        color: orange
+
+  # Stop each flash independently
+  power_shot_flash_stop_led_honda_double:
+    power_shot_honda: stop
+
+  power_shot_flash_stop_led_balrog_double:
+    power_shot_balrog: stop
+
+  power_shot_flash_stop_led_chunli_double:
+    power_shot_chunli: stop
+
+  power_shot_flash_stop_led_blanka_double:
+    power_shot_blanka: stop
+
+  power_shot_flash_stop_led_dhalsim_double:
+    power_shot_dhalsim: stop
+
+  power_shot_flash_stop_led_zangief_double:
+    power_shot_zangief: stop
+
+  power_shot_flash_stop_led_guile_double:
+    power_shot_guile: stop
   timer_cammy_blanka_intro_timer_tick{ticks_remaining==1}:
     right_vuk_alert:
       speed: 12

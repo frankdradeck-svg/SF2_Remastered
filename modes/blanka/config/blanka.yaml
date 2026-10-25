@@ -386,22 +386,16 @@ light_player:
     (light):
       color: orange
       priority: 3
+  power_shot_light_off:
+    (light):
+      color: off
+      priority: 3
 
 show_player:
-  power_shots_complete:
-    off:
-      show_tokens:
-        lights: (lights)
   timer_blanka_intro_timer_tick{ticks_remaining==1}:
     left_vuk_alert:
       speed: 12
       loops: 5
-  power_shots_selected:
-    flash_color:
-      speed: 2
-      show_tokens:
-        lights: (lights)
-        color: orange
   logicblock_blanka_hits_hit{remaining == 1}:
     flash_color:
       speed: 4
