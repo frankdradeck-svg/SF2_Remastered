@@ -365,12 +365,35 @@ variable_player:
     fight_running:
       int: 0
       action: set
+    ramp_mode_running:
+      int: 0
+      action: set
   choose_fight:
     fight_running:
       int: 1
       action: set
   cammy_combos_started:
     fight_running:
+      int: 1
+      action: set
+  guile_mb_started:
+    fight_running:
+      int: 1
+      action: set
+  mode_millions_started:
+    ramp_mode_running:
+      int: 1
+      action: set
+  mode_akuma_build_started:
+    ramp_mode_running:
+      int: 1
+      action: set
+  mode_akuma_started:
+    ramp_mode_running:
+      int: 1
+      action: set
+  car_mb_started:
+    ramp_mode_running:
       int: 1
       action: set
   timer_skillshot_timer_complete:
