@@ -9,18 +9,15 @@ sound_player:
   mode_ken_hurry_started:
     hurry:
       bus: voice_boost
-  s_right_vuk_active{current_player.ken_outro_timer_started!=1}:
+  s_left_vuk_active{current_player.ken_outro_timer_started!=1}:
     good_shot_randomizer:
       bus: voice
 
 show_player:
   mode_ken_hurry_started:
-    flash_color:
-      key: balrog_flash
-      speed: 4
-      show_tokens:
-        lights: led_balrog_defeat, led_balrog_double, led_balrog_power, led_mbison_defeat
-        color: white
+    chase_honda:
+      speed: 32
+      loops: -1
   finishing_ken:
     jackpot_default:
       speed: 6
@@ -51,7 +48,7 @@ slide_player:
       priority: 101
     ken_hurry_main:
       action: remove
-  s_right_vuk_active{current_player.ken_outro_timer_started!=1}:
+  s_left_vuk_active{current_player.ken_outro_timer_started!=1}:
     hurry_up_complete:
       expire: 5s
       priority: 101
@@ -59,7 +56,7 @@ slide_player:
       action: remove
 
 queue_relay_player:
-  balldevice_bd_right_vuk_ball_eject_attempt:
+  balldevice_bd_left_vuk_ball_eject_attempt:
     post: finishing_ken
     wait_for: timer_finishing_ken_timer_complete
 
@@ -98,7 +95,7 @@ variable_player:
     ken_hurry_active:
       int: 1
       action: set
-  s_right_vuk_active:
+  s_left_vuk_active:
     score: 30_000_000 - device.timers.ken_hurry_timer.ticks * 200_050
   timer_ken_hurry_outro_timer_started:
     ken_outro_timer_started:

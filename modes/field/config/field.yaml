@@ -321,7 +321,7 @@ show_player:
       loops: 5
   ball_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
-      speed: 8
+      speed: 32
       loops: -1
   mode_field_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
@@ -390,33 +390,24 @@ show_player:
       speed: 32
       loops: -1
   car_mb_qualified_event:
-    flash_color:
-      key: chunli_flash
-      speed: 4
-      show_tokens:
-        lights: led_vega_defeat, led_chunli_defeat, led_chunli_double, led_chunli_power
-        color: white
+    chase_zangief:
+      speed: 32
+      loops: -1
   mode_field_started{current_player.car_mb_qualified==1}:
-    flash_color:
-      key: chunli_flash
-      speed: 4
-      show_tokens:
-        lights: led_vega_defeat, led_chunli_defeat, led_chunli_double, led_chunli_power
-        color: white
+    chase_zangief:
+      speed: 32
+      loops: -1
   ball_started{current_player.car_mb_qualified==1}:
-    flash_color:
-      key: chunli_flash
-      speed: 4
-      show_tokens:
-        lights: led_vega_defeat, led_chunli_defeat, led_chunli_double, led_chunli_power
-        color: white
+    chase_zangief:
+      speed: 32
+      loops: -1
 
 
 event_player:
-  s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1}: choose_fight
+  s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1 and current_player.car_mb_qualified!=1}: choose_fight
+  s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1 and current_player.car_mb_qualified==1}: car_mb_started
   s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}: choose_fighter_mode
   s_guile_opto_active{current_player.guile_mb_qualified==1}: guile_mb_started
-  s_right_orbit_rollover_active{current_player.car_mb_qualified==1}: car_mb_started
   timer_field_stepper_intro_started: chunli_intro_start
   s_stepper_home_active: chunli_home
   s_chunli_entrance_active: chunli_move_90

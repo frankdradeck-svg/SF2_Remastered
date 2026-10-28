@@ -51,7 +51,11 @@ sound_player:
       bus: voice_boost
     hurry:
       bus: voice_boost
-  
+
+queue_relay_player:
+  balldevice_bd_left_vuk_ball_eject_attempt{current_player.car_intro_complete!=1}:
+    post: car_intro_event
+    wait_for: timer_car_intro_timer_complete
 
 slide_player:
   mode_car_mb_started: 
@@ -286,6 +290,12 @@ counters:
 
 
 timers:
+  car_intro_timer:
+    start_value: 3
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    start_running: true
   car_smash_timer:
     start_value: 15
     end_value: 0
@@ -312,6 +322,10 @@ timers:
     start_running: true
 
 variable_player:
+  car_intro_event:
+    car_intro_complete:
+      int: 1
+      action: set
   mode_car_mb_started:
     jackpot_time:
       int: 0
