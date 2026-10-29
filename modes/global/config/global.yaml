@@ -313,7 +313,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: left_orbit_hit{current_player.fight_running==1}
   right_ramp_field_timer:
     start_value: 5
@@ -321,7 +321,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: left_orbit_hit{current_player.fight_running!=1}
   super_meter_timer:
     start_value: 20
@@ -505,9 +505,9 @@ sequence_shots:
       - spinner_loop_spinner_active
       - s_left_orbit_rollover_active
     sequence_timeout: 2s
-  left_orbit_shot:
+  left_orbit:
     switch_sequence: s_left_orbit_rollover, s_right_orbit_rollover
-    sequence_timeout: 3s
+    sequence_timeout: 5s
 
 counters:
   guile_hits:

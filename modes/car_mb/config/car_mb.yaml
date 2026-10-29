@@ -314,12 +314,6 @@ timers:
     control_events:
       - action: restart
         event: timer_car_smash_timer_complete
-  car_intro_timer:
-    start_value: 3
-    end_value: 0
-    direction: down
-    tick_interval: 1s
-    start_running: true
 
 variable_player:
   car_intro_event:
