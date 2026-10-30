@@ -68,6 +68,17 @@ sound_player:
       bus: voice_loud
 
 show_player:
+  power_shot_selected_led_ryu_double:
+    flash_color:
+      key: power_shot_ryu
+      speed: 2
+      show_tokens:
+        lights: led_ryu_double
+        color: orange
+
+  power_shot_flash_stop_led_ryu_double:
+    power_shot_ryu: stop
+    
   "{current_player.super_meter > 4 and current_player.super_meter < 20}":
     flash_color:
       loops: -1

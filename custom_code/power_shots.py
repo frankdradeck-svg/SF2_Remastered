@@ -14,6 +14,7 @@ class PowerShots(CustomCode):
         ("spinner_center_spinner_active", "led_dhalsim_double"),
         ("s_zangief_active", "led_zangief_double"),
         ("s_guile_opto_active", "led_guile_double"),
+        ("spinner_loop_spinner_active", "led_ryu_double"),
     ]
 
     FIGHTS = (
