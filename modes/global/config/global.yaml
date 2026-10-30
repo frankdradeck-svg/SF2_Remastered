@@ -78,8 +78,8 @@ show_player:
 
   power_shot_flash_stop_led_ryu_double:
     power_shot_ryu: stop
-    
-  "{current_player.super_meter > 4 and current_player.super_meter < 20}":
+
+  "{current_player.super_meter > 4 and current_player.super_meter < 20 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}":
     flash_color:
       loops: -1
       speed: 2
@@ -87,7 +87,7 @@ show_player:
         lights: led_action
         color: blue
 
-  "{current_player.super_meter == 20}":
+  "{current_player.super_meter == 20 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}":
     super_meter_max:
       speed: 6
       loops: -1
