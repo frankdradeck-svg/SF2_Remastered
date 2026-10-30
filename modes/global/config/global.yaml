@@ -6,14 +6,17 @@ mode:
   priority: 200
 
 sound_player:
+  s_action_inactive{current_player.ramp_timer_running!=1 and device.counters.super_meter_counter.value>4 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}:
+    standup:
+      bus: effects_loud
   lane_lights_complete:
     vo_bonusx:
       bus: voice
   s_center_spinner_active:
-    spinner2:
+    spinner3:
       bus: effects_loud
   s_loop_spinner_active:
-    spinner2:
+    spinner3:
       bus: effects_loud
   s_left_sling_active:
     sling1:

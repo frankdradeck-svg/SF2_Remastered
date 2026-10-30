@@ -1,26 +1,49 @@
 events:
   game_ended: 33
-  game_started: 608
+  game_started: 609
 missing_switches:
-  s_action: 15
-  s_center_spinner: 2
+  s_action: 16
+  s_center_standup_1: 1
+  s_center_standup_2: 1
+  s_center_standup_3: 1
   s_chun_li_entrance: 50
   s_chun_li_exit: 50
-  s_left_outlane: 3
+  s_chunli_entrance: 1
+  s_chunli_exit: 1
+  s_drain: 1
+  s_guile_opto: 1
+  s_left_flipper: 1
+  s_left_inlane: 1
+  s_left_orbit_rollover: 1
+  s_left_outlane: 4
   s_left_ramp_opto: 42
-  s_left_ramp_rollover: 13
-  s_loop_spinner: 2
+  s_left_ramp_rollover: 14
+  s_left_sling: 1
+  s_left_vuk: 1
+  s_loop_spinner: 3
   s_plunge_opto: 42
-  s_pop_standup_1: 4
-  s_pop_standup_3: 4
-  s_punchback_1: 608
-  s_punchback_2: 608
-  s_right_outlane: 6
+  s_pop_bumper: 1
+  s_pop_standup_1: 5
+  s_pop_standup_2: 1
+  s_pop_standup_3: 5
+  s_punchback_1: 609
+  s_punchback_2: 609
+  s_right_flipper: 1
+  s_right_inlane: 1
+  s_right_orbit_rollover: 1
+  s_right_outlane: 7
   s_right_ramp_divert: 534
   s_right_ramp_opto: 42
-  s_right_standup_2: 6
-  s_start: 10
-  s_tilt: 35
+  s_right_sling: 1
+  s_right_standup_1: 1
+  s_right_standup_2: 7
+  s_right_vuk: 1
+  s_start: 11
+  s_stepper_home: 1
+  s_tilt: 36
+  s_trough: 1
+  s_upper_flipper: 1
+  s_zangief: 1
 player:
   score:
     average: 22858086
@@ -37,7 +60,7 @@ player:
     - 20777500
     total: 33
 shots:
-  center_spinner: 6115
+  center_spinner: 6165
   chunli_ramp: 273
   guile_ramp: 213
   left_orbit: 1181
@@ -47,7 +70,7 @@ shots:
   zangief_ramp: 266
 switches:
   s_action: 3
-  s_center_spinner: 6315
+  s_center_spinner: 6365
   s_center_standup_1: 141
   s_center_standup_2: 542
   s_center_standup_3: 176
@@ -83,7 +106,7 @@ switches:
   s_right_standup_1: 44
   s_right_standup_2: 29
   s_right_vuk: 345
-  s_shooter: 983
+  s_shooter: 984
   s_start: 13
   s_stepper_home: 374
   s_tilt: 0
