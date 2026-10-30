@@ -511,6 +511,22 @@ variable_player:
     skillshot_running:
       int: 0
       action: set
+  timer_right_ramp_field_timer_started:
+    ramp_timer_running:
+      int: 1
+      action: set
+  timer_right_ramp_fight_timer_started:
+    ramp_timer_running:
+      int: 1
+      action: set
+  timer_right_ramp_field_timer_complete:
+    ramp_timer_running:
+      int: 0
+      action: set
+  timer_right_ramp_fight_timer_complete:
+    ramp_timer_running:
+      int: 0
+      action: set
 
 sequence_shots:
   combo_1:
@@ -585,7 +601,7 @@ counters:
       - event: timer_super_meter_timer_tick
         action: subtract
         value: 1
-      - event: s_action_inactive{device.counters.super_meter_counter.value>4 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}
+      - event: s_action_inactive{current_player.ramp_timer_running!=1 and device.counters.super_meter_counter.value>4 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}
         action: subtract
         value: 5
 
