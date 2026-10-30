@@ -21,9 +21,6 @@ sound_player:
   s_right_sling_active:
     sling2:
       bus: effects
-  super_meter_qualified_event:
-    super_meter_maxed:
-      bus: voice
   timer_super_meter_timer_started:
     double_scoring:
       bus: voice
@@ -71,6 +68,19 @@ sound_player:
       bus: voice_loud
 
 show_player:
+  "{current_player.super_meter > 4 and current_player.super_meter < 20}":
+    flash_color:
+      loops: -1
+      speed: 2
+      show_tokens:
+        lights: led_action
+        color: blue
+
+  "{current_player.super_meter == 20}":
+    super_meter_max:
+      speed: 6
+      loops: -1
+
   s_left_vuk_active:
     left_vuk_alert:
       speed: 12
@@ -174,14 +184,6 @@ show_player:
     right_ramp_alert:
       speed: 32
       loops: 3
-  super_meter_qualified_event:
-    super_meter_full:
-      speed: 2
-      priority: 1
-  timer_super_meter_timer_started:
-    off:
-      show_tokens:
-        lights: led_fighter_1, led_fighter_2
   power_move_event:
     jackpot_default:
       speed: 6
@@ -334,6 +336,8 @@ timers:
     control_events:
       - action: restart
         event: left_orbit_hit{current_player.fight_running!=1}
+      - action: restart
+        event: s_action_inactive{device.counters.super_meter_counter.value>4 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}
   super_meter_timer:
     start_value: 20
     end_value: 0
@@ -341,9 +345,7 @@ timers:
     tick_interval: 1s
     control_events:
       - action: start
-        event: s_right_standup_1_active{current_player.super_meter_qualified==1}
-      - action: start
-        event: s_right_standup_2_active{current_player.super_meter_qualified==1}
+        event: action_long_press_active{device.counters.super_meter_counter.value>19 and current_player.super_meter_running!=1}
   skillshot_timer:
     start_value: 8
     end_value: 0
@@ -572,7 +574,9 @@ counters:
       - event: timer_super_meter_timer_tick
         action: subtract
         value: 1
-  
+      - event: s_action_inactive{device.counters.super_meter_counter.value>4 and current_player.ramp_mode_running!=1 and current_player.playing_fighter_mode!=1 and current_player.super_meter_running!=1}
+        action: subtract
+        value: 5
 
 
 

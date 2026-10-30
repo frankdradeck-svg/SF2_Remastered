@@ -199,6 +199,9 @@ light_player:
     led_gi:
       color: white
       fade: 200ms
+    led_start:
+      color: white
+      fade: 200ms
     led_pop_standups_1:
       color: green
     led_pop_standups_2:

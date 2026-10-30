@@ -14,6 +14,12 @@ show_player:
     attract_lights:
       loops: -1
       speed: 20
+    flash_color:
+      speed: 2
+      show_tokens:
+        lights: led_action, led_start
+        color: red
+    
 
 mode_settings:
   selectable_items:

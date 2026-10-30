@@ -1,0 +1,16 @@
+#show_version=6
+- time: 0
+  lights:
+    led_action: blue
+
+- time: '+1'
+  lights:
+    led_action: off
+
+- time: '+1'
+  lights:
+    led_action: green
+
+- time: '+1'
+  lights:
+    led_action: off
