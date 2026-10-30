@@ -69,6 +69,132 @@ show_player:
     ball_save: stop
 
 light_player:
+
+  # ------------------------------------------------
+  # LED 1
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 1 and current_player.fighter_letters < 8}":
+    led_fighter_apron_1:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 8 and current_player.fighter_letters < 15}":
+    led_fighter_apron_1:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 15}":
+    led_fighter_apron_1:
+      color: blue
+      fade: 200ms
+
+  # ------------------------------------------------
+  # LED 2
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 2 and current_player.fighter_letters < 9}":
+    led_fighter_apron_2:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 9 and current_player.fighter_letters < 16}":
+    led_fighter_apron_2:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 16}":
+    led_fighter_apron_2:
+      color: blue
+      fade: 200ms
+
+  # ------------------------------------------------
+  # LED 3
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 3 and current_player.fighter_letters < 10}":
+    led_fighter_apron_3:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 10 and current_player.fighter_letters < 17}":
+    led_fighter_apron_3:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 17}":
+    led_fighter_apron_3:
+      color: blue
+      fade: 200ms
+
+  # ------------------------------------------------
+  # LED 4
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 4 and current_player.fighter_letters < 11}":
+    led_fighter_apron_4:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 11 and current_player.fighter_letters < 18}":
+    led_fighter_apron_4:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 18}":
+    led_fighter_apron_4:
+      color: blue
+      fade: 200ms
+
+  # ------------------------------------------------
+  # LED 5
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 5 and current_player.fighter_letters < 12}":
+    led_fighter_apron_5:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 12 and current_player.fighter_letters < 19}":
+    led_fighter_apron_5:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 19}":
+    led_fighter_apron_5:
+      color: blue
+      fade: 200ms
+
+  # ------------------------------------------------
+  # LED 6
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 6 and current_player.fighter_letters < 13}":
+    led_fighter_apron_6:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 13 and current_player.fighter_letters < 20}":
+    led_fighter_apron_6:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 20}":
+    led_fighter_apron_6:
+      color: blue
+      fade: 200ms
+
+  # ------------------------------------------------
+  # LED 7
+  # ------------------------------------------------
+  "{current_player.fighter_letters >= 7 and current_player.fighter_letters < 14}":
+    led_fighter_apron_7:
+      color: red
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 14 and current_player.fighter_letters < 21}":
+    led_fighter_apron_7:
+      color: green
+      fade: 200ms
+
+  "{current_player.fighter_letters >= 21}":
+    led_fighter_apron_7:
+      color: blue
+      fade: 200ms
   mode_base_started:
     led_gi:
       color: white
@@ -118,90 +244,6 @@ light_player:
   mode_millions_started:
     led_ryu_defeat:
       color: white
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==0}:
-    led_fighter_apron_1:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==1}:
-    led_fighter_apron_2:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==2}:
-    led_fighter_apron_3:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==3}:
-    led_fighter_apron_4:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==4}:
-    led_fighter_apron_5:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==5}:
-    led_fighter_apron_6:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==6}:
-    led_fighter_apron_7:
-      color: red
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==7}:
-    led_fighter_apron_1:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==8}:
-    led_fighter_apron_2:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==9}:
-    led_fighter_apron_3:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==10}:
-    led_fighter_apron_4:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==11}:
-    led_fighter_apron_5:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==12}:
-    led_fighter_apron_6:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==13}:
-    led_fighter_apron_7:
-      color: green
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==14}:
-    led_fighter_apron_1:
-      color: blue
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==15}:
-    led_fighter_apron_2:
-      color: blue
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==16}:
-    led_fighter_apron_3:
-      color: blue
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==17}:
-    led_fighter_apron_4:
-      color: blue
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==18}:
-    led_fighter_apron_5:
-      color: blue
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==19}:
-    led_fighter_apron_6:
-      color: blue
-      fade: 200ms
-  get_fighter_letter{current_player.fighter_letters==20}:
-    led_fighter_apron_7:
-      color: blue
       fade: 200ms
 
 
