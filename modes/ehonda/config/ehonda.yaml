@@ -348,12 +348,15 @@ timers:
     end_value: 0
     direction: down
     tick_interval: 1s
-    start_running: true
+    control_events:
+      - action: start
+        event: ehonda_scoop_intro_finish_event
   ehonda_fight_timer:
-    start_value: 15
+    start_value: 12
     end_value: 0
     direction: down
     tick_interval: 1s
+    max_value: 12
     control_events:
       - action: start
         event: mode_ehonda_started
@@ -361,7 +364,7 @@ timers:
         event: ehonda_losing
       - action: add
         event: power_move_event
-        value: 15
+        value: 12
     restart_on_complete: true
   finishing_ehonda_timer:
     start_value: 10

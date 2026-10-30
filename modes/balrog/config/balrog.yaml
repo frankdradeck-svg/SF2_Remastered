@@ -344,16 +344,19 @@ queue_relay_player:
 
 timers:
   balrog_intro_timer:
-    start_value: 6
+    start_value: 5
     end_value: 0
     direction: down
     tick_interval: 1s
-    start_running: true
+    control_events:
+      - action: start
+        event: balrog_scoop_intro_finish_event
   balrog_fight_timer:
-    start_value: 15
+    start_value: 12
     end_value: 0
     direction: down
     tick_interval: 1s
+    max_value: 12
     control_events:
       - action: start
         event: mode_balrog_started
@@ -361,7 +364,7 @@ timers:
         event: balrog_losing
       - action: add
         event: power_move_event
-        value: 15
+        value: 12
     restart_on_complete: true
   finishing_balrog_timer:
     start_value: 10

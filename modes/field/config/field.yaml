@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: timer_cammy_combos_outro_timer_complete, timer_millions_timer_complete, multiball_akuma_mb_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, mode_guile_mb_stopped, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
+  start_events: timer_blanka_losing_timer_complete, timer_sagat_losing_timer_complete, timer_ehonda_losing_timer_complete, timer_vega_losing_timer_complete, timer_chunli_losing_timer_complete, timer_balrog_losing_timer_complete, timer_zangief_losing_timer_complete, timer_dhalsim_losing_timer_complete, timer_cammy_combos_outro_timer_complete, timer_millions_timer_complete, multiball_akuma_mb_ended, ball_starting, timer_finishing_vega_timer_complete, timer_finishing_chunli_timer_complete, mode_guile_mb_stopped, multiball_car_mb_ended, timer_finishing_blanka_timer_complete, timer_finishing_ehonda_timer_complete, timer_finishing_sagat_timer_complete, timer_finishing_dhalsim_timer_complete, timer_finishing_balrog_timer_complete, timer_finishing_zangief_timer_complete
   stop_events: timer_finishing_ken_timer_complete{current_player.millions_played!=1}, ball_will_end, cammy_combos_started, choose_fighter_mode, chunli_started, vega_started, guile_mb_started, car_mb_started, blanka_started, zangief_started, dhalsim_started, balrog_started, sagat_started, ehonda_started
   priority: 300
 
@@ -13,7 +13,7 @@ sound_player:
     challenger2: 
       bus: voice
   car_mb_qualified_event:
-    shoot_under_right:
+    shoot_under_left:
       bus: voice_boost
   timer_field_intro_timer_complete{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     shoot_under_left:
@@ -311,14 +311,6 @@ light_player:
       color: orange
 
 show_player:
-  s_left_vuk_active:
-    left_vuk_alert:
-      speed: 12
-      loops: 5
-  s_right_vuk_active:
-    right_vuk_alert:
-      speed: 12
-      loops: 5
   ball_started{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
     chase_balrog:
       speed: 32
@@ -389,18 +381,6 @@ show_player:
     chase_zangief:
       speed: 32
       loops: -1
-  car_mb_qualified_event:
-    chase_zangief:
-      speed: 32
-      loops: -1
-  mode_field_started{current_player.car_mb_qualified==1}:
-    chase_zangief:
-      speed: 32
-      loops: -1
-  ball_started{current_player.car_mb_qualified==1}:
-    chase_zangief:
-      speed: 32
-      loops: -1
 
 
 event_player:
@@ -408,9 +388,6 @@ event_player:
   s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1 and current_player.car_mb_qualified==1}: car_mb_started
   s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}: choose_fighter_mode
   s_guile_opto_active{current_player.guile_mb_qualified==1}: guile_mb_started
-  timer_field_stepper_intro_started: chunli_intro_start
-  s_stepper_home_active: chunli_home
-  s_chunli_entrance_active: chunli_move_90
   s_right_vuk_active{current_player.blanka_frenzy_qualified==1}: blanka_frenzy_started
   s_right_vuk_active{current_player.cammy_combos_qualified==1}: cammy_combos_started
   

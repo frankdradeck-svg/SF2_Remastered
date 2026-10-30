@@ -291,11 +291,13 @@ counters:
 
 timers:
   car_intro_timer:
-    start_value: 3
+    start_value: 5
     end_value: 0
     direction: down
     tick_interval: 1s
-    start_running: true
+    control_events:
+      - action: start
+        event: car_intro_event
   car_smash_timer:
     start_value: 15
     end_value: 0
