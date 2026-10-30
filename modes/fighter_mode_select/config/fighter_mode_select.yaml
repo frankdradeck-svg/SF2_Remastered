@@ -13,7 +13,7 @@ mode_settings:
     - akuma
   next_item_events: s_right_flipper_inactive
   previous_item_events: s_left_flipper_inactive
-  select_item_events: flipper_cancel, timer_fighter_select_timer_complete
+  select_item_events: flipper_cancel, timer_fighter_select_timer_complete, s_action_inactive
 
 sound_player:
   mode_fighter_mode_select_started:
@@ -22,6 +22,13 @@ sound_player:
       action: play
 slide_player:
   mode_fighter_mode_select_started: fighter_mode_select
+
+show_player:
+  flash_color:
+    speed: 2
+    show_tokens:
+      lights: led_action
+      color: red
 
 event_player:
   carousel_item_selected{item=="akuma"}: akuma_chosen
