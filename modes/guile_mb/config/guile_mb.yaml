@@ -280,3 +280,11 @@ counters:
     events_when_complete: guile_mb_base_jackpot_event
     reset_on_complete: true
     disable_on_complete: false
+  guile_mb_super_jackpot_tracking:
+    count_events: guile_mb_super_jackpot_event
+    starting_count: 0
+    count_complete_value: 1
+    direction: up
+    events_when_complete: guile_mb_base_jackpot_fighter_letter
+    reset_on_complete: false
+    disable_on_complete: true
