@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vj0tfn25pbk4"
+path="res://.godot/imported/DP_Cinematic_SFX_Ramp Exit_After Breaths_01.wav-1f7e4a775fda346e72dbde646c47a63b.sample"
+
+[deps]
+
+source_file="res://sounds_pcm/DP_Cinematic_SFX_Ramp Exit_After Breaths_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Ramp Exit_After Breaths_01.wav-1f7e4a775fda346e72dbde646c47a63b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

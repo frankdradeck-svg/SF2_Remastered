@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cj2r7i8wmrvhe"
+path="res://.godot/imported/DP_Cinematic_SFX_Scoop_Burb Bloop_01.wav-ceab3b4c1fd84c91ea80b2c97fe11c1c.sample"
+
+[deps]
+
+source_file="res://sounds_pcm/DP_Cinematic_SFX_Scoop_Burb Bloop_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Scoop_Burb Bloop_01.wav-ceab3b4c1fd84c91ea80b2c97fe11c1c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
