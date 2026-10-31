@@ -291,7 +291,7 @@ counters:
 
 timers:
   car_intro_timer:
-    start_value: 5
+    start_value: 2
     end_value: 0
     direction: down
     tick_interval: 1s

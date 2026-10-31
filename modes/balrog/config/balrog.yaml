@@ -337,7 +337,7 @@ variable_player:
 queue_relay_player:
   balldevice_bd_left_vuk_ball_eject_attempt{device.counters.balrog_hits.value==3}:
     post: balrog_scoop_ko_finish_event
-    wait_for: timer_finishing_balrog_timer_complete
+    wait_for: timer_finishing_balrog_timer_tick{ticks_remaining==1}
   balldevice_bd_left_vuk_ball_eject_attempt{current_player.balrog_intro_complete!=1}:
     post: balrog_scoop_intro_finish_event
     wait_for: timer_balrog_intro_timer_complete

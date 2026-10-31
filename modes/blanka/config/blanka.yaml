@@ -337,7 +337,7 @@ variable_player:
 queue_relay_player:
   balldevice_bd_left_vuk_ball_eject_attempt{device.counters.blanka_hits.value==3}:
     post: blanka_scoop_ko_finish_event
-    wait_for: timer_finishing_blanka_timer_complete
+    wait_for: timer_finishing_blanka_timer_tick{ticks_remaining==1}
   balldevice_bd_left_vuk_ball_eject_attempt{current_player.blanka_intro_complete!=1}:
     post: blanka_scoop_intro_finish_event
     wait_for: timer_blanka_intro_timer_complete
