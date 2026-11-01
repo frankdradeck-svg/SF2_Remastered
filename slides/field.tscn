@@ -22,7 +22,15 @@
 [ext_resource type="VideoStream" uid="uid://lbibdb5wapuu" path="res://assets/Cosmic_Elevator_Equator_Ultra_Street_Fighter_IV_1920x1080[01KPNNW4ZE97DN13D8VV8D4617].ogv" id="14_lm755"]
 [ext_resource type="VideoStream" uid="uid://ddrteayufo4dn" path="res://assets/Exciting_Street_Scene_India_Super_Street_Fighter_IV_1920x1080[01KPNNTC5MJBYEZ3WRCSNKK8WF].ogv" id="15_5x0sp"]
 [ext_resource type="VideoStream" uid="uid://b48y6vwnjhg1s" path="res://assets/Festival_at_the_Old_Temple_South_Korea_Super_Street_Fighter_IV_1920x1080[01KPNNSP0585W5M0KJGP5AZ1TR].ogv" id="16_gjk56"]
+[ext_resource type="VideoStream" uid="uid://cqacipqng2jel" path="res://assets/Metro_City_U.S.A._Street_Fighter_Alpha_2_1920x1080[01M67MNCNN5F6PWRAZENKTCSP5].ogv" id="17_3uswu"]
+[ext_resource type="VideoStream" uid="uid://b3hseksxdgp5e" path="res://assets/Bilsk_Steelworks_U.S.S.R._Street_Fighter_Alpha_2_1920x1080[01M67MK27QWAZ04JPTPAWB4MAH].ogv" id="18_b8gcv"]
+[ext_resource type="VideoStream" uid="uid://ep5oanwjyyd3" path="res://assets/Ring_of_Power_Street_Fighter_V_1920x1080[01M67MAWT5ZJYD27T6WPCDBGX6].ogv" id="19_p4fb3"]
+[ext_resource type="VideoStream" uid="uid://dydb844agh6t" path="res://assets/Union_Station_Street_Fighter_V_1920x1080[01M67KW2M11QEZNHSQ7FK2YQB0].ogv" id="20_228rt"]
+[ext_resource type="VideoStream" uid="uid://dq0g2jd1qo840" path="res://assets/Ring_of_Destiny_Street_Fighter_V_1920x1080[01M67M9E7N8N756JNS86A880H2].ogv" id="21_21w86"]
+[ext_resource type="VideoStream" uid="uid://c2bissg6niuga" path="res://assets/Apprentice_Alley_Street_Fighter_V_1920x1080[01M67M0S8PJC4SQNQ135F8VVBR].ogv" id="22_o3l6k"]
 [ext_resource type="Texture2D" uid="uid://bgxluotqwtw0c" path="res://assets/blanka4.png" id="23_eyrve"]
+[ext_resource type="VideoStream" uid="uid://cb1g43675c1yk" path="res://assets/Bustling_Side_Street_Street_Fighter_V_1920x1080[01M67KQ1TR69DX6EJG0XND8J6W].ogv" id="23_h3amg"]
+[ext_resource type="VideoStream" uid="uid://bjso0t8lj4f1s" path="res://assets/Lair_of_the_Four_Kings_Street_Fighter_V_1920x1080[01M67M3H98KQHETC2ZH7KPVWR8].ogv" id="24_38e2g"]
 [ext_resource type="Texture2D" uid="uid://b2es25r7ff8g5" path="res://assets/cammy3.png" id="24_cxje7"]
 
 [node name="Field" type="Control" unique_id=2085516752]
@@ -189,6 +197,102 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 stream = ExtResource("16_gjk56")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer14" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=245944579]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("17_3uswu")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer15" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=965711772]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("18_b8gcv")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer16" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1647295039]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("19_p4fb3")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer17" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=227011509]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("20_228rt")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer18" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=211125406]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("21_21w86")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer19" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=580558786]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("22_o3l6k")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer20" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1810701551]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("23_h3amg")
+expand = true
+loop = true
+bus = &"music"
+script = ExtResource("2_g2r2l")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer21" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1708928766]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("24_38e2g")
 expand = true
 loop = true
 bus = &"music"
