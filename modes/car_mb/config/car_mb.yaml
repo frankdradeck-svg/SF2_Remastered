@@ -7,7 +7,7 @@ mode:
 
 sound_player:
   mode_car_mb_started:
-    car_mb_music:
+    car_mb2:
       bus: music
     bonus_stage_start:
       bus: voice_boost
