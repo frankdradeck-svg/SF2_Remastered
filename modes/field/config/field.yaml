@@ -72,12 +72,6 @@ slide_player:
   mode_field_started: 
     field:
       action: play
-    vega:
-      action: remove
-    chunli:
-      action: remove
-    guile_mb:
-      action: remove
   s_guile_opto_active{device.counters.guile_hits.value==0 and current_player.guile_mb_played!=1}:
     g_uile:
       expire: 3s
@@ -165,54 +159,54 @@ slide_player:
   mode_field_started{current_player.guile_mb_qualified==1}:
     guile_mb_overlay:
       action: play
-  s_right_vuk_active{current_player.ken_hurry_active!=1}:
-    bison_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
-  s_zangief_active:
-    zangief_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
-  s_chunli_entrance_active:
+#  s_right_vuk_active{current_player.ken_hurry_active!=1}:
+#    bison_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
+#  s_zangief_active:
+#    zangief_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
+  chunli_animation_started:
     chunli_videos:
       action: queue
       max_queue_time: 1s
       expire: 3s
       priority: 101
-  s_center_spinner_active{device.counters.center_spinner_hits.value==15}:
-    dhalsim_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
-  s_loop_spinner_active{device.counters.loop_spinner_hits.value==10}:
-    kenryu_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
-  s_right_standup_1_active:
-    fei_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
-  s_right_standup_2_active:
-    fei_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
-  s_left_orbit_rollover_active{device.counters.left_orbit_hits.value==1}:
-    blanka_videos:
-      action: queue
-      max_queue_time: 1s
-      expire: 3s
-      priority: 101
+#  s_center_spinner_active{device.counters.center_spinner_hits.value==15}:
+#    dhalsim_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
+#  s_loop_spinner_active{device.counters.loop_spinner_hits.value==10}:
+#    kenryu_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
+#  s_right_standup_1_active:
+#    fei_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
+#  s_right_standup_2_active:
+#    fei_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
+#  s_left_orbit_rollover_active{device.counters.left_orbit_hits.value==1}:
+#    blanka_videos:
+#      action: queue
+#      max_queue_time: 1s
+#      expire: 3s
+#      priority: 101
 
 
 variable_player:
