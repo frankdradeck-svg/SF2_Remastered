@@ -375,7 +375,7 @@ timers:
       - action: stop
         event: skillshot_hit_event
       - action: start
-        event: balldevice_bd_plunger_lane_ejecting_ball
+        event: s_shooter_inactive
   cammy_blanka_intro_timer:
     start_value: 5
     end_value: 0
