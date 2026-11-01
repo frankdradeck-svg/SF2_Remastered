@@ -399,7 +399,7 @@ show_player:
     left_vuk_alert:
       speed: 12
       loops: 5
-  timer_finishing_chunli_timer_tick{ticks_remaining==1}:
+  timer_finishing_chunli_timer_tick{ticks_remaining==2}:
       left_vuk_alert:
       speed: 12
       loops: 5
