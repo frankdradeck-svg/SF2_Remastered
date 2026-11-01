@@ -349,7 +349,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: chunli_scoop_intro_finish_event
   chunli_fight_timer:
     start_value: 12
@@ -358,7 +358,7 @@ timers:
     tick_interval: 1s
     max_value: 12
     control_events:
-      - action: start
+      - action: restart
         event: mode_chunli_started
       - action: stop
         event: chunli_losing
@@ -372,7 +372,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: finishing_chunli
   chunli_losing_timer:
     start_value: 10
@@ -380,7 +380,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: chunli_losing
 #timer_finishing_mode_complete
 
@@ -397,6 +397,10 @@ light_player:
 show_player:
   timer_chunli_intro_timer_tick{ticks_remaining==1}:
     left_vuk_alert:
+      speed: 12
+      loops: 5
+  timer_finishing_chunli_timer_tick{ticks_remaining==1}:
+      left_vuk_alert:
       speed: 12
       loops: 5
   logicblock_chunli_hits_hit{remaining == 1}:

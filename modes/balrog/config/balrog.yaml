@@ -349,7 +349,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: balrog_scoop_intro_finish_event
   balrog_fight_timer:
     start_value: 12
@@ -358,7 +358,7 @@ timers:
     tick_interval: 1s
     max_value: 12
     control_events:
-      - action: start
+      - action: restart
         event: mode_balrog_started
       - action: stop
         event: balrog_losing
@@ -372,7 +372,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: finishing_balrog
   balrog_losing_timer:
     start_value: 10
@@ -380,7 +380,7 @@ timers:
     direction: down
     tick_interval: 1s
     control_events:
-      - action: start
+      - action: restart
         event: balrog_losing
 #timer_finishing_mode_complete
 
@@ -404,6 +404,10 @@ show_player:
       priority: 5
   timer_balrog_intro_timer_tick{ticks_remaining==1}:
     left_vuk_alert:
+      speed: 12
+      loops: 5
+  timer_finishing_balrog_timer_tick{ticks_remaining==1}:
+      left_vuk_alert:
       speed: 12
       loops: 5
 

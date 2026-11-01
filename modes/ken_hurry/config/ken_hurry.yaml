@@ -9,15 +9,18 @@ sound_player:
   mode_ken_hurry_started:
     hurry:
       bus: voice_boost
-  s_left_vuk_active{current_player.ken_outro_timer_started!=1}:
+  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}:
     good_shot_randomizer:
       bus: voice
 
 show_player:
   mode_ken_hurry_started:
-    chase_honda:
-      speed: 32
-      loops: -1
+    flash_color:
+      key: hurry_flash
+      speed: 4
+      show_tokens:
+        lights: led_ryu_defeat, led_ryu_double, led_ryu_millions
+        color: white
   finishing_ken:
     jackpot_default:
       speed: 6
@@ -48,17 +51,12 @@ slide_player:
       priority: 101
     ken_hurry_main:
       action: remove
-  s_left_vuk_active{current_player.ken_outro_timer_started!=1}:
+  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}:
     hurry_up_complete:
       expire: 5s
       priority: 101
     ken_hurry_main:
       action: remove
-
-queue_relay_player:
-  balldevice_bd_left_vuk_ball_eject_attempt:
-    post: finishing_ken
-    wait_for: timer_finishing_ken_timer_complete
 
 timers:
   ken_hurry_timer:
@@ -86,6 +84,9 @@ timers:
     control_events:
       - action: start
         event: timer_ken_hurry_timer_complete
+
+event_player:
+  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}: finishing_ken
 
 variable_player:
   mode_ken_hurry_started:
