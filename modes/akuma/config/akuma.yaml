@@ -12,9 +12,10 @@ slide_player:
       priority: 3
   akuma_jackpot_event:
     akuma_jackpot:
-      action: play
+      action: queue
+      max_queue_time: 1s
       expire: 2s
-      priority: 4
+      priority: 101
 
 sound_player:
   mode_akuma_started:
@@ -72,8 +73,8 @@ variable_player:
 
 event_player:
   s_zangief_active: akuma_jackpot_event
-  s_center_spinner_active: akuma_jackpot_event
-  s_loop_spinner_active: akuma_jackpot_event
+  spinner_loop_spinner_active: akuma_jackpot_event
+  spinner_center_spinner_active: akuma_jackpot_event
   s_left_orbit_rollover_active: akuma_jackpot_event
   s_right_vuk_active: akuma_jackpot_event
   s_left_vuk_active: akuma_jackpot_event

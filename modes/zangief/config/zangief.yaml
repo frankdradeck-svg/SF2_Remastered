@@ -323,6 +323,10 @@ variable_player:
     zangief_intro_complete:
       int: 1
       action: set
+  mode_zangief_started:
+    zangief_intro_complete:
+      int: 0
+      action: set
   s_guile_opto_active:
     score: 150000
   s_center_spinner_active:
@@ -352,11 +356,11 @@ timers:
       - action: restart
         event: zangief_scoop_intro_finish_event
   zangief_fight_timer:
-    start_value: 12
+    start_value: 14
     end_value: 0
     direction: down
     tick_interval: 1s
-    max_value: 12
+    max_value: 14
     control_events:
       - action: restart
         event: mode_zangief_started
@@ -364,7 +368,7 @@ timers:
         event: zangief_losing
       - action: add
         event: power_move_event
-        value: 12
+        value: 14
     restart_on_complete: true
   finishing_zangief_timer:
     start_value: 10
@@ -420,6 +424,7 @@ counters:
     events_when_complete: finishing_zangief
     persist_state: false
     reset_on_complete: false
+    restart_events: mode_zangief_started
   zangief_final_move_hits:
     count_events: s_left_ramp_rollover_active{device.counters.zangief_hits.value==2}
     starting_count: 0
@@ -427,12 +432,17 @@ counters:
     direction: up
     events_when_complete: power_move_event
     reset_on_complete: false
+    persist_state: false
+    restart_events: mode_zangief_started
   zangief_damage:
     count_events: timer_zangief_fight_timer_complete
     starting_count: 0
     count_complete_value: 3
     direction: up
     events_when_complete: zangief_losing
+    persist_state: false
+    reset_on_complete: false
+    restart_events: mode_zangief_started
 
 event_player:
   s_chunli_entrance_active: chunli_move_90

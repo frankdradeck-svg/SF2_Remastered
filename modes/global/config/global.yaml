@@ -190,6 +190,11 @@ show_player:
       speed: 32
       loops: 3
     chase_chun: stop
+  timer_skillshot_timer_tick{ticks_remaining==1}:
+    right_ramp_alert:
+      speed: 32
+      loops: 3
+    chase_chun: stop
   timer_right_ramp_field_timer_started:
     chase_chun:
       speed: 32

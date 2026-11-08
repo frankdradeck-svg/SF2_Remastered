@@ -323,6 +323,10 @@ variable_player:
     vega_intro_complete:
       int: 1
       action: set
+  mode_vega_started:
+    vega_intro_complete:
+      int: 0
+      action: set
   power_move_event{device.counters.vega_hits.value==0}:
     score: 2000000
   power_move_event{device.counters.vega_hits.value==1}:
@@ -348,11 +352,11 @@ timers:
       - action: restart
         event: vega_scoop_intro_finish_event
   vega_fight_timer:
-    start_value: 12
+    start_value: 14
     end_value: 0
     direction: down
     tick_interval: 1s
-    max_value: 12
+    max_value: 14
     control_events:
       - action: restart
         event: mode_vega_started
@@ -360,7 +364,7 @@ timers:
         event: vega_losing
       - action: add
         event: power_move_event
-        value: 12
+        value: 14
     restart_on_complete: true
   finishing_vega_timer:
     start_value: 10
@@ -416,6 +420,7 @@ counters:
     events_when_complete: finishing_vega
     persist_state: false
     reset_on_complete: false
+    restart_events: mode_vega_started
   vega_final_move_hits:
     count_events: s_left_ramp_rollover_active{device.counters.vega_hits.value==2}
     starting_count: 0
@@ -423,12 +428,17 @@ counters:
     direction: up
     events_when_complete: power_move_event
     reset_on_complete: false
+    persist_state: false
+    restart_events: mode_vega_started
   vega_damage:
     count_events: timer_vega_fight_timer_complete
     starting_count: 0
     count_complete_value: 3
     direction: up
     events_when_complete: vega_losing
+    persist_state: false
+    reset_on_complete: false
+    restart_events: mode_vega_started
 
 event_player:
   s_chunli_entrance_active: chunli_move_90
