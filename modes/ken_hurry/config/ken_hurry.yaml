@@ -9,7 +9,7 @@ sound_player:
   mode_ken_hurry_started:
     hurry:
       bus: voice_boost
-  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}:
+  spinner_loop_spinner_active{current_player.ken_outro_timer_started!=1}:
     good_shot_randomizer:
       bus: voice
 
@@ -33,7 +33,7 @@ event_player:
       current_hurryup:
         type: int
         value: 30_000_000 - ticks * 200_050
-  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}: finishing_ken
+  spinner_loop_spinner_active{current_player.ken_outro_timer_started!=1}: finishing_ken
 
 slide_player:
   mode_ken_hurry_started:
@@ -52,7 +52,7 @@ slide_player:
       priority: 101
     ken_hurry_main:
       action: remove
-  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}:
+  spinner_loop_spinner_active{current_player.ken_outro_timer_started!=1}:
     hurry_up_complete:
       expire: 5s
       priority: 101
@@ -94,7 +94,7 @@ variable_player:
     ken_hurry_active:
       int: 1
       action: set
-  s_left_vuk_active:
+  spinner_loop_spinner_active:
     score: 30_000_000 - device.timers.ken_hurry_timer.ticks * 200_050
   timer_ken_hurry_outro_timer_started:
     ken_outro_timer_started:
