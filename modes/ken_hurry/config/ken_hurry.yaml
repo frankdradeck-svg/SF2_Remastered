@@ -33,6 +33,7 @@ event_player:
       current_hurryup:
         type: int
         value: 30_000_000 - ticks * 200_050
+  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}: finishing_ken
 
 slide_player:
   mode_ken_hurry_started:
@@ -84,9 +85,6 @@ timers:
     control_events:
       - action: start
         event: timer_ken_hurry_timer_complete
-
-event_player:
-  s_loop_spinner_active{current_player.ken_outro_timer_started!=1}: finishing_ken
 
 variable_player:
   mode_ken_hurry_started:

@@ -407,7 +407,7 @@ show_player:
       speed: 12
       loops: 5
   timer_finishing_balrog_timer_tick{ticks_remaining==2}:
-      left_vuk_alert:
+    left_vuk_alert:
       speed: 12
       loops: 5
 

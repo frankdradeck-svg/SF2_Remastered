@@ -400,7 +400,7 @@ show_player:
       speed: 12
       loops: 5
   timer_finishing_ehonda_timer_tick{ticks_remaining==2}:
-      eft_vuk_alert:
+    left_vuk_alert:
       speed: 12
       loops: 5
   logicblock_ehonda_hits_hit{remaining == 1}:
