@@ -49,6 +49,7 @@ var _thread: Thread
 ###
 
 func _ready() -> void:
+	self.log.setLevel(GMCLogger.LogLevel.VERBOSE)
 	# Set the port for BCP connections
 	port = self.mpf.get_config_value("gmc", "bcp_port", port)
 	# Wait until a server is actively listening before polling for clients
@@ -305,6 +306,7 @@ func _thread_poll(_userdata=null) -> void:
 
 		var bytes = _client.get_available_bytes()
 		if not bytes:
+			_mutex.unlock()
 			OS.delay_msec(delay)
 			continue
 
