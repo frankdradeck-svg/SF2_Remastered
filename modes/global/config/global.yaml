@@ -394,7 +394,7 @@ timers:
 
 
 queue_relay_player:
-  balldevice_bd_left_vuk_ball_eject_attempt{current_player.fighter_mode_qualified==1}:
+  balldevice_bd_left_vuk_ball_eject_attempt{current_player.fighter_mode_qualified==1 and current_player.fighter_mode_vuk_queue==1}:
     post: waiting_for_choice
     wait_for: fighter_eject
   balldevice_bd_right_vuk_ball_eject_attempt{current_player.blanka_frenzy_qualified==1 or current_player.cammy_combos_qualified==1}:
@@ -402,6 +402,10 @@ queue_relay_player:
     wait_for: timer_cammy_blanka_intro_timer_complete
 
 variable_player:
+  fighter_eject:
+    fighter_mode_vuk_queue:
+      int: 0
+      action: set
   mode_field_started:
     fight_running:
       int: 0
@@ -542,6 +546,10 @@ variable_player:
   timer_right_ramp_fight_timer_complete:
     ramp_timer_running:
       int: 0
+      action: set
+  s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}:
+    fighter_mode_vuk_queue:
+      int: 1
       action: set
 
 sequence_shots:

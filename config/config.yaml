@@ -752,6 +752,8 @@ player_vars:
     initial_value: 0
   field_mode_active:
     initial_value: 0
+  fighter_mode_vuk_queue:
+    initial_value: 0
 
 event_player:
   ball_starting: ramp_skillshot_start

@@ -301,14 +301,14 @@ variable_player:
     fighter_letters: 1
 
 event_player:
-  timer_finishing_vega_timer_complete: get_fighter_letter
-  timer_finishing_chunli_timer_complete: get_fighter_letter
-  timer_finishing_ehonda_timer_complete: get_fighter_letter
-  timer_finishing_zangief_timer_complete: get_fighter_letter
-  timer_finishing_sagat_timer_complete: get_fighter_letter
-  timer_finishing_dhalsim_timer_complete: get_fighter_letter
-  timer_finishing_balrog_timer_complete: get_fighter_letter
-  timer_finishing_blanka_timer_complete: get_fighter_letter
+  timer_finishing_vega_timer_started: get_fighter_letter
+  timer_finishing_chunli_timer_started: get_fighter_letter
+  timer_finishing_ehonda_timer_started: get_fighter_letter
+  timer_finishing_zangief_timer_started: get_fighter_letter
+  timer_finishing_sagat_timer_started: get_fighter_letter
+  timer_finishing_dhalsim_timer_started: get_fighter_letter
+  timer_finishing_balrog_timer_started: get_fighter_letter
+  timer_finishing_blanka_timer_started: get_fighter_letter
   mode_guile_mb_started: get_fighter_letter
   mode_millions_started: get_fighter_letter
   vega_started: get_fighter_letter
