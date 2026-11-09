@@ -611,7 +611,7 @@ diverters:
   left_ramp:
     activation_coil: c_left_ramp_divert
     type: hold
-    activate_events: fight_qualified_event, ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}, logicblock_chunli_hits_hit{remaining==1}, logicblock_vega_hits_hit{remaining==1}, mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}, logicblock_blanka_hits_hit{remaining==1}, logicblock_zangief_hits_hit{remaining==1}, logicblock_sagat_hits_hit{remaining==1}, logicblock_dhalsim_hits_hit{remaining==1}, logicblock_balrog_hits_hit{remaining==1}, logicblock_ehonda_hits_hit{remaining==1}, get_fighter_letter{current_player.fighter_letters==7 or current_player.fighter_letters==14 or current_player.fighter_letters==21}
+    activate_events: fight_qualified_event, ball_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}, logicblock_chunli_hits_hit{remaining==1}, logicblock_vega_hits_hit{remaining==1}, mode_field_started{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}, logicblock_blanka_hits_hit{remaining==1}, logicblock_zangief_hits_hit{remaining==1}, logicblock_sagat_hits_hit{remaining==1}, logicblock_dhalsim_hits_hit{remaining==1}, logicblock_balrog_hits_hit{remaining==1}, logicblock_ehonda_hits_hit{remaining==1}, get_fighter_letter{current_player.field_mode_active==1 and (current_player.fighter_letters==7 or current_player.fighter_letters==14 or current_player.fighter_letters==21)}
     enable_events: ball_started, multiball_guile_mb_ended
     deactivate_events: mode_car_mb_started, vega_started{device.counters.vega_hits.value<2}, chunli_started{device.counters.chunli_hits.value<2}, mode_field_started{current_player.fight_qualified!=1}, ball_ended, game_ending, ehonda_started{device.counters.ehonda_hits.value<2}, blanka_started{device.counters.blanka_hits.value<2}, dhalsim_started{device.counters.dhalsim_hits.value<2}, sagat_started{device.counters.sagat_hits.value<2}, balrog_started{device.counters.balrog_hits.value<2}, zangief_started{device.counters.zangief_hits.value<2}, mode_akuma_started, mode_akuma_build_started, mode_fighter_mode_select_started, cammy_combos_started
     disable_events: ball_ended, game_ending, guile_mb_started
@@ -749,6 +749,8 @@ player_vars:
   ramp_mode_running:
     initial_value: 0
   ramp_timer_running:
+    initial_value: 0
+  field_mode_active:
     initial_value: 0
 
 event_player:

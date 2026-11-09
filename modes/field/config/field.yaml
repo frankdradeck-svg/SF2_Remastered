@@ -285,6 +285,10 @@ variable_player:
     playing_fighter_mode:
       int: 0
       action: set
+  mode_field_will_stop:
+    field_mode_active:
+      int: 0
+      action: set
 
 light_player:
   ball_started{current_player.fight_qualified==1}:
