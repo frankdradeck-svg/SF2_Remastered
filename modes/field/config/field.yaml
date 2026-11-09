@@ -289,6 +289,10 @@ variable_player:
     field_mode_active:
       int: 0
       action: set
+  s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}:
+    fighter_mode_vuk_queue:
+      int: 1
+      action: set
 
 light_player:
   ball_started{current_player.fight_qualified==1}:
@@ -382,6 +386,7 @@ show_player:
 
 
 event_player:
+  get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}: get_fighter_letter_field
   s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1 and current_player.car_mb_qualified!=1}: choose_fight
   s_left_ramp_rollover_active{current_player.fight_qualified==1 and current_player.fighter_mode_qualified!=1 and current_player.car_mb_qualified==1}: car_mb_started
   s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}: choose_fighter_mode

@@ -547,10 +547,6 @@ variable_player:
     ramp_timer_running:
       int: 0
       action: set
-  s_left_ramp_rollover_active{current_player.fighter_mode_qualified==1}:
-    fighter_mode_vuk_queue:
-      int: 1
-      action: set
 
 sequence_shots:
   combo_1:
