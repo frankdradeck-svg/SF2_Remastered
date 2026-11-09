@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_723ov"]
 [ext_resource type="Texture2D" uid="uid://bxv3loa8j2mjj" path="res://assets/red_x_2.png" id="2_tb0fg"]
 
-[node name="MPFSlide" type="Control" unique_id=496584869]
+[node name="CammyCombosAllx" type="Control" unique_id=496584869]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

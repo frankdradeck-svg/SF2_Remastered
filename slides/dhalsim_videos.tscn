@@ -14,7 +14,7 @@
 [ext_resource type="VideoStream" uid="uid://1qbfr8vh0gel" path="res://assets/dhalsim_9.ogv" id="12_00w6a"]
 [ext_resource type="VideoStream" uid="uid://b8opqsi7v28kr" path="res://assets/new_dhalsim_1.ogv" id="13_h6ydo"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="DhalsimVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_xrnkp")

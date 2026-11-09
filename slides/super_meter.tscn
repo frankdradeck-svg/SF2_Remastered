@@ -7,7 +7,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4ur2"]
 bg_color = Color(0.23324844, 0.742165, 0.9999998, 1)
 
-[node name="MPFSlide" type="Control" unique_id=1966137499]
+[node name="SuperMeter" type="Control" unique_id=1966137499]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

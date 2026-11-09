@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://ddy3t7aqd8l1" path="res://assets/hurry_up_failed_2.ogv" id="2_q0obq"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ihedk"]
 
-[node name="Ko" type="Control" unique_id=988220383]
+[node name="HurryUpFailed" type="Control" unique_id=988220383]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

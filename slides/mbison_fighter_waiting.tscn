@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_8p34u"]
 [ext_resource type="VideoStream" uid="uid://b8bvwtvobj324" path="res://assets/fighter_mode_bison_WAITING_2.ogv" id="5_ggfba"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="MbisonFighterWaiting" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_m7fj8")

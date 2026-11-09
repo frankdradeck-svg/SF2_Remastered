@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cg3v6qwcd28hx"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_exuvx"]
+[ext_resource type="VideoStream" uid="uid://ddlb3xwhi7h77" path="res://assets/hurry_up_1.ogv" id="2_exuvx"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_opfgg"]
+
+[node name="Ko" type="Control" unique_id=988220383]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_exuvx")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1726492846]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_exuvx")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_opfgg")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

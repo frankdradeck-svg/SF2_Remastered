@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://csbl8cboyfgba"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_cah4n"]
+[ext_resource type="Script" uid="uid://hxhsfa7gtrdy" path="res://addons/mpf-gmc/classes/mpf_progress.gd" id="2_plc1w"]
+[ext_resource type="Texture2D" uid="uid://1brrper0qkg7" path="res://assets/meter.PNG" id="3_uv2vv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4ur2"]
+bg_color = Color(0.23324844, 0.742165, 0.9999998, 1)
+
+[node name="MPFSlide" type="Control" unique_id=1966137499]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_cah4n")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFProgress" type="ProgressBar" parent="." unique_id=742083266]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 832.0
+offset_right = 436.0
+offset_bottom = 855.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_h4ur2")
+max_value = 20.0
+step = 1.0
+value = 12.0
+show_percentage = false
+script = ExtResource("2_plc1w")
+variable_name = "super_meter"
+metadata/_custom_type_script = "uid://hxhsfa7gtrdy"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=339202228]
+position = Vector2(305, 807)
+scale = Vector2(1.4916201, 1.2972972)
+texture = ExtResource("3_uv2vv")

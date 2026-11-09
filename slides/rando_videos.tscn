@@ -12,7 +12,7 @@
 [ext_resource type="VideoStream" uid="uid://ck0sp4kgu6rba" path="res://assets/new_thawk_1.ogv" id="10_1vnwn"]
 [ext_resource type="VideoStream" uid="uid://ccumvdghmxuh2" path="res://assets/new_fuerte_1.ogv" id="11_lti84"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="RandoVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_1a2ux")

@@ -10,7 +10,7 @@
 [ext_resource type="VideoStream" uid="uid://ymiqiuobhs10" path="res://assets/fighter_mode_select_ryu.ogv" id="8_faosa"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="9_a1d8e"]
 
-[node name="fighter_mode_select" type="Control" unique_id=2020096209]
+[node name="FighterModeSelect" type="Control" unique_id=2020096209]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

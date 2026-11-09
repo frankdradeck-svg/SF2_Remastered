@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cr5v31tv3sj48"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_cbs24"]
+[ext_resource type="Script" uid="uid://bh3xoo03q0ii0" path="res://addons/mpf-gmc/classes/mpf_child_pool.gd" id="2_fwub5"]
+[ext_resource type="VideoStream" uid="uid://cls7k41vfb0f7" path="res://assets/fighter_mode_bison_VUK_WAITING.ogv" id="3_e2bay"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_xpdmd"]
+[ext_resource type="VideoStream" uid="uid://cpwgrfsvi86yb" path="res://assets/fighter_mode_bison_WAITING_1.ogv" id="5_cbs24"]
+[ext_resource type="VideoStream" uid="uid://b8bvwtvobj324" path="res://assets/fighter_mode_bison_WAITING_2.ogv" id="6_fwub5"]
+
+[node name="Field" type="Control" unique_id=2085516752]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cbs24")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFChildPool" type="Control" parent="." unique_id=923641232]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_fwub5")
+playback_method = 2
+advance_on_show = true
+child_method = "play"
+metadata/_custom_type_script = "uid://bh3xoo03q0ii0"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1378299526]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("3_e2bay")
+volume_db = -80.0
+expand = true
+bus = &"effects"
+script = ExtResource("4_xpdmd")
+end_behavior = 3
+end_method = "video_finished"
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer2" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=1254736699]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("5_cbs24")
+volume_db = -80.0
+expand = true
+bus = &"effects"
+script = ExtResource("4_xpdmd")
+end_behavior = 3
+end_method = "video_finished"
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="MPFVideoPlayer3" type="VideoStreamPlayer" parent="MPFChildPool" unique_id=58804013]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("6_fwub5")
+volume_db = -80.0
+expand = true
+bus = &"effects"
+script = ExtResource("4_xpdmd")
+end_behavior = 3
+end_method = "video_finished"
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

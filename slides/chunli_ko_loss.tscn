@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bq5om3gk4eej1" path="res://assets/chunli_ko_loss.ogv" id="2_6pxtx"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_m7om3"]
 
-[node name="MPFSlide" type="Control" unique_id=727142682]
+[node name="ChunliKoLoss" type="Control" unique_id=727142682]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://uc2acsvh18km" path="res://assets/vega_ko_loss.ogv" id="2_pt4ux"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ailrk"]
 
-[node name="MPFSlide" type="Control" unique_id=666637265]
+[node name="VegaKoLoss" type="Control" unique_id=666637265]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

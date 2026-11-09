@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://cm470w88mtu6q" path="res://assets/fighter_mode_bison_JACKPOT.ogv" id="2_ia135"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_dwo85"]
 
-[node name="Ko" type="Control" unique_id=988220383]
+[node name="FighterModeMbisonJackpot" type="Control" unique_id=988220383]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

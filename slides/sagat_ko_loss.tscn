@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://c8hcx8r3ubev1" path="res://assets/sagat_ko_loss.ogv" id="2_tw6j2"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ekhk7"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="SagatKoLoss" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

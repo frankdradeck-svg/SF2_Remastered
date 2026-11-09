@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://sdf8lb3ejeh6"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_qrtih"]
+[ext_resource type="VideoStream" uid="uid://clx5qq8najkhs" path="res://assets/car_video_hit_to_no_dmg.ogv" id="2_qrtih"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_jcfau"]
+
+[node name="Field" type="Control" unique_id=2085516752]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qrtih")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1378299526]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_qrtih")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_jcfau")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

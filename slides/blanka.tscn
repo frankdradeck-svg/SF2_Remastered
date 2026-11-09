@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bk04qtu1gdxkv" path="res://assets/blanka_start.ogv" id="2_8ua6g"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_a2msh"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="Blanka" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

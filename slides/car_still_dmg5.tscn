@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_e0s14"]
 [ext_resource type="Texture2D" uid="uid://cmuxfqhkg58sh" path="res://assets/car_still_damage_5.png" id="2_m2chs"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="CarStillDmg5" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

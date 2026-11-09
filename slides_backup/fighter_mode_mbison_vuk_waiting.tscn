@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://chknrwx2a3a77"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_3tj4k"]
+[ext_resource type="VideoStream" uid="uid://cls7k41vfb0f7" path="res://assets/fighter_mode_bison_VUK_WAITING.ogv" id="2_jqlbu"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_k5fdo"]
+
+[node name="Ko" type="Control" unique_id=988220383]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_3tj4k")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1726492846]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_jqlbu")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_k5fdo")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

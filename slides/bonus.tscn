@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_fyms0"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_ktofo"]
 
-[node name="MPFSlide" type="Control" unique_id=1181075095]
+[node name="Bonus" type="Control" unique_id=1181075095]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

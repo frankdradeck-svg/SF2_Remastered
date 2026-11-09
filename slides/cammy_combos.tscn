@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ti0m7"]
 [ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="4_o6mj7"]
 
-[node name="MPFSlide" type="Control" unique_id=496584869]
+[node name="CammyCombos" type="Control" unique_id=496584869]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

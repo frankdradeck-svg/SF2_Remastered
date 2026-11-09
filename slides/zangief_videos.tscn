@@ -16,7 +16,7 @@
 [ext_resource type="VideoStream" uid="uid://buuapthd6urcc" path="res://assets/new_zangief_5.ogv" id="14_xqu1v"]
 [ext_resource type="VideoStream" uid="uid://cklhhs46kufpw" path="res://assets/new_zangief_6.ogv" id="15_7k1bf"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="ZangiefVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_1a2ux")

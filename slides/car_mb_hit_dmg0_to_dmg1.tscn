@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bykbakg0gelbw" path="res://assets/car_video_hit_to_dmg1.ogv" id="2_2p30w"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_uqg4q"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="CarMbHitDmg0ToDmg1" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_pe4sa")

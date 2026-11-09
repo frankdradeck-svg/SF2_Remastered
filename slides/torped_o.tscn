@@ -13,7 +13,7 @@
 [ext_resource type="VideoStream" uid="uid://c4fil0vcftejx" path="res://assets/ehonda_8.ogv" id="11_xgukt"]
 [ext_resource type="VideoStream" uid="uid://co4c8kwjjiqt1" path="res://assets/new_ehonda_1.ogv" id="12_a4ueo"]
 
-[node name="MPFSlide" type="Control" unique_id=213916040]
+[node name="TorpedO" type="Control" unique_id=213916040]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

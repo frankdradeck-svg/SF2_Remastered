@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://fy6cgqa72xsy" path="res://assets/dhalsim_start.ogv" id="2_uhct5"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_dmhyi"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="Dhalsim" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

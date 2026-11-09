@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c1wrpuy1cwb76"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_q0obq"]
+[ext_resource type="VideoStream" uid="uid://ddy3t7aqd8l1" path="res://assets/hurry_up_failed_2.ogv" id="2_q0obq"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ihedk"]
+
+[node name="Ko" type="Control" unique_id=988220383]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_q0obq")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1726492846]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_q0obq")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_ihedk")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Label" type="Label" parent="." unique_id=1467786400]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 443.0
+offset_right = 1765.0
+offset_bottom = 785.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 150
+text = "HURRY UP FAILED"

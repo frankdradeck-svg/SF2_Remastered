@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_qlyne"]
 [ext_resource type="VideoStream" uid="uid://y5pxqmev3d7x" path="res://assets/vega_attack_2.ogv" id="5_s6nv5"]
 
-[node name="MPFSlide" type="Control" unique_id=244864899]
+[node name="VegaAttacks" type="Control" unique_id=244864899]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_wmx3v"]
 [ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="3_ndvhr"]
 
-[node name="MPFSlide" type="Control" unique_id=213916040]
+[node name="LoopCounter" type="Control" unique_id=213916040]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

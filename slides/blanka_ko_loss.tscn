@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://dce1kn6dlsprx" path="res://assets/blanka_ko_loss.ogv" id="2_dvdox"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_7cn40"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="BlankaKoLoss" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

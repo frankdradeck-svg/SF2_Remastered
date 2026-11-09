@@ -19,7 +19,7 @@
 [ext_resource type="VideoStream" uid="uid://b84o5fhls6bk0" path="res://assets/new_blanka_4.ogv" id="17_ayugo"]
 [ext_resource type="VideoStream" uid="uid://dorwy04ltbhd2" path="res://assets/new_blanka_5.ogv" id="18_ltwoc"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="BlankaVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_oi6mm")

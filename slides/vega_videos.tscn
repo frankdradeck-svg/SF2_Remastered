@@ -15,7 +15,7 @@
 [ext_resource type="VideoStream" uid="uid://b3r2lc4gbu8wm" path="res://assets/new_vega_2.ogv" id="13_rfhf2"]
 [ext_resource type="VideoStream" uid="uid://d206ufqm52tbf" path="res://assets/new_vega_3.ogv" id="14_hf1j5"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="VegaVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_v04qo")

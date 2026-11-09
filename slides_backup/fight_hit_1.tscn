@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cih3xt41w5j6v"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_q48dn"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_q48dn")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label" type="Label" parent="." unique_id=1730150719]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 460.0
+offset_right = 1690.0
+offset_bottom = 802.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 150
+text = "HADOKEN"
+
+[node name="Label2" type="Label" parent="." unique_id=96281559]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 588.0
+offset_right = 1824.0
+offset_bottom = 861.0
+theme_override_constants/outline_size = 31
+theme_override_font_sizes/font_size = 200
+text = "2,000,000"

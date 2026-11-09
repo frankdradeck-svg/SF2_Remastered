@@ -23,7 +23,7 @@
 [ext_resource type="VideoStream" uid="uid://djw3tf4rapeb0" path="res://assets/mbison_18.ogv" id="21_yorjp"]
 [ext_resource type="VideoStream" uid="uid://bpwidd2t0g4r8" path="res://assets/new_mbison_1.ogv" id="22_tj7vg"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="BisonVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_688h3")

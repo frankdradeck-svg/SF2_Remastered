@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bn656eqc6yfnu"]
+
+[ext_resource type="Texture2D" uid="uid://bpmtinfpanjx7" path="res://assets/bonus_stage_sprites_RYU.png" id="1_8adcf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7ld0"]
+atlas = ExtResource("1_8adcf")
+region = Rect2(515, 2860, 128, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awdhf"]
+atlas = ExtResource("1_8adcf")
+region = Rect2(387, 2860, 128, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jq3o"]
+atlas = ExtResource("1_8adcf")
+region = Rect2(259, 2860, 128, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63ai5"]
+atlas = ExtResource("1_8adcf")
+region = Rect2(131, 2860, 128, 95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckr12"]
+atlas = ExtResource("1_8adcf")
+region = Rect2(3, 2860, 128, 95)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7ld0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awdhf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jq3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63ai5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckr12")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

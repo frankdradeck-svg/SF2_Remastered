@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://invb3fkre15i" path="res://assets/chunli_ryu_attack_1.ogv" id="2_5620t"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_n7mmh"]
 
-[node name="MPFSlide" type="Control" unique_id=1587466739]
+[node name="ChunliRyuAttack1" type="Control" unique_id=1587466739]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

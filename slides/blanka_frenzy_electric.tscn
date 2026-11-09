@@ -88,7 +88,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="MPFSlide" type="Control" unique_id=1270873951]
+[node name="BlankaFrenzyElectric" type="Control" unique_id=1270873951]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

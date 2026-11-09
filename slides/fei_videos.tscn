@@ -10,7 +10,7 @@
 [ext_resource type="VideoStream" uid="uid://bkgyyaye6uuuo" path="res://assets/fei_5.ogv" id="8_py2xt"]
 [ext_resource type="VideoStream" uid="uid://dqev677uvwwww" path="res://assets/fei_6.ogv" id="9_t00hc"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="FeiVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_phm4w")

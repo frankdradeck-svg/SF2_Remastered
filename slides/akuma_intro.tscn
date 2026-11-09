@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://dgmllpwwbwgg3" path="res://assets/akuma_v2_intro_full.ogv" id="2_g7hcx"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_rdqu6"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="AkumaIntro" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

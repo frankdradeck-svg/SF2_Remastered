@@ -26,7 +26,7 @@
 [ext_resource type="VideoStream" uid="uid://c8h7r007rrw1" path="res://assets/ken_12.ogv" id="24_w6j7h"]
 [ext_resource type="VideoStream" uid="uid://coyposqd5do0u" path="res://assets/ken_13.ogv" id="25_nqj5h"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="KenryuVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_p0y4b")

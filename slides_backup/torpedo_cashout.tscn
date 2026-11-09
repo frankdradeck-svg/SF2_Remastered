@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://78p5wtdrurwe"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_yc17n"]
+[ext_resource type="VideoStream" uid="uid://yaho44byic66" path="res://assets/ehonda_1.ogv" id="2_yc17n"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_r5nst"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_ct7mx"]
+
+[node name="Ko" type="Control" unique_id=988220383]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_yc17n")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1726492846]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_yc17n")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_r5nst")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Label" type="Label" parent="." unique_id=1638261942]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 443.0
+offset_right = 1765.0
+offset_bottom = 785.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 150
+text = "TORPEDO COLLECT"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1802380430]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 593.0
+offset_right = 2287.0
+offset_bottom = 825.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/font_size = 170
+text = "15,000,000"
+script = ExtResource("4_ct7mx")
+variable_name = "torpedo_cashout_value"
+comma_separate = true
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bbsq4hnnx5ix1" path="res://assets/ko1.ogv" id="2_tn0ef"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_6moku"]
 
-[node name="Ko" type="Control" unique_id=988220383]
+[node name="Ko1" type="Control" unique_id=988220383]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

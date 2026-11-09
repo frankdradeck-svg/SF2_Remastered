@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://ia8ifk2rhqpl" path="res://assets/vega_ryu_attack_2.ogv" id="2_4hhgc"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_jck7j"]
 
-[node name="MPFSlide" type="Control" unique_id=896121065]
+[node name="VegaRyuAttack2" type="Control" unique_id=896121065]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

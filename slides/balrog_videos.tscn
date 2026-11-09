@@ -18,7 +18,7 @@
 [ext_resource type="VideoStream" uid="uid://cdrf657qipa07" path="res://assets/new_balrog_8.ogv" id="16_fmvyw"]
 [ext_resource type="VideoStream" uid="uid://c7wsmooisleo4" path="res://assets/new_balrog_9.ogv" id="17_1rfqm"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="BalrogVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_oi6mm")

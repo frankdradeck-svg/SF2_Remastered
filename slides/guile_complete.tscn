@@ -20,7 +20,7 @@
 [ext_resource type="VideoStream" uid="uid://yva41yae6j06" path="res://assets/guile_clip_15.ogv" id="18_4gds6"]
 [ext_resource type="VideoStream" uid="uid://tfryrnkq878n" path="res://assets/guile_clip_16.ogv" id="19_ke3bk"]
 
-[node name="MPFSlide" type="Control" unique_id=213916040]
+[node name="GuileComplete" type="Control" unique_id=213916040]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

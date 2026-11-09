@@ -13,7 +13,7 @@
 [ext_resource type="VideoStream" uid="uid://c4fil0vcftejx" path="res://assets/ehonda_8.ogv" id="11_1fml4"]
 [ext_resource type="VideoStream" uid="uid://co4c8kwjjiqt1" path="res://assets/new_ehonda_1.ogv" id="12_0rhbr"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="EhondaVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_1fml4")

@@ -16,7 +16,7 @@
 [ext_resource type="VideoStream" uid="uid://bilq4j7xcam17" path="res://assets/new_sagat_4.ogv" id="14_xlq3f"]
 [ext_resource type="VideoStream" uid="uid://hqc8jv1foq2i" path="res://assets/new_sagat_5.ogv" id="15_63j1t"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="SagatVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_tdx0x")

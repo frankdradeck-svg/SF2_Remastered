@@ -14,7 +14,7 @@
 [ext_resource type="VideoStream" uid="uid://dop8i8os0deth" path="res://assets/new_chunli_3.ogv" id="12_mnkcr"]
 [ext_resource type="VideoStream" uid="uid://diunlxvnh47hq" path="res://assets/new_chunli_4.ogv" id="13_uedgc"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="ChunliVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_8ucve")

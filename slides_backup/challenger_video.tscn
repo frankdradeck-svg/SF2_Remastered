@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://0patviaev5yb"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_a5m0n"]
+[ext_resource type="VideoStream" uid="uid://bvtpnlpvrlsb1" path="res://assets/challenger1.ogv" id="2_j1jot"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_8nsmr"]
+
+[node name="ChallengerVideo" type="Control" unique_id=1634057368]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_a5m0n")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=92795868]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_j1jot")
+autoplay = true
+expand = true
+script = ExtResource("3_8nsmr")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

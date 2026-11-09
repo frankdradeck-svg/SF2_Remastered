@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dkhl7woepjnhp"]
+
+[ext_resource type="Texture2D" uid="uid://blbmrhdegjogr" path="res://assets/barrel_stage_sprites_BARREL.png" id="1_yluul"]
+[ext_resource type="Script" uid="uid://cdjksid2vpy80" path="res://slides/barrel.gd" id="2_u0568"]
+[ext_resource type="AudioStream" uid="uid://bf46v1hit4i5s" path="res://sounds/barrel_smash.wav" id="3_cdixh"]
+[ext_resource type="AudioStream" uid="uid://clcqpowpbacpp" path="res://sounds/barrel_kick_hit.wav" id="4_q6mep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynol0"]
+atlas = ExtResource("1_yluul")
+region = Rect2(249, 57, 79, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdfxb"]
+atlas = ExtResource("1_yluul")
+region = Rect2(170, 57, 79, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwgo6"]
+atlas = ExtResource("1_yluul")
+region = Rect2(91, 57, 79, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkefo"]
+atlas = ExtResource("1_yluul")
+region = Rect2(12, 57, 79, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yluul"]
+atlas = ExtResource("1_yluul")
+region = Rect2(10, 122, 107, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6h206"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynol0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdfxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwgo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkefo")
+}],
+"loop": true,
+"name": &"barrel_roll_right",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yluul")
+}],
+"loop": false,
+"name": &"barrel_smash",
+"speed": 1.5
+}]
+
+[node name="Barrel" type="AnimatedSprite2D" unique_id=674060889]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_6h206")
+animation = &"barrel_smash"
+script = ExtResource("2_u0568")
+roll_speed = 400.0
+bar_y = 200.0
+ground_y = 800.0
+
+[node name="SmashSound" type="AudioStreamPlayer" parent="." unique_id=1978122686]
+stream = ExtResource("3_cdixh")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=1698580665]
+stream = ExtResource("4_q6mep")

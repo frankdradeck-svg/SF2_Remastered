@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://b8v0d1y1pchmr"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_sru3m"]
+[ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_psy8i"]
+[ext_resource type="VideoStream" uid="uid://dxknrxbjvdm30" path="res://assets/fighter_mode_select_chun.ogv" id="3_grgrm"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_nocb6"]
+[ext_resource type="VideoStream" uid="uid://djao8cb2e666g" path="res://assets/fighter_mode_select_bison.ogv" id="5_0fbkq"]
+[ext_resource type="VideoStream" uid="uid://d4dqu5mwg1nqt" path="res://assets/fighter_mode_select_akuma.ogv" id="6_7dlko"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="7_o7ntg"]
+[ext_resource type="VideoStream" uid="uid://ymiqiuobhs10" path="res://assets/fighter_mode_select_ryu.ogv" id="8_faosa"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="9_a1d8e"]
+
+[node name="fighter_mode_select" type="Control" unique_id=2020096209]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sru3m")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFCarousel" type="Control" parent="." unique_id=1280749504]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_psy8i")
+carousel_name = "fighter_mode_select"
+metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
+
+[node name="mbison" type="Node2D" parent="MPFCarousel" unique_id=783784839]
+
+[node name="mbison_select" type="VideoStreamPlayer" parent="MPFCarousel/mbison" unique_id=1163271340]
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("5_0fbkq")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("4_nocb6")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="chunli" type="Node2D" parent="MPFCarousel" unique_id=1443505725]
+
+[node name="chunli_select" type="VideoStreamPlayer" parent="MPFCarousel/chunli" unique_id=439698510]
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("3_grgrm")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("4_nocb6")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="akuma" type="Node2D" parent="MPFCarousel" unique_id=945945021]
+
+[node name="akuma_select" type="VideoStreamPlayer" parent="MPFCarousel/akuma" unique_id=665175570]
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("6_7dlko")
+volume_db = -80.0
+autoplay = true
+expand = true
+script = ExtResource("4_nocb6")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="ryu_select" type="VideoStreamPlayer" parent="." unique_id=281695291]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 1080.0
+stream = ExtResource("8_faosa")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+script = ExtResource("4_nocb6")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1771593113]
+position = Vector2(956, 326.28912)
+scale = Vector2(0.2675781, 1.0873259)
+texture = ExtResource("7_o7ntg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2089107867]
+position = Vector2(968, 932.99994)
+scale = Vector2(1.6707357, 1.4922742)
+texture = ExtResource("7_o7ntg")
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1203961047]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 210.0
+offset_right = 1093.0
+offset_bottom = 415.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/font_size = 150
+text = "15"
+horizontal_alignment = 1
+script = ExtResource("9_a1d8e")
+variable_name = "fighter_mode_select_time_left"
+initialize_empty = false
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

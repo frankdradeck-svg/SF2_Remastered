@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bsii84bdh8l21"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_6bsju"]
+[ext_resource type="VideoStream" uid="uid://7uop0wofuml" path="res://assets/chunli_attack_2.ogv" id="2_ii7pt"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_itcvn"]
+
+[node name="MPFSlide" type="Control" unique_id=644110598]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6bsju")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=145052513]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_ii7pt")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_itcvn")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

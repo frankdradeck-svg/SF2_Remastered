@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b8q7qkf1v0lwi"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_x4mjb"]
+[ext_resource type="Texture2D" uid="uid://m0gjchavjgjq" path="res://assets/stages/blanka_idle_sprite.png" id="5_x4mjb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l353h"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(0, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ngd4"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(185, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06hyr"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(370, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usnhv"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(555, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqjir"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(740, 0, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2544p"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(0, 89, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mubk"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(185, 89, 185, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5u5i"]
+atlas = ExtResource("5_x4mjb")
+region = Rect2(370, 89, 185, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fsqwp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l353h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ngd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06hyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usnhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqjir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2544p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mubk")
+}, {
+"duration": 80.0,
+"texture": SubResource("AtlasTexture_f5u5i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="MPFSlide" type="Control" unique_id=1270873951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_x4mjb")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2139373046]
+position = Vector2(1379, 312)
+sprite_frames = SubResource("SpriteFrames_fsqwp")
+autoplay = "default"
+frame_progress = 0.48293656

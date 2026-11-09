@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://b7jpb0rs5j2u7" path="res://assets/vega_x.ogv" id="2_mn7n3"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_kwqj3"]
 
-[node name="Ko" type="Control" unique_id=988220383]
+[node name="Skillshot" type="Control" unique_id=988220383]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

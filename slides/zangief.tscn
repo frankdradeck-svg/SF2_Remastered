@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://cg2qqt4037bpw" path="res://assets/zangief_start.ogv" id="2_58rur"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_bvrge"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="Zangief" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

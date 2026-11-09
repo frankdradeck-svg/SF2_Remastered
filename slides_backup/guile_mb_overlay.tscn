@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bfcschu2fqav0"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_lmcp0"]
+[ext_resource type="Texture2D" uid="uid://b88kdbp24eiwk" path="res://assets/hud1.png" id="2_88yxn"]
+
+[node name="MPFSlide" type="Control" unique_id=1270873951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_lmcp0")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=323136025]
+position = Vector2(1746, 223)
+scale = Vector2(0.3011068, 0.5151367)
+texture = ExtResource("2_88yxn")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=277748713]
+offset_left = -508.12524
+offset_top = -112.59146
+offset_right = 1421.4226
+offset_bottom = 110.40854
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 100
+text = "Guile Multiball is Lit!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Sprite2D" unique_id=1065475844]
+offset_left = -282.29184
+offset_top = -11.647393
+offset_right = 435.70816
+offset_bottom = 57.352608
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 50
+text = "Shoot the Guile Ramp to Start"

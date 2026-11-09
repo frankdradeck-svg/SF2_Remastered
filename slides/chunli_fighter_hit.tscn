@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_p2yic"]
 [ext_resource type="VideoStream" uid="uid://dvbjamcbkn2xm" path="res://assets/fighter_mode_chunli_hit_2.ogv" id="5_g2b2g"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="ChunliFighterHit" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_bc3is")

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://prjc74ltl2os" path="res://assets/empty_transparent.PNG" id="2_37sr0"]
 [ext_resource type="Texture2D" uid="uid://cowcy5o8j2n28" path="res://assets/right_1hit_left_transparent.PNG" id="3_x574g"]
 
-[node name="MPFSlide" type="Control" unique_id=1955847962]
+[node name="HealthRight1hit" type="Control" unique_id=1955847962]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

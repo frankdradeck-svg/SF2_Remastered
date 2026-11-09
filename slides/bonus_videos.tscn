@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://dks8y61qiq5r8" path="res://assets/money.ogv" id="2_2ps2l"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_voe1s"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="BonusVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nqqhw")

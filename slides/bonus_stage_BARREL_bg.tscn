@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://xq2x4cnjfnht" path="res://slides/barrel_spawner.gd" id="6_ynol0"]
 [ext_resource type="AudioStream" uid="uid://doqcn7lb3a8yf" path="res://sounds/barrel_kick.wav" id="7_gdfxb"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="BonusStageBarrelBg" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

@@ -7,7 +7,7 @@
 [ext_resource type="VideoStream" uid="uid://cpwgrfsvi86yb" path="res://assets/fighter_mode_bison_WAITING_1.ogv" id="5_cbs24"]
 [ext_resource type="VideoStream" uid="uid://b8bvwtvobj324" path="res://assets/fighter_mode_bison_WAITING_2.ogv" id="6_fwub5"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="FighterModeMbisonWaitingRandom" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_cbs24")

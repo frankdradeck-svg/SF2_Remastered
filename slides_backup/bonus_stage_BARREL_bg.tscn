@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b6xhlvoqahr2d"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_14ue3"]
+[ext_resource type="Texture2D" uid="uid://rakv5d23gcbc" path="res://assets/bonus2.png" id="2_gygbu"]
+[ext_resource type="SpriteFrames" uid="uid://fkbublsemcxs" path="res://slides/ryu_left.tres" id="3_14ue3"]
+[ext_resource type="Script" uid="uid://bhuqmb1e5d87e" path="res://slides/animated_sprite_2d.gd" id="4_xng6b"]
+[ext_resource type="PackedScene" uid="uid://dkhl7woepjnhp" path="res://slides/barrel.tscn" id="5_r1vm0"]
+[ext_resource type="Script" uid="uid://xq2x4cnjfnht" path="res://slides/barrel_spawner.gd" id="6_ynol0"]
+[ext_resource type="AudioStream" uid="uid://doqcn7lb3a8yf" path="res://sounds/barrel_kick.wav" id="7_gdfxb"]
+
+[node name="Fight" type="Control" unique_id=1718823309]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_14ue3")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=696474367]
+position = Vector2(959.49994, 544.5)
+scale = Vector2(4.986979, 4.8437495)
+texture = ExtResource("2_gygbu")
+
+[node name="BarrelSpawner" type="Node2D" parent="." unique_id=1982852629]
+script = ExtResource("6_ynol0")
+barrel_scene = ExtResource("5_r1vm0")
+
+[node name="Ryu" type="AnimatedSprite2D" parent="." unique_id=1289962463]
+z_index = 1
+position = Vector2(970, 740)
+scale = Vector2(5, 5)
+sprite_frames = ExtResource("3_14ue3")
+animation = &"ryu_celebrate"
+script = ExtResource("4_xng6b")
+kick_range = 500.0
+hit_area_top = 600.0
+kick_hit_delay = 0.35
+
+[node name="KickSound" type="AudioStreamPlayer" parent="Ryu" unique_id=1689885519]
+stream = ExtResource("7_gdfxb")

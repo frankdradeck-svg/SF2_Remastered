@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://2d33irll8o7u" path="res://assets/chunli_ko_win.ogv" id="2_lytpq"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_6moku"]
 
-[node name="Ko" type="Control" unique_id=988220383]
+[node name="ChunliKo" type="Control" unique_id=988220383]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

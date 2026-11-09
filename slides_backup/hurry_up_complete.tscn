@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://w8lvmfbtqc4q"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_g61a3"]
+[ext_resource type="VideoStream" uid="uid://br4t4842aenqv" path="res://assets/hurry_up_complete.ogv" id="2_g61a3"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_aytat"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_qd5xt"]
+
+[node name="Ko" type="Control" unique_id=988220383]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_g61a3")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1726492846]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_g61a3")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_aytat")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Label" type="Label" parent="." unique_id=1638261942]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 443.0
+offset_right = 1765.0
+offset_bottom = 785.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 150
+text = "HURRY UP COMPLETE"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1802380430]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 593.0
+offset_right = 2287.0
+offset_bottom = 825.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/font_size = 170
+text = "15,000,000"
+script = ExtResource("4_qd5xt")
+variable_type = 1
+variable_name = "current_hurryup"
+initialize_empty = false
+update_event = "hurry_up_value"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"

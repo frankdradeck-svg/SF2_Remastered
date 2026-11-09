@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_05k83"]
 [ext_resource type="VideoStream" uid="uid://cprvbb5l8vqus" path="res://assets/guile_clip_14.ogv" id="5_knnw5"]
 
-[node name="MPFSlide" type="Control" unique_id=213916040]
+[node name="GuileMbSuperjackpot" type="Control" unique_id=213916040]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

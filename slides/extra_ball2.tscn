@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_jsrpd"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="ExtraBall2" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_jsrpd")

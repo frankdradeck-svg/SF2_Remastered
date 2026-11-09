@@ -14,7 +14,7 @@
 [ext_resource type="VideoStream" uid="uid://qjdxn1qelwfl" path="res://assets/fighter_mode_bison_idle_9.ogv" id="12_h7thd"]
 [ext_resource type="VideoStream" uid="uid://b4oxl7rhylbil" path="res://assets/fighter_mode_bison_idle_10.ogv" id="13_0w6tj"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="MbisonFighterIdle" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_w4kt5")

@@ -15,7 +15,7 @@
 [ext_resource type="VideoStream" uid="uid://b82laegeig2td" path="res://assets/new_seth_10.ogv" id="13_2v84r"]
 [ext_resource type="VideoStream" uid="uid://27qumk7hoxkb" path="res://assets/new_seth_11.ogv" id="14_wg4aq"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="SethVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_vpubc")

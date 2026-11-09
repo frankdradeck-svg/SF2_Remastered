@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cvglibolivvuy" path="res://assets/meter2.PNG" id="3_hspqx"]
 [ext_resource type="Texture2D" uid="uid://1brrper0qkg7" path="res://assets/meter.PNG" id="3_ynrlj"]
 
-[node name="MPFSlide" type="Control" unique_id=1966137499]
+[node name="SuperMeter2" type="Control" unique_id=1966137499]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

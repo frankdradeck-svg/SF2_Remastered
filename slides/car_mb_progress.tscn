@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://gun56bvpwcnh" path="res://assets/carsmash_1.ogv" id="2_0jubf"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_1hjmc"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="CarMbProgress" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_guc0a")

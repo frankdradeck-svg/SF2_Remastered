@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://c68bo5uq76abk"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_wx5im"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_lsyin"]
+
+[node name="MPFSlide" type="Control" unique_id=213916040]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_wx5im")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label3" type="Label" parent="." unique_id=730284880]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 448.0
+offset_right = 2049.0
+offset_bottom = 558.0
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 80
+text = "Value:"
+
+[node name="MPFVariable" type="Label" parent="." unique_id=1101555038]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 392.0
+offset_right = 2573.0
+offset_bottom = 624.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_font_sizes/font_size = 170
+text = "5,000,000"
+script = ExtResource("2_lsyin")
+variable_type = 1
+variable_name = "current_millions"
+initialize_empty = false
+update_event = "millions_value"
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2099579562]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 221.0
+offset_right = 1774.0
+offset_bottom = 527.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 180
+theme_override_font_sizes/bold_font_size = 160
+theme_override_font_sizes/bold_italics_font_size = 160
+theme_override_font_sizes/italics_font_size = 160
+theme_override_font_sizes/mono_font_size = 160
+bbcode_enabled = true
+text = "[wave]LOOP MILLIONS[/wave]"

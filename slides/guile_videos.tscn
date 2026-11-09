@@ -20,7 +20,7 @@
 [ext_resource type="VideoStream" uid="uid://yva41yae6j06" path="res://assets/guile_clip_15.ogv" id="18_or84n"]
 [ext_resource type="VideoStream" uid="uid://tfryrnkq878n" path="res://assets/guile_clip_16.ogv" id="19_vt85s"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="GuileVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_446vl")

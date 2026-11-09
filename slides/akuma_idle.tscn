@@ -8,7 +8,7 @@
 [ext_resource type="VideoStream" uid="uid://bamlp6pa3n3og" path="res://assets/akuma_idle_3.ogv" id="6_snfhd"]
 [ext_resource type="VideoStream" uid="uid://dppwafid7v4lv" path="res://assets/akuma_idle_4.ogv" id="7_ii142"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="AkumaIdle" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_jxvjx")

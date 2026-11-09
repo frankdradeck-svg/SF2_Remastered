@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://0ys5jvcv1y1j"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_bysvl"]
+[ext_resource type="Texture2D" uid="uid://u2xionm4r4it" path="res://assets/challenger (1).png" id="2_bysvl"]
+
+[node name="MPFSlide" type="Control" unique_id=1163427742]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 261.0
+offset_top = 206.0
+offset_right = 2181.0
+offset_bottom = 1286.0
+script = ExtResource("1_bysvl")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=632872537]
+position = Vector2(137, 37)
+scale = Vector2(1.55, 1.3980583)
+texture = ExtResource("2_bysvl")

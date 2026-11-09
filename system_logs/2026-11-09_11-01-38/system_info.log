@@ -1,0 +1,29 @@
+Mon Nov  9 11:01:38 EST 2026
+Linux mastershred-sf 6.17.0-41-generic #41-Ubuntu SMP PREEMPT_DYNAMIC Sat Jun 20 18:01:40 UTC 2026 x86_64 GNU/Linux
+               total        used        free      shared  buff/cache   available
+Mem:           6.7Gi       2.1Gi       2.2Gi        23Mi       2.3Gi       4.6Gi
+Swap:          511Mi          0B       511Mi
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0     4K  1 loop /snap/bare/5
+loop1    7:1    0    74M  1 loop /snap/core22/2437
+loop2    7:2    0    74M  1 loop /snap/core22/2955
+loop3    7:3    0  66.8M  1 loop /snap/core24/1587
+loop4    7:4    0  66.8M  1 loop /snap/core24/1643
+loop5    7:5    0 246.6M  1 loop /snap/firefox/8274
+loop6    7:6    0 283.8M  1 loop /snap/firefox/9057
+loop7    7:7    0 516.2M  1 loop /snap/gnome-42-2204/226
+loop8    7:8    0  16.4M  1 loop /snap/firmware-updater/224
+loop9    7:9    0 531.4M  1 loop /snap/gnome-42-2204/247
+loop10   7:10   0  16.5M  1 loop /snap/firmware-updater/226
+loop11   7:11   0 606.1M  1 loop /snap/gnome-46-2404/153
+loop12   7:12   0  91.7M  1 loop /snap/gtk-common-themes/1535
+loop13   7:13   0   402M  1 loop /snap/mesa-2404/1839
+loop14   7:14   0   395M  1 loop /snap/mesa-2404/1165
+loop15   7:15   0 407.9M  1 loop /snap/obs-studio/1322
+loop16   7:16   0 408.6M  1 loop /snap/obs-studio/1324
+loop17   7:17   0  50.3M  1 loop /snap/snapd/27738
+loop18   7:18   0  44.7M  1 loop /snap/snapd/28254
+sda      8:0    0 119.2G  0 disk 
+├─sda1   8:1    0   300M  0 part /boot/efi
+└─sda2   8:2    0 118.9G  0 part /
+sdb      8:16   1     0B  0 disk 

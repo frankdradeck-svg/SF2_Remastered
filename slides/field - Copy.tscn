@@ -23,7 +23,7 @@
 [ext_resource type="VideoStream" uid="uid://ddrteayufo4dn" path="res://assets/Exciting_Street_Scene_India_Super_Street_Fighter_IV_1920x1080[01KPNNTC5MJBYEZ3WRCSNKK8WF].ogv" id="15_5x0sp"]
 [ext_resource type="VideoStream" uid="uid://b48y6vwnjhg1s" path="res://assets/Festival_at_the_Old_Temple_South_Korea_Super_Street_Fighter_IV_1920x1080[01KPNNSP0585W5M0KJGP5AZ1TR].ogv" id="16_gjk56"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="FieldCopy" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_j4cmf")

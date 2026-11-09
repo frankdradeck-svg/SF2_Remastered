@@ -11,7 +11,7 @@
 [ext_resource type="VideoStream" uid="uid://dxb1hbhda7y86" path="res://assets/fighter_mode_chunli_idle_6.ogv" id="9_ba4lq"]
 [ext_resource type="VideoStream" uid="uid://jsko8eqqe6f4" path="res://assets/fighter_mode_chunli_idle_7.ogv" id="10_e06r1"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="ChunliFighterIdle" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_xh0c4")

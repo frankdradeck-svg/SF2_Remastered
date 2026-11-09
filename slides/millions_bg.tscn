@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://ctdy40b3vsdko" path="res://assets/Super_Street_Fighter_II_OST_Ken_Theme_1280x720[01KT4NYWHNGCE2JWF5PKB5QQ9F].ogv" id="2_nbhyw"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_4qotg"]
 
-[node name="MPFSlide" type="Control" unique_id=496584869]
+[node name="MillionsBg" type="Control" unique_id=496584869]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cs7ktqlv4fu6p"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_brbco"]
+
+[node name="Ko" type="Control" unique_id=988220383]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_brbco")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Label" type="Label" parent="." unique_id=1638261942]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 374.0
+offset_right = 1756.0
+offset_bottom = 716.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 150
+text = "EXTRA BALL"
+horizontal_alignment = 1

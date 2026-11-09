@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://8qjq2onoeg61"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_tw6j2"]
+[ext_resource type="VideoStream" uid="uid://c8hcx8r3ubev1" path="res://assets/sagat_ko_loss.ogv" id="2_tw6j2"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_ekhk7"]
+
+[node name="Fight" type="Control" unique_id=1718823309]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_tw6j2")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1415132247]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+stream = ExtResource("2_tw6j2")
+autoplay = true
+expand = true
+bus = &"effects"
+script = ExtResource("3_ekhk7")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

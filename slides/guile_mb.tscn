@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://bm8gajvm5ktd7" path="res://assets/Super_Street_Fighter_II_OST_Guile_Theme_1280x720[01KPNP70EJ5WZNW6GA2AG9Q0DS].ogv" id="2_ck5tk"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_hyssj"]
 
-[node name="MPFSlide" type="Control" unique_id=496584869]
+[node name="GuileMb" type="Control" unique_id=496584869]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

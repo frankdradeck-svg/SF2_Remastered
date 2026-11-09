@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://5y471h66r5t3" path="res://assets/balrog_ko_win.ogv" id="2_00472"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_t1p7j"]
 
-[node name="Fight" type="Control" unique_id=1718823309]
+[node name="BalrogKo" type="Control" unique_id=1718823309]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

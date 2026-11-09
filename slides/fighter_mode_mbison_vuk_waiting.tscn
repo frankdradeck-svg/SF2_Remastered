@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://cls7k41vfb0f7" path="res://assets/fighter_mode_bison_VUK_WAITING.ogv" id="2_jqlbu"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_k5fdo"]
 
-[node name="Ko" type="Control" unique_id=988220383]
+[node name="FighterModeMbisonVukWaiting" type="Control" unique_id=988220383]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

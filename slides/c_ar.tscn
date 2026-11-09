@@ -4,7 +4,7 @@
 [ext_resource type="VideoStream" uid="uid://gun56bvpwcnh" path="res://assets/carsmash_1.ogv" id="2_4k2hi"]
 [ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_6q8xn"]
 
-[node name="MPFSlide" type="Control" unique_id=213916040]
+[node name="CAr" type="Control" unique_id=213916040]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0

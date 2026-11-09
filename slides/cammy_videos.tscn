@@ -11,7 +11,7 @@
 [ext_resource type="VideoStream" uid="uid://da1dbgjpkqnw" path="res://assets/cammy_6.ogv" id="9_1mxp8"]
 [ext_resource type="VideoStream" uid="uid://cuh3w5vmlxlm0" path="res://assets/new_cammy_1.ogv" id="10_hrs4o"]
 
-[node name="Field" type="Control" unique_id=2085516752]
+[node name="CammyVideos" type="Control" unique_id=2085516752]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_e2t6c")
