@@ -443,8 +443,12 @@ switches:
     number: front-0
   s_drain:
     number: front-24
-  s_trough:
+  s_trough_1:
     number: front-6
+  s_trough_3:
+    number: front-7
+  s_trough_2:
+    number: front-18
   s_shooter:
     number: front-25
   s_left_inlane:
@@ -657,8 +661,7 @@ ball_devices:
     tags: drain
     eject_timeouts: 2s
   bd_trough:
-    entrance_switch: s_trough
-    entrance_switch_full_timeout: 3000ms
+    ball_switches: s_trough_1, s_trough_2, s_trough_3
     ball_capacity: 3
     eject_coil: c_trough_eject
     eject_coil_enable_time: 500ms
