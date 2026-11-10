@@ -311,14 +311,14 @@ event_player:
   timer_finishing_blanka_timer_started: get_fighter_letter
   mode_guile_mb_started: get_fighter_letter
   mode_millions_started: get_fighter_letter
-  vega_started: get_fighter_letter
-  ehonda_started: get_fighter_letter
-  zangief_started: get_fighter_letter
-  sagat_started: get_fighter_letter
-  dhalsim_started: get_fighter_letter
-  balrog_started: get_fighter_letter
-  blanka_started: get_fighter_letter
-  chunli_started: get_fighter_letter
+  mode_vega_started: get_fighter_letter
+  mode_ehonda_started: get_fighter_letter
+  mode_zangief_started: get_fighter_letter
+  mode_sagat_started: get_fighter_letter
+  mode_dhalsim_started: get_fighter_letter
+  mode_balrog_started: get_fighter_letter
+  mode_blanka_started: get_fighter_letter
+  mode_chunli_started: get_fighter_letter
   skillshot_hit_event: get_fighter_letter
   blanka_frenzy_started: get_fighter_letter
   blanka_frenzy_complete: get_fighter_letter

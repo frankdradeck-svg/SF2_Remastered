@@ -106,7 +106,7 @@ counters:
 
 timers:
   blanka_frenzy_timer:
-    start_value: 30
+    start_value: 40
     end_value: 0
     direction: down
     tick_interval: 1s

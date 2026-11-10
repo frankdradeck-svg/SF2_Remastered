@@ -693,7 +693,7 @@ player_vars:
   vega_completed:
     initial_value: 0
   fight_qualified:
-    initial_value: 0
+    initial_value: 1
   guile_mb_qualified:
     initial_value: 0
   car_mb_qualified: 
