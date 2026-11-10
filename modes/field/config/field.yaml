@@ -12,9 +12,9 @@ sound_player:
   get_fighter_letter{current_player.fighter_letters==6 or current_player.fighter_letters==13 or current_player.fighter_letters==20}:
     challenger2: 
       bus: voice
-  car_mb_qualified_event:
-    shoot_under_left:
-      bus: voice_boost
+#  car_mb_qualified_event:
+#    shoot_under_left:
+#      bus: voice_boost
   timer_field_intro_timer_complete{current_player.fight_qualified==1 or current_player.fighter_mode_qualified==1}:
     shoot_under_left:
       bus: voice
