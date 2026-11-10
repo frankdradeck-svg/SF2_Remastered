@@ -443,7 +443,3 @@ counters:
     persist_state: false
     reset_on_complete: false
     restart_events: mode_chunli_started
-
-event_player:
-  s_chunli_entrance_active: chunli_move_90
-  s_stepper_home_active: chunli_home
